@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import pdbRoutes from "./src/routesPdb.js";
+import metaRoutes from "./src/routesMeta.js";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/pdb", pdbRoutes);
+app.use("/api/meta", metaRoutes);
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {

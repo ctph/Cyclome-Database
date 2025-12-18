@@ -5,22 +5,109 @@
 // const SequenceSearchBar = () => {
 //   const [value, setValue] = useState(null);
 //   const [options, setOptions] = useState([]);
-//   const [sequenceMap, setSequenceMap] = useState({});
+//   const [sequenceMap, setSequenceMap] = useState({}); // { "1a1p_a": "SEQUENCE..." }
+//   const [allIds, setAllIds] = useState([]); // ["1a1p_a", ...]
 //   const navigate = useNavigate();
 //   const lastSearchedTerm = useRef(null);
 
-//   // Load JSON and build sorted options
-//   useEffect(() => {}, []);
+//   // Load JSON once and build maps/options
+//   useEffect(() => {
+//     let cancelled = false;
+
+//     async function loadSequences() {
+//       try {
+//         const res = await fetch("/static/sequence_similarity_sorted.json");
+//         const data = await res.json();
+
+//         // Build { idLower: sequenceUpper }
+//         const map = {};
+//         const ids = [];
+
+//         for (const row of Array.isArray(data) ? data : []) {
+//           const rawId = row?.PDB;
+//           const seq = row?.Sequence;
+
+//           if (!rawId || !seq) continue;
+
+//           const id = String(rawId).trim().toLowerCase(); // normalize id
+//           const sequence = String(seq).trim().toUpperCase();
+
+//           map[id] = sequence;
+//           ids.push(id);
+//         }
+
+//         ids.sort();
+
+//         if (!cancelled) {
+//           setSequenceMap(map);
+//           setAllIds(ids);
+
+//           // Show all by default (946 is fine)
+//           setOptions(
+//             ids.map((id) => ({
+//               label: id.toUpperCase(),
+//               value: id, // keep lowercase for routes
+//               sequence: map[id].toLowerCase(), // used by filterOption
+//             }))
+//           );
+//         }
+//       } catch (e) {
+//         if (!cancelled) message.error("Failed to load sequence JSON");
+//       }
+//     }
+
+//     loadSequences();
+//     return () => {
+//       cancelled = true;
+//     };
+//   }, []);
 
 //   const handleSearch = (input) => {
-//     if (!input || input.length < 3) return;
-//     if (input === lastSearchedTerm.current) return;
+//     const term = String(input || "").trim();
+//     if (!term) return;
 
-//     lastSearchedTerm.current = input.toLowerCase();
+//     // prevent repeated work
+//     if (term === lastSearchedTerm.current) return;
+//     lastSearchedTerm.current = term;
 
-//     const sequenceMatches = Object.entries(sequenceMap)
-//       .filter(([_, seq]) => seq.toLowerCase().includes(input.toLowerCase()))
-//       .slice(0, 5); // max 5 suggestions
+//     const termLower = term.toLowerCase();
+//     const termUpper = term.toUpperCase();
+
+//     // ✅ 1) If user typed a PDB-like id, prioritize ID matching (prefix)
+//     const idMatches = allIds
+//       .filter((id) => id.startsWith(termLower))
+//       .slice(0, 20);
+
+//     if (idMatches.length > 0) {
+//       setOptions(
+//         idMatches.map((id) => ({
+//           label: id.toUpperCase(),
+//           value: id,
+//           sequence: (sequenceMap[id] || "").toLowerCase(),
+//         }))
+//       );
+
+//       // If exactly one, auto-navigate (same vibe as your original)
+//       if (idMatches.length === 1) {
+//         navigate(`/similarity/${idMatches[0]}`);
+//       }
+//       return;
+//     }
+
+//     // ✅ 2) Otherwise treat it as a sequence substring search
+//     // Use min length to avoid expensive scans + too many hits
+//     if (term.length < 5) return;
+
+//     const sequenceMatches = [];
+//     for (const id of allIds) {
+//       const seq = sequenceMap[id];
+//       if (!seq) continue;
+
+//       if (seq.includes(termUpper)) {
+//         sequenceMatches.push([id, seq]);
+//         if (sequenceMatches.length >= 5) break; // max 5 suggestions like your code
+//       }
+//     }
 
 //     if (sequenceMatches.length === 1) {
 //       navigate(`/similarity/${sequenceMatches[0][0]}`);
@@ -35,22 +122,22 @@
 //     message.info({
 //       content: (
 //         <div>
-//           <p>No exact match. Did you mean:</p>
+//           <p>No exact ID match. Sequence matches:</p>
 //           <ul style={{ marginTop: 8, marginBottom: 0, paddingLeft: 16 }}>
-//             {sequenceMatches.map(([pdbId, seq]) => {
+//             {sequenceMatches.map(([id, seq]) => {
 //               let preview = seq.slice(0, displayLength);
 //               if (seq.length > displayLength) preview += "...";
 //               else preview = preview.padEnd(displayLength, " ");
 
 //               return (
-//                 <li key={pdbId}>
+//                 <li key={id}>
 //                   <a
 //                     onClick={() => {
 //                       message.destroy(key);
-//                       navigate(`/similarity/${pdbId}`);
+//                       navigate(`/similarity/${id}`);
 //                     }}
 //                   >
-//                     <strong>{pdbId.toUpperCase()}</strong>
+//                     <strong>{id.toUpperCase()}</strong>
 //                     <span
 //                       style={{
 //                         fontSize: "12px",
@@ -74,9 +161,9 @@
 //     });
 //   };
 
-//   const handleChange = (selectedPdbId) => {
-//     setValue(selectedPdbId);
-//     navigate(`/similarity/${selectedPdbId}`);
+//   const handleChange = (selectedId) => {
+//     setValue(selectedId);
+//     navigate(`/similarity/${selectedId}`);
 //     lastSearchedTerm.current = null;
 //   };
 
@@ -84,14 +171,20 @@
 //     <Select
 //       showSearch
 //       value={value}
-//       placeholder="Search by sequence (min 5 chars)"
+//       placeholder="Search by PDB ID or sequence (sequence min 5 chars)"
 //       style={{ width: "100%" }}
 //       options={options}
 //       onChange={handleChange}
 //       onSearch={handleSearch}
-//       filterOption={(input, option) =>
-//         option?.sequence?.includes(input.toLowerCase())
-//       }
+//       // local filtering for dropdown typing (works because options include sequence)
+//       filterOption={(input, option) => {
+//         const t = String(input || "").toLowerCase();
+//         if (!t) return true;
+
+//         const label = String(option?.label || "").toLowerCase();
+//         const seq = String(option?.sequence || ""); // already lower
+//         return label.includes(t) || seq.includes(t);
+//       }}
 //     />
 //   );
 // };

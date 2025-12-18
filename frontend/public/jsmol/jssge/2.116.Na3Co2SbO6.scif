@@ -1,0 +1,73 @@
+#\#CIF_2.0 
+# Created by FINDSPINGROUP  version - 0.10.6 -- BH: added name_SpSG_Chen by hand
+_space_group_spin.transform_spinframe_P_abc  'a,b,c'
+_space_group_spin.collinear_direction_xyz .
+_space_group_spin.coplanar_perp_uvw   '0.336,0,1.055' 
+_space_group_spin.rotation_axis  ? 
+_space_group_spin.rotation_angle ?
+
+_space_group_spin.spin_space_group_number_Chen  ?
+_space_group_spin.spin_space_group_latex_name_Chen    ""
+_space_group_spin.spin_space_group_linear_name_Chen    "1 2_100 2_010 m || P2/m|(2_001,2_2001,1)"
+_space_group_spin.spin_part_point_group_name_h-m mmm 
+_space_group_spin.transform_G0_to_L0_Pp_abc ?
+
+
+space_group.name_h-m_full "1 P/2m 1"
+
+_cell_length_a           10.741
+_cell_length_b           18.578
+_cell_length_c            5.653
+_cell_angle_alpha        90.000
+_cell_angle_beta        108.566
+_cell_angle_gamma        90.000
+
+loop_
+_space_group_symop_spin_operation.id
+_space_group_symop_spin_operation.xyzt
+_space_group_symop_spin_operation.uvw
+1 x,y,z,+1                                               u,v,w
+2 x,-y,z,+1                                            -u,v,-w
+3 -x,y,-z,+1                                 u-0.636794w,-v,-w
+4 -x+0.5,-y,-z,+1                                        u,v,w
+
+loop_
+_space_group_symop_spin_lattice.id
+_space_group_symop_spin_lattice.xyzt
+_space_group_symop_spin_lattice.uvw
+1 x,y,z,+1                                               u,v,w
+2 x+0.5,y+0.5,z,+1                                       u,v,w
+3 x+0.5,y,z,+1                               -u+0.636794w,-v,w
+4 x,y+0.5,z,+1                               -u+0.636794w,-v,w
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_symmetry_multiplicity
+Co1	Co	0.000000	0.333333	0.000000	1.0	4
+Co2	Co	0.250000	0.083350	0.000000	1.0	4
+Sb1	Sb	0.000000	0.000000	0.000000	1.0	8
+Sb2	Sb	0.250000	0.250000	0.000000	1.0	8
+O1	O	0.136500	0.170600	0.794700	1.0	2
+O2	O	0.386500	0.420600	0.794700	1.0	2
+O3	O	0.375550	0.000000	0.204400	1.0	4
+O4	O	0.125550	0.250000	0.204400	1.0	4
+Na1	Na	0.000000	0.250000	0.500000	1.0	8
+Na2	Na	0.250000	0.000000	0.500000	1.0	8
+Na3	Na	0.000000	0.413800	0.500000	1.0	4
+Na4	Na	0.250000	0.163800	0.500000	1.0	4
+
+
+loop_
+_atom_site_spin_moment.label
+_atom_site_spin_moment.axis_u
+_atom_site_spin_moment.axis_v
+_atom_site_spin_moment.axis_w
+_atom_site_spin_moment.symmform_uvw
+_atom_site_spin_moment.magnitude
+Co1	0.690000	0.000000	0.000000	u,0,0	0.690
+Co2	-0.000000	-1.270000	0.000000	0,u,0	1.270
