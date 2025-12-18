@@ -9,7 +9,7 @@ const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Point this to your real JSON file location
+// Point this to your real JSON file location
 const SIM_PATH = path.join(
   __dirname,
   "..",
@@ -17,7 +17,7 @@ const SIM_PATH = path.join(
   "sequence_similarity_sorted.json"
 );
 
-// ---- helpers ----
+// helpers
 function baseId(x) {
   return String(x || "")
     .trim()
@@ -33,10 +33,9 @@ function splitIds(str) {
     .filter(Boolean);
 }
 
-// ---- in-memory cache ----
 let loaded = false;
 let loadError = null;
-let index = new Map(); // baseId -> row object
+let index = new Map();
 
 function loadOnce() {
   if (loaded) return;
@@ -57,7 +56,6 @@ function loadOnce() {
     const m = new Map();
 
     for (const row of data) {
-      // Your file uses "PDB" field (per your earlier code)
       const pdbField = row?.PDB;
       if (!pdbField) continue;
 
@@ -88,7 +86,7 @@ function loadOnce() {
   }
 }
 
-// ---- routes ----
+// routes
 
 // Health/debug endpoint (optional but super useful)
 router.get("/health", (req, res) => {
@@ -104,7 +102,7 @@ router.get("/health", (req, res) => {
   res.json({ ok: true, indexed: index.size, simPath: SIM_PATH });
 });
 
-// ✅ Single lookup
+// Single lookup
 // Full URL becomes: /api/similarity/:pdbId/:threshold
 router.get("/:pdbId/:threshold", (req, res) => {
   loadOnce();
@@ -157,7 +155,7 @@ router.get("/:pdbId/:threshold", (req, res) => {
   }
 });
 
-// ✅ Batch lookup
+// Batch lookup
 // Full URL: /api/similarity/batch/:threshold?ids=1ahl,1akg,1wt8_A
 router.get("/batch/:threshold", (req, res) => {
   loadOnce();

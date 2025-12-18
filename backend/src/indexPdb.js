@@ -15,17 +15,17 @@ export function buildPdbIndex(pdbDirAbs) {
   for (const file of files) {
     if (!file.toLowerCase().endsWith(".pdb")) continue;
 
-    const stem = file.slice(0, -4); // e.g. "1A1P_A"
+    const stem = file.slice(0, -4);
     const m = stem.match(/^([A-Za-z0-9]+)(?:_([A-Za-z0-9]+))?$/);
 
     if (!m) continue;
 
-    const pdb = (m[1] || "").toUpperCase(); // "1A1P"
-    const chain = (m[2] || "").toUpperCase(); // "A" (or "")
-    const chainId = chain ? `${pdb}_${chain}` : pdb; // "1A1P_A"
+    const pdb = (m[1] || "").toUpperCase();
+    const chain = (m[2] || "").toUpperCase();
+    const chainId = chain ? `${pdb}_${chain}` : pdb;
 
-    const chainKey = chainId.toLowerCase(); // "1a1p_a"
-    const pdbKey = pdb.toLowerCase(); // "1a1p"
+    const chainKey = chainId.toLowerCase();
+    const pdbKey = pdb.toLowerCase();
 
     chainIndex[chainKey] = { id: chainId, pdb, chain, file };
 
@@ -53,10 +53,6 @@ export function buildPdbIndex(pdbDirAbs) {
   return { chainIndex, pdbIndex };
 }
 
-/**
- * Fast prefix search using sorted keys + binary search.
- * Much faster than scanning for every keystroke when dataset is big.
- */
 export function makePrefixSearcher(index) {
   const keys = Object.keys(index).sort(); // lowercase keys
 
