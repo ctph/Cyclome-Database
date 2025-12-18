@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./layout/HomePage";
-// import SimilarityPage from "./pages/SimilarityPage";
+import SimilarityPage from "./layout/SimilarityPage";
 import PdbPage from "./layout/PdbPage";
 // import NotFound from "./pages/NotFound";
 
@@ -13,6 +13,10 @@ export default function App() {
         {/* <Route path="/similarity/:pdbId" element={<SimilarityPage />} /> */}
 
         <Route path="/pdb/:pdbId" element={<PdbPage />} />
+        <Route
+          path="/similarity/:pdbId/:threshold"
+          element={<SimilarityPage />}
+        />
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

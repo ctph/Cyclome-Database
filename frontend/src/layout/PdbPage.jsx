@@ -1,162 +1,7 @@
-// import React, { useEffect, useMemo, useRef, useState } from "react";
-// import { useParams } from "react-router-dom";
-// import { Card, Spin, Typography, Tag, Space, Divider } from "antd";
-
-// const { Title, Text } = Typography;
-
-// const PdbPage = () => {
-//   const { pdbId } = useParams(); // e.g. "1a1p_a"
-//   const containerRef = useRef(null);
-
-//   const [metaLoading, setMetaLoading] = useState(true);
-//   const [metaError, setMetaError] = useState(null);
-//   const [metaRecord, setMetaRecord] = useState(null);
-
-//   const pdbIdUpper = useMemo(() => String(pdbId || "").toUpperCase(), [pdbId]);
-
-//   // ---- JSmol (unchanged) ----
-//   useEffect(() => {
-//     if (!window.Jmol) return;
-//     if (!containerRef.current) return;
-
-//     containerRef.current.innerHTML = "";
-
-//     const Info = {
-//       width: 600,
-//       height: 600,
-//       debug: false,
-//       color: "white",
-//       addSelectionOptions: false,
-//       use: "HTML5",
-//       j2sPath: "/jsmol/j2s",
-//       serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-//       script: `
-//         load "/api/pdb/file/${pdbId}";
-//         cartoon only;
-//         color structure;
-//       `,
-//     };
-
-//     const applet = window.Jmol.getApplet("jsmolApplet", Info);
-//     containerRef.current.innerHTML = window.Jmol.getAppletHtml(applet);
-//   }, [pdbId]);
-
-//   // ---- Metadata fetch from backend (same host) ----
-//   useEffect(() => {
-//     let cancelled = false;
-
-//     async function loadMeta() {
-//       setMetaLoading(true);
-//       setMetaError(null);
-//       setMetaRecord(null);
-
-//       try {
-//         const res = await fetch(`/api/meta/${pdbId}`);
-//         if (!res.ok) {
-//           if (res.status === 404) {
-//             if (!cancelled) setMetaRecord(null);
-//             return;
-//           }
-//           throw new Error(`Metadata fetch failed: ${res.status}`);
-//         }
-
-//         const obj = await res.json(); // ✅ single record
-//         if (!cancelled) setMetaRecord(obj);
-//       } catch (e) {
-//         if (!cancelled) setMetaError(e.message || "Failed to load metadata");
-//       } finally {
-//         if (!cancelled) setMetaLoading(false);
-//       }
-//     }
-
-//     if (pdbId) loadMeta();
-//     return () => {
-//       cancelled = true;
-//     };
-//   }, [pdbId]);
-
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         gap: 16,
-//         alignItems: "flex-start",
-//         flexWrap: "wrap",
-//       }}
-//     >
-//       {/* Left: JSmol */}
-//       <div>
-//         <Title level={3} style={{ marginTop: 0 }}>
-//           PDB Viewer: {pdbIdUpper}
-//         </Title>
-//         <div ref={containerRef} />
-//       </div>
-
-//       {/* Right: Metadata card */}
-//       <Card title="Metadata" style={{ width: 420 }}>
-//         {metaLoading ? (
-//           <Spin />
-//         ) : metaError ? (
-//           <Text type="danger">{metaError}</Text>
-//         ) : !metaRecord ? (
-//           <Text type="secondary">No metadata found</Text>
-//         ) : (
-//           <Space direction="vertical" size="small" style={{ width: "100%" }}>
-//             <div>
-//               <Text type="secondary">Cyclization</Text>
-//               <div style={{ marginTop: 4 }}>
-//                 <Tag color="blue">
-//                   {String(metaRecord.Cyclization || "Unknown")}
-//                 </Tag>
-//               </div>
-//             </div>
-
-//             <div>
-//               <Text type="secondary">Organism</Text>
-//               <div style={{ marginTop: 4 }}>
-//                 {metaRecord.Organism_Scientific_Name || "N/A"}
-//               </div>
-//             </div>
-
-//             <Divider style={{ margin: "8px 0" }} />
-
-//             <div>
-//               <Text type="secondary">Method</Text>
-//               <div style={{ marginTop: 4 }}>{metaRecord.Method || "N/A"}</div>
-//             </div>
-
-//             <Divider style={{ margin: "8px 0" }} />
-
-//             <div>
-//               <Text type="secondary">Release Date</Text>
-//               <div style={{ marginTop: 4 }}>
-//                 {metaRecord.Release_Date || "N/A"}
-//               </div>
-//             </div>
-
-//             <Divider style={{ margin: "8px 0" }} />
-
-//             <div>
-//               <Text type="secondary">Keywords</Text>
-//               <div style={{ marginTop: 4, wordBreak: "break-word" }}>
-//                 {metaRecord.Keywords || "N/A"}
-//               </div>
-//             </div>
-
-//             <Divider style={{ margin: "8px 0" }} />
-//           </Space>
-//         )}
-//       </Card>
-//     </div>
-//   );
-// };
-
-// export default PdbPage;
-
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../components/Header";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {
   Card,
   Spin,
@@ -186,14 +31,13 @@ const PdbPage = () => {
   const [metaLoading, setMetaLoading] = useState(true);
   const [metaError, setMetaError] = useState(null);
   const [metaRecord, setMetaRecord] = useState(null);
+  const navigate = useNavigate();
 
   const runJsmol = (cmd) => {
     try {
       if (!window.Jmol || !appletRef.current) return;
       window.Jmol.script(appletRef.current, cmd);
-    } catch {
-      // ignore
-    }
+    } catch {}
   };
 
   // 1) Create JSmol ONCE per pdbId
@@ -283,9 +127,7 @@ const PdbPage = () => {
 
   const handleSimilarityClick = (threshold) => {
     const baseId = pdbId.split("_")[0].toLowerCase();
-    // Page 3 later
-    // navigate(`/percent/${baseId}/${threshold}`);
-    console.log("Go to similarity", baseId, threshold);
+    navigate(`/similarity/${baseId}/${threshold}`);
   };
 
   return (
