@@ -3,6 +3,8 @@ import { Select, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import levenshtein from "fast-levenshtein";
 
+const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
+
 const SearchBar = () => {
   const [value, setValue] = useState(null);
   const [options, setOptions] = useState([]);
@@ -10,7 +12,34 @@ const SearchBar = () => {
   const navigate = useNavigate();
   const lastSearchedTerm = useRef(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadAllIds() {
+      try {
+        const res = await fetch(`${API_BASE}/api/pdb/all`);
+        const data = await res.json();
+
+        if (!cancelled && Array.isArray(data.results)) {
+          setAllPdbIds(data.results);
+
+          setOptions(
+            data.results.map((id) => ({
+              label: id.toUpperCase(),
+              value: id.toLowerCase(),
+            }))
+          );
+        }
+      } catch {
+        message.error("Failed to load PDB list from backend");
+      }
+    }
+
+    loadAllIds();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const findNearestMatches = (searchTerm) => {
     const distances = allPdbIds.map((pdbId) => ({
@@ -24,12 +53,33 @@ const SearchBar = () => {
       .map((item) => item.pdbId);
   };
 
-  const handleSearch = (searchTerm) => {
+  const handleSearch = async (searchTerm) => {
     if (!searchTerm || searchTerm.length < 4) return;
     if (searchTerm === lastSearchedTerm.current) return;
 
     lastSearchedTerm.current = searchTerm;
 
+    // Populate dropdown from backend (fast prefix search)
+    try {
+      const res = await fetch(
+        `${API_BASE}/api/pdb/search?q=${encodeURIComponent(
+          searchTerm.toLowerCase()
+        )}&limit=50`
+      );
+      const data = await res.json();
+      const ids = Array.isArray(data?.results) ? data.results : [];
+
+      setOptions(
+        ids.map((id) => ({
+          label: id.toUpperCase(),
+          value: id.toLowerCase(), // normalized selection value
+        }))
+      );
+    } catch (e) {
+      // don’t change logic; just fail quietly
+    }
+
+    // Keep your original exact match + suggestion logic exactly
     const exactMatch = allPdbIds.find(
       (pdbId) => pdbId.toLowerCase() === searchTerm.toLowerCase()
     );
@@ -48,7 +98,7 @@ const SearchBar = () => {
                   <a
                     onClick={() => {
                       message.destroy(key);
-                      navigate(`/similarity/${match}`);
+                      navigate(`/similarity/${match.toLowerCase()}`);
                     }}
                   >
                     {match.toUpperCase()}
@@ -64,11 +114,11 @@ const SearchBar = () => {
     }
   };
 
-  const handleChange = (selectedFilename) => {
-    const pdbId = selectedFilename.replace(".pdb", "").toLowerCase();
-    setValue(selectedFilename);
-    navigate(`/similarity/${pdbId}`);
-    lastSearchedTerm.current = null; // Reset on selection
+  const handleChange = (selectedIdLower) => {
+    // selectedIdLower is already normalized
+    setValue(selectedIdLower);
+    navigate(`/similarity/${selectedIdLower}`);
+    lastSearchedTerm.current = null;
   };
 
   return (
@@ -80,9 +130,7 @@ const SearchBar = () => {
       options={options}
       onChange={handleChange}
       onSearch={handleSearch}
-      filterOption={(input, option) =>
-        option?.label?.toUpperCase().includes(input.toUpperCase())
-      }
+      filterOption={false} // IMPORTANT: backend does filtering; keep logic unchanged
     />
   );
 };
