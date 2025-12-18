@@ -73,6 +73,31 @@ router.get("/all", (req, res) => {
     results: Object.values(chainIndex).map((e) => e.id),
   });
 });
+/**
+ * GET /api/pdb/file/:id
+ * Example: /api/pdb/file/1A1P_A  -> streams 1A1P_A.pdb
+ * This is useful because it accepts underscore IDs directly.
+ */
+router.get("/file/:id", (req, res) => {
+  const raw = String(req.params.id || "").trim();
+  const key = raw.toLowerCase();
+
+  // allow underscore IDs like 1a1p_a
+  if (!/^[a-z0-9_]+$/.test(key)) {
+    return res.status(400).json({ error: "Invalid id" });
+  }
+
+  const entry = chainIndex[key];
+  if (!entry) return res.status(404).json({ error: "PDB chain not found" });
+
+  const filePath = path.join(PDB_DIR, entry.file);
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: "File missing on server" });
+  }
+
+  res.setHeader("Content-Type", "chemical/x-pdb; charset=utf-8");
+  fs.createReadStream(filePath).pipe(res);
+});
 
 /**
  * GET /api/pdb/:pdb/:chain
@@ -126,32 +151,6 @@ router.get("/:pdb", (req, res) => {
     chainIds: entry.chainIds,
     files: entry.files,
   });
-});
-
-/**
- * GET /api/pdb/file/:id
- * Example: /api/pdb/file/1A1P_A  -> streams 1A1P_A.pdb
- * This is useful because it accepts underscore IDs directly.
- */
-router.get("/file/:id", (req, res) => {
-  const raw = String(req.params.id || "").trim();
-  const key = raw.toLowerCase();
-
-  // allow underscore IDs like 1a1p_a
-  if (!/^[a-z0-9_]+$/.test(key)) {
-    return res.status(400).json({ error: "Invalid id" });
-  }
-
-  const entry = chainIndex[key];
-  if (!entry) return res.status(404).json({ error: "PDB chain not found" });
-
-  const filePath = path.join(PDB_DIR, entry.file);
-  if (!fs.existsSync(filePath)) {
-    return res.status(404).json({ error: "File missing on server" });
-  }
-
-  res.setHeader("Content-Type", "chemical/x-pdb; charset=utf-8");
-  fs.createReadStream(filePath).pipe(res);
 });
 
 export default router;

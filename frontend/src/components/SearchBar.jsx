@@ -59,7 +59,6 @@ const SearchBar = () => {
 
     lastSearchedTerm.current = searchTerm;
 
-    // Populate dropdown from backend (fast prefix search)
     try {
       const res = await fetch(
         `${API_BASE}/api/pdb/search?q=${encodeURIComponent(
@@ -72,14 +71,13 @@ const SearchBar = () => {
       setOptions(
         ids.map((id) => ({
           label: id.toUpperCase(),
-          value: id.toLowerCase(), // normalized selection value
+          value: id.toLowerCase(),
         }))
       );
     } catch (e) {
-      // don’t change logic; just fail quietly
+      // fail quietly
     }
 
-    // Keep your original exact match + suggestion logic exactly
     const exactMatch = allPdbIds.find(
       (pdbId) => pdbId.toLowerCase() === searchTerm.toLowerCase()
     );
@@ -98,7 +96,7 @@ const SearchBar = () => {
                   <a
                     onClick={() => {
                       message.destroy(key);
-                      navigate(`/similarity/${match.toLowerCase()}`);
+                      navigate(`/pdb/${match.toLowerCase()}`); // ✅ changed
                     }}
                   >
                     {match.toUpperCase()}
@@ -115,9 +113,8 @@ const SearchBar = () => {
   };
 
   const handleChange = (selectedIdLower) => {
-    // selectedIdLower is already normalized
     setValue(selectedIdLower);
-    navigate(`/similarity/${selectedIdLower}`);
+    navigate(`/pdb/${selectedIdLower}`); // ✅ changed
     lastSearchedTerm.current = null;
   };
 
@@ -130,7 +127,7 @@ const SearchBar = () => {
       options={options}
       onChange={handleChange}
       onSearch={handleSearch}
-      filterOption={false} // IMPORTANT: backend does filtering; keep logic unchanged
+      filterOption={false}
     />
   );
 };

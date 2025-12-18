@@ -1,21 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./layout/HomePage";
-// import SearchPage from "./pages/SearchPage";
-// import SequenceDetailPage from "./pages/SequenceDetailPage";
+// import SimilarityPage from "./pages/SimilarityPage";
+import PdbPage from "./layout/PdbPage";
+// import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* First page */}
         <Route path="/" element={<HomePage />} />
 
-        {/* Other pages */}
-        {/* <Route path="/search" element={<SearchPage />} /> */}
-        {/* <Route path="/sequence/:id" element={<SequenceDetailPage />} /> */}
+        {/* <Route path="/similarity/:pdbId" element={<SimilarityPage />} /> */}
 
-        {/* 404 */}
-        <Route path="*" element={<h2>404 — Page Not Found</h2>} />
+        <Route path="/pdb/:pdbId" element={<PdbPage />} />
+
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </BrowserRouter>
   );
