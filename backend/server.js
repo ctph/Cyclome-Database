@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import pdbRoutes from "./src/routesPdb.js";
 import metaRoutes from "./src/routesMeta.js";
+import similarityRoutes from "./src/routesSimilarity.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/pdb", pdbRoutes);
 app.use("/api/meta", metaRoutes);
+app.use("/api/similarity", similarityRoutes);
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
