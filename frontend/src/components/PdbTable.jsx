@@ -2,10 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 const PdbPage = () => {
-  const { pdbId: rawParam } = useParams(); // e.g. "1a1p_a" or "1a1p"
+  const { pdbId: rawParam } = useParams();
   const holderRef = useRef(null);
 
-  // Normalize: default to _A if no chain
   const normalized = rawParam?.includes("_")
     ? rawParam.toLowerCase()
     : `${rawParam?.toLowerCase()}_a`;
@@ -13,7 +12,6 @@ const PdbPage = () => {
   useEffect(() => {
     if (!holderRef.current) return;
 
-    // Clear previous viewer
     holderRef.current.innerHTML = "";
 
     // JSmol not loaded yet
@@ -28,7 +26,6 @@ const PdbPage = () => {
       height: 600,
       use: "HTML5",
       j2sPath: "/jsmol/j2s",
-      // This is okay to keep; JSmol uses it for some operations
       serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
       script: `
         load /api/pdb/file/${normalized};
@@ -37,7 +34,6 @@ const PdbPage = () => {
       `,
     };
 
-    // Create + mount the viewer
     const app = window.Jmol.getApplet("jsmolView", Info);
     holderRef.current.innerHTML = window.Jmol.getAppletHtml(app);
   }, [normalized]);

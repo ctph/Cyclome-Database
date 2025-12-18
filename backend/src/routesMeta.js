@@ -9,7 +9,6 @@ const META_PATH = path.resolve(
   "cyclome_for_website_with_metadata.json"
 );
 
-// Cache in memory (fast on EC2)
 let CACHE = null;
 function getMeta() {
   if (!CACHE) {
@@ -18,7 +17,7 @@ function getMeta() {
   return CACHE;
 }
 
-// GET /api/meta/:id   (id like 1ag7_a)
+// GET /api/meta/:id
 router.get("/:id", (req, res) => {
   const id = String(req.params.id || "")
     .trim()

@@ -96,7 +96,7 @@ const SearchBar = () => {
                   <a
                     onClick={() => {
                       message.destroy(key);
-                      navigate(`/pdb/${match.toLowerCase()}`); // ✅ changed
+                      navigate(`/pdb/${match.toLowerCase()}`);
                     }}
                   >
                     {match.toUpperCase()}
@@ -114,7 +114,7 @@ const SearchBar = () => {
 
   const handleChange = (selectedIdLower) => {
     setValue(selectedIdLower);
-    navigate(`/pdb/${selectedIdLower}`); // ✅ changed
+    navigate(`/pdb/${selectedIdLower}`);
     lastSearchedTerm.current = null;
   };
 

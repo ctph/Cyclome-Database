@@ -20,7 +20,7 @@ import {
 const { Title, Text } = Typography;
 
 const PdbPage = () => {
-  const { pdbId } = useParams(); // e.g. "1akg_a"
+  const { pdbId } = useParams();
   const pdbIdUpper = useMemo(() => String(pdbId || "").toUpperCase(), [pdbId]);
 
   const containerRef = useRef(null);
@@ -40,7 +40,6 @@ const PdbPage = () => {
     } catch {}
   };
 
-  // 1) Create JSmol ONCE per pdbId
   useEffect(() => {
     if (!window.Jmol) {
       message.error(
@@ -71,11 +70,9 @@ const PdbPage = () => {
     appletRef.current = applet;
     containerRef.current.innerHTML = window.Jmol.getAppletHtml(applet);
 
-    // reset view button default on new PDB
     setViewMode("cartoon");
   }, [pdbId]);
 
-  // 2) Toggle view WITHOUT recreating viewer
   useEffect(() => {
     if (!appletRef.current) return;
 
@@ -95,7 +92,7 @@ const PdbPage = () => {
     setViewMode((prev) => (prev === "cartoon" ? "stick" : "cartoon"));
   };
 
-  // Metadata from backend (same EC2 host)
+  // Metadata from backend
   useEffect(() => {
     let cancelled = false;
 
@@ -132,12 +129,12 @@ const PdbPage = () => {
 
   return (
     <div style={{ padding: 16 }}>
-      {/* HEADER */}
+      {/* header */}
       <Header />
 
       <Divider style={{ margin: "12px 0" }} />
 
-      {/* TITLE + ACTIONS (KEEP EXACTLY YOUR LAYOUT) */}
+      {/* title and action */}
       <Flex justify="space-between" align="center" wrap="wrap" gap={16}>
         <Title level={2} style={{ margin: 0 }}>
           {pdbId.toUpperCase()} Structure Viewer
@@ -163,7 +160,7 @@ const PdbPage = () => {
           </Button>
         </Space>
 
-        {/* CYCLIZATION CLASS (KEEP EXACTLY YOUR LAYOUT) */}
+        {/* cycliczation button */}
         <Flex align="center" gap={8} style={{ marginLeft: "auto" }}>
           <Text strong>Cyclization Class:</Text>
 
@@ -179,9 +176,9 @@ const PdbPage = () => {
 
       <Divider />
 
-      {/* MAIN CONTENT */}
+      {/*main content */}
       <Row gutter={[16, 16]} align="stretch">
-        {/* LEFT: JSmol */}
+        {/* left: JSmol */}
         <Col xs={24} lg={16}>
           <Card
             title={
@@ -221,7 +218,7 @@ const PdbPage = () => {
           </Card>
         </Col>
 
-        {/* RIGHT: Metadata */}
+        {/* right: Metadata */}
         <Col xs={24} lg={8}>
           <Card
             title={<Text strong>Metadata</Text>}

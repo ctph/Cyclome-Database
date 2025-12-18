@@ -103,7 +103,7 @@ const SimilarityPage = () => {
           key: `${id}-${idx}`,
           rank: idx + 1,
           pdb: id,
-          sequence: seq, // ✅ same sequence for all rows
+          sequence: seq, // same sequence for all rows
         }));
 
         if (!cancelled) {
@@ -178,7 +178,7 @@ const SimilarityPage = () => {
           <Tag color="blue">{t}%</Tag>
         </Space>
 
-        {/* ✅ Sequence card */}
+        {/* Sequence card */}
         <Card
           title="Sequence"
           style={{ borderRadius: 14, boxShadow: "0 6px 18px rgba(0,0,0,0.06)" }}

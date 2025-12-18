@@ -75,8 +75,6 @@ router.get("/all", (req, res) => {
 });
 /**
  * GET /api/pdb/file/:id
- * Example: /api/pdb/file/1A1P_A  -> streams 1A1P_A.pdb
- * This is useful because it accepts underscore IDs directly.
  */
 router.get("/file/:id", (req, res) => {
   const raw = String(req.params.id || "").trim();
@@ -101,7 +99,6 @@ router.get("/file/:id", (req, res) => {
 
 /**
  * GET /api/pdb/:pdb/:chain
- * Example: /api/pdb/1a1p/A  -> streams 1A1P_A.pdb
  */
 router.get("/:pdb/:chain", (req, res) => {
   const pdb = String(req.params.pdb || "")
@@ -131,7 +128,6 @@ router.get("/:pdb/:chain", (req, res) => {
 
 /**
  * GET /api/pdb/:pdb
- * Example: /api/pdb/1a1p  -> returns chain list for base PDB
  */
 router.get("/:pdb", (req, res) => {
   const pdbKey = String(req.params.pdb || "")
