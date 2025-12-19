@@ -14,21 +14,24 @@ const PdbTable = () => {
       })
       .then((data) => {
         const formatted = Object.entries(data)
-          .map(([pdbId, info]) => ({
-            id: pdbId,
-            sequence: info.sequence || "-",
-            melting_point: info.melting_point_K ?? "-",
-            filepath: `/filtered_pdbs_frontend/${info.filename}`,
-          }))
+          .map(([pdbId, info]) => {
+            const chainId = String(info.filename || "")
+              .toLowerCase()
+              .replace(/\.pdb$/i, ""); // "1ag7_a"
+
+            return {
+              id: chainId,
+              baseId: pdbId,
+              sequence: info.sequence || "-",
+              melting_point: info.melting_point_K ?? "-",
+              filepath: `./backend/cyclic_pdbs/${info.filename}`,
+            };
+          })
           .sort((a, b) =>
             a.id.localeCompare(b.id, undefined, { numeric: true })
           );
 
         setPdbs(formatted);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
         setLoading(false);
       });
   }, []);
@@ -38,9 +41,9 @@ const PdbTable = () => {
       title: "PDB ID",
       dataIndex: "id",
       key: "id",
-      render: (id) => (
-        <Link to={`/pdb/${id.toLowerCase()}`}>
-          <Tag color="blue">{id}</Tag>
+      render: (chainId) => (
+        <Link to={`/pdb/${chainId}`}>
+          <Tag color="blue">{chainId}</Tag>
         </Link>
       ),
     },
@@ -66,10 +69,7 @@ const PdbTable = () => {
       key: "actions",
       render: (_, record) => (
         <>
-          <Link
-            to={`/pdb/${record.id.toLowerCase()}`}
-            style={{ marginRight: 8 }}
-          >
+          <Link to={`/pdb/${record.id}`} style={{ marginRight: 8 }}>
             View 3D
           </Link>
           <a href={record.filepath} download>

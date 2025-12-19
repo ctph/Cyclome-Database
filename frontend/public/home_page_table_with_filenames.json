@@ -544,11 +544,6 @@
     "melting_point_K": 333,
     "filename": "5XDI_A.pdb"
   },
-  "999999999999999926539781176481198923508803215199467887262646419780362305536": {
-    "sequence": "GCCSDPLCAWAC",
-    "melting_point_K": 355,
-    "filename": null
-  },
   "1CNL": {
     "sequence": "GCCSDPRCAWRC",
     "melting_point_K": 350,
@@ -569,11 +564,7 @@
     "melting_point_K": 353,
     "filename": "1AKG_A.pdb"
   },
-  "10000000000000000470601344959054695891559601407866630764278709534898249531392": {
-    "sequence": "GCCSNPRCAWRC",
-    "melting_point_K": 347,
-    "filename": null
-  },
+
   "1MII": {
     "sequence": "GCCSNPVCHLEHSNLC",
     "melting_point_K": 348,
@@ -1558,11 +1549,6 @@
     "sequence": "GCCGSYPNAACHPCSCKDRPSYCGQ",
     "melting_point_K": 339,
     "filename": "1P1P_A.pdb"
-  },
-  "99999999999999995164818811802792197885196090803013355167206819763650035712": {
-    "sequence": "GCCSDPRCAWECX",
-    "melting_point_K": 351,
-    "filename": null
   },
   "1MXN": {
     "sequence": "GCCSYPPCFATNPDC",
@@ -4318,11 +4304,6 @@
     "sequence": "LVAYGIAQGTAEKVVSLINAGLTVGSIISILGGVTVGLSGVFTAVKAAIAKQGIKKAIQL",
     "melting_point_K": 354,
     "filename": "2KJF_A.pdb"
-  },
-  "99999999999999995280522225138166806691251291352861698530421623488512": {
-    "sequence": "MAKEFGIPAAVAGTVLNVVEAGGWVTTIVSILTAVGSGGLSLLAAAGRESIKAYLKKEIKKKGKRAVIAW",
-    "melting_point_K": 343,
-    "filename": null
   },
   "1O82": {
     "sequence": "MAKEFGIPAAVAGTVLNVVEAGGWVTTIVSILTAVGSGGLSLLAAAGRESIKAYLKKEIKKKGKRAVIAW",

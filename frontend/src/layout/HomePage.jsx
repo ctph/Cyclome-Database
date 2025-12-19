@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar";
 import HomeTable from "../components/HomeTable";
 import Header from "../components/Header";
 import { Space } from "antd";
-// import SequenceSearchBar from "../components/SequenceSearchBar";
+import SequenceSearchBar from "../components/SequenceSearchBar";
 
 const HomePage = ({ allOptions }) => {
   const handleSearch = (query) => {
@@ -28,9 +28,9 @@ const HomePage = ({ allOptions }) => {
           }}
         >
           <h2 style={{ fontFamily: "Arial, sans-serif" }}>
-            {/* PDB Sequence Search Bar */}
+            PDB Sequence Search Bar
           </h2>
-          {/* <SequenceSearchBar allOptions={allOptions} /> */}
+          <SequenceSearchBar allOptions={allOptions} />
         </div>
         <div style={{ marginTop: 32 }}>
           <HomeTable />
