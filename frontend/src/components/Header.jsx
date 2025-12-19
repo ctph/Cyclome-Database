@@ -9,7 +9,7 @@ const Header = () => (
   <div style={{ textAlign: "center", marginBottom: 16 }}>
     <Link to="/" style={{ textDecoration: "none" }}>
       <Title level={2} style={{ color: "#1677ff", marginBottom: 0 }}>
-        Pepknots Database
+        Cyclome Database
       </Title>
     </Link>
   </div>

@@ -1,10 +1,10 @@
 import React from "react";
 // import "./HomePage.css";
 import SearchBar from "../components/SearchBar";
-// import PdbTable from "../components/PdbTable";
+import HomeTable from "../components/HomeTable";
 import Header from "../components/Header";
 import { Space } from "antd";
-import SequenceSearchBar from "../components/SequenceSearchBar";
+// import SequenceSearchBar from "../components/SequenceSearchBar";
 
 const HomePage = ({ allOptions }) => {
   const handleSearch = (query) => {
@@ -32,7 +32,9 @@ const HomePage = ({ allOptions }) => {
           </h2>
           {/* <SequenceSearchBar allOptions={allOptions} /> */}
         </div>
-        <div style={{ marginTop: 32 }}>{/* <PdbTable /> */}</div>
+        <div style={{ marginTop: 32 }}>
+          <HomeTable />
+        </div>
       </Space>
     </div>
   );

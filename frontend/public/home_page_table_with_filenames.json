@@ -1,0 +1,4542 @@
+{
+  "1CYA": {
+    "sequence": "ALLVTAGLVLA",
+    "melting_point_K": 358,
+    "filename": "1CYA_A.pdb"
+  },
+  "1DG0": {
+    "sequence": "CPWQPWC",
+    "melting_point_K": 349,
+    "filename": "1DG0_A.pdb"
+  },
+  "1DG2": {
+    "sequence": "GCCSYPPCFATNPDC",
+    "melting_point_K": 328,
+    "filename": "1DG2_A.pdb"
+  },
+  "1DFY": {
+    "sequence": "GCPWQPWC",
+    "melting_point_K": 333,
+    "filename": "1DFY_A.pdb"
+  },
+  "1DFZ": {
+    "sequence": "GCPWQPWC",
+    "melting_point_K": 360,
+    "filename": "1DFZ_A.pdb"
+  },
+  "1D7T": {
+    "sequence": "GCPYNPKC",
+    "melting_point_K": 358,
+    "filename": "1D7T_A.pdb"
+  },
+  "1T9E": {
+    "sequence": "GRATKSIPPIAFPD",
+    "melting_point_K": 338,
+    "filename": "1T9E_A.pdb"
+  },
+  "1PXQ": {
+    "sequence": "NKGCATCSIGAACLVDGPIPDFEIAGATGLFGLWG",
+    "melting_point_K": 347,
+    "filename": "1PXQ_A.pdb"
+  },
+  "1MPV": {
+    "sequence": "CHWDLLVRHWVC",
+    "melting_point_K": 372,
+    "filename": "1MPV_A.pdb"
+  },
+  "1N1U": {
+    "sequence": "AGETCVGGTCNTPGATCSWPVCTRNGLPV",
+    "melting_point_K": 346,
+    "filename": "1N1U_A.pdb"
+  },
+  "1VB8": {
+    "sequence": "CAESCVWIPCTVTALLGCSCSNKVCYNGIP",
+    "melting_point_K": 370,
+    "filename": "1VB8_A.pdb"
+  },
+  "1NBJ": {
+    "sequence": "CAESCVYIPCTVTALLGCSCSNRVCYNGIP",
+    "melting_point_K": 357,
+    "filename": "1NBJ_A.pdb"
+  },
+  "2MT8": {
+    "sequence": "CEAIYAAPKCRRDSDCPGACICRGNGYCGEAIYAAPFAR",
+    "melting_point_K": 328,
+    "filename": "2MT8_A.pdb"
+  },
+  "1YP8": {
+    "sequence": "CGESCFLGTCYTKGCSCGEWKLCYGTNGGTIFD",
+    "melting_point_K": 338,
+    "filename": "1YP8_A.pdb"
+  },
+  "1PT4": {
+    "sequence": "CGETCFGGTCNTPGCSCTWPICTRDGLPV",
+    "melting_point_K": 361,
+    "filename": "1PT4_A.pdb"
+  },
+  "2KUK": {
+    "sequence": "CGETCFTGTCYTNGCTCDPWPVCTRNGLPV",
+    "melting_point_K": 341,
+    "filename": "2KUK_A.pdb"
+  },
+  "2B38": {
+    "sequence": "CGETCLLGTCYTTGCTCNKYRVCTKDGSVLN",
+    "melting_point_K": 328,
+    "filename": "2B38_A.pdb"
+  },
+  "2JWM": {
+    "sequence": "CGETCTLGTCYTQGCTCSWPICKRNGLPV",
+    "melting_point_K": 372,
+    "filename": "2JWM_A.pdb"
+  },
+  "2F2I": {
+    "sequence": "CGETCVGGTCNTPGCTCSWDKCTRNGLPV",
+    "melting_point_K": 362,
+    "filename": "2F2I_A.pdb"
+  },
+  "2LUR": {
+    "sequence": "CGETCVGGTCNTPGCTCSWPVCGHFRWGV",
+    "melting_point_K": 351,
+    "filename": "2LUR_A.pdb"
+  },
+  "1NB1": {
+    "sequence": "CGETCVGGTCNTPGCTCSWPVCTRNGLPV",
+    "melting_point_K": 360,
+    "filename": "1NB1_A.pdb"
+  },
+  "1ZNU": {
+    "sequence": "CGETCVGGTCNTPGCTCSWPVCTRNGLPV",
+    "melting_point_K": 357,
+    "filename": "1ZNU_A.pdb"
+  },
+  "1HVZ": {
+    "sequence": "GFCRCLCRRGVCRCICTR",
+    "melting_point_K": 354,
+    "filename": "1HVZ_A.pdb"
+  },
+  "7RIJ": {
+    "sequence": "GFPCGESCVYGPCFTAAIGCSCKSKVCYKN",
+    "melting_point_K": 339,
+    "filename": "7RIJ_A.pdb"
+  },
+  "7RN3": {
+    "sequence": "GFPCGESCVYIPCFTAAIGCSCKSKVCYKN",
+    "melting_point_K": 337,
+    "filename": "7RN3_A.pdb"
+  },
+  "2MH1": {
+    "sequence": "GGGCGETCVGGTCNTPGCTCSWPVCTRNGLPVT",
+    "melting_point_K": 342,
+    "filename": "2MH1_A.pdb"
+  },
+  "5WOV": {
+    "sequence": "GGVCPKILQRCRRDSDCPGACICRGNGYCGSGSD",
+    "melting_point_K": 367,
+    "filename": "5WOV_A.pdb"
+  },
+  "5WOW": {
+    "sequence": "GGVCPKILQRCRRDSDCPGACICRGNGYCGYPYDVPDYA",
+    "melting_point_K": 368,
+    "filename": "5WOW_A.pdb"
+  },
+  "2KCG": {
+    "sequence": "GIPCGESCVWIPCISSAIGCSCKSKVCYRN",
+    "melting_point_K": 332,
+    "filename": "2KCG_A.pdb"
+  },
+  "2KNM": {
+    "sequence": "GIPCGESCVWIPCISSAIGCSCKSKVCYRN",
+    "melting_point_K": 331,
+    "filename": "2KNM_A.pdb"
+  },
+  "2KNN": {
+    "sequence": "GIPCGXSCVWIPCISSAIGCSCKSKVCYRN",
+    "melting_point_K": 367,
+    "filename": "2KNN_A.pdb"
+  },
+  "6DHR": {
+    "sequence": "GLPICGETCLLGKCYTPGCSCRRPVCYKN",
+    "melting_point_K": 365,
+    "filename": "6DHR_A.pdb"
+  },
+  "2LAM": {
+    "sequence": "GLPTCGETCTLGTCYVPDCSCSWPICMKN",
+    "melting_point_K": 360,
+    "filename": "2LAM_A.pdb"
+  },
+  "7LHC": {
+    "sequence": "GLPVCGETCVGGTCNTPGCKCSWPVCTRN",
+    "melting_point_K": 349,
+    "filename": "7LHC_A.pdb"
+  },
+  "2MN1": {
+    "sequence": "GLPVCGETCVGGTCNTPGCTCSWWPVCTRN",
+    "melting_point_K": 350,
+    "filename": "2MN1_A.pdb"
+  },
+  "7K7X": {
+    "sequence": "GLPVCGETCVGGTCNTPGCVCSWPVCTRN",
+    "melting_point_K": 358,
+    "filename": "7K7X_A.pdb"
+  },
+  "2GJ0": {
+    "sequence": "GSIPACGESCFKGKCYTPGCSCSKYPLCAKN",
+    "melting_point_K": 367,
+    "filename": "2GJ0_A.pdb"
+  },
+  "2KVX": {
+    "sequence": "GSLCGDTCFVLGCNDSSCSCNYPICVKD",
+    "melting_point_K": 330,
+    "filename": "2KVX_A.pdb"
+  },
+  "2KUX": {
+    "sequence": "GTPCGESCVYIPCISGVIGCSCTDKVCYLN",
+    "melting_point_K": 359,
+    "filename": "2KUX_A.pdb"
+  },
+  "2K7G": {
+    "sequence": "GVPICGETCTLGTCYTAGCSCSWPVCTRN",
+    "melting_point_K": 344,
+    "filename": "2K7G_A.pdb"
+  },
+  "7RMQ": {
+    "sequence": "IPCGESCVWIPCISSAIGCSCKSKVCYRNG",
+    "melting_point_K": 343,
+    "filename": "7RMQ_A.pdb"
+  },
+  "1CRE": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
+    "melting_point_K": 349,
+    "filename": "1CRE_A.pdb"
+  },
+  "1KBS": {
+    "sequence": "RKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
+    "melting_point_K": 349,
+    "filename": "1KBS_A.pdb"
+  },
+  "4GUX": {
+    "sequence": "SGSDGGVCPKILKKCRRDSDCPGACICRGNGYCG",
+    "melting_point_K": 331,
+    "filename": "4GUX_D.pdb"
+  },
+  "2M86": {
+    "sequence": "SGSGASKAPTSFAEYWNLLSAGGVCPKILQRCRRDSDCPGACICRGNGYCG",
+    "melting_point_K": 331,
+    "filename": "2M86_A.pdb"
+  },
+  "2MW0": {
+    "sequence": "SWPICKRNGLPVCGETCTLGTCSTQGCTC",
+    "melting_point_K": 360,
+    "filename": "2MW0_A.pdb"
+  },
+  "1KAL": {
+    "sequence": "SWPVCTRNGLPVCGETCVGGTCNTPGCTC",
+    "melting_point_K": 360,
+    "filename": "1KAL_A.pdb"
+  },
+  "1R1F": {
+    "sequence": "TFCGETCRVIPVCTYSAALGCTCDDRSDGLCKRNGDP",
+    "melting_point_K": 350,
+    "filename": "1R1F_A.pdb"
+  },
+  "1QUZ": {
+    "sequence": "ASCRTPKDCADPCRKETGCPYGKCMNRKCKCNRC",
+    "melting_point_K": 358,
+    "filename": "1QUZ_A.pdb"
+  },
+  "1QDP": {
+    "sequence": "CAKKRNWCGKNEDCCCPMKCIYAWYNQQGSCQTTITGLFKKC",
+    "melting_point_K": 349,
+    "filename": "1QDP_A.pdb"
+  },
+  "1FGE": {
+    "sequence": "CEAPEGYILDDGFICTDIDE",
+    "melting_point_K": 360,
+    "filename": "1FGE_A.pdb"
+  },
+  "1DW4": {
+    "sequence": "CKGKGAKCSRLMYDCCTGSCRSGKC",
+    "melting_point_K": 370,
+    "filename": "1DW4_A.pdb"
+  },
+  "1DW5": {
+    "sequence": "CKGKGAKCSRLMYDCCTGACRSGKC",
+    "melting_point_K": 357,
+    "filename": "1DW5_A.pdb"
+  },
+  "1OMG": {
+    "sequence": "CKGKGAKCSRLMYDCCTGSCKSGKC",
+    "melting_point_K": 371,
+    "filename": "1OMG_A.pdb"
+  },
+  "1MVJ": {
+    "sequence": "CKLKGQSCRKTSYDCCSGSCGRSGKC",
+    "melting_point_K": 346,
+    "filename": "1MVJ_A.pdb"
+  },
+  "1EGT": {
+    "sequence": "CPEGYILDDGFCTDIDE",
+    "melting_point_K": 329,
+    "filename": "1EGT_A.pdb"
+  },
+  "1V6R": {
+    "sequence": "CSCSSLMDKECVYFCHLDIIW",
+    "melting_point_K": 353,
+    "filename": "1V6R_A.pdb"
+  },
+  "2MGO": {
+    "sequence": "CYIQNCPLG",
+    "melting_point_K": 371,
+    "filename": "2MGO_A.pdb"
+  },
+  "1XGC": {
+    "sequence": "ECCNPACGRHYSC",
+    "melting_point_K": 364,
+    "filename": "1XGC_A.pdb"
+  },
+  "1OMB": {
+    "sequence": "EDNCIAEDYGKCTWGGTKCCRGRPCRCSMIGTNCECTPRLIMEGLSFA",
+    "melting_point_K": 354,
+    "filename": "1OMB_A.pdb"
+  },
+  "1UL2": {
+    "sequence": "GCCSHPACAGNNQHIC",
+    "melting_point_K": 332,
+    "filename": "1UL2_A.pdb"
+  },
+  "1B3C": {
+    "sequence": "KDGYLVEKTGCKKTCYKLGENDFCNRECKWKHIGGSYGYCYGFGCYCEGLPDSTQTWPLPNKTC",
+    "melting_point_K": 357,
+    "filename": "1B3C_A.pdb"
+  },
+  "1VNB": {
+    "sequence": "KEGYLVKKSDGCKYDCFWLGKNEHCNTECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSC",
+    "melting_point_K": 346,
+    "filename": "1VNB_A.pdb"
+  },
+  "1ETN": {
+    "sequence": "CELCCNPACAGC",
+    "melting_point_K": 356,
+    "filename": "1ETN_A.pdb"
+  },
+  "1ETL": {
+    "sequence": "CELCCNPGCAGC",
+    "melting_point_K": 366,
+    "filename": "1ETL_A.pdb"
+  },
+  "1ETM": {
+    "sequence": "CELCCNPLCAGC",
+    "melting_point_K": 363,
+    "filename": "1ETM_A.pdb"
+  },
+  "5KK4": {
+    "sequence": "AKDCKRESNTFPGICITKPPCRKACIREKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 338,
+    "filename": "5KK4_A.pdb"
+  },
+  "6MRY": {
+    "sequence": "ARQCKAESNTFTGICIAKPPCRQACIREKFTDGHCSKVLRRCLCTKRC",
+    "melting_point_K": 370,
+    "filename": "6MRY_A.pdb"
+  },
+  "1N4N": {
+    "sequence": "ATCKAECPTWDSVCINKKPCVACCKKAKFSDGHCSKILRRCLCTKEC",
+    "melting_point_K": 362,
+    "filename": "1N4N_A.pdb"
+  },
+  "1VTX": {
+    "sequence": "CAKKRNWCGKTEDCCCPMKCVYAWYNEQGSCQSTISALWKKC",
+    "melting_point_K": 356,
+    "filename": "1VTX_A.pdb"
+  },
+  "5TY4": {
+    "sequence": "CCLRPLYIDFRKDLGWKWIHEPKGYNANFCAGACPYLWSSDTQHSRVLSLYNTINPEASASPCCVSQDLEPLTIVYYVGRKPKVEQLSNMIVKSCKC",
+    "melting_point_K": 359,
+    "filename": "5TY4_B.pdb"
+  },
+  "1ZA8": {
+    "sequence": "CGESCAMISFCFTEVIGCSCKNKVCYLNSIS",
+    "melting_point_K": 358,
+    "filename": "1ZA8_A.pdb"
+  },
+  "1BH4": {
+    "sequence": "CGESCVWIPCISAALGCSCKNKVCYRNGIP",
+    "melting_point_K": 360,
+    "filename": "1BH4_A.pdb"
+  },
+  "2KCH": {
+    "sequence": "CGETCFGGTCNTPGCSCTWPICTRDGLPV",
+    "melting_point_K": 360,
+    "filename": "2KCH_A.pdb"
+  },
+  "3E4H": {
+    "sequence": "CGETCTLGTCYTAGCSCSWPVCTRNGVPI",
+    "melting_point_K": 372,
+    "filename": "3E4H_A.pdb"
+  },
+  "2F2J": {
+    "sequence": "CGETCVGGTCNTPGCTCSKNKCTRNGLPV",
+    "melting_point_K": 347,
+    "filename": "2F2J_A.pdb"
+  },
+  "1CLV": {
+    "sequence": "CIPKWNRCGPKMDGVPCCEPYTCTSDYYGNCS",
+    "melting_point_K": 335,
+    "filename": "1CLV_I.pdb"
+  },
+  "1HTX": {
+    "sequence": "CIPKWNRCGPKMDGVPCCEPYTCTSDYYGNCS",
+    "melting_point_K": 350,
+    "filename": "1HTX_A.pdb"
+  },
+  "1QFD": {
+    "sequence": "CIPKWNRCGPKMDGVPCCEPYTCTSDYYGNCS",
+    "melting_point_K": 368,
+    "filename": "1QFD_A.pdb"
+  },
+  "1HVW": {
+    "sequence": "CIPSGQPCPYNENCCSQSCTGGRCD",
+    "melting_point_K": 361,
+    "filename": "1HVW_A.pdb"
+  },
+  "1TT3": {
+    "sequence": "CKGKGAKCSKLMYDCCTGSCRSGKC",
+    "melting_point_K": 362,
+    "filename": "1TT3_A.pdb"
+  },
+  "1FEO": {
+    "sequence": "CKGKGAKCSRLMYDCCTGSCRSGKCG",
+    "melting_point_K": 339,
+    "filename": "1FEO_A.pdb"
+  },
+  "1MVI": {
+    "sequence": "CKGKGAKCSRLMYDCCTGSCRSGKC",
+    "melting_point_K": 365,
+    "filename": "1MVI_A.pdb"
+  },
+  "1TTK": {
+    "sequence": "CKGKGAKCSRLMKDCCTGSCRSGKC",
+    "melting_point_K": 371,
+    "filename": "1TTK_A.pdb"
+  },
+  "1CNN": {
+    "sequence": "CKGKGAPCRKYMYDCCSGSCGRRGKC",
+    "melting_point_K": 328,
+    "filename": "1CNN_A.pdb"
+  },
+  "1OMN": {
+    "sequence": "CKGKGAPCRKMMYDCCSGSCGRRGKC",
+    "melting_point_K": 332,
+    "filename": "1OMN_A.pdb"
+  },
+  "1F3K": {
+    "sequence": "CKQADEPCDVFSLDCCTGICLGVCMW",
+    "melting_point_K": 349,
+    "filename": "1F3K_A.pdb"
+  },
+  "1TR6": {
+    "sequence": "CKSPGSSCSKTSYNCCRSCNPYTKRCY",
+    "melting_point_K": 327,
+    "filename": "1TR6_A.pdb"
+  },
+  "2CCO": {
+    "sequence": "CKSPGSSCSPTSYGCCRSCNPYTKRCY",
+    "melting_point_K": 350,
+    "filename": "2CCO_A.pdb"
+  },
+  "1RPB": {
+    "sequence": "CLGIGSCNDFAGCGYAVVCFW",
+    "melting_point_K": 345,
+    "filename": "1RPB_A.pdb"
+  },
+  "1RPC": {
+    "sequence": "CLGIGSCNDFAGCGYAVVCFW",
+    "melting_point_K": 360,
+    "filename": "1RPC_A.pdb"
+  },
+  "1D5Q": {
+    "sequence": "CNLARCQLSCKSLGLKGGCQGSFCTCG",
+    "melting_point_K": 329,
+    "filename": "1D5Q_A.pdb"
+  },
+  "1AV3": {
+    "sequence": "CRIPNQKCFQHLDDCCSRKCNRFNKCV",
+    "melting_point_K": 358,
+    "filename": "1AV3_A.pdb"
+  },
+  "1KCP": {
+    "sequence": "CRIPNQKCFQHLVDCCSRKCNRFNKCV",
+    "melting_point_K": 359,
+    "filename": "1KCP_A.pdb"
+  },
+  "1SRB": {
+    "sequence": "CSCKDMTDKECLYFCHQDVIW",
+    "melting_point_K": 334,
+    "filename": "1SRB_A.pdb"
+  },
+  "1EDP": {
+    "sequence": "CSCSSLMDKECVYFCHL",
+    "melting_point_K": 365,
+    "filename": "1EDP_A.pdb"
+  },
+  "1EDN": {
+    "sequence": "CSCSSLMDKECVYFCHLDIIW",
+    "melting_point_K": 353,
+    "filename": "1EDN_A.pdb"
+  },
+  "1MPZ": {
+    "sequence": "CTTGPCCRQCKLKPAGTTCWKTSLTSHYCTGKSCDCPLYPG",
+    "melting_point_K": 368,
+    "filename": "1MPZ_A.pdb"
+  },
+  "1CMR": {
+    "sequence": "CTTSKECWSVCQRLHNTSKGWCDHRGCICES",
+    "melting_point_K": 328,
+    "filename": "1CMR_A.pdb"
+  },
+  "1MR0": {
+    "sequence": "CVRLHESCLGQQVPCCDPAATCYCRFFNAFCYCR",
+    "melting_point_K": 357,
+    "filename": "1MR0_A.pdb"
+  },
+  "1HYK": {
+    "sequence": "CVRLHESCLGQQVPCCDPCATCYCRFFNAFCYCRKLGTAMNPCSRT",
+    "melting_point_K": 371,
+    "filename": "1HYK_A.pdb"
+  },
+  "1MYN": {
+    "sequence": "DCLSGRYKGPCAVWDNETCRRVCKEEGRSSGHCSPSLKCWCEGC",
+    "melting_point_K": 337,
+    "filename": "1MYN_A.pdb"
+  },
+  "4BVV": {
+    "sequence": "DCMFGNGKGYRGKKATTVTGTPCQEWAAQEPHRHSTFIPGTNKWAGLEKNYCRNPDGDINGPWCYTMNPRKLFDYCDIPLC",
+    "melting_point_K": 355,
+    "filename": "4BVV_A.pdb"
+  },
+  "1UOY": {
+    "sequence": "DTCGSGYNVDQRRTNSGCKAGNGDRHFCGCDRTGVVECKGGKWTEVQDCGSSSCKGTSNGGATC",
+    "melting_point_K": 352,
+    "filename": "1UOY_A.pdb"
+  },
+  "1NOT": {
+    "sequence": "ECCNPACHRHYSC",
+    "melting_point_K": 363,
+    "filename": "1NOT_A.pdb"
+  },
+  "1XGA": {
+    "sequence": "ECCNPACARHYSC",
+    "melting_point_K": 362,
+    "filename": "1XGA_A.pdb"
+  },
+  "1XGB": {
+    "sequence": "ECCNPACGRHYSC",
+    "melting_point_K": 367,
+    "filename": "1XGB_A.pdb"
+  },
+  "1IEN": {
+    "sequence": "FNWRCCLIPACRRNHKKFC",
+    "melting_point_K": 332,
+    "filename": "1IEN_A.pdb"
+  },
+  "5XDI": {
+    "sequence": "FQCGRQAGGARCSNGLCCSQFGYCGSTPPYCGAGQCQSQC",
+    "melting_point_K": 333,
+    "filename": "5XDI_A.pdb"
+  },
+  "999999999999999926539781176481198923508803215199467887262646419780362305536": {
+    "sequence": "GCCSDPLCAWAC",
+    "melting_point_K": 355,
+    "filename": null
+  },
+  "1CNL": {
+    "sequence": "GCCSDPRCAWRC",
+    "melting_point_K": 350,
+    "filename": "1CNL_A.pdb"
+  },
+  "1G2G": {
+    "sequence": "GCCSDPKCAWRC",
+    "melting_point_K": 371,
+    "filename": "1G2G_A.pdb"
+  },
+  "1PEN": {
+    "sequence": "GCCSLPPCAANNPDYC",
+    "melting_point_K": 349,
+    "filename": "1PEN_A.pdb"
+  },
+  "1AKG": {
+    "sequence": "GCCSLPPCALSNPDYC",
+    "melting_point_K": 353,
+    "filename": "1AKG_A.pdb"
+  },
+  "10000000000000000470601344959054695891559601407866630764278709534898249531392": {
+    "sequence": "GCCSNPRCAWRC",
+    "melting_point_K": 347,
+    "filename": null
+  },
+  "1MII": {
+    "sequence": "GCCSNPVCHLEHSNLC",
+    "melting_point_K": 348,
+    "filename": "1MII_A.pdb"
+  },
+  "1HP9": {
+    "sequence": "GHACYRNCWREGNDEETCKERC",
+    "melting_point_K": 367,
+    "filename": "1HP9_A.pdb"
+  },
+  "4R5U": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICEIPRGDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 329,
+    "filename": "4R5U_A.pdb"
+  },
+  "6ATL": {
+    "sequence": "GSVVIGQRCYRSPDCYSACKKLVGKATGKCTNGRCDC",
+    "melting_point_K": 356,
+    "filename": "6ATL_A.pdb"
+  },
+  "2Z3S": {
+    "sequence": "GVPINVSCTGSKDCYAPCRKQTGCPNAKCINKSCKCYGC",
+    "melting_point_K": 340,
+    "filename": "2Z3S_A.pdb"
+  },
+  "1HJE": {
+    "sequence": "ICCNPACAPKYSC",
+    "melting_point_K": 348,
+    "filename": "1HJE_A.pdb"
+  },
+  "1QMW": {
+    "sequence": "ICCNPACGPKYSC",
+    "melting_point_K": 354,
+    "filename": "1QMW_A.pdb"
+  },
+  "1MTQ": {
+    "sequence": "IRDECCSNPACRVNNPHVC",
+    "melting_point_K": 371,
+    "filename": "1MTQ_A.pdb"
+  },
+  "2B3C": {
+    "sequence": "KDGYLVEKTGCKKTCYKLGENDFCNRECKWKHIGGSYGYCYGFGCYCEGLPDSTQTWPLPNKTC",
+    "melting_point_K": 352,
+    "filename": "2B3C_A.pdb"
+  },
+  "1NPI": {
+    "sequence": "KEGYLMDHEGCKLSCFIRPSGYCGRECGIKKGSSGYCAWPACYCYGLPNWVKVWDRATNKC",
+    "melting_point_K": 347,
+    "filename": "1NPI_A.pdb"
+  },
+  "2YBR": {
+    "sequence": "KEGYLVDKNTGCKYECLKLGDNDYCLRECKQQYGKGAGGYCYAFACWCTHLYEQAIVWPLPNKRCS",
+    "melting_point_K": 339,
+    "filename": "2YBR_C.pdb"
+  },
+  "2YC1": {
+    "sequence": "KEGYLVDKNTGCKYECLKLGDNDYCLRECKQQYGKGAGGYCYAFACWCTHLYEQAIVWPLPNKRCS",
+    "melting_point_K": 342,
+    "filename": "2YC1_C.pdb"
+  },
+  "4V1D": {
+    "sequence": "KEGYLVDKNTGCKYECLKLGDNDYCLRECKQQYGKGAGGYCYAFACWCTHLYEQAIVWPLPNKRCS",
+    "melting_point_K": 334,
+    "filename": "4V1D_C.pdb"
+  },
+  "2SN3": {
+    "sequence": "KEGYLVKKSDGCKYGCLKLGENEGCDTECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSC",
+    "melting_point_K": 331,
+    "filename": "2SN3_A.pdb"
+  },
+  "2M01": {
+    "sequence": "KKKCQLPSDVGKGKASFTRYYYNEESGKCETFIYGGVGGNSNNFLTKEDCCRECAQGSC",
+    "melting_point_K": 350,
+    "filename": "2M01_A.pdb"
+  },
+  "3PSM": {
+    "sequence": "KTCENLADTFRGPCFTDGSCDDHCKNKEHLIKGRCRDDFRCWCTRNC",
+    "melting_point_K": 351,
+    "filename": "3PSM_A.pdb"
+  },
+  "2LJ7": {
+    "sequence": "KTCENLSDSFKGPCIPDGNCNKHCKEKEHLLSGRCRDDFRCWCTRNC",
+    "melting_point_K": 363,
+    "filename": "2LJ7_A.pdb"
+  },
+  "6NOM": {
+    "sequence": "KTCENLSGTFKGPCIPDGNCNKHCRNNEHLLSGRCRDDFRCWCTNRC",
+    "melting_point_K": 355,
+    "filename": "6NOM_A.pdb"
+  },
+  "1BK8": {
+    "sequence": "LCNERPSQTWSGNCGNTAHCDKQCQDWEKASHGACHKRENHWKCFCYFNC",
+    "melting_point_K": 349,
+    "filename": "1BK8_A.pdb"
+  },
+  "5KY4": {
+    "sequence": "NTPDCTESSCFNGGTCVDGINSFTCLCPPGFTGSYCQYDV",
+    "melting_point_K": 360,
+    "filename": "5KY4_B.pdb"
+  },
+  "1AYJ": {
+    "sequence": "QKLCERPSGTWSGVCGNNNACKNQCINLEKARHGSCNYVFPAHKCICYFPC",
+    "melting_point_K": 337,
+    "filename": "1AYJ_A.pdb"
+  },
+  "2N2R": {
+    "sequence": "QKLCQRPSGTWSGVCGNNNACKNQCIRLEKARHGSCNYVFPAHKCICYFPC",
+    "melting_point_K": 366,
+    "filename": "2N2R_A.pdb"
+  },
+  "1EIS": {
+    "sequence": "QRCGSQGGGSTCPGLRCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGGNCQYRCSSS",
+    "melting_point_K": 338,
+    "filename": "1EIS_A.pdb"
+  },
+  "1EN2": {
+    "sequence": "QRCGSQGGGSTCPGLRCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGGNCQYRCSSS",
+    "melting_point_K": 327,
+    "filename": "1EN2_A.pdb"
+  },
+  "1ENM": {
+    "sequence": "QRCGSQGGGSTCPGLRCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGGNCQYRCSSS",
+    "melting_point_K": 328,
+    "filename": "1ENM_A.pdb"
+  },
+  "1R9I": {
+    "sequence": "QRLCCGFPKSCRSRQCKPHRCC",
+    "melting_point_K": 372,
+    "filename": "1R9I_A.pdb"
+  },
+  "2M8B": {
+    "sequence": "QRLCEKPSGTWSGVCGNNGACRNQCIRLEKARHGSCNYVFPAHKCICYFPC",
+    "melting_point_K": 368,
+    "filename": "2M8B_B.pdb"
+  },
+  "1K64": {
+    "sequence": "RDPCCYHPTCNMSNPQIC",
+    "melting_point_K": 346,
+    "filename": "1K64_A.pdb"
+  },
+  "1MR4": {
+    "sequence": "RECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 352,
+    "filename": "1MR4_A.pdb"
+  },
+  "4AAZ": {
+    "sequence": "RECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 365,
+    "filename": "4AAZ_A.pdb"
+  },
+  "4AB0": {
+    "sequence": "RECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 371,
+    "filename": "4AB0_A.pdb"
+  },
+  "1GPT": {
+    "sequence": "RICRRRSAGFKGPCVSNKNCAQVCMQEGWGGGNCDGPLRRCKCMRRC",
+    "melting_point_K": 354,
+    "filename": "1GPT_A.pdb"
+  },
+  "1BEI": {
+    "sequence": "RSCIDTIPKSRCTAFQCKHSMAYRLSFCRKTCGTC",
+    "melting_point_K": 338,
+    "filename": "1BEI_A.pdb"
+  },
+  "1ROO": {
+    "sequence": "RSCIDTIPKSRCTAFQCKHSMKYRLSFCRKTCGTC",
+    "melting_point_K": 364,
+    "filename": "1ROO_A.pdb"
+  },
+  "1GNA": {
+    "sequence": "TCEICAYAACTGC",
+    "melting_point_K": 370,
+    "filename": "1GNA_A.pdb"
+  },
+  "1IEO": {
+    "sequence": "VGVCCGYKLCHPC",
+    "melting_point_K": 339,
+    "filename": "1IEO_A.pdb"
+  },
+  "1WT7": {
+    "sequence": "WCSTCLDLACTGSKDCYAPCRKQTGCPNAKCINKSCKCYGC",
+    "melting_point_K": 330,
+    "filename": "1WT7_A.pdb"
+  },
+  "1SH1": {
+    "sequence": "AACKCDDEGPDIRTAPLTGTVDLGSCNAGWEKCASYYTIIADCCRKKK",
+    "melting_point_K": 328,
+    "filename": "1SH1_A.pdb"
+  },
+  "2SH1": {
+    "sequence": "AACKCDDEGPDIRTAPLTGTVDLGSCNAGWEKCASYYTIIADCCRKKK",
+    "melting_point_K": 360,
+    "filename": "2SH1_A.pdb"
+  },
+  "1SHI": {
+    "sequence": "AACKCDDEGPDIRTAPLTGTVDLGSCNAGWEKCASYYTIIADCCRKKKX",
+    "melting_point_K": 363,
+    "filename": "1SHI_A.pdb"
+  },
+  "1Q2K": {
+    "sequence": "AACYSSDCRVKCVAMGFSSGKCINSKCKCYK",
+    "melting_point_K": 355,
+    "filename": "1Q2K_A.pdb"
+  },
+  "1R1G": {
+    "sequence": "AACYSSDCRVKCVAMGFSSGKCINSKCKCYK",
+    "melting_point_K": 334,
+    "filename": "1R1G_A.pdb"
+  },
+  "2N1S": {
+    "sequence": "AAGQCYRGRCSGGLCCSKYGYCGSGPAYCG",
+    "melting_point_K": 347,
+    "filename": "2N1S_A.pdb"
+  },
+  "1DTK": {
+    "sequence": "AAKYCKLPLRIGPCKRKIPSFYYKWKAKQCLPFDYSGCGGNANRFKTIEECRRTCVG",
+    "melting_point_K": 357,
+    "filename": "1DTK_A.pdb"
+  },
+  "1BDS": {
+    "sequence": "AAPCFCSGKPGRGDLWILRGTCPGGYGYTSNCYKWPNICCYPH",
+    "melting_point_K": 346,
+    "filename": "1BDS_A.pdb"
+  },
+  "2BDS": {
+    "sequence": "AAPCFCSGKPGRGDLWILRGTCPGGYGYTSNCYKWPNICCYPH",
+    "melting_point_K": 359,
+    "filename": "2BDS_A.pdb"
+  },
+  "1JLZ": {
+    "sequence": "ACGSCRKKCKGSGKCINGRCKCY",
+    "melting_point_K": 367,
+    "filename": "1JLZ_A.pdb"
+  },
+  "1QK6": {
+    "sequence": "ACKGVFDACTPGKNECCPNRVCSDKHKWCKWKL",
+    "melting_point_K": 350,
+    "filename": "1QK6_A.pdb"
+  },
+  "1MM0": {
+    "sequence": "ACNFQSCWATCQAQHSIYFRRAFCDRSQCKCVFVRG",
+    "melting_point_K": 344,
+    "filename": "1MM0_A.pdb"
+  },
+  "1AG7": {
+    "sequence": "ACSGRGSRCPPQCCMGLRCGRGNPQKCIGAHEDV",
+    "melting_point_K": 371,
+    "filename": "1AG7_A.pdb"
+  },
+  "1RMK": {
+    "sequence": "ACSKKWEYCIVPILGFVYCCPGLICGPFVCV",
+    "melting_point_K": 356,
+    "filename": "1RMK_A.pdb"
+  },
+  "1JU8": {
+    "sequence": "ADCNGACSPFEVPPCRSRDCRCVPIGLFVGFCIHPTG",
+    "melting_point_K": 352,
+    "filename": "1JU8_A.pdb"
+  },
+  "1LMR": {
+    "sequence": "ADDDCLPRGSKCLGENKQCCKGTTCMFYANRCVGV",
+    "melting_point_K": 359,
+    "filename": "1LMR_A.pdb"
+  },
+  "1IGX": {
+    "sequence": "ADPGAPAPVNPCCYYPCQHQGICVRFGLDRYQCDCTRTGYSGPNCTIPEIWTWLRTTLRPSPSFIHFLLTHGRWLWDFVNATFIRDTLMRLVLTVRSNLIPSPPTYNIAHDYISWESFSNVSYYTRILPSVPRDCPTPMGTKGKKQLPDAEFLSRRFLLRRKFIPDPQGTNLMFAFFAQHFTHQFFKTSGKMGPGFTKALGHGVDLGHIYGDNLERQYQLRLFKDGKLKYQMLNGEVYPPSVEEAPVLMHYPRGIPPQSQMAVGQEVFGLLPGLMLYATIWLREHNRVCDLLKAEHPTWGDEQLFQTARLILIGETIKIVIEEYVQQLSGYFLQLKFDPELLFGAQFQYRNRIAMEFNQLYHWHPLMPDSFRVGPQDYSYEQFLFNTSMLVDYGVEALVDAFSRQPAGRIGGGRNIDHHILHVAVDVIKESRVLRLQPFNEYRKRFGMKPYTSFQELTGEKEMAAELEELYGDIDALEFYPGLLLEKCHPNSIFGESMIEMGAPFSLKGLLGNPICSPEYWKASTFGGEVGFNLVKTATLKKLVCLNTKTCPYVSFHVPDPRQEDRPGVERPPTEL",
+    "melting_point_K": 343,
+    "filename": "1IGX_A.pdb"
+  },
+  "1IGZ": {
+    "sequence": "ADPGAPAPVNPCCYYPCQHQGICVRFGLDRYQCDCTRTGYSGPNCTIPEIWTWLRTTLRPSPSFIHFLLTHGRWLWDFVNATFIRDTLMRLVLTVRSNLIPSPPTYNIAHDYISWESFSNVSYYTRILPSVPRDCPTPMGTKGKKQLPDAEFLSRRFLLRRKFIPDPQGTNLMFAFFAQHFTHQFFKTSGKMGPGFTKALGHGVDLGHIYGDNLERQYQLRLFKDGKLKYQMLNGEVYPPSVEEAPVLMHYPRGIPPQSQMAVGQEVFGLLPGLMLYATIWLREHNRVCDLLKAEHPTWGDEQLFQTARLILIGETIKIVIEEYVQQLSGYFLQLKFDPELLFGAQFQYRNRIAMEFNQLYHWHPLMPDSFRVGPQDYSYEQFLFNTSMLVDYGVEALVDAFSRQPAGRIGGGRNIDHHILHVAVDVIKESRVLRLQPFNEYRKRFGMKPYTSFQELTGEKEMAAELEELYGDIDALEFYPGLLLEKCHPNSIFGESMIEMGAPFSLKGLLGNPICSPEYWKASTFGGEVGFNLVKTATLKKLVCLNTKTCPYVSFHVPDPRQEDRPGVERPPTEL",
+    "melting_point_K": 363,
+    "filename": "1IGZ_A.pdb"
+  },
+  "2MQF": {
+    "sequence": "AECKGFGKSCVPGKNECCSGYACNSRDKWCKVLL",
+    "melting_point_K": 346,
+    "filename": "2MQF_A.pdb"
+  },
+  "1I26": {
+    "sequence": "AEKDCIAPGAPCFGTDKPCCNPRAWCSSYANKCL",
+    "melting_point_K": 356,
+    "filename": "1I26_A.pdb"
+  },
+  "1SCY": {
+    "sequence": "AFCNLRMCQLSCRSLGLLGKCIGDKCECVKH",
+    "melting_point_K": 329,
+    "filename": "1SCY_A.pdb"
+  },
+  "6VNZ": {
+    "sequence": "AFCNLRRCELSCRSLGLLGACIGEECKCVPY",
+    "melting_point_K": 328,
+    "filename": "6VNZ_A.pdb"
+  },
+  "6D8U": {
+    "sequence": "AFCNLRRCELSCRSLGLLGECIGEECKCVPY",
+    "melting_point_K": 350,
+    "filename": "6D8U_A.pdb"
+  },
+  "6D9O": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEACKCVPY",
+    "melting_point_K": 352,
+    "filename": "6D9O_A.pdb"
+  },
+  "6D9P": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECACVPY",
+    "melting_point_K": 366,
+    "filename": "6D9P_A.pdb"
+  },
+  "6D8S": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECECVPY",
+    "melting_point_K": 350,
+    "filename": "6D8S_A.pdb"
+  },
+  "6D93": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECKCVPA",
+    "melting_point_K": 353,
+    "filename": "6D93_A.pdb"
+  },
+  "6D8Y": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECKCVPH",
+    "melting_point_K": 358,
+    "filename": "6D8Y_A.pdb"
+  },
+  "2LU9": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECKCVPY",
+    "melting_point_K": 352,
+    "filename": "2LU9_A.pdb"
+  },
+  "6D8H": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECKCVPYN",
+    "melting_point_K": 337,
+    "filename": "6D8H_A.pdb"
+  },
+  "6D3T": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECKCVY",
+    "melting_point_K": 353,
+    "filename": "6D3T_A.pdb"
+  },
+  "6D8Q": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEECKCVYN",
+    "melting_point_K": 327,
+    "filename": "6D8Q_A.pdb"
+  },
+  "6D8T": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEKCECVPY",
+    "melting_point_K": 371,
+    "filename": "6D8T_A.pdb"
+  },
+  "6D8R": {
+    "sequence": "AFCNLRRCELSCRSLGLLGKCIGEKCKCVPY",
+    "melting_point_K": 330,
+    "filename": "6D8R_A.pdb"
+  },
+  "1DKC": {
+    "sequence": "AGCIKNGGRCNASAGPPYCCSSYCFQIAGQSYGVCKNR",
+    "melting_point_K": 365,
+    "filename": "1DKC_A.pdb"
+  },
+  "1WO9": {
+    "sequence": "AGECTPGQTKKQDCNTCTCTPTGIWGCTRKACRTT",
+    "melting_point_K": 364,
+    "filename": "1WO9_A.pdb"
+  },
+  "5ZV6": {
+    "sequence": "AGECVRGRCPGGLCCSKFGFCGSGPAYCGG",
+    "melting_point_K": 357,
+    "filename": "5ZV6_A.pdb"
+  },
+  "1DL0": {
+    "sequence": "AICTGADRPCAACCPCCPGTSCKAESNGVSYCRKDEP",
+    "melting_point_K": 357,
+    "filename": "1DL0_A.pdb"
+  },
+  "1LX5": {
+    "sequence": "AILGRSETQECLFFNANWERDRTNQTGVEPCYGDKDKRRHCFATWKNISGSIEIVKQGCWLDDINCYDRTDCIEKKDSPEVYFCCCEGNMCNEKFSYFPEME",
+    "melting_point_K": 352,
+    "filename": "1LX5_B.pdb"
+  },
+  "2GOO": {
+    "sequence": "AILGRSETQECLFFNANWERDRTNQTGVEPCYGDKDKRRHCFATWKNISGSIEIVKQGCWLDDINCYDRTDCIEKKDSPEVYFCCCEGNMCNEKFSYFPEME",
+    "melting_point_K": 364,
+    "filename": "2GOO_C.pdb"
+  },
+  "7KPD": {
+    "sequence": "AIPCGESCVYIPCISVVIGCSCRNKVCYR",
+    "melting_point_K": 341,
+    "filename": "7KPD_A.pdb"
+  },
+  "5VYP": {
+    "sequence": "AKDCKRESNTFPGICITKPPCRKACIREKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 348,
+    "filename": "5VYP_A.pdb"
+  },
+  "1M9Z": {
+    "sequence": "ALCKFCDVRFSTCDNQKSCMSNCSITSICEKPQEVCVAVWRKNDENITLETVCHDPKLPYHDFILEDAASPTCIMKEKKKPGETFFMCSCSSDECNDNIIFSEEYNTSNPD",
+    "melting_point_K": 368,
+    "filename": "1M9Z_A.pdb"
+  },
+  "1TER": {
+    "sequence": "ALCNCNRIIIPHMCWKKCGKK",
+    "melting_point_K": 369,
+    "filename": "1TER_A.pdb"
+  },
+  "1KCN": {
+    "sequence": "ALCPAVCYVGGKALCPDVCYV",
+    "melting_point_K": 369,
+    "filename": "1KCN_A.pdb"
+  },
+  "5TX4": {
+    "sequence": "ALDAAYCFRNVQDNCCLRPLYIDFRKDLGWKWIHEPKGYNANFCAGACPYRASKSPSCVSQDLEPLTIVYYVGRKPKVEQLSNMIVKSCKCS",
+    "melting_point_K": 370,
+    "filename": "5TX4_B.pdb"
+  },
+  "1KTZ": {
+    "sequence": "ALDTNYCFRNLEENCCVRPLYIDFRQDLGWKWVHEPKGYYANFCSGPCPYLRSADTTHSTVLGLYNTLNPEASASPCCVPQDLEPLTILYYVGRTPKVEQLSNMVVKSCKCS",
+    "melting_point_K": 345,
+    "filename": "1KTZ_A.pdb"
+  },
+  "6MAC": {
+    "sequence": "TRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHLPEPG",
+    "melting_point_K": 331,
+    "filename": "6MAC_C.pdb"
+  },
+  "2PJY": {
+    "sequence": "ALQCFCHLCTKDNFTCVTDGLCFVSVTETTDKVIHNSSCIAEIDLIPRDRPFVCAPSSKTGSVTTTYCCNQDHCNKIEL",
+    "melting_point_K": 344,
+    "filename": "2PJY_C.pdb"
+  },
+  "2W9W": {
+    "sequence": "AMDCTTGPCCRQCKLKPAGTTCWKTSVSSHYCTGRSCECPSYPG",
+    "melting_point_K": 350,
+    "filename": "2W9W_A.pdb"
+  },
+  "2W9U": {
+    "sequence": "AMDCTTGPCCRQCKLKPAGTTCWKTSVSSHYCTGRSCECPSYPGNG",
+    "melting_point_K": 359,
+    "filename": "2W9U_A.pdb"
+  },
+  "2W9V": {
+    "sequence": "AMDCTTGPCCRQCKLKPAGTTCWRTSVSSHYCTGRSCECPSYPG",
+    "melting_point_K": 339,
+    "filename": "2W9V_A.pdb"
+  },
+  "2W9O": {
+    "sequence": "AMDCTTGPCCRQCKLKPAGTTCWRTSVSSHYCTGRSCECPSYPGNG",
+    "melting_point_K": 368,
+    "filename": "2W9O_A.pdb"
+  },
+  "1XI7": {
+    "sequence": "AMVSSTCIGHYQKCVNADKPCCSKTVRYGDSKNVRKFICDRDGEGVCVPFDGGVRGLPNGA",
+    "melting_point_K": 333,
+    "filename": "1XI7_A.pdb"
+  },
+  "1XJ1": {
+    "sequence": "AMVSSTCIGHYQKCVNADKPCCSKTVRYGDSKNVRKFICDRDGEGVCVPFDGGVRGLPNGA",
+    "melting_point_K": 354,
+    "filename": "1XJ1_A.pdb"
+  },
+  "3TH2": {
+    "sequence": "ANAFLEELRPGSLERECKEEQCSFEEAREIFKDAERTKLFWISYSDGDQCASSPCQNGGSCKDQLQSYICFCLPAFEGRNCETHKDDQLICVNENGGCEQYCSDHTGTKRSCRCHEGYSLLADGVSCTPTVEYPCGKIPILE",
+    "melting_point_K": 341,
+    "filename": "3TH2_L.pdb"
+  },
+  "3TH3": {
+    "sequence": "ANAFLEELRPGSLERECKEEQCSFEEAREIFKDAERTKLFWISYSDGDQCASSPCQNGGSCKDQLQSYICFCLPAFEGRNCETHKDDQLICVNENGGCEQYCSDHTGTKRSCRCHEGYSLLADGVSCTPTVEYPCGKIPILE",
+    "melting_point_K": 342,
+    "filename": "3TH3_L.pdb"
+  },
+  "3TH4": {
+    "sequence": "ANAFLEELRPGSLERECKEEQCSFEEAREIFKDAERTKLFWISYSDGDQCASSPCQNGGSCKDQLQSYICFCLPAFEGRNCETHKDDQLICVNENGGCEQYCSDHTGTKRSCRCHEGYSLLADGVSCTPTVEYPCGKIPILE",
+    "melting_point_K": 367,
+    "filename": "3TH4_L.pdb"
+  },
+  "4ZMA": {
+    "sequence": "ANAFLEELRPGSLERECKEEQCSFEEAREIFKDAERTKLFWISYSDGDQCASSPCQNGGSCKDQLQSYICFCLPAFEGRNCETHKDDQLICVNENGGCEQYCSDHTGTKRSCRCHEGYSLLADGVSCTPTVEYPCGKIPILEKRNASKPQGR",
+    "melting_point_K": 346,
+    "filename": "4ZMA_L.pdb"
+  },
+  "1IOD": {
+    "sequence": "ANSFLEEVKQGNLERECLEEACSLEEAREVFEDAEQTDEFWSKY",
+    "melting_point_K": 334,
+    "filename": "1IOD_G.pdb"
+  },
+  "1UHA": {
+    "sequence": "APECGERASGKRCPNGKCCSQWGYCGTTDNYCGQGCQSQCDYWRCGRDFGGRLCEEDMCCSKYGWCGYSDDHCEDGCQSQCD",
+    "melting_point_K": 330,
+    "filename": "1UHA_A.pdb"
+  },
+  "1ULM": {
+    "sequence": "APECGERASGKRCPNGKCCSQWGYCGTTDNYCGQGCQSQCDYWRCGRDFGGRLCEEDMCCSKYGWCGYSDDHCEDGCQSQCD",
+    "melting_point_K": 372,
+    "filename": "1ULM_A.pdb"
+  },
+  "1ULN": {
+    "sequence": "APECGERASGKRCPNGKCCSQWGYCGTTDNYCGQGCQSQCDYWRCGRDFGGRLCEEDMCCSKYGWCGYSDDHCEDGCQSQCDLT",
+    "melting_point_K": 351,
+    "filename": "1ULN_A.pdb"
+  },
+  "1BNB": {
+    "sequence": "APLSCGRNGGVCIPIRCPVPMRQIGTCFGRPVKCCRSW",
+    "melting_point_K": 367,
+    "filename": "1BNB_A.pdb"
+  },
+  "4UJ0": {
+    "sequence": "AQQICKAPSQTFPGLCFMDSSCRKYCIKEKFTGGHCSKLQRKCLCTKPC",
+    "melting_point_K": 348,
+    "filename": "4UJ0_A.pdb"
+  },
+  "2LKB": {
+    "sequence": "ARDAYIAKPHNCVYECFDAFSSYCNGVCTKNGAKSGYCQILGTYGNGCWCIALPDNVPIRIPGKCH",
+    "melting_point_K": 365,
+    "filename": "2LKB_A.pdb"
+  },
+  "5MOU": {
+    "sequence": "ARDAYIAKPHNCVYECYNPKGSYCNDLCTENGAESGYCQILGKYGNACWCIQLPDNVPIRIPGKCH",
+    "melting_point_K": 349,
+    "filename": "5MOU_A.pdb"
+  },
+  "6B55": {
+    "sequence": "ARECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 348,
+    "filename": "6B55_A.pdb"
+  },
+  "1VIB": {
+    "sequence": "ASATWGAAYPACENNCRKKYDLCIRCQGKWAGKRGKCAAHCIIQKNNCKGKCKKE",
+    "melting_point_K": 356,
+    "filename": "1VIB_A.pdb"
+  },
+  "1P8B": {
+    "sequence": "ASCNGVCSPFEMPPCGTSACRCIPVGLVIGYCRNPSG",
+    "melting_point_K": 364,
+    "filename": "1P8B_A.pdb"
+  },
+  "3KFD": {
+    "sequence": "ATALQCFCHLCTKDNFTCVTDGLCFVSVTETTDKVIHNSMCIAEIDLIPRDRPFVCAPSSKTGSVTTTYCCNQDHCNKIELPTTV",
+    "melting_point_K": 355,
+    "filename": "3KFD_I.pdb"
+  },
+  "2E3F": {
+    "sequence": "ATCDLASFSSQWVTPNDSLCAAHCIARRYRGGYCNGKRVCVCR",
+    "melting_point_K": 365,
+    "filename": "2E3F_A.pdb"
+  },
+  "2E3E": {
+    "sequence": "ATCDLASFSSQWVTPNDSLCAAHCLVKGYRGGYCKNKICHCRDKF",
+    "melting_point_K": 359,
+    "filename": "2E3E_A.pdb"
+  },
+  "2NY8": {
+    "sequence": "ATCDLASGFGVGSSLCAAHCIARRYRGGYCNSKAVCVCRN",
+    "melting_point_K": 338,
+    "filename": "2NY8_X.pdb"
+  },
+  "2NY9": {
+    "sequence": "ATCDLASGFGVGSSLCAAHCLVKGYRGGYCKNKICHCRDKF",
+    "melting_point_K": 341,
+    "filename": "2NY9_X.pdb"
+  },
+  "2NZ3": {
+    "sequence": "ATCDLASIFNVNHALCAAHCIARRYRGGYCNSKAVCVCRN",
+    "melting_point_K": 354,
+    "filename": "2NZ3_A.pdb"
+  },
+  "2E3G": {
+    "sequence": "ATCDLASKWNWNHTLCAAHCIARRYRGGYCNSKAVCVCRN",
+    "melting_point_K": 361,
+    "filename": "2E3G_A.pdb"
+  },
+  "1L4V": {
+    "sequence": "ATCDLLSGTGINHSACAAHCLLRGNRGGYCNGKAVCVCRN",
+    "melting_point_K": 356,
+    "filename": "1L4V_A.pdb"
+  },
+  "1ICA": {
+    "sequence": "ATCDLLSGTGINHSACAAHCLLRGNRGGYCNGKGVCVCRN",
+    "melting_point_K": 356,
+    "filename": "1ICA_A.pdb"
+  },
+  "2LLD": {
+    "sequence": "ATCDLLSGTGVKHSACAAHCLLRGNRGGYCNGRAICVCRN",
+    "melting_point_K": 368,
+    "filename": "2LLD_A.pdb"
+  },
+  "1WM7": {
+    "sequence": "ATCEDCPEHCATQNARAKCDNDKCVCEPK",
+    "melting_point_K": 336,
+    "filename": "1WM7_A.pdb"
+  },
+  "2KRA": {
+    "sequence": "AVITGACDKDVQCGSGTCCAASAWSRNIRFCIPLGNSGEDCHPASHKVPYDGKRLSSLCPCKSGLTCSKSGEKFKCS",
+    "melting_point_K": 364,
+    "filename": "2KRA_A.pdb"
+  },
+  "1IMT": {
+    "sequence": "AVITGACERDLQCGKGTCCAVSLWIKSVRVCTPVGTSGEDCHPASHKIPFSGQRMHHTCPCAPNLACVQTSPKKFKCLSK",
+    "melting_point_K": 348,
+    "filename": "1IMT_A.pdb"
+  },
+  "2ERI": {
+    "sequence": "CGESCVFIPCISTLLGCSCKNKVCYRNGVIP",
+    "melting_point_K": 370,
+    "filename": "2ERI_A.pdb"
+  },
+  "1Q3J": {
+    "sequence": "CIKNGNGCQPNGSQGNCCSGYCHKQPGWVAGYCRRK",
+    "melting_point_K": 353,
+    "filename": "1Q3J_A.pdb"
+  },
+  "1OMC": {
+    "sequence": "CKSPGSSCSPTSYNCCRSCNPYTKACY",
+    "melting_point_K": 339,
+    "filename": "1OMC_A.pdb"
+  },
+  "1TTL": {
+    "sequence": "CKSPGSSCSPTSYNCCRSCNPYTKRCY",
+    "melting_point_K": 358,
+    "filename": "1TTL_A.pdb"
+  },
+  "1JXC": {
+    "sequence": "CPEIEAQGNECLKEYGGDVGFGFCAPRIFPTICYTRCRENKGAKGGRCRWGQGSNVKCLCDFCGDTPQ",
+    "melting_point_K": 366,
+    "filename": "1JXC_A.pdb"
+  },
+  "2PO8": {
+    "sequence": "CPKILKKCRRDSDCPGACICRGNGYCGSGSDGGV",
+    "melting_point_K": 345,
+    "filename": "2PO8_A.pdb"
+  },
+  "2KYQ": {
+    "sequence": "DCKRKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 357,
+    "filename": "2KYQ_A.pdb"
+  },
+  "1KOZ": {
+    "sequence": "DCVRFWGKCSQTSDCCPHLACKSKWPRNICVWDGSV",
+    "melting_point_K": 345,
+    "filename": "1KOZ_A.pdb"
+  },
+  "1EMX": {
+    "sequence": "DDCGKLFSGCDTNADCCEGYVCRLWCKLDW",
+    "melting_point_K": 353,
+    "filename": "1EMX_A.pdb"
+  },
+  "1G1P": {
+    "sequence": "DDCIKPYGFCSLPILKNGLCCSGACVGVCADL",
+    "melting_point_K": 334,
+    "filename": "1G1P_A.pdb"
+  },
+  "1G1Z": {
+    "sequence": "DDCIKPYGFCSLPILKNGLCCSGACAGVCADL",
+    "melting_point_K": 344,
+    "filename": "1G1Z_A.pdb"
+  },
+  "1QKY": {
+    "sequence": "DEAIRCTGTKDCYIPCRYITGCFNSRCINKSCKCYGCT",
+    "melting_point_K": 352,
+    "filename": "1QKY_A.pdb"
+  },
+  "5KXH": {
+    "sequence": "DGDQCASNPCQNGGTCQDHLKSYVCFCLLDFEGRNCEKSK",
+    "melting_point_K": 371,
+    "filename": "5KXH_B.pdb"
+  },
+  "5KY2": {
+    "sequence": "DGDQCASNPCQNGGTCQDHLKSYVCFCLLDFEGRNCEKSK",
+    "melting_point_K": 347,
+    "filename": "5KY2_B.pdb"
+  },
+  "2LY5": {
+    "sequence": "DKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 333,
+    "filename": "2LY5_A.pdb"
+  },
+  "2LY6": {
+    "sequence": "DKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 331,
+    "filename": "2LY6_A.pdb"
+  },
+  "1I2V": {
+    "sequence": "DKLIGSCVWGAVNYTSDCNGECLLRGYKGGHCGSFANVNCWCET",
+    "melting_point_K": 363,
+    "filename": "1I2V_A.pdb"
+  },
+  "1OZZ": {
+    "sequence": "DKLIGSCVWGAVNYTSNCNAECKRRGYKGGHCGSFANVNCWCET",
+    "melting_point_K": 346,
+    "filename": "1OZZ_A.pdb"
+  },
+  "1P0A": {
+    "sequence": "DKLIGSCVWGAVNYTSNCNAECKRRGYKGGHCGSFLNVNCWCET",
+    "melting_point_K": 343,
+    "filename": "1P0A_A.pdb"
+  },
+  "1P00": {
+    "sequence": "DKLIGSCVWGAVNYTSNCRAECKRRGYKGGHCGSFANVNCWCET",
+    "melting_point_K": 346,
+    "filename": "1P00_A.pdb"
+  },
+  "4Z6A": {
+    "sequence": "DQCASSPCQNGGSCKDQLQSYICFCLPAFEGRNCETHKDDQLICVNENGGCEQYCSDHTGTKRSCRCHEGYSLLADGVSCTPTVEYPCGKIPILEK",
+    "melting_point_K": 334,
+    "filename": "4Z6A_L.pdb"
+  },
+  "1KG1": {
+    "sequence": "DRCRYTLCCDGALKAVSACLHESESCLVPGDCCRGKSRLTLCSYGEGGNGFQCPTGYRQC",
+    "melting_point_K": 341,
+    "filename": "1KG1_A.pdb"
+  },
+  "1NE5": {
+    "sequence": "DRDSCVDKSRCAKYGYYQECQDCCKNAGHNGGTCMFFKCKCA",
+    "melting_point_K": 357,
+    "filename": "1NE5_A.pdb"
+  },
+  "1PX9": {
+    "sequence": "DRDSCVDKSRCAKYGYYQECQDCCKNAGHNGGTCMFFKCKCA",
+    "melting_point_K": 364,
+    "filename": "1PX9_A.pdb"
+  },
+  "6ZOI": {
+    "sequence": "DRPSYCNLPADSGSGTKSEQRIYYNSARKQCLTFTYNGKGGNENNFIHTYDCARTCQYPA",
+    "melting_point_K": 367,
+    "filename": "6ZOI_A.pdb"
+  },
+  "6YHY": {
+    "sequence": "DRPSYCNLPADSGSGTKSEQRIYYNSARKQCLTFTYNGQGGNENNFRRTYDCRRTCQYP",
+    "melting_point_K": 333,
+    "filename": "6YHY_A.pdb"
+  },
+  "1M4F": {
+    "sequence": "DTHFPICIFCCGCCHRSKCGMCCKT",
+    "melting_point_K": 334,
+    "filename": "1M4F_A.pdb"
+  },
+  "5KY0": {
+    "sequence": "DVNECISNPCQNGATCLDQIGEFQCICMPGYEGVYCEINT",
+    "melting_point_K": 364,
+    "filename": "5KY0_B.pdb"
+  },
+  "5KY8": {
+    "sequence": "DVNECISNPCQNGATCLDQIGEFQCICMPGYEGVYCEINT",
+    "melting_point_K": 357,
+    "filename": "5KY8_B.pdb"
+  },
+  "5KY9": {
+    "sequence": "DVNECISNPCQNGGTCLDQIGEFQCICMPGYEGVYCEINT",
+    "melting_point_K": 343,
+    "filename": "5KY9_B.pdb"
+  },
+  "3UCI": {
+    "sequence": "EAEFGKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARLDDLDDRCTGQSADCPRYH",
+    "melting_point_K": 343,
+    "filename": "3UCI_A.pdb"
+  },
+  "1S4Y": {
+    "sequence": "EAETRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHLPEPG",
+    "melting_point_K": 352,
+    "filename": "1S4Y_A.pdb"
+  },
+  "1L3X": {
+    "sequence": "EAGEECDCGSPGNPCCDAATCKLRQGAQCAEGLCCDQCRFMKEGTICRRARGDDLDDYCNGISAGCPRNPFHA",
+    "melting_point_K": 347,
+    "filename": "1L3X_A.pdb"
+  },
+  "1RO3": {
+    "sequence": "ECESGPCCRNCKFLKEGTICKRARGDDMDDYCNGKTCDCPRNPHKGPAT",
+    "melting_point_K": 340,
+    "filename": "1RO3_A.pdb"
+  },
+  "2ECH": {
+    "sequence": "ECESGPCCRNCKFLKEGTICKRARGDDMDDYCNGKTCDCPRNPHKGPAT",
+    "melting_point_K": 367,
+    "filename": "2ECH_A.pdb"
+  },
+  "6GFT": {
+    "sequence": "ECKGFGKSCVPGKNECCSGLTCSNKHKWCKVLL",
+    "melting_point_K": 370,
+    "filename": "6GFT_A.pdb"
+  },
+  "1NIX": {
+    "sequence": "ECKGFGKSCVPGKNECCSGYACNSRDKWCKVLL",
+    "melting_point_K": 367,
+    "filename": "1NIX_A.pdb"
+  },
+  "2M4Z": {
+    "sequence": "ECLEIFKACNPSNDQCCKSSKLVCSRKTRACKYQI",
+    "melting_point_K": 344,
+    "filename": "2M4Z_A.pdb"
+  },
+  "2M50": {
+    "sequence": "ECLEIFKACNPSNDQCCKSSKLVCSRKTRWCAYQI",
+    "melting_point_K": 342,
+    "filename": "2M50_A.pdb"
+  },
+  "1MB6": {
+    "sequence": "ECLEIFKACNPSNDQCCKSSKLVCSRKTRWCKYQI",
+    "melting_point_K": 340,
+    "filename": "1MB6_A.pdb"
+  },
+  "2M4X": {
+    "sequence": "ECLEIFKACNPSNDQCCKSSKLVCSRKTRWCKYQI",
+    "melting_point_K": 362,
+    "filename": "2M4X_A.pdb"
+  },
+  "1RYV": {
+    "sequence": "ECLGFGKGCNPSNDQCCKSSNLVCSRAHRWCKYEI",
+    "melting_point_K": 328,
+    "filename": "1RYV_A.pdb"
+  },
+  "1RYG": {
+    "sequence": "ECLGFGKGCNPSNDQCCKSSNLVCSRKHAWCKYEI",
+    "melting_point_K": 344,
+    "filename": "1RYG_A.pdb"
+  },
+  "1NIY": {
+    "sequence": "ECLGFGKGCNPSNDQCCKSSNLVCSRKHRWCKYEI",
+    "melting_point_K": 336,
+    "filename": "1NIY_A.pdb"
+  },
+  "2A2V": {
+    "sequence": "ECRKMFGGCSVDSDCCAHLGCKPTLKYCAWDGTF",
+    "melting_point_K": 367,
+    "filename": "2A2V_A.pdb"
+  },
+  "1D1H": {
+    "sequence": "ECRYLFGGCKTTSDCCKHLGCKFRDKYCAWDFTFS",
+    "melting_point_K": 353,
+    "filename": "1D1H_A.pdb"
+  },
+  "1EIT": {
+    "sequence": "ECVPENGHCRDWYDECCEGFYCSCRQPPKCICRNNN",
+    "melting_point_K": 327,
+    "filename": "1EIT_A.pdb"
+  },
+  "1LMM": {
+    "sequence": "EDCIPKWKGCVNRHGDCCEGLECWKRRRSFEVCVPKTPKT",
+    "melting_point_K": 356,
+    "filename": "1LMM_A.pdb"
+  },
+  "4EC7": {
+    "sequence": "EDHPVHNLGEHSVCDSVSAWVTKTTATDIKGNTVTVMENVNLDNKVYKEYFFETKCKNPNPEPSGCRGIDSSHWNSYCTETDTFIKALTMEGNQASWRFIRIETACVCVITKKKGN",
+    "melting_point_K": 333,
+    "filename": "4EC7_A.pdb"
+  },
+  "1AGG": {
+    "sequence": "EDNCIAEDYGKCTWGGTKCCRGRPCRCSMIGTNCECTPRLIMEGLSFA",
+    "melting_point_K": 366,
+    "filename": "1AGG_A.pdb"
+  },
+  "1OMA": {
+    "sequence": "EDNCIAEDYGKCTWGGTKCCRGRPCRCSMIGTNCECTPRLIMEGLSFA",
+    "melting_point_K": 358,
+    "filename": "1OMA_A.pdb"
+  },
+  "6LSQ": {
+    "sequence": "EFECESGPCCRNCKFLKEGTICKRARGDDMDDYCNGKTCDCPRNPHKGPAT",
+    "melting_point_K": 354,
+    "filename": "6LSQ_A.pdb"
+  },
+  "2M7F": {
+    "sequence": "EFHHHHHHGKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDWNDDRCTGQSADCPRNGLYG",
+    "melting_point_K": 360,
+    "filename": "2M7F_A.pdb"
+  },
+  "2M7H": {
+    "sequence": "EFHHHHHHGKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDWNDDRCTGQSADCPRNPWNG",
+    "melting_point_K": 351,
+    "filename": "2M7H_A.pdb"
+  },
+  "2M75": {
+    "sequence": "EFHHHHHHGKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDWNDDRCTGQSADCPRYH",
+    "melting_point_K": 341,
+    "filename": "2M75_A.pdb"
+  },
+  "1V28": {
+    "sequence": "ENFAGGCATGFMRTADGRCKPTF",
+    "melting_point_K": 339,
+    "filename": "1V28_A.pdb"
+  },
+  "1HRL": {
+    "sequence": "ENFAGGCATGYLRTADGRCKPTF",
+    "melting_point_K": 350,
+    "filename": "1HRL_A.pdb"
+  },
+  "1B1V": {
+    "sequence": "ENFNGGCLAGYMRTADGRCKPTF",
+    "melting_point_K": 333,
+    "filename": "1B1V_A.pdb"
+  },
+  "1B5N": {
+    "sequence": "ENFNGGCLAGYMRTADGRCKPTF",
+    "melting_point_K": 350,
+    "filename": "1B5N_A.pdb"
+  },
+  "1BQF": {
+    "sequence": "ENFSGGCVAGYMRTPDGRCKPTFYQ",
+    "melting_point_K": 344,
+    "filename": "1BQF_A.pdb"
+  },
+  "1WKX": {
+    "sequence": "EQCGRQAGGKLCPDNLCCSQWGWCGSTDEYCSPDHNCQSNCKD",
+    "melting_point_K": 335,
+    "filename": "1WKX_A.pdb"
+  },
+  "1HEV": {
+    "sequence": "EQCGRQAGGKLCPNNLCCSQWGWCGSTDEYCSPDHNCQSNCKD",
+    "melting_point_K": 332,
+    "filename": "1HEV_A.pdb"
+  },
+  "1Q9B": {
+    "sequence": "EQCGRQAGGKLCPNNLCCSQWGWCGSTDEYCSPDHNCQSNCKD",
+    "melting_point_K": 345,
+    "filename": "1Q9B_A.pdb"
+  },
+  "4WP4": {
+    "sequence": "EQCGRQAGGKLCPNNLCCSQWGWCGSTDEYCSPDHNCQSNCKD",
+    "melting_point_K": 334,
+    "filename": "4WP4_A.pdb"
+  },
+  "1T0W": {
+    "sequence": "EQCGRQAGGKLCPNNLCCSQWGWCGSTDEYCS",
+    "melting_point_K": 331,
+    "filename": "1T0W_A.pdb"
+  },
+  "5OLL": {
+    "sequence": "EQCVKKDELCIPYYLDCCEPLECKKVNWWDHKCIG",
+    "melting_point_K": 355,
+    "filename": "5OLL_A.pdb"
+  },
+  "1H20": {
+    "sequence": "EQHADPICNKPCKTHDDCSGAWFCQACWNSARTCGPYVG",
+    "melting_point_K": 369,
+    "filename": "1H20_A.pdb"
+  },
+  "1WQ9": {
+    "sequence": "EVRPFLDVYQRSACQTRETLVSILQEHPDEISDIFRPSCVAVLRCSGCCTDESMKCTPVGKHTADIQIMRMNPRTHSSKMEVMKFMEHTACECRPA",
+    "melting_point_K": 332,
+    "filename": "1WQ9_A.pdb"
+  },
+  "1M2S": {
+    "sequence": "FGLIDVKCFASSECWTACKKVTGSGQGKCQNNQCRCY",
+    "melting_point_K": 348,
+    "filename": "1M2S_A.pdb"
+  },
+  "2OFS": {
+    "sequence": "FLQCYNCPNPTADCKTAVQCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQ",
+    "melting_point_K": 370,
+    "filename": "2OFS_A.pdb"
+  },
+  "1B8W": {
+    "sequence": "FVQHRPRDCESINGVCRHKDTVNCREIFLADCYNDGQKCCRK",
+    "melting_point_K": 340,
+    "filename": "1B8W_A.pdb"
+  },
+  "1ATX": {
+    "sequence": "GAACLCKSDGPNTRGNSMSGTIWVFGCPSGWNNCEGRAIIGYCCKQ",
+    "melting_point_K": 354,
+    "filename": "1ATX_A.pdb"
+  },
+  "2MPQ": {
+    "sequence": "GACLGFGKSCNPSNDQCCKSSSLACSTKHKWCKYEL",
+    "melting_point_K": 330,
+    "filename": "2MPQ_A.pdb"
+  },
+  "4D4O": {
+    "sequence": "GAMSCVYAFGSNGQRQLGLGHDEDMDTPQRSVPGDDGAIVRKIACGGNHSVMLTNDGNLVGCGDNRRGELDSAQALRQVHDWRPVEVPAPVVDVACGWDTTVIVDADGRVWQRGGGCYEFTQQHVPLNSNDERIAVYGCFQNFVVVQGTRVYGWGSNTKCQLQEPKSRSLKEPVLVYDTGSVAVDYVAMGKDFMVIVDEGGRIVHASGRLPTGFELKQQQKRHNLVVLCMWTSIHLWNARLNTVESFGRGTHSQLFPQERLDFPIVGVATGSEHGILTTANQEGKSHCYNVYCWGWGEHGNCGPQKGSQPGLQLVGQYSGKPRVFGGCATTWIVLGSGSGSGSGSMSTYDEIEIEDMTFEPENQMFTYPCPCGDRFQIYLDDMFEGEKVAVCPSCSLMIDVVFDKEDLAEYYEEAGIHPPEPIAAAA",
+    "melting_point_K": 358,
+    "filename": "4D4O_A.pdb"
+  },
+  "4D4P": {
+    "sequence": "GAMSCVYAFGSNGQRQLGLGHDEDMDTPQRSVPGDDGAIVRKIACGGNHSVMLTNDGNLVGCGDNRRGELDSAQALRQVHDWRPVEVPAPVVDVACGWDTTVIVDADGRVWQRGGGCYEFTQQHVPLNSNDERIAVYGCFQNFVVVQGTRVYGWGSNTKCQLQEPKSRSLKEPVLVYDTGSVAVDYVAMGKDFMVIVDEGGRIVHASGRLPTGFELKQQQKRHNLVVLCMWTSIHLWNARLNTVESFGRGTHSQLFPQERLDFPIVGVATGSEHGILTTANQEGKSHCYNVYCWGWGEHGNCGPQKGSQPGLQLVGQYSGKPRVFGGCATTWIVLGSGSGSGSGSMSTYDEIEIEDMTFEPENQMFTYPCPCGDRFQIYLDDMFEGEKVAVCPSCSLMIDVVFDKEDLAEYYEEAGIHPPEPIAAAA",
+    "melting_point_K": 330,
+    "filename": "4D4P_A.pdb"
+  },
+  "1PQR": {
+    "sequence": "GCCGPYPNAACHPCGCKVGRPPYCDRPSGG",
+    "melting_point_K": 339,
+    "filename": "1PQR_A.pdb"
+  },
+  "1P1P": {
+    "sequence": "GCCGSYPNAACHPCSCKDRPSYCGQ",
+    "melting_point_K": 339,
+    "filename": "1P1P_A.pdb"
+  },
+  "99999999999999995164818811802792197885196090803013355167206819763650035712": {
+    "sequence": "GCCSDPRCAWECX",
+    "melting_point_K": 351,
+    "filename": null
+  },
+  "1MXN": {
+    "sequence": "GCCSYPPCFATNPDC",
+    "melting_point_K": 338,
+    "filename": "1MXN_A.pdb"
+  },
+  "1MXP": {
+    "sequence": "GCCSYPPCPATNPDC",
+    "melting_point_K": 343,
+    "filename": "1MXP_A.pdb"
+  },
+  "2JTB": {
+    "sequence": "GCKGFGDSCTPGKNECCPNYACSSKHKWCKVYL",
+    "melting_point_K": 336,
+    "filename": "2JTB_A.pdb"
+  },
+  "1LU8": {
+    "sequence": "GCLEFWWKCNPNDDKCCRPKLKCSKLFKLCNFSF",
+    "melting_point_K": 364,
+    "filename": "1LU8_A.pdb"
+  },
+  "1QK7": {
+    "sequence": "GCLGDKCDYNNGCCSGYVCSRTWKWCVLAGPW",
+    "melting_point_K": 327,
+    "filename": "1QK7_A.pdb"
+  },
+  "5T3M": {
+    "sequence": "GCLGIFKACNPSNDQCCKSSKLVCSRKTRWCKWQI",
+    "melting_point_K": 368,
+    "filename": "5T3M_A.pdb"
+  },
+  "1W7Z": {
+    "sequence": "GCPRILIRCKQDSDCLAGCVCGPNGFCGSPA",
+    "melting_point_K": 363,
+    "filename": "1W7Z_A.pdb"
+  },
+  "1H9H": {
+    "sequence": "GCPRILIRCKQDSDCLAGCVCGPNGFCGSPHHHHHH",
+    "melting_point_K": 328,
+    "filename": "1H9H_I.pdb"
+  },
+  "1H9I": {
+    "sequence": "GCPRILIRCKQDSDCLAGCVCTNNKFCGSPHHHHHH",
+    "melting_point_K": 336,
+    "filename": "1H9I_I.pdb"
+  },
+  "2ETI": {
+    "sequence": "GCPRILMRCKQDSDCLAGCVCGPNGFCG",
+    "melting_point_K": 352,
+    "filename": "2ETI_A.pdb"
+  },
+  "2IT7": {
+    "sequence": "GCPRILMRCKQDSDCLAGCVCGPNGFCG",
+    "melting_point_K": 333,
+    "filename": "2IT7_A.pdb"
+  },
+  "2LET": {
+    "sequence": "GCPRLLMRCKQDSDCLAGCVCGPNGFCG",
+    "melting_point_K": 371,
+    "filename": "2LET_A.pdb"
+  },
+  "1S6W": {
+    "sequence": "GCRFCCNCCPNMSGCGVCCRF",
+    "melting_point_K": 359,
+    "filename": "1S6W_A.pdb"
+  },
+  "1C6W": {
+    "sequence": "GDCLPHLKLCKENKDCCSKKCKRRGTNIEKRCR",
+    "melting_point_K": 361,
+    "filename": "1C6W_A.pdb"
+  },
+  "1IE6": {
+    "sequence": "GDCLPHLKRCKADNDCCGKKCKRRGTNAEKRCR",
+    "melting_point_K": 337,
+    "filename": "1IE6_A.pdb"
+  },
+  "6SF1": {
+    "sequence": "GDPVKPSRGPLVTCTCESPHCKGPTCRGAWCTVVLVREEGRHPQEHRGCGNLHRELCRGRPTEFVNHYCCDSHLCNHNVSLVLEATQPPSEQPGTDGQ",
+    "melting_point_K": 336,
+    "filename": "6SF1_A.pdb"
+  },
+  "6SF3": {
+    "sequence": "GDPVKPSRGPLVTCTCESPHCKGPTCRGAWCTVVLVREEGRHPQEHRGCGNLHRELCRGRPTEFVNHYCCDSHLCNHNVSLVLEATQPPSEQPGTDGQ",
+    "melting_point_K": 367,
+    "filename": "6SF3_A.pdb"
+  },
+  "1KVE": {
+    "sequence": "WSLRWRMQKSTTIAAIAGCSGAATFGGLAGGIVGCIAAGILAILQGFEVNWHNGGGGDRSNPV",
+    "melting_point_K": 345,
+    "filename": "1KVE_B.pdb"
+  },
+  "1DQ7": {
+    "sequence": "GEDGYIADGDNCTYICTFNNYCHALCTDKKGDSGACDWWVPYGVVCWCEDLPTPVPIRGSGKCR",
+    "melting_point_K": 371,
+    "filename": "1DQ7_A.pdb"
+  },
+  "2A7T": {
+    "sequence": "GEDGYIADGDNCTYICTFNNYCHALCTDKKGDSGACDWWVPYGVVCWCEDLPTPVPIRGSGKCR",
+    "melting_point_K": 359,
+    "filename": "2A7T_A.pdb"
+  },
+  "1FVL": {
+    "sequence": "GEECDCGSPSNPCCDAATCKLRPGAQCADGLCCDQCRFKKKRTICRIARGDFPDDRCTGLSNDCPRWNDL",
+    "melting_point_K": 346,
+    "filename": "1FVL_A.pdb"
+  },
+  "1J2L": {
+    "sequence": "GEECDCGSPSNPCCDAATCKLRPGAQCADGLCCDQCRFKKKRTICRIARGDFPDDRCTGQSADCPRWNGL",
+    "melting_point_K": 339,
+    "filename": "1J2L_A.pdb"
+  },
+  "6OHX": {
+    "sequence": "GEEVRDAYIAQPHNCVYHCFRDSYCNDLCIKHGAESGECKWFTSSGNACWCVKLPKSEPIKVPGKCH",
+    "melting_point_K": 366,
+    "filename": "6OHX_A.pdb"
+  },
+  "1FJN": {
+    "sequence": "GFGCPNNYQCHRHCKSIPGRCGGYCGGWHRLRCTCYRCG",
+    "melting_point_K": 360,
+    "filename": "1FJN_A.pdb"
+  },
+  "4R5R": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFKKKRTICRIPRGDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 336,
+    "filename": "4R5R_A.pdb"
+  },
+  "1Q7J": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIAKGDWNDDRCTGQSADCPRYH",
+    "melting_point_K": 338,
+    "filename": "1Q7J_A.pdb"
+  },
+  "2PJI": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 339,
+    "filename": "2PJI_A.pdb"
+  },
+  "4M4C": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDPPDDRCTGQSADCPRYH",
+    "melting_point_K": 358,
+    "filename": "4M4C_A.pdb"
+  },
+  "1Q7I": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDWNDDRCTGQSADCPRYH",
+    "melting_point_K": 362,
+    "filename": "1Q7I_A.pdb"
+  },
+  "1N4Y": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIPRGDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 331,
+    "filename": "1N4Y_A.pdb"
+  },
+  "2PJF": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIPRGDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 344,
+    "filename": "2PJF_A.pdb"
+  },
+  "4RQG": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIPRGDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 348,
+    "filename": "4RQG_A.pdb"
+  },
+  "2PJG": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIPRGEMPDDRCTGQSADCPRYH",
+    "melting_point_K": 371,
+    "filename": "2PJG_A.pdb"
+  },
+  "2LJV": {
+    "sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIPRLDMPDDRCTGQSADCPRYH",
+    "melting_point_K": 332,
+    "filename": "2LJV_A.pdb"
+  },
+  "2NDB": {
+    "sequence": "GKKKCIAKDYGRCKWGGTPCCRGRGCICSIMGTNCECKPRLIMEGLGLA",
+    "melting_point_K": 364,
+    "filename": "2NDB_A.pdb"
+  },
+  "6YHT": {
+    "sequence": "GLPSLCYEPADSGSGTKSEKRIYYNSARKQCLRFTYNGKGGNANNFIHTFDCQHTCLYK",
+    "melting_point_K": 348,
+    "filename": "6YHT_A.pdb"
+  },
+  "4TTN": {
+    "sequence": "GLPVCAETCVGGTCNTPGCTCSWPVCTRN",
+    "melting_point_K": 359,
+    "filename": "4TTN_A.pdb"
+  },
+  "2M9O": {
+    "sequence": "GLPVCGETCTLGTCYTQGCTCSWPICKRN",
+    "melting_point_K": 370,
+    "filename": "2M9O_A.pdb"
+  },
+  "4TTO": {
+    "sequence": "GLPVCGETCVGGTCNTPGCTCSWPACTRN",
+    "melting_point_K": 361,
+    "filename": "4TTO_A.pdb"
+  },
+  "2KHB": {
+    "sequence": "GLPVCGETCVGGTCNTPGCTCSWPVCTRN",
+    "melting_point_K": 371,
+    "filename": "2KHB_A.pdb"
+  },
+  "4TTM": {
+    "sequence": "GLPVCGETCVGGTCNTPGCTCSWPVCTRN",
+    "melting_point_K": 371,
+    "filename": "4TTM_A.pdb"
+  },
+  "4IYE": {
+    "sequence": "GLTCVTSKSIFGITTEDCPDGQNLCFKRRHYVVPAIYDSTRGCAATCPIPENYDSIHCCKTDKCNE",
+    "melting_point_K": 366,
+    "filename": "4IYE_A.pdb"
+  },
+  "2K3G": {
+    "sequence": "GPEDTLPFLKCYCSGHCPDDAINNTCITNGHCFAIIEEDDQGETTLASGCMKYEGSDFQCKDSPKAQLRRTIECCRTNLCNQYLQPTLPPVVIGPFFDGSIR",
+    "melting_point_K": 351,
+    "filename": "2K3G_A.pdb"
+  },
+  "6WJC": {
+    "sequence": "GPGSLTCVKSNSIWFPTSEDCPDGQNLCFKRWQYISPRMYDFTRGCAATCPKAEYRDVINCCGTDKCNK",
+    "melting_point_K": 340,
+    "filename": "6WJC_C.pdb"
+  },
+  "5NGV": {
+    "sequence": "GPKAMAETRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHLP",
+    "melting_point_K": 349,
+    "filename": "5NGV_A.pdb"
+  },
+  "3GJ3": {
+    "sequence": "GPLGSGTWDCDTCLVQNKPEAVKCVACETPKPG",
+    "melting_point_K": 330,
+    "filename": "3GJ3_B.pdb"
+  },
+  "6LCQ": {
+    "sequence": "GPLGSRHCLSQSHRFKGMCVSSNNCANVCRTESFPDGECKSHGLERKCFCKKVC",
+    "melting_point_K": 371,
+    "filename": "6LCQ_A.pdb"
+  },
+  "1JLP": {
+    "sequence": "GPPCCLYGSCRPFPGCYNALCCRK",
+    "melting_point_K": 332,
+    "filename": "1JLP_A.pdb"
+  },
+  "1B45": {
+    "sequence": "GRCCHPACGKYYSC",
+    "melting_point_K": 333,
+    "filename": "1B45_A.pdb"
+  },
+  "1SFI": {
+    "sequence": "GRCTKSIPPICFPD",
+    "melting_point_K": 345,
+    "filename": "1SFI_I.pdb"
+  },
+  "4HGC": {
+    "sequence": "GRCTXSIPPICFPD",
+    "melting_point_K": 354,
+    "filename": "4HGC_I.pdb"
+  },
+  "1SNB": {
+    "sequence": "GRDAYIADSENCTYFCGSNPYCNDVCTENGAKSGYCQWAGRYGNACYCIDLPASERIKEGGRCG",
+    "melting_point_K": 367,
+    "filename": "1SNB_A.pdb"
+  },
+  "6AVD": {
+    "sequence": "GSAEIIRCSGTRECYAPCQKLTGCLNAKCMNKACKCYGCV",
+    "melting_point_K": 335,
+    "filename": "6AVD_A.pdb"
+  },
+  "2MEO": {
+    "sequence": "GSAFCNLAACELSCRSLGLLGKCIGEECKCVPY",
+    "melting_point_K": 371,
+    "filename": "2MEO_A.pdb"
+  },
+  "2ME7": {
+    "sequence": "GSAFCNLARCELSCRSLGLLGKCIGEECKCVPY",
+    "melting_point_K": 352,
+    "filename": "2ME7_A.pdb"
+  },
+  "2MEL": {
+    "sequence": "GSAFCNLRACELSCRSLGLLGKCIGEECKCVPY",
+    "melting_point_K": 361,
+    "filename": "2MEL_A.pdb"
+  },
+  "2MEN": {
+    "sequence": "GSAFCNLRRCELSCASLGLLGKCIGEECKCVPY",
+    "melting_point_K": 348,
+    "filename": "2MEN_A.pdb"
+  },
+  "2KY3": {
+    "sequence": "GSAFCNLRRCELSCRSLGLLGKCIGEECKCVPY",
+    "melting_point_K": 344,
+    "filename": "2KY3_A.pdb"
+  },
+  "6ATU": {
+    "sequence": "GSAQEPVKGPVSTKPGSCPIILIRCAMLNPPNRCLKDTDCPGIKKCCEGSCGMACFVPQ",
+    "melting_point_K": 338,
+    "filename": "6ATU_A.pdb"
+  },
+  "6AV8": {
+    "sequence": "GSGCFGYKCDYYKGCCSGYVCSPTWKWCVRPGPGR",
+    "melting_point_K": 366,
+    "filename": "6AV8_A.pdb"
+  },
+  "6ATM": {
+    "sequence": "GSGVPINVKCRGSRDCLDPCKKAGMRFGKCINSKCHCTP",
+    "melting_point_K": 352,
+    "filename": "6ATM_C.pdb"
+  },
+  "1XDT": {
+    "sequence": "GSHMRVTLSSKPQALATPNKEEHGKRKKKGKGLGKKRDPCLRKYKDFCIHGECKYVKELRAPSCICHPGYHGERCHGLS",
+    "melting_point_K": 334,
+    "filename": "1XDT_R.pdb"
+  },
+  "6AVA": {
+    "sequence": "GSMCMPCFTTRPDMAQQCRACCKGRGKCFGPQCLCGYD",
+    "melting_point_K": 334,
+    "filename": "6AVA_A.pdb"
+  },
+  "6AVC": {
+    "sequence": "GSQFTDVKCTGSKQCWPVCKQMFGKPNGKCMNGKCRCYS",
+    "melting_point_K": 359,
+    "filename": "6AVC_A.pdb"
+  },
+  "6AU7": {
+    "sequence": "GSRPTDIKCSASYQCFPVCKSRFGKTNGRCVNGLCDCF",
+    "melting_point_K": 351,
+    "filename": "6AU7_A.pdb"
+  },
+  "6AUP": {
+    "sequence": "GSRPTDIKCSASYQCFPVCKSRFGKTNGRCVNGLCDCF",
+    "melting_point_K": 370,
+    "filename": "6AUP_A.pdb"
+  },
+  "6ATN": {
+    "sequence": "GSVFINVKCRGSPECLPKCKEAIGKSAGKCMNGKCKCYP",
+    "melting_point_K": 333,
+    "filename": "6ATN_A.pdb"
+  },
+  "2KTC": {
+    "sequence": "GSVGCAECPMHCKGKMAKPTCENEVCKCNIGKKD",
+    "melting_point_K": 339,
+    "filename": "2KTC_A.pdb"
+  },
+  "6AY7": {
+    "sequence": "GSVRIPVSCRHSGQCLRPCRDAGMRFGRCMNGRCDCTPR",
+    "melting_point_K": 356,
+    "filename": "6AY7_A.pdb"
+  },
+  "2IT8": {
+    "sequence": "GVCPKILKKCRRDSDCPGACICRGNGYCG",
+    "melting_point_K": 367,
+    "filename": "2IT8_A.pdb"
+  },
+  "1XSW": {
+    "sequence": "GVEINVKCSGSPQCLKPCKDAGMRFGKCMNRKCHCTPK",
+    "melting_point_K": 363,
+    "filename": "1XSW_A.pdb"
+  },
+  "2KTX": {
+    "sequence": "GVEINVKCSGSPQCLKPCKDAGMRFGKCMNRKCHCTPK",
+    "melting_point_K": 371,
+    "filename": "2KTX_A.pdb"
+  },
+  "1KTX": {
+    "sequence": "GVEINVKCSGSPQCLKPCKDAGMRFGKCMNRKCHCTPX",
+    "melting_point_K": 360,
+    "filename": "1KTX_A.pdb"
+  },
+  "1SCO": {
+    "sequence": "GVIINVKCKISRQCLEPCKKAGMRFGKCMNGKCHCTPK",
+    "melting_point_K": 359,
+    "filename": "1SCO_A.pdb"
+  },
+  "1APF": {
+    "sequence": "GVPCLCDSDGPRPRGNTLSGILWFYPSGCPSGWHNCKAHGPNIGWCCKK",
+    "melting_point_K": 353,
+    "filename": "1APF_A.pdb"
+  },
+  "2H9X": {
+    "sequence": "GVPCRCDSDGPSVHGNTLSGTVWVGSCASGWHKCNDEYNIAYECCKQ",
+    "melting_point_K": 339,
+    "filename": "2H9X_A.pdb"
+  },
+  "1AGT": {
+    "sequence": "GVPINVSCTGSPQCIKPCKDAGMRFGKCMNRKCHCTPK",
+    "melting_point_K": 327,
+    "filename": "1AGT_A.pdb"
+  },
+  "1AHL": {
+    "sequence": "GVSCLCDSDGPSVRGNTLSGTLWLYPSGCPSGWHNCKAHGPTIGWCCKQ",
+    "melting_point_K": 329,
+    "filename": "1AHL_A.pdb"
+  },
+  "2AB9": {
+    "sequence": "GYKTSISTITIEDNGRCTKSIPPICFPDGRP",
+    "melting_point_K": 355,
+    "filename": "2AB9_A.pdb"
+  },
+  "1AS5": {
+    "sequence": "HPPCCLYGKCRRYPGCSSASCCQR",
+    "melting_point_K": 327,
+    "filename": "1AS5_A.pdb"
+  },
+  "1JLO": {
+    "sequence": "HPPCCLYGKCRRYPGCASASCCQR",
+    "melting_point_K": 365,
+    "filename": "1JLO_A.pdb"
+  },
+  "1M4E": {
+    "sequence": "ICIFCCGCCHRSKCGMCCKT",
+    "melting_point_K": 330,
+    "filename": "1M4E_A.pdb"
+  },
+  "1A1P": {
+    "sequence": "ICVVQDWGHHRCTK",
+    "melting_point_K": 357,
+    "filename": "1A1P_A.pdb"
+  },
+  "1N8M": {
+    "sequence": "IEAIRCGGSRDCYRPCQKRTGCPNAKCINKTCKCYGCS",
+    "melting_point_K": 361,
+    "filename": "1N8M_A.pdb"
+  },
+  "1D6B": {
+    "sequence": "IMFFEMQACWSHSGVCRDKSERNCKPMAWTYCENRNQKCCEY",
+    "melting_point_K": 332,
+    "filename": "1D6B_A.pdb"
+  },
+  "1ZUE": {
+    "sequence": "IMFFEMQACWSHSGVCRDKSERNCKPMAWTYCENRNQKCCEY",
+    "melting_point_K": 345,
+    "filename": "1ZUE_A.pdb"
+  },
+  "1ZUF": {
+    "sequence": "IMFFEMQACWSHSGVCRDKSERNCKPMAWTYCENRNQKCCEY",
+    "melting_point_K": 343,
+    "filename": "1ZUF_A.pdb"
+  },
+  "1CTX": {
+    "sequence": "IRCFITPDITSKDCPNGHVCYTKTWCDAFCSIRGKRVDLGCAATCPTVKTGVDIQCCSTDNCNPFPTRKRP",
+    "melting_point_K": 358,
+    "filename": "1CTX_A.pdb"
+  },
+  "1YI5": {
+    "sequence": "IRCFITPDITSKDCPNGHVCYTKTWCDAFCSIRGKRVDLGCAATCPTVKTGVDIQCCSTDNCNPFPTRKRP",
+    "melting_point_K": 337,
+    "filename": "1YI5_F.pdb"
+  },
+  "2CTX": {
+    "sequence": "IRCFITPDITSKDCPNGHVCYTKTWCDAFCSIRGKRVDLGCAATCPTVKTGVDIQCCSTDNCNPFPTRKRP",
+    "melting_point_K": 371,
+    "filename": "2CTX_A.pdb"
+  },
+  "4AEA": {
+    "sequence": "IRCFITPDITSKDCPNGHVCYTKTWCDAFCSIRGKRVDLGCAATCPTVKTGVDIQCCSTDNCNPFPTRKRP",
+    "melting_point_K": 340,
+    "filename": "4AEA_A.pdb"
+  },
+  "1NTN": {
+    "sequence": "ITCYKTPIITSETCAPGQNLCYTKTWCDAWCGSRGKVIELGCAATCPTVESYQDIKCCSTDNCNPHPKQKRP",
+    "melting_point_K": 364,
+    "filename": "1NTN_A.pdb"
+  },
+  "1W6B": {
+    "sequence": "ITCYKTPIPITSETCAPGQNLCYTKTWCDAWCGSRGKVIELGCAATCPTVESYQDIKCCSTDDCNPHPKQKRP",
+    "melting_point_K": 358,
+    "filename": "1W6B_A.pdb"
+  },
+  "2ABX": {
+    "sequence": "IVCHTTATIPSSAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNHPPKRQPG",
+    "melting_point_K": 369,
+    "filename": "2ABX_A.pdb"
+  },
+  "1BXP": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 347,
+    "filename": "1BXP_A.pdb"
+  },
+  "1IDI": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 343,
+    "filename": "1IDI_A.pdb"
+  },
+  "1IDL": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 335,
+    "filename": "1IDL_A.pdb"
+  },
+  "1IK8": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 372,
+    "filename": "1IK8_A.pdb"
+  },
+  "1IKC": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 341,
+    "filename": "1IKC_A.pdb"
+  },
+  "1KC4": {
+    "sequence": "IPGKRTESFYECCKEPYPDS",
+    "melting_point_K": 332,
+    "filename": "1KC4_A.pdb"
+  },
+  "1KFH": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDAFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 359,
+    "filename": "1KFH_A.pdb"
+  },
+  "1KL8": {
+    "sequence": "IPGKRTESFYECCKEPYPDS",
+    "melting_point_K": 344,
+    "filename": "1KL8_B.pdb"
+  },
+  "2QC1": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDVFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 360,
+    "filename": "2QC1_A.pdb"
+  },
+  "4UY2": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDVFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 337,
+    "filename": "4UY2_C.pdb"
+  },
+  "5HBT": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDVFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 335,
+    "filename": "5HBT_A.pdb"
+  },
+  "5HBV": {
+    "sequence": "IVCHTTATSPISAVTCPPGENLCYRKMWCDVFCSSRGKVVELGCAATCPSKKPYEEVTCCSTDKCNPHPKQRPG",
+    "melting_point_K": 362,
+    "filename": "5HBV_A.pdb"
+  },
+  "1KQH": {
+    "sequence": "KCLAEAADCSPWSGDSCCKPYLCSCIFFYPCSCRPKGW",
+    "melting_point_K": 332,
+    "filename": "1KQH_A.pdb"
+  },
+  "1KQI": {
+    "sequence": "KCLAEAADCSPWSGDSCCKPYLCSCIFFYPCSCRPKGW",
+    "melting_point_K": 330,
+    "filename": "1KQI_A.pdb"
+  },
+  "1Y29": {
+    "sequence": "KCLPPGKPCYGATQKIPCCGVCSHNKCT",
+    "melting_point_K": 345,
+    "filename": "1Y29_A.pdb"
+  },
+  "1I6F": {
+    "sequence": "KDGYPVDSKGCKLSCVANNYCDNQCKMKKASGGHCYAMSCYCEGLPENAKVSDSATNICG",
+    "melting_point_K": 343,
+    "filename": "1I6F_A.pdb"
+  },
+  "1I6G": {
+    "sequence": "KDGYPVDSKGCKLSCVANNYCDNQCKMKKASGGHCYAMSCYCEGLPENAKVSDSATNICG",
+    "melting_point_K": 341,
+    "filename": "1I6G_A.pdb"
+  },
+  "1NH5": {
+    "sequence": "KDGYPVDSKGCKLSCVANNYCDNQCKMKKASGGHCYAMSCYCEGLPENAKVSDSATNICG",
+    "melting_point_K": 345,
+    "filename": "1NH5_A.pdb"
+  },
+  "3BYB": {
+    "sequence": "KDRPDFCELPADTGPCRVRFPSFYYNPDEKKCLEFIYGGCEGNANNFITKEECESTCAA",
+    "melting_point_K": 336,
+    "filename": "3BYB_A.pdb"
+  },
+  "3UIR": {
+    "sequence": "KDRPDFCELPADTGPCRVRFPSFYYNPDEKKCLEFIYGGCEGNANNFITKEECESTCAA",
+    "melting_point_K": 333,
+    "filename": "3UIR_C.pdb"
+  },
+  "5ZJ3": {
+    "sequence": "KDRPDFCELPADTGPCRVRFPSFYYNPDEKKCLEFIYGGCEGNANNFITKEECESTCAA",
+    "melting_point_K": 371,
+    "filename": "5ZJ3_A.pdb"
+  },
+  "6Q61": {
+    "sequence": "KDRPSLCDLPADSGSGTKAEKRIYYNSARKQCLRFDYTGQGGNENNFRRTYDCARTCLYTA",
+    "melting_point_K": 353,
+    "filename": "6Q61_A.pdb"
+  },
+  "6Q6C": {
+    "sequence": "KDRPSLCDLPADSGSGTKAEKRIYYNSARKQCLRFDYTGQGGNENNFRRTYDCQDTCLYTA",
+    "melting_point_K": 359,
+    "filename": "6Q6C_A.pdb"
+  },
+  "2CA7": {
+    "sequence": "KDRPSLCDLPADSGSGTKAEKRIYYNSARKQCLRFDYTGQGGNENNFRRTYDCQRTCLYT",
+    "melting_point_K": 364,
+    "filename": "2CA7_A.pdb"
+  },
+  "1B7D": {
+    "sequence": "KEGYLMDHEGCKLSCFIRPSGYCGRECGIKKGSSGYCAWPACYCYGLPNWVKVWDRATNKC",
+    "melting_point_K": 337,
+    "filename": "1B7D_A.pdb"
+  },
+  "1CN2": {
+    "sequence": "KEGYLVDKNTGCKYECLKLGDNDYCLRECKQQYGKGAGGYCYAFACWCTHLYEQAIVWPLPNKRCSX",
+    "melting_point_K": 346,
+    "filename": "1CN2_A.pdb"
+  },
+  "6VXW": {
+    "sequence": "KEGYLVDYHTGCKYTCAKLGDNDYCVRECRLRYYQSAHGYCYAFACWCTHLYEQAVVWPLPNKRCKX",
+    "melting_point_K": 342,
+    "filename": "6VXW_A.pdb"
+  },
+  "1JZA": {
+    "sequence": "KEGYLVNKSTGCKYGCLKLGENEGCDKECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSCS",
+    "melting_point_K": 365,
+    "filename": "1JZA_A.pdb"
+  },
+  "1JZB": {
+    "sequence": "KEGYLVNKSTGCKYGCLKLGENEGCDKECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSCS",
+    "melting_point_K": 358,
+    "filename": "1JZB_A.pdb"
+  },
+  "2KJA": {
+    "sequence": "KEGYLVNKSTGCKYGCLLLGKNEGCDKECKAKNQGGSYGYCYAFGCWCEGLPESTPTYPLPNKSCS",
+    "melting_point_K": 328,
+    "filename": "2KJA_A.pdb"
+  },
+  "2LI7": {
+    "sequence": "KEGYLVSKSTGCKYECLKLGDNDYCLRECKQQYGKSSGGYCYAFACWCTHLYEQAVVWPLPNKTCNX",
+    "melting_point_K": 372,
+    "filename": "2LI7_A.pdb"
+  },
+  "1GPS": {
+    "sequence": "KICRRRSAGFKGPCMSNKNCAQVCQQEGWGGGNCDGPFRRCKCIRQC",
+    "melting_point_K": 329,
+    "filename": "1GPS_A.pdb"
+  },
+  "1T1T": {
+    "sequence": "KIDGYPVDYWNCKRICWYNNKYCNDLCKGLKADSGYCWGWTLSCYCQGLPDNARIKRSGRCRA",
+    "melting_point_K": 341,
+    "filename": "1T1T_A.pdb"
+  },
+  "1NRA": {
+    "sequence": "KKDGYPVDSGNCKYECLKDDYCNDLCLERKADKGYCYWGKVSCYCYGLPDNSPTKTSGKCNPA",
+    "melting_point_K": 345,
+    "filename": "1NRA_A.pdb"
+  },
+  "1NRB": {
+    "sequence": "KKDGYPVDSGNCKYECLKDDYCNDLCLERKADKGYCYWGKVSCYCYGLPDNSPTKTSGKCNPA",
+    "melting_point_K": 368,
+    "filename": "1NRB_A.pdb"
+  },
+  "1IVA": {
+    "sequence": "KKKCIAKDYGRCKWGGTPCCRGRGCICSIMGTNCECKPRLIMEGLGLA",
+    "melting_point_K": 355,
+    "filename": "1IVA_A.pdb"
+  },
+  "1OAV": {
+    "sequence": "KKKCIAKDYGRCKWGGTPCCRGRGCICSIMGTNCECKPRLIMEGLGLA",
+    "melting_point_K": 344,
+    "filename": "1OAV_A.pdb"
+  },
+  "1OAW": {
+    "sequence": "KKKCIAKDYGRCKWGGTPCCRGRGCICSIMGTNCECKPRLIMEGLGLA",
+    "melting_point_K": 370,
+    "filename": "1OAW_A.pdb"
+  },
+  "1T0Z": {
+    "sequence": "KKNGYAVDSSGKVAECLFNNYCNNECTKVYYADKGYCCLLKCYCFGLADDKPVLDIWDSTKNYCDVQIIDLS",
+    "melting_point_K": 347,
+    "filename": "1T0Z_A.pdb"
+  },
+  "1WWN": {
+    "sequence": "KKNGYAVDSSGKVSECLLNNYCNNICTKVYYATSGYCCLLSCYCFGLDDDKAVLKIKDATKSYCDVQII",
+    "melting_point_K": 347,
+    "filename": "1WWN_A.pdb"
+  },
+  "4KYP": {
+    "sequence": "KKNGYPLDRNGKTTECSGVNAIAPHYCNSECTKVYYAESGYCCWGACYCFGLEDDKPIGPMKDITKKYCDVQIIPSGSHHHHHH",
+    "melting_point_K": 334,
+    "filename": "4KYP_A.pdb"
+  },
+  "1T7H": {
+    "sequence": "KRCSCSSLMDKECVYFCH",
+    "melting_point_K": 342,
+    "filename": "1T7H_A.pdb"
+  },
+  "1BHP": {
+    "sequence": "KSCCKSTLGRNCYNLCRARGAQKLCANVCRCKLTSGLSCPKDFPK",
+    "melting_point_K": 351,
+    "filename": "1BHP_A.pdb"
+  },
+  "2V9B": {
+    "sequence": "KSCCPNTTGRDIYNTCRLGGGSRERCASLSGCKIISASTCPSDYPK",
+    "melting_point_K": 367,
+    "filename": "2V9B_A.pdb"
+  },
+  "1ED0": {
+    "sequence": "KSCCPNTTGRNIYNACRLTGAPRPTCAKLSGCKIISGSTCPSDYPK",
+    "melting_point_K": 333,
+    "filename": "1ED0_A.pdb"
+  },
+  "1OKH": {
+    "sequence": "KSCCPNTTGRNIYNACRLTGAPRPTCAKLSGCKIISGSTCPSDYPK",
+    "melting_point_K": 329,
+    "filename": "1OKH_A.pdb"
+  },
+  "1ORL": {
+    "sequence": "KSCCPNTTGRNIYNTCRFAGGSRERCAKLSGCKIISASTCPSDYPK",
+    "melting_point_K": 361,
+    "filename": "1ORL_A.pdb"
+  },
+  "1JMN": {
+    "sequence": "KSCCPNTTGRNIYNTCRFGGGSRQVCASLSGCKIISASTCPSDYPK",
+    "melting_point_K": 364,
+    "filename": "1JMN_A.pdb"
+  },
+  "1JMP": {
+    "sequence": "KSCCPNTTGRNIYNTCRLGGGSRERCASLSGCKIISASTCPSDYPK",
+    "melting_point_K": 365,
+    "filename": "1JMP_A.pdb"
+  },
+  "3C8P": {
+    "sequence": "KSCCPSTTGRNIYNTCRLTGSSRETCAKLSGCKIISASTCPSNYPK",
+    "melting_point_K": 352,
+    "filename": "3C8P_A.pdb"
+  },
+  "1NBL": {
+    "sequence": "KSCCRNTLARNCYNACRFTGGSQPTCGILCDCIHVTTTTCPSSHPS",
+    "melting_point_K": 343,
+    "filename": "1NBL_A.pdb"
+  },
+  "3SZS": {
+    "sequence": "KSCCRNTLARNCYNACRFTGGSQPTCGILCDCIHVTTTTCPSSHPS",
+    "melting_point_K": 361,
+    "filename": "3SZS_A.pdb"
+  },
+  "2PLH": {
+    "sequence": "KSCCRSTLGRNCYNLCRARGAQKLCAGVCRCKISSGLSCPKGFPK",
+    "melting_point_K": 344,
+    "filename": "2PLH_A.pdb"
+  },
+  "1WUW": {
+    "sequence": "KSCCRSTLGRNCYNLCRVRGAQKLCANACRCKLTSGLKCPSSFPK",
+    "melting_point_K": 339,
+    "filename": "1WUW_A.pdb"
+  },
+  "1JKZ": {
+    "sequence": "KTCEHLADTYRGVCFTNASCDDHCKNKAHLISGTCHNWKCFCTQNC",
+    "melting_point_K": 344,
+    "filename": "1JKZ_A.pdb"
+  },
+  "6VPN": {
+    "sequence": "KTCENLADTYKGPCFTTGSCDDHCKNKEHLRSGRCRDDFRCWCTKNC",
+    "melting_point_K": 334,
+    "filename": "6VPN_A.pdb"
+  },
+  "2GL1": {
+    "sequence": "KTCENLANTYRGPCFTTGSCDDHCKNKEHLRSGRCRDDFRCWCTRNC",
+    "melting_point_K": 370,
+    "filename": "2GL1_A.pdb"
+  },
+  "1MA2": {
+    "sequence": "KWCFRVCYRGICYRRCR",
+    "melting_point_K": 341,
+    "filename": "1MA2_A.pdb"
+  },
+  "1CW6": {
+    "sequence": "KYYGNGVHCTKSGCSVNWGEAFSAGVHRLANGGNGFW",
+    "melting_point_K": 352,
+    "filename": "1CW6_A.pdb"
+  },
+  "1JE9": {
+    "sequence": "LECHNQQSSQAPTTKTCSGETNCYKKWWSDHRGTIIERGCGCPKVKPGVNLNCCRTDRCNN",
+    "melting_point_K": 347,
+    "filename": "1JE9_A.pdb"
+  },
+  "1IQ9": {
+    "sequence": "LECHNQQSSQPPTTKTCPGETNCYKKVWRDHRGTIIERGCGCPTVKPGIKLNCCTTDKCNN",
+    "melting_point_K": 334,
+    "filename": "1IQ9_A.pdb"
+  },
+  "1NEA": {
+    "sequence": "LECHNQQSSQPPTTKTCPGETNCYKKVWRDHRGTIIERGCGCPTVKPGIKLNCCTTDKCNN",
+    "melting_point_K": 347,
+    "filename": "1NEA_A.pdb"
+  },
+  "1NOR": {
+    "sequence": "LECHNQQSSQPPTTKTCSGETNCYKKWWSDHRGTIIERGCGCPKVKPGVNLNCCRTDRCNN",
+    "melting_point_K": 356,
+    "filename": "1NOR_A.pdb"
+  },
+  "2MJ4": {
+    "sequence": "LECHNQQSSQPPTTKTCSGETNCYKKWWSDHRGTIIERGCGCPKVKPGVNLNCCRTDRCNN",
+    "melting_point_K": 334,
+    "filename": "2MJ4_A.pdb"
+  },
+  "1ONJ": {
+    "sequence": "LECHNQQSSQTPTTKTCSGETNCYKKWWSDHRGTIIERGCGCPKVKPGVNLNCCTTDRCNN",
+    "melting_point_K": 337,
+    "filename": "1ONJ_A.pdb"
+  },
+  "1VB0": {
+    "sequence": "LECHNQQSSQTPTTKTCSGETNCYKKWWSDHRGTIIERGCGCPKVKPGVNLNCCTTDRCNN",
+    "melting_point_K": 366,
+    "filename": "1VB0_A.pdb"
+  },
+  "1G6M": {
+    "sequence": "LECHNQQSSQTPTTTGCSGGENNCYKKEWRDNRGYRTERGCGCPSVKKGIGINCCTTDRCNN",
+    "melting_point_K": 349,
+    "filename": "1G6M_A.pdb"
+  },
+  "1COD": {
+    "sequence": "LECHNQQSSQTPTTTGCSGGETNCYKKRWRDHRGYRTERGCGCPSVKNGIEINCCTTDRCNN",
+    "melting_point_K": 332,
+    "filename": "1COD_A.pdb"
+  },
+  "1COE": {
+    "sequence": "LECHNQQSSQTPTTTGCSGGETNCYKKRWRDHRGYRTERGCGCPSVKNGIEINCCTTDRCNN",
+    "melting_point_K": 352,
+    "filename": "1COE_A.pdb"
+  },
+  "1V6P": {
+    "sequence": "LECHNQQSSQTPTTTGCSGGETNCYKKRWRDHRGYRTERGCGCPSVKNGIEINCCTTDRCNN",
+    "melting_point_K": 362,
+    "filename": "1V6P_A.pdb"
+  },
+  "1I25": {
+    "sequence": "LFECSFSCEIEKEGDKPCKKKKCKGGWKCKFNMCVKV",
+    "melting_point_K": 350,
+    "filename": "1I25_A.pdb"
+  },
+  "3VTS": {
+    "sequence": "LKCHNKLVPFLSKTCPEGKNLCYKMTLMKMPKIPIKRGCTDACPKSSLLVKVVCCNKDKCN",
+    "melting_point_K": 344,
+    "filename": "3VTS_A.pdb"
+  },
+  "1CVO": {
+    "sequence": "LKCHNTQLPFIYKTCPEGKNLCFKATLKKFPLKFPVKRGCADNCPKNSALLKYVCCSTDKCN",
+    "melting_point_K": 347,
+    "filename": "1CVO_A.pdb"
+  },
+  "1KXI": {
+    "sequence": "LKCHNTQLPFIYKTCPEGKNLCFKATLKKFPLKFPVKRGCADNCPKNSALLKYVCCSTDKCN",
+    "melting_point_K": 330,
+    "filename": "1KXI_A.pdb"
+  },
+  "1CB9": {
+    "sequence": "LKCKKLVPLFSKTCPAGKNLCYKMFMVAAPHVPVKRGCIDVCPKSSLLVKYVCCNTDKCN",
+    "melting_point_K": 348,
+    "filename": "1CB9_A.pdb"
+  },
+  "1CCQ": {
+    "sequence": "LKCKKLVPLFSKTCPAGKNLCYKMFMVAAPHVPVKRGCIDVCPKSSLLVKYVCCNTDKCN",
+    "melting_point_K": 349,
+    "filename": "1CCQ_A.pdb"
+  },
+  "1FFJ": {
+    "sequence": "LKCKKLVPLFSKTCPAGKNLCYKMFMVAAPHVPVKRGCIDVCPKSSLLVKYVCCNTDKCN",
+    "melting_point_K": 331,
+    "filename": "1FFJ_A.pdb"
+  },
+  "2CDX": {
+    "sequence": "LKCNKLIPIASKTCPAGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 369,
+    "filename": "2CDX_A.pdb"
+  },
+  "1CDT": {
+    "sequence": "LKCNKLIPIAYKTCPEGKNLCYKMMLASKKMVPVKRGCINVCPKNSALVKYVCCSTDRCN",
+    "melting_point_K": 346,
+    "filename": "1CDT_A.pdb"
+  },
+  "6RC7": {
+    "sequence": "LKCNKLIPLAYKTCPAGKNLCYKMFMVSNKTVPVKRGCIDACPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 356,
+    "filename": "6RC7_A.pdb"
+  },
+  "7O2K": {
+    "sequence": "LKCNKLIPLAYKTCPAGKNLCYKMFMVSNKTVPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 347,
+    "filename": "7O2K_A.pdb"
+  },
+  "7QFC": {
+    "sequence": "LKCNKLIPLAYKTCPAGKNLCYKMFMVSNKTVPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 367,
+    "filename": "7QFC_A.pdb"
+  },
+  "1RL5": {
+    "sequence": "LKCNKLVPIAYKTCPEGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 364,
+    "filename": "1RL5_A.pdb"
+  },
+  "1ZAD": {
+    "sequence": "LKCNKLVPIAYKTCPEGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 355,
+    "filename": "1ZAD_A.pdb"
+  },
+  "5NPN": {
+    "sequence": "LKCNKLVPIAYKTCPEGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 328,
+    "filename": "5NPN_A.pdb"
+  },
+  "5NQ4": {
+    "sequence": "LKCNKLVPIAYKTCPEGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 345,
+    "filename": "5NQ4_A.pdb"
+  },
+  "1H0J": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 365,
+    "filename": "1H0J_A.pdb"
+  },
+  "1I02": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 362,
+    "filename": "1I02_A.pdb"
+  },
+  "1XT3": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 343,
+    "filename": "1XT3_A.pdb"
+  },
+  "2BHI": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 348,
+    "filename": "2BHI_A.pdb"
+  },
+  "2CRS": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 366,
+    "filename": "2CRS_A.pdb"
+  },
+  "2CRT": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 335,
+    "filename": "2CRT_A.pdb"
+  },
+  "1CHV": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVSNKMVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 337,
+    "filename": "1CHV_S.pdb"
+  },
+  "1CRF": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
+    "melting_point_K": 342,
+    "filename": "1CRF_A.pdb"
+  },
+  "4OM4": {
+    "sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
+    "melting_point_K": 341,
+    "filename": "4OM4_A.pdb"
+  },
+  "1CXN": {
+    "sequence": "LKCNQLIPPFWKTCPKGKNLCYKMTMRAAPMVPVKRGCIDVCPKSSLLIKYMCCNTDKCN",
+    "melting_point_K": 336,
+    "filename": "1CXN_A.pdb"
+  },
+  "1CXO": {
+    "sequence": "LKCNQLIPPFWKTCPKGKNLCYKMTMRAAPMVPVKRGCIDVCPKSSLLIKYMCCNTDKCN",
+    "melting_point_K": 333,
+    "filename": "1CXO_A.pdb"
+  },
+  "1TGX": {
+    "sequence": "LKCNQLIPPFWKTCPKGKNLCYKMTMRAAPMVPVKRGCIDVCPKSSLLIKYMCCNTDKCN",
+    "melting_point_K": 351,
+    "filename": "1TGX_A.pdb"
+  },
+  "2CCX": {
+    "sequence": "LKCNQLIPPFWKTCPKGKNLCYKMTMRAAPMVPVKRGCIDVCPKSSLLIKYMCCNTNKCN",
+    "melting_point_K": 341,
+    "filename": "2CCX_A.pdb"
+  },
+  "1UG4": {
+    "sequence": "LKCNQLIPPFYKTCAAGKNLCYKMFMVAAPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
+    "melting_point_K": 372,
+    "filename": "1UG4_A.pdb"
+  },
+  "1HP3": {
+    "sequence": "LLACLFGNGRCSSNRDCCELTPVCKRGSCVSS",
+    "melting_point_K": 349,
+    "filename": "1HP3_A.pdb"
+  },
+  "1G9P": {
+    "sequence": "LLACLFGNGRCSSNRDCCELTPVCKRGSCVSSGPGLVGGILGGIL",
+    "melting_point_K": 335,
+    "filename": "1G9P_A.pdb"
+  },
+  "6AEX": {
+    "sequence": "LQCMQCESNQSCLVEECALGQDLCRTTVLREWQDDRELEVVTRGCAHSEKTNRTMSYRMGSMIISLTETVCATNLCNRPRPGARGRAFPQGRYLECASCTSLDQSCERGREQSLQCRYPTEHCIEVVTLQSTERSLKDEDYTRGCGSLPGCPGTAGFHSNQTFHFLKCCNYTHCNGGPVLDLQSFPPNGFQCYSCEGNNTLGCSSEEASLINCRGPMNQCLVATGLDVLGNRSYTVRGCATASWCQGSHVADSFPTHLNVSVSCCHGSGCNSPTGGA",
+    "melting_point_K": 371,
+    "filename": "6AEX_U.pdb"
+  },
+  "5IMT": {
+    "sequence": "LQCYNCPNPTADCKTAVNCSSAFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLEN",
+    "melting_point_K": 368,
+    "filename": "5IMT_D.pdb"
+  },
+  "1ERG": {
+    "sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCN",
+    "melting_point_K": 365,
+    "filename": "1ERG_A.pdb"
+  },
+  "1CDQ": {
+    "sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLEN",
+    "melting_point_K": 365,
+    "filename": "1CDQ_A.pdb"
+  },
+  "1CDR": {
+    "sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLEN",
+    "melting_point_K": 365,
+    "filename": "1CDR_A.pdb"
+  },
+  "1CDS": {
+    "sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLEN",
+    "melting_point_K": 370,
+    "filename": "1CDS_A.pdb"
+  },
+  "2JQP": {
+    "sequence": "LTCLICPEKDCQKVHTCRNEEKICVKRFYDKNQLGWRAQRGCAVSCPKAKPNETVQCCSTDKCNK",
+    "melting_point_K": 328,
+    "filename": "2JQP_A.pdb"
+  },
+  "7C28": {
+    "sequence": "LTCVTDKSFGGVITEECAAGQKICFKNWKKMGPKLYDVKRGCTATCPKADDNGCVKCCNTDKCNK",
+    "melting_point_K": 349,
+    "filename": "7C28_A.pdb"
+  },
+  "1FF4": {
+    "sequence": "LTCVTTKSIGGVTTEDCPAGQNVCFKRWHYVTPKNYDIIKGCAATCPKVDNNDPIRCCGTDKCND",
+    "melting_point_K": 337,
+    "filename": "1FF4_A.pdb"
+  },
+  "1WZ5": {
+    "sequence": "LVKCRGTSDCGRPCQQQTGAPNSKCINRMCKCYGA",
+    "melting_point_K": 357,
+    "filename": "1WZ5_A.pdb"
+  },
+  "4P7U": {
+    "sequence": "MALCKFCDVRFSTCDNQKSCMSNCSITSICEKPQEVCVAVWRKNDENITLETVCHDPKLPYHDFILEDAASPTCIMKEKKKPGETFFMCSCSSDECNDNIIFSEEYNTSNPD",
+    "melting_point_K": 343,
+    "filename": "4P7U_A.pdb"
+  },
+  "4XJJ": {
+    "sequence": "MALCKFCDVRFSTCDNQKSCMSNCSITSICEKPQEVCVAVWRKNDENITLETVCHDPKLPYHDFILEDAASPTCIMKEKKKPGETFFMCSCSSDECNDNIIFSEEYNTSNPD",
+    "melting_point_K": 338,
+    "filename": "4XJJ_A.pdb"
+  },
+  "2QJ9": {
+    "sequence": "MAQAKHKQRKRLKSSCKRHPLYVDFSDVGWNDWIVAPPGYHAFYCHGECPFPLADHLNSTNHAIVQTLVNSVNSKIPKACCVPTELSAISMLYLDENEKVVLKNYQDMVVEGCGCR",
+    "melting_point_K": 360,
+    "filename": "2QJ9_A.pdb"
+  },
+  "2QJA": {
+    "sequence": "MAQAKHKQRKRLKSSCKRHPLYVDFSDVGWNDWIVAPPGYHAFYCHGECPFPLADHLNSTNHAIVQTLVNSVNSKIPKACCVPTELSAISMLYLDENEKVVLKNYQDMVVEGCGCR",
+    "melting_point_K": 362,
+    "filename": "2QJA_A.pdb"
+  },
+  "2QJB": {
+    "sequence": "MAQAKHKQRKRLKSSCKRHPLYVDFSDVGWNDWIVAPPGYHAFYCHGECPFPLADHLNSTNHAIVQTLVNSVNSKIPKACCVPTELSAISMLYLDENEKVVLKNYQDMVVEGCGCR",
+    "melting_point_K": 356,
+    "filename": "2QJB_A.pdb"
+  },
+  "1CHL": {
+    "sequence": "MCMPCFTTDHQMARKCDDCCGGKGRGKCYGPQCLCR",
+    "melting_point_K": 336,
+    "filename": "1CHL_A.pdb"
+  },
+  "5L1C": {
+    "sequence": "MCMPCFTTDHQMARKCDDCCGGKGRGKCYGPQCLCR",
+    "melting_point_K": 336,
+    "filename": "5L1C_A.pdb"
+  },
+  "1SIS": {
+    "sequence": "MCMPCFTTDPNMAKKCRDCCGGNGKCFGPQCLCNR",
+    "melting_point_K": 361,
+    "filename": "1SIS_A.pdb"
+  },
+  "2I61": {
+    "sequence": "MDGYIKRRDGCKVACLIGNEGCDKECKAYGGSYGYCWTWGLACWCEGLPDDKTWKSETNTCG",
+    "melting_point_K": 334,
+    "filename": "2I61_A.pdb"
+  },
+  "5F84": {
+    "sequence": "MDIVDGDQCESNPCLNGGSCKDDINSYECWCPFGFEGKNCELLEHHHHHH",
+    "melting_point_K": 331,
+    "filename": "5F84_B.pdb"
+  },
+  "1F94": {
+    "sequence": "MECYRCGVSGCHLKITCSAEETFCYKWLNKISNERWLGCAKTCTEIDTWNVYNKCCTTNLCNT",
+    "melting_point_K": 333,
+    "filename": "1F94_A.pdb"
+  },
+  "1IJC": {
+    "sequence": "MECYRCGVSGCHLKITCSAEETFCYKWLNKISNERWLGCAKTCTEIDTWNVYNKCCTTNLCNT",
+    "melting_point_K": 335,
+    "filename": "1IJC_A.pdb"
+  },
+  "1JGK": {
+    "sequence": "MKCKICNFDTCRAGELKVCASGEKYCFKESWREARGTRIERGCAATCPKGSVYGLYVLCCTTDDCN",
+    "melting_point_K": 365,
+    "filename": "1JGK_A.pdb"
+  },
+  "1BCG": {
+    "sequence": "MKKNGYPLDRNGKTTECSGVNAIAPHYCNSECTKVYYAESGYCCWGACYCFGLEDDKPIGPMKDITKKYCDVQIIPS",
+    "melting_point_K": 336,
+    "filename": "1BCG_A.pdb"
+  },
+  "5XWE": {
+    "sequence": "MKPVLLTLVVVTIVCLDLGYTRICLKQEPFQPETTTTCPEGEDACYNLFWSDHSEIKIEMGCGCPKTEPYTNLYCCKIDSCNK",
+    "melting_point_K": 330,
+    "filename": "5XWE_A.pdb"
+  },
+  "3QB4": {
+    "sequence": "MKRQGKRPSKNLKARCSRKALHVNFKDMGWDDWIIAPLEYEAFHCEGLCEFPLASHLEPTNHAVIQTLMNSMDPESTPPTCCVPTRLSPISILFIDSANNVVYKQYEDMVVESCGCR",
+    "melting_point_K": 351,
+    "filename": "3QB4_A.pdb"
+  },
+  "3EVS": {
+    "sequence": "MKRQGKRPSKNLKARCSRKALHVNFKDMGWDDWIIAPLEYEAFHCEGLCEFPLRSHLEPTNHAVIQTLMNSMDPESTPPTCCVPTRLSPISILFIDSANNVVYKQYEDMVVESCGCR",
+    "melting_point_K": 355,
+    "filename": "3EVS_B.pdb"
+  },
+  "5LUE": {
+    "sequence": "MLKCNKLVPIAYKTCPEGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 327,
+    "filename": "5LUE_A.pdb"
+  },
+  "5T8A": {
+    "sequence": "MLKCNKLVPIAYKTCPEGKNLCYKMFMMSDLTIPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
+    "melting_point_K": 337,
+    "filename": "5T8A_A.pdb"
+  },
+  "2UX2": {
+    "sequence": "MLQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLEN",
+    "melting_point_K": 361,
+    "filename": "2UX2_A.pdb"
+  },
+  "5IMY": {
+    "sequence": "MLQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLEN",
+    "melting_point_K": 363,
+    "filename": "5IMY_C.pdb"
+  },
+  "2UWR": {
+    "sequence": "MLQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLENC",
+    "melting_point_K": 359,
+    "filename": "2UWR_A.pdb"
+  },
+  "2J8B": {
+    "sequence": "MLQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCNFNEQLENG",
+    "melting_point_K": 337,
+    "filename": "2J8B_A.pdb"
+  },
+  "2MJ0": {
+    "sequence": "MLTCLNCPEMFCGKFQICRNGEKICFKKLHQRRALSWRYIRGCADTCPVGKPYEMIECCSTDKCNR",
+    "melting_point_K": 352,
+    "filename": "2MJ0_A.pdb"
+  },
+  "1MR6": {
+    "sequence": "MQCKTCSFYTCPNSETCPDGKNICVKRSWTAVRGDGPKREIRRECAATCPPSKLGLTVFCCTTDNCNH",
+    "melting_point_K": 365,
+    "filename": "1MR6_A.pdb"
+  },
+  "2LJM": {
+    "sequence": "MRGSHHHHHHGSIEGRKEGYLVSKSTGCKYECLKLGDNDYCLRECKQQYGKSSGGYCYAFACWCTHLYEQAVVWPLPNKTCN",
+    "melting_point_K": 339,
+    "filename": "2LJM_A.pdb"
+  },
+  "6IMF": {
+    "sequence": "MRVFFSLIIFSFMLATCQGACGIGPLVSSPTDAMAPKKCVDPNDRRKHLIVSTWNTADCLRCECDNDGLSCCHRYGGLAERAGCKSVLNQVTCEYEFYRLDDLSKRCDA",
+    "melting_point_K": 344,
+    "filename": "6IMF_B.pdb"
+  },
+  "2ATB": {
+    "sequence": "MVRDAYIADDVNCVYECFRDAYCNELCTKNGASSGYCQWAGKYGNACWCYALPDNVPIRVPGKCR",
+    "melting_point_K": 352,
+    "filename": "2ATB_A.pdb"
+  },
+  "1LQH": {
+    "sequence": "MVRDAYIAKNYNCVYECFRDAYCNELCTKNGASSGYCQWAGKYGNACWCYALPDNVPIRVPGKCR",
+    "melting_point_K": 329,
+    "filename": "1LQH_A.pdb"
+  },
+  "1LQI": {
+    "sequence": "MVRDAYIAKNYNCVYECFRDAYCNELCTKNGASSGYCQWAGKYGNACWCYALPDNVPIRVPGKCR",
+    "melting_point_K": 366,
+    "filename": "1LQI_A.pdb"
+  },
+  "2ASC": {
+    "sequence": "MVRDAYIAKNYNCVYECFRDAYCNELCTKNGASSGYCQWAGKYGNACWCYALPDNVPIRVPGKCR",
+    "melting_point_K": 344,
+    "filename": "2ASC_A.pdb"
+  },
+  "2YEO": {
+    "sequence": "MVRDAYIAKNYNCVYECFRDAYCNELCTKNGASSGYCQWLGKYGNACWCYALPDNVPIRVPGKCR",
+    "melting_point_K": 342,
+    "filename": "2YEO_A.pdb"
+  },
+  "1OMY": {
+    "sequence": "MVRDAYIAQNYNCVYHCARDAYCNELCTKNGAKSGSCPYLGEHKFACYCKDLPDNVPIRVPGKCH",
+    "melting_point_K": 331,
+    "filename": "1OMY_A.pdb"
+  },
+  "5AX2": {
+    "sequence": "MVSTYDEIEIEDMTFEPENQMFTYPCPCGDRFQIYLDDMFEGEKVAVCPSCSLMIDVVFDKEDLAEYYEEAGIHPPEPIAAAAHHHHHH",
+    "melting_point_K": 372,
+    "filename": "5AX2_A.pdb"
+  },
+  "1UYA": {
+    "sequence": "NDDCELCVNVACTGCL",
+    "melting_point_K": 335,
+    "filename": "1UYA_A.pdb"
+  },
+  "1UYB": {
+    "sequence": "NDDCELCVNVACTGCL",
+    "melting_point_K": 360,
+    "filename": "1UYB_A.pdb"
+  },
+  "3D4U": {
+    "sequence": "NECVSKGFGCLPQSDCPQEARLSYGGCSTVCCDLSKLTGCKGKGGECNPLDRQCKELQAESASCGKGQKCCVWL",
+    "melting_point_K": 337,
+    "filename": "3D4U_B.pdb"
+  },
+  "3LMS": {
+    "sequence": "NECVSKGFGCLPQSDCPQEARLSYGGCSTVCCDLSKLTGCKGKGGECNPLDRQCKELQAESASCGKGQKCCVWL",
+    "melting_point_K": 339,
+    "filename": "3LMS_B.pdb"
+  },
+  "1ZLH": {
+    "sequence": "NECVSKGFGCLPQSDCPQEARLSYGGCSTVCCDLSKLTGCKGKGGECNPLDRQCKELQAESASCGKGQKCCVWLH",
+    "melting_point_K": 346,
+    "filename": "1ZLH_B.pdb"
+  },
+  "1ZLI": {
+    "sequence": "NECVSKGFGCLPQSDCPQEARLSYGGCSTVCCDLSKLTGCKGKGGECNPLDRQCKELQAESASCGKGQKCCVWLH",
+    "melting_point_K": 350,
+    "filename": "1ZLI_B.pdb"
+  },
+  "2JTO": {
+    "sequence": "NECVSKGFGCLPQSDCPQEARLSYGGCSTVCCDLSKLTGCKGKGGECNPLDRQCKELQAESASCGKGQKCCVWLH",
+    "melting_point_K": 339,
+    "filename": "2JTO_A.pdb"
+  },
+  "2K2X": {
+    "sequence": "NECVSKGFGCLPQSDCPQEARLSYGGCSTVCCDLSKLTGCKGKGGECNPLDRQCKELQAESASCGKGQKCCVWLH",
+    "melting_point_K": 350,
+    "filename": "2K2X_A.pdb"
+  },
+  "7RFA": {
+    "sequence": "NGLPVCGETCVGGTCNTPGCKCSWPVCTR",
+    "melting_point_K": 357,
+    "filename": "7RFA_A.pdb"
+  },
+  "1JJZ": {
+    "sequence": "NGLPVCGETCVGGTCNTPGCTCSWPVCTR",
+    "melting_point_K": 351,
+    "filename": "1JJZ_A.pdb"
+  },
+  "1K48": {
+    "sequence": "NGLPVCGETCVGGTCNTPGCTCSWPVCTR",
+    "melting_point_K": 348,
+    "filename": "1K48_A.pdb"
+  },
+  "1BRV": {
+    "sequence": "NHQDHNNFQTLPYVPCSTCEGNLACLSLCHIE",
+    "melting_point_K": 337,
+    "filename": "1BRV_A.pdb"
+  },
+  "1UGL": {
+    "sequence": "NLMKRCTRGFRKLGKCTTLEEEKCKTLYPRGQCTCSDSKMNTHSCDCKSC",
+    "melting_point_K": 357,
+    "filename": "1UGL_A.pdb"
+  },
+  "1RMR": {
+    "sequence": "NSVHPCCDPVICEPREGEHCISGPCCENCYFLNSGTICKRARGDGNQDYCTGITPDCPRNRYNV",
+    "melting_point_K": 340,
+    "filename": "1RMR_A.pdb"
+  },
+  "1TEJ": {
+    "sequence": "NSVNPCCDPVICKPRDGEHCISGPCCNNCKFLNSGTICQRARGDGNHDYCTGITTDCPRNRYNV",
+    "melting_point_K": 340,
+    "filename": "1TEJ_A.pdb"
+  },
+  "1ZU3": {
+    "sequence": "NSVRDAYIAAPHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 329,
+    "filename": "1ZU3_A.pdb"
+  },
+  "1T7A": {
+    "sequence": "NSVRDAYIADPHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 347,
+    "filename": "1T7A_A.pdb"
+  },
+  "1ZYV": {
+    "sequence": "NSVRDAYIADSHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIKGPGKCH",
+    "melting_point_K": 357,
+    "filename": "1ZYV_A.pdb"
+  },
+  "1ZYW": {
+    "sequence": "NSVRDAYIADSHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIKVGGKCH",
+    "melting_point_K": 366,
+    "filename": "1ZYW_A.pdb"
+  },
+  "1ZUT": {
+    "sequence": "NSVRDAYIADSHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIKVPGKCH",
+    "melting_point_K": 355,
+    "filename": "1ZUT_A.pdb"
+  },
+  "1ZVG": {
+    "sequence": "NSVRDAYIADSHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 358,
+    "filename": "1ZVG_A.pdb"
+  },
+  "1ZVE": {
+    "sequence": "NSVRDAYIAGPHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 349,
+    "filename": "1ZVE_A.pdb"
+  },
+  "1T7E": {
+    "sequence": "NSVRDAYIAKSHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 341,
+    "filename": "1T7E_A.pdb"
+  },
+  "1T7B": {
+    "sequence": "NSVRDAYIAQPHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 327,
+    "filename": "1T7B_A.pdb"
+  },
+  "1DAN": {
+    "sequence": "NTVAAYNLTWKSTNFKTILEWEPKPVNQVYTVQISTKSGDWKSKCFYTTDTECDLTDEIVKDVKQTYLARVFSYPAGNVE",
+    "melting_point_K": 362,
+    "filename": "1DAN_T.pdb"
+  },
+  "1RC9": {
+    "sequence": "NVDFDSESPRKPEIQNEIVDLHNSLRRSVNPTASNMLRMEWYPEAADNAERWAYRCIESHSSYESRVIEGIKCGENIYMSPYPMKWTDIIHAWHDEYKDFKYGVGADPPNAVTGHYTQIVWYKSYRIGCAAAYCPSSPYSYFFVCQYCPAGNFIGKTATPYTSGTPCGDCPSDCDNGLCTNPCTRENKFTNCNTMVQQSSCQDNYMKTNCPASCFCQNKII",
+    "melting_point_K": 352,
+    "filename": "1RC9_A.pdb"
+  },
+  "2KCR": {
+    "sequence": "PAQDYRCQLSRNYGKGSGSFTNYYYDKATSSCKTFRYRGSGGNGNRFKTLEDCEATCVTAE",
+    "melting_point_K": 333,
+    "filename": "2KCR_A.pdb"
+  },
+  "1MCV": {
+    "sequence": "PCTLEYMRCKQDSDCLAGCVCGPNGFCG",
+    "melting_point_K": 347,
+    "filename": "1MCV_I.pdb"
+  },
+  "4XL1": {
+    "sequence": "PDVDECALGANPCEHAGKCLNTLGSFECQCLQGYTGPRCEIDVNECISNPCQNDATCLDQIGEFQCICMPGYEGVYCEINTDECASSPCLHNGRCVDKINEFLCQCPKGFSGHLCQSG",
+    "melting_point_K": 354,
+    "filename": "4XL1_A.pdb"
+  },
+  "1REW": {
+    "sequence": "QAKHKQRKRLKSSCKRHPLYVDFSDVGWNDWIVAPPGYHAFYCHGECPFPLADHLNSTNHAIVQTLVNSVNSKIPKACCVPTELSAISMLYLDENEKVVLKNYQDMVVEGCGCR",
+    "melting_point_K": 339,
+    "filename": "1REW_A.pdb"
+  },
+  "2H5F": {
+    "sequence": "QAVGLPHGFCIQCNRKTWSNCSIGHRCLPYHMTCYTLYKPDENGEMKWAVKGCARMCPTAKSGERVKCCTGASCNSD",
+    "melting_point_K": 350,
+    "filename": "2H5F_A.pdb"
+  },
+  "2H7Z": {
+    "sequence": "QAVGPPYTLCFECNRMTSSDCSTALRCYRGSCYTLYRPDENCELKWAVKGCAETCPTAGPNERVKCCRSPRCNDD",
+    "melting_point_K": 339,
+    "filename": "2H7Z_A.pdb"
+  },
+  "2PUQ": {
+    "sequence": "QCASSPCQNGGSCKDQLQSYICFCLPAFEGRNCETHKDDQLICVNENGGCEQYCSDHTGTKRSCRCHEGYSLLADGVSCTPTVEYPCGKIPILE",
+    "melting_point_K": 359,
+    "filename": "2PUQ_L.pdb"
+  },
+  "6JIC": {
+    "sequence": "QDDPTCGKPCNTMDDCSNGWFCQACWNSRKTCGPFV",
+    "melting_point_K": 361,
+    "filename": "6JIC_A.pdb"
+  },
+  "1I8N": {
+    "sequence": "QDEDAGGAGDETSEGEDTTGSDETPSTGGGGDGGNEETITAGNEDCWSKRPGWKLPDNLLTKTEFTSVDECRKMCEESAVEPSCYILQINTETNECYRNNEGDVTWSSLQYDQPNVVQWHLHACSK",
+    "melting_point_K": 366,
+    "filename": "1I8N_A.pdb"
+  },
+  "1BRZ": {
+    "sequence": "QDKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 332,
+    "filename": "1BRZ_A.pdb"
+  },
+  "2BRZ": {
+    "sequence": "QDKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 341,
+    "filename": "2BRZ_A.pdb"
+  },
+  "4HE7": {
+    "sequence": "QDKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 365,
+    "filename": "4HE7_A.pdb"
+  },
+  "2N66": {
+    "sequence": "QDKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYKEKRNLQCICDYCEY",
+    "melting_point_K": 340,
+    "filename": "2N66_A.pdb"
+  },
+  "2N69": {
+    "sequence": "QDKCKKVYENYPVSKCQLRIANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 331,
+    "filename": "2N69_A.pdb"
+  },
+  "6A5I": {
+    "sequence": "QDRPKFCYLPDDPGVCKAHIPRFYYNPASNKCKEFIYGGCGGNANNFETRAECRHTCVASRKGGPRRP",
+    "melting_point_K": 337,
+    "filename": "6A5I_A.pdb"
+  },
+  "3BT1": {
+    "sequence": "QESCKGRCTEGFNVDKKCQCDELCSYYQSCCTDYTAECKP",
+    "melting_point_K": 355,
+    "filename": "3BT1_B.pdb"
+  },
+  "3BT2": {
+    "sequence": "QESCKGRCTEGFNVDKKCQCDELCSYYQSCCTDYTAECKP",
+    "melting_point_K": 330,
+    "filename": "3BT2_B.pdb"
+  },
+  "1BIG": {
+    "sequence": "QFTDVKCTGSKQCWPVCKQMFGKPNGKCMNGKCRCYS",
+    "melting_point_K": 348,
+    "filename": "1BIG_A.pdb"
+  },
+  "2BMT": {
+    "sequence": "QFTNVSCSASSQCWPVCKKLFGTYRGKCMNSKCRCYS",
+    "melting_point_K": 362,
+    "filename": "2BMT_A.pdb"
+  },
+  "1BAH": {
+    "sequence": "QFTNVSCTTSKEAWSVCQRLHNTSRGKCMNKKARCYS",
+    "melting_point_K": 339,
+    "filename": "1BAH_A.pdb"
+  },
+  "2CRD": {
+    "sequence": "QFTNVSCTTSKECWSVCQRLHNTSRGKCMNKKCRCYS",
+    "melting_point_K": 353,
+    "filename": "2CRD_A.pdb"
+  },
+  "4JTC": {
+    "sequence": "QFTNVSCTTSKECWSVCQRLHNTSRGKCMNKKCRCYS",
+    "melting_point_K": 349,
+    "filename": "4JTC_Y.pdb"
+  },
+  "4JTD": {
+    "sequence": "QFTNVSCTTSKECWSVCQRLHNTSRGMCMNKKCRCYS",
+    "melting_point_K": 339,
+    "filename": "4JTD_Y.pdb"
+  },
+  "1LIR": {
+    "sequence": "QFTQESCTASNQCWSICKRLHNTNRGKCMNKKCRCYS",
+    "melting_point_K": 332,
+    "filename": "1LIR_A.pdb"
+  },
+  "4NTW": {
+    "sequence": "QIRPAFCYEDPPFFQKCGAFVDSYYFNRSRITCVHFFYGQCDVNQNHFTTMSECNRVCHG",
+    "melting_point_K": 358,
+    "filename": "4NTW_B.pdb"
+  },
+  "4NTX": {
+    "sequence": "QIRPAFCYEDPPFFQKCGAFVDSYYFNRSRITCVHFFYGQCDVNQNHFTTMSECNRVCHG",
+    "melting_point_K": 359,
+    "filename": "4NTX_B.pdb"
+  },
+  "4NTY": {
+    "sequence": "QIRPAFCYEDPPFFQKCGAFVDSYYFNRSRITCVHFFYGQCDVNQNHFTTMSECNRVCHG",
+    "melting_point_K": 335,
+    "filename": "4NTY_B.pdb"
+  },
+  "5WUZ": {
+    "sequence": "QNCGRQAGNRACANQLCCSQYGFCGSTSEYCSRANGCQSNCRG",
+    "melting_point_K": 348,
+    "filename": "5WUZ_A.pdb"
+  },
+  "3NH7": {
+    "sequence": "QNLDSMLHGTGMKSDSDQKKSENGVTLAPEDTLPFLKCYCSGHCPDDAINNTCITNGHCFAIIEEDDQGETTLASGCMKYEGSDFQCKDSPKAQLRRTIECCRTNLCNQYLQPTLPPVVIGPFFDGSIR",
+    "melting_point_K": 330,
+    "filename": "3NH7_A.pdb"
+  },
+  "3C05": {
+    "sequence": "QPKNPCCDAATCKLTPGSQCAEGLCCDQCKFIKAGKICRRARGDNPDYRCTGQSGDCPRKHF",
+    "melting_point_K": 370,
+    "filename": "3C05_A.pdb"
+  },
+  "1R02": {
+    "sequence": "QPLPDCCRQKTCSCRLYELLHGAGNHAAGILTL",
+    "melting_point_K": 345,
+    "filename": "1R02_A.pdb"
+  },
+  "1DEM": {
+    "sequence": "QPLRKLCILHRNPGRCYQKIPAFYYNQKKKQCEGFTWSGCGGNSNRFKTIEECRRTCIRK",
+    "melting_point_K": 353,
+    "filename": "1DEM_A.pdb"
+  },
+  "1DEN": {
+    "sequence": "QPLRKLCILHRNPGRCYQKIPAFYYNQKKKQCEGFTWSGCGGNSNRFKTIEECRRTCIRK",
+    "melting_point_K": 342,
+    "filename": "1DEN_A.pdb"
+  },
+  "1DTX": {
+    "sequence": "QPRRKLCILHRNPGRCYDKIPAFYYNQKKKQCERFDWSGCGGNSNRFKTIEECRRTCIG",
+    "melting_point_K": 372,
+    "filename": "1DTX_A.pdb"
+  },
+  "1C4E": {
+    "sequence": "QQCVKKDELCIPYYLDCCEPLECKKVNWWDHKCIG",
+    "melting_point_K": 347,
+    "filename": "1C4E_A.pdb"
+  },
+  "1GUR": {
+    "sequence": "QQCVKKDELCIPYYLDCCEPLECKKVNWWDHKCIG",
+    "melting_point_K": 327,
+    "filename": "1GUR_A.pdb"
+  },
+  "2LJS": {
+    "sequence": "QRACPRILKKCRRDSDCPGECICKGNGYCG",
+    "melting_point_K": 331,
+    "filename": "2LJS_A.pdb"
+  },
+  "1Q2J": {
+    "sequence": "QRCCNGRRGCSSRWCRDHSRCC",
+    "melting_point_K": 340,
+    "filename": "1Q2J_A.pdb"
+  },
+  "4AML": {
+    "sequence": "QRCGEQGSNMECPNNLCCSQYGYCGMGGDYCGKGCQNGACWTSKRCGSQAGGATCTNNQCCSQYGYCGFGAEYCGAGCQGGPCRADIKCGSQAGGKLCPNNLCCSQWGFCGLGSEFCGGGCQSGACSTDKPCGKDAGGRVCTNNYCCSKWGSCGIGPGYCGAGCQSGGCDG",
+    "melting_point_K": 355,
+    "filename": "4AML_A.pdb"
+  },
+  "1EHD": {
+    "sequence": "QRCGSQGGGATCPGLRCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGGKCQYRCSSS",
+    "melting_point_K": 332,
+    "filename": "1EHD_A.pdb"
+  },
+  "1EHH": {
+    "sequence": "QRCGSQGGGATCPGLRCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGGKCQYRCSSS",
+    "melting_point_K": 347,
+    "filename": "1EHH_A.pdb"
+  },
+  "1IQB": {
+    "sequence": "QRCGSQGGGGTCPALWCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGSKCQYRCSSS",
+    "melting_point_K": 344,
+    "filename": "1IQB_A.pdb"
+  },
+  "1P9G": {
+    "sequence": "QTCASRCPRPCNAGLCCSIYGYCGSGAAYCGAGNCRCQCRG",
+    "melting_point_K": 337,
+    "filename": "1P9G_A.pdb"
+  },
+  "1P9Z": {
+    "sequence": "QTCASRCPRPCNAGLCCSIYGYCGSGAAYCGAGNCRCQCRG",
+    "melting_point_K": 347,
+    "filename": "1P9Z_A.pdb"
+  },
+  "2C4B": {
+    "sequence": "QVINTFDGVADYLQTYHKLPDNYITKSEAQALGWVASKGNLADVAPGKSIGGDIFSNREGKLPGKSGRTWREADINYTSGFRNSDRILYSSDWLIYKTTDAYQTFTKIRSSSMGVCPKILKKCRRDSDCLAGCVCGPNGFCGS",
+    "melting_point_K": 356,
+    "filename": "2C4B_A.pdb"
+  },
+  "1WQ8": {
+    "sequence": "QVRPFLEVHERSACQARETLVPILQEYPDEISDIFRPSCVAVLRCSGCCTDESLKCTPVGKHTVDIQIMRVNPRTQSSKMEVMKFTEHTACECRPRRKQGEPDGPKEKPR",
+    "melting_point_K": 327,
+    "filename": "1WQ8_A.pdb"
+  },
+  "1TCH": {
+    "sequence": "RDCCTPPKKCKDAQCKPQRCCA",
+    "melting_point_K": 345,
+    "filename": "1TCH_A.pdb"
+  },
+  "1TCK": {
+    "sequence": "RDCCTPPKKCKKAQCKPQRCCA",
+    "melting_point_K": 346,
+    "filename": "1TCK_A.pdb"
+  },
+  "1TCG": {
+    "sequence": "RDCCTPAKKCKDRQCKPQRCCA",
+    "melting_point_K": 330,
+    "filename": "1TCG_A.pdb"
+  },
+  "1TCJ": {
+    "sequence": "RDCCTPPKKCKDRQCKPQRCCA",
+    "melting_point_K": 359,
+    "filename": "1TCJ_A.pdb"
+  },
+  "1GIB": {
+    "sequence": "RDCCTPPRKCKDRRCKPMKCCA",
+    "melting_point_K": 332,
+    "filename": "1GIB_A.pdb"
+  },
+  "1PE4": {
+    "sequence": "RDGYPLASNGCKFGCSGLGENNPTCNHVCEKKAGSDYGYCYAWTCYCEHVAEGTVLWGDSGTGPCRS",
+    "melting_point_K": 331,
+    "filename": "1PE4_A.pdb"
+  },
+  "4CQK": {
+    "sequence": "RECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC",
+    "melting_point_K": 327,
+    "filename": "4CQK_A.pdb"
+  },
+  "1LSI": {
+    "sequence": "RECYLNPHDTQTCPSGQEICYVKSWCNAWCSSRGKVLEFGCAATCPSVNTGTEIKCCSADKCNTYP",
+    "melting_point_K": 332,
+    "filename": "1LSI_A.pdb"
+  },
+  "2ERA": {
+    "sequence": "RICFNHQGSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 330,
+    "filename": "2ERA_A.pdb"
+  },
+  "1ERA": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYHKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 348,
+    "filename": "1ERA_A.pdb"
+  },
+  "1FRA": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYHKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 372,
+    "filename": "1FRA_A.pdb"
+  },
+  "3EBX": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYHKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 346,
+    "filename": "3EBX_A.pdb"
+  },
+  "6EBX": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYHKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 349,
+    "filename": "6EBX_A.pdb"
+  },
+  "6PNW": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYHKQWSDFRGTIIERGCGCPTVKPGINLSCCESEVCNN",
+    "melting_point_K": 361,
+    "filename": "6PNW_A.pdb"
+  },
+  "1QKD": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 364,
+    "filename": "1QKD_A.pdb"
+  },
+  "1QKE": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 364,
+    "filename": "1QKE_A.pdb"
+  },
+  "5EBX": {
+    "sequence": "RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 367,
+    "filename": "5EBX_A.pdb"
+  },
+  "3ERA": {
+    "sequence": "RICFNHQTSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 345,
+    "filename": "3ERA_A.pdb"
+  },
+  "1NXB": {
+    "sequence": "RICFNQHSSQPQTTKTCSPGESSCYHKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+    "melting_point_K": 332,
+    "filename": "1NXB_A.pdb"
+  },
+  "1F2S": {
+    "sequence": "RICPRIWMECKRDSDCMAECICVMGHCG",
+    "melting_point_K": 333,
+    "filename": "1F2S_I.pdb"
+  },
+  "1MCT": {
+    "sequence": "RICPRIWMECTRDSDCMAKCICVAGHCG",
+    "melting_point_K": 369,
+    "filename": "1MCT_I.pdb"
+  },
+  "1DRS": {
+    "sequence": "RICYNHLGTKPPTTETCQEDSCYKNIWTFDNIIRRGCGCFTPRGDMPGPYCCESDKCNL",
+    "melting_point_K": 372,
+    "filename": "1DRS_A.pdb"
+  },
+  "1NTX": {
+    "sequence": "RICYNHQSTTRATTKSCEENSCYKKYWRDHRGTIIERGCGCPKVKPGVGIHCCQSDKCNY",
+    "melting_point_K": 333,
+    "filename": "1NTX_A.pdb"
+  },
+  "1TFS": {
+    "sequence": "RICYSHKASLPRATKTCVENTCYKMFIRTHREYISERGCGCPTAMWPYQTECCKGDRCNK",
+    "melting_point_K": 335,
+    "filename": "1TFS_A.pdb"
+  },
+  "1VYC": {
+    "sequence": "RKCLIKYSQANESSKTCPSGQLLCLKKWEIGNPSGKEVKRGCVATCPKPWKNEIIQCCAKDKCNA",
+    "melting_point_K": 331,
+    "filename": "1VYC_A.pdb"
+  },
+  "2H8U": {
+    "sequence": "RKCLIKYSQANESSKTCPSGQLLCLKKWEIGNPSGKEVKRGCVATCPKPWKNEIIQCCAKDKCNA",
+    "melting_point_K": 367,
+    "filename": "2H8U_A.pdb"
+  },
+  "3PLC": {
+    "sequence": "RKCLNTPLPLIYTTCPIGQDKCVKMTIKKLPSKYDVIRGCIDICPKSSADVEVLCCDTNKCNK",
+    "melting_point_K": 328,
+    "filename": "3PLC_A.pdb"
+  },
+  "1KBT": {
+    "sequence": "RKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
+    "melting_point_K": 363,
+    "filename": "1KBT_A.pdb"
+  },
+  "4OM5": {
+    "sequence": "RKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
+    "melting_point_K": 362,
+    "filename": "4OM5_A.pdb"
+  },
+  "1BUN": {
+    "sequence": "RKRHPDCDKPPDTKICQTVVRAFYYKPSAKRCVQFRYGGCNGNGNHFKSDHLCRCECLEYR",
+    "melting_point_K": 357,
+    "filename": "1BUN_B.pdb"
+  },
+  "4ZQY": {
+    "sequence": "RLCLSDYSIFSETIEICPEGHNYCFKKFPKGITRLPWVIRGCAATCPKPEAQVYVDCCARDKCNR",
+    "melting_point_K": 345,
+    "filename": "4ZQY_A.pdb"
+  },
+  "5NCE": {
+    "sequence": "RMCKTPSGKFKGYCVNNTNCKNVCRTEGFPTGSCDFHVAGRKCYCYKPCP",
+    "melting_point_K": 372,
+    "filename": "5NCE_A.pdb"
+  },
+  "3D65": {
+    "sequence": "RPDFCELPADTGPCRVRFPSFYYNPDEKKCLEFIYGGCEGNANNFITKEECESTCAA",
+    "melting_point_K": 335,
+    "filename": "3D65_I.pdb"
+  },
+  "2M99": {
+    "sequence": "RPRFCELAPSAGSCFAFVPSYYYNQYSNTCHSFTYSGCGGNANRFRTIDECNRTCVG",
+    "melting_point_K": 341,
+    "filename": "2M99_A.pdb"
+  },
+  "1J5J": {
+    "sequence": "RPTDIKCSESYQCFPVCKSRFGKTNGRCVNGFCDCF",
+    "melting_point_K": 362,
+    "filename": "1J5J_A.pdb"
+  },
+  "1LGL": {
+    "sequence": "RPTDIKCSESYQCFPVCKSRFGKTNGRCVNGFCDCF",
+    "melting_point_K": 364,
+    "filename": "1LGL_A.pdb"
+  },
+  "1C2U": {
+    "sequence": "RSAIDTIPKSRCTAFQCKHSAKYRLSFCRKTCGTA",
+    "melting_point_K": 349,
+    "filename": "1C2U_A.pdb"
+  },
+  "1ANS": {
+    "sequence": "RSCCPCYWGGCPWGQNCYPEGCSGPKV",
+    "melting_point_K": 344,
+    "filename": "1ANS_A.pdb"
+  },
+  "1CZ6": {
+    "sequence": "RSVCRQIKICRRRGGCYYKCTNRPY",
+    "melting_point_K": 362,
+    "filename": "1CZ6_A.pdb"
+  },
+  "1KBA": {
+    "sequence": "RTCLISPSSTPQTCPNGQDICFLKAQCDKFCSIRGPVIEQGCVATCPQFRSNYRSLLCCTTDNCNH",
+    "melting_point_K": 349,
+    "filename": "1KBA_A.pdb"
+  },
+  "2NBT": {
+    "sequence": "RTCLISPSSTPQTCPNGQDICFLKAQCDKFCSIRGPVIEQGCVATCPQFRSNYRSLLCCTTDNCNH",
+    "melting_point_K": 356,
+    "filename": "2NBT_A.pdb"
+  },
+  "4LFT": {
+    "sequence": "RTCNKTFSDQSKICPPGENICYTKTWCDAFCSQRGKRVELGCAATCPKVKAGVEIKCCSTDNCNKFQFGKPRX",
+    "melting_point_K": 341,
+    "filename": "4LFT_A.pdb"
+  },
+  "2BTC": {
+    "sequence": "RVCPKILMECKKDSDCLAECICLEHGYCG",
+    "melting_point_K": 344,
+    "filename": "2BTC_I.pdb"
+  },
+  "2STB": {
+    "sequence": "RVCPKILMECKKDSDCLAECICLEHGYCG",
+    "melting_point_K": 357,
+    "filename": "2STB_I.pdb"
+  },
+  "1LU0": {
+    "sequence": "RVCPRILLECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 372,
+    "filename": "1LU0_A.pdb"
+  },
+  "2V1V": {
+    "sequence": "RVCPRILLECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 368,
+    "filename": "2V1V_A.pdb"
+  },
+  "1CTI": {
+    "sequence": "RVCPRILMECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 357,
+    "filename": "1CTI_A.pdb"
+  },
+  "1PPE": {
+    "sequence": "RVCPRILMECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 340,
+    "filename": "1PPE_I.pdb"
+  },
+  "2CTI": {
+    "sequence": "RVCPRILMECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 359,
+    "filename": "2CTI_A.pdb"
+  },
+  "2STA": {
+    "sequence": "RVCPRILMECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 333,
+    "filename": "2STA_I.pdb"
+  },
+  "3CTI": {
+    "sequence": "RVCPRILMECKKDSDCLAECVCLEHGYCG",
+    "melting_point_K": 360,
+    "filename": "3CTI_A.pdb"
+  },
+  "2FQA": {
+    "sequence": "SAISCGETCFKFKCYTPRCSCSYPVCK",
+    "melting_point_K": 372,
+    "filename": "2FQA_A.pdb"
+  },
+  "1IXT": {
+    "sequence": "SCNNSCQSHSDCASHCICTFRGCGAVN",
+    "melting_point_K": 366,
+    "filename": "1IXT_A.pdb"
+  },
+  "1EYO": {
+    "sequence": "SCSGRDSRCPPVCCMGLMCSRGKCVSIYGE",
+    "melting_point_K": 327,
+    "filename": "1EYO_A.pdb"
+  },
+  "1GM2": {
+    "sequence": "SCTKSIPPQCY",
+    "melting_point_K": 335,
+    "filename": "1GM2_A.pdb"
+  },
+  "1DF6": {
+    "sequence": "SCVYIPCTVTALLGCSCSNRVCYNGIPCAE",
+    "melting_point_K": 329,
+    "filename": "1DF6_A.pdb"
+  },
+  "3CH5": {
+    "sequence": "SDKPASTSGTGFGDKFKPAIGTWDCDTCLVQNKPEAVKCVACETPKPGTGVK",
+    "melting_point_K": 371,
+    "filename": "3CH5_B.pdb"
+  },
+  "6V6T": {
+    "sequence": "SECRYLFGGCKTTADCCKHLGCRTDLYYCAWDGTF",
+    "melting_point_K": 362,
+    "filename": "6V6T_A.pdb"
+  },
+  "2KNI": {
+    "sequence": "SEDCIPKWKGCVNRHGDCCEGLECWKRRRSFEVCVPKTPKT",
+    "melting_point_K": 343,
+    "filename": "2KNI_A.pdb"
+  },
+  "1BTE": {
+    "sequence": "SETQECLFFNANWERDRTNQTGVEPCYGDKDKRRHCFATWKNISGSIEIVKQGCWLDDINCYDRTDCIEKKDSPEVYFCCCEGNMCNEKFSYFPEME",
+    "melting_point_K": 356,
+    "filename": "1BTE_A.pdb"
+  },
+  "2H62": {
+    "sequence": "SGRGEAETRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHL",
+    "melting_point_K": 363,
+    "filename": "2H62_D.pdb"
+  },
+  "2H64": {
+    "sequence": "SGRGEAETRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHLP",
+    "melting_point_K": 332,
+    "filename": "2H64_C.pdb"
+  },
+  "1NYS": {
+    "sequence": "SGRGEAETRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHLPEPLVPR",
+    "melting_point_K": 350,
+    "filename": "1NYS_A.pdb"
+  },
+  "1NYU": {
+    "sequence": "SGRGEAETRECIYYNANWELERTNQSGLERCEGEQDKRLHCYASWRNSSGTIELVKKGCWLDDFNCYDRQECVATEENPQVYFCCCEGNFCNERFTHLPEPLVPR",
+    "melting_point_K": 343,
+    "filename": "1NYU_A.pdb"
+  },
+  "1HA9": {
+    "sequence": "SGSDGGVCPKILKKCRRDSDCPGACICRGNGYCG",
+    "melting_point_K": 336,
+    "filename": "1HA9_A.pdb"
+  },
+  "1IB9": {
+    "sequence": "SGSDGGVCPKILKKCRRDSDCPGACICRGNGYCG",
+    "melting_point_K": 356,
+    "filename": "1IB9_A.pdb"
+  },
+  "1IC9": {
+    "sequence": "SKYEYTIPSYTFRGPGCPTLKPAITVRCE",
+    "melting_point_K": 342,
+    "filename": "1IC9_A.pdb"
+  },
+  "1ICO": {
+    "sequence": "SKYEYTIPSYTFRGPGCPTVKPAVTIRCE",
+    "melting_point_K": 333,
+    "filename": "1ICO_A.pdb"
+  },
+  "2MOP": {
+    "sequence": "SPPVCGNKILEQGEDCDCGSPANCQDRCCNAATCKLTPGSQCNYGECCDQCRFKKAGTVCRIARGDWNDDYCTGKSSDCPWNH",
+    "melting_point_K": 366,
+    "filename": "2MOP_1.pdb"
+  },
+  "2MP5": {
+    "sequence": "SPPVCGNKILEQGEDCDCGSPANCQDRCCNAATCKLTPGSQCNYGECCDQCRFKKAGTVCRIARGDWNDDYCTGKSSDCPWNH",
+    "melting_point_K": 333,
+    "filename": "2MP5_1.pdb"
+  },
+  "1AXH": {
+    "sequence": "SPTCIPSGQPCPYNENCCSQSCTFKENENGNTVKRCD",
+    "melting_point_K": 342,
+    "filename": "1AXH_A.pdb"
+  },
+  "1EHS": {
+    "sequence": "STQSNKKDLCEHYRQIAKESCKKGFLGVRDGTAGACFGAQIMVAAKGC",
+    "melting_point_K": 365,
+    "filename": "1EHS_A.pdb"
+  },
+  "1LA4": {
+    "sequence": "TCRYLFGGCKTTADCCKHLACRSDGKYCAWDGTF",
+    "melting_point_K": 357,
+    "filename": "1LA4_A.pdb"
+  },
+  "1MTX": {
+    "sequence": "TIINVKCTSPKQCLPPCKAQFGQSAGAKCMNGKCKCYPH",
+    "melting_point_K": 330,
+    "filename": "1MTX_A.pdb"
+  },
+  "1SXM": {
+    "sequence": "TIINVKCTSPKQCSKPCKELYGSSAGAKCMNGKCKCYNN",
+    "melting_point_K": 336,
+    "filename": "1SXM_A.pdb"
+  },
+  "1C49": {
+    "sequence": "TISCTNEKQCYPHCKKETGYPNAKCMNRKCKCFGR",
+    "melting_point_K": 328,
+    "filename": "1C49_A.pdb"
+  },
+  "3HH7": {
+    "sequence": "TKCYNHQSTTPETTEICPDSGYFCYKSSWIDGREGRIERGCTFTCPELTPNGKYVYCCRRDKCNQ",
+    "melting_point_K": 352,
+    "filename": "3HH7_A.pdb"
+  },
+  "1TXA": {
+    "sequence": "TKCYVTPDATSQTCPDGQDICYTKTWCDGFCSSRGKRIDLGCAATCPKVKPGVDIKCCSTDNCNPFPTWKRKH",
+    "melting_point_K": 351,
+    "filename": "1TXA_A.pdb"
+  },
+  "1TXB": {
+    "sequence": "TKCYVTPDATSQTCPDGQDICYTKTWCDGFCSSRGKRIDLGCAATCPKVKPGVDIKCCSTDNCNPFPTWKRKH",
+    "melting_point_K": 355,
+    "filename": "1TXB_A.pdb"
+  },
+  "1ES7": {
+    "sequence": "TLPFLKCYCSGHCPDDAINNTCITNGHCFAIIEEDDQGETTLASGCMKYEGSDFQCKDSPKAQLRRTIECCRTNLCNQYLQPTLPPVVI",
+    "melting_point_K": 363,
+    "filename": "1ES7_B.pdb"
+  },
+  "1B41": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 370,
+    "filename": "1B41_B.pdb"
+  },
+  "1F8U": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 345,
+    "filename": "1F8U_B.pdb"
+  },
+  "1FSC": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 339,
+    "filename": "1FSC_A.pdb"
+  },
+  "1FSS": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 334,
+    "filename": "1FSS_B.pdb"
+  },
+  "1KU6": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 358,
+    "filename": "1KU6_B.pdb"
+  },
+  "1MAH": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 351,
+    "filename": "1MAH_F.pdb"
+  },
+  "2X8B": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 363,
+    "filename": "2X8B_B.pdb"
+  },
+  "4BDT": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 354,
+    "filename": "4BDT_B.pdb"
+  },
+  "4EY8": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDNLEVKCCTSPDKCNY",
+    "melting_point_K": 371,
+    "filename": "4EY8_B.pdb"
+  },
+  "1FAS": {
+    "sequence": "TMCYSHTTTSRAILTNCGENSCYRKSRRHPPKMVLGRGCGCPPGDDYLEVKCCTSPDKCNY",
+    "melting_point_K": 343,
+    "filename": "1FAS_A.pdb"
+  },
+  "1QM7": {
+    "sequence": "TMCYSHTTTSRAILTNCPGETNCYKKSRRHPPKMVLGRGCGCPTVAPGIKLNCCTTDKCNY",
+    "melting_point_K": 359,
+    "filename": "1QM7_A.pdb"
+  },
+  "1PVZ": {
+    "sequence": "TPFAIKCATDADCSRKCPGNPPCRNGFCACT",
+    "melting_point_K": 345,
+    "filename": "1PVZ_A.pdb"
+  },
+  "1RJI": {
+    "sequence": "TPYPVNCKTDRDCVMCGLGISCKNGYCQGCT",
+    "melting_point_K": 333,
+    "filename": "1RJI_A.pdb"
+  },
+  "1WT8": {
+    "sequence": "TPYPVNCKTDRDCVMCGLGISCKNGYCQGCT",
+    "melting_point_K": 353,
+    "filename": "1WT8_A.pdb"
+  },
+  "1AZ6": {
+    "sequence": "TQSHAGQCGGIGYSGPTVCASGTTCQVLNPYYSQCL",
+    "melting_point_K": 369,
+    "filename": "1AZ6_A.pdb"
+  },
+  "1AZH": {
+    "sequence": "TQSHAGQCGGIGYSGPTVCASGTTCQVLNPYYSQCL",
+    "melting_point_K": 356,
+    "filename": "1AZH_A.pdb"
+  },
+  "1AZJ": {
+    "sequence": "TQSHYGQCGGIGYSGPTVCASGTTCQVLNPAYSQCL",
+    "melting_point_K": 345,
+    "filename": "1AZJ_A.pdb"
+  },
+  "1AZK": {
+    "sequence": "TQSHYGQCGGIGYSGPTVCASGTTCQVLNPYASQCL",
+    "melting_point_K": 351,
+    "filename": "1AZK_A.pdb"
+  },
+  "1CBH": {
+    "sequence": "TQSHYGQCGGIGYSGPTVCASGTTCQVLNPYYSQCL",
+    "melting_point_K": 333,
+    "filename": "1CBH_A.pdb"
+  },
+  "2CBH": {
+    "sequence": "TQSHYGQCGGIGYSGPTVCASGTTCQVLNPYYSQCL",
+    "melting_point_K": 329,
+    "filename": "2CBH_A.pdb"
+  },
+  "1PNH": {
+    "sequence": "TVCNLRRCQLSCRSLGLLGKCIGVKCECVKH",
+    "melting_point_K": 351,
+    "filename": "1PNH_A.pdb"
+  },
+  "1HLY": {
+    "sequence": "TVIDVKCTSPKQCLPPCKAQFGIRAGAKCMNGKCKCYPH",
+    "melting_point_K": 346,
+    "filename": "1HLY_A.pdb"
+  },
+  "1ORX": {
+    "sequence": "VCGETCVGGTCNTPGCTCSWPVCT",
+    "melting_point_K": 366,
+    "filename": "1ORX_A.pdb"
+  },
+  "1BGK": {
+    "sequence": "VCRDWFKETACRHAKSLGNCRTSQKYRANCAKTCELC",
+    "melting_point_K": 336,
+    "filename": "1BGK_A.pdb"
+  },
+  "1HP2": {
+    "sequence": "VFINAKCRGSPECLPKCKEAIGKAAGKCMNGKCKCYP",
+    "melting_point_K": 353,
+    "filename": "1HP2_A.pdb"
+  },
+  "1DU9": {
+    "sequence": "VGCEECPMHCKGKNAKPTCDDGVCNCNV",
+    "melting_point_K": 370,
+    "filename": "1DU9_A.pdb"
+  },
+  "1WM8": {
+    "sequence": "VGCEECPMHCKGKNANPTCDDGVCNCNV",
+    "melting_point_K": 368,
+    "filename": "1WM8_A.pdb"
+  },
+  "1MMC": {
+    "sequence": "VGECVRGRCPSGMCCSQFGYCGKGPKYCGR",
+    "melting_point_K": 333,
+    "filename": "1MMC_A.pdb"
+  },
+  "2MLD": {
+    "sequence": "VGINVDCKHSGQCLKPCKKAGMRFGKCINGKCDCTPK",
+    "melting_point_K": 328,
+    "filename": "2MLD_A.pdb"
+  },
+  "1BKT": {
+    "sequence": "VGINVKCKHSGQCLKPCKDAGMRFGKCINGKCDCTPK",
+    "melting_point_K": 341,
+    "filename": "1BKT_A.pdb"
+  },
+  "2MLA": {
+    "sequence": "VGINVKCKHSGQCLKPCKKAGMRFGKCINGKCDCTPK",
+    "melting_point_K": 360,
+    "filename": "2MLA_A.pdb"
+  },
+  "2K4U": {
+    "sequence": "VGINVKCKHSRQCLKPCKDAGMRFGKCTNGKCHCTPK",
+    "melting_point_K": 347,
+    "filename": "2K4U_A.pdb"
+  },
+  "1WMT": {
+    "sequence": "VHTNIPCRGTSDCYEPCEKKYNCARAKCMNRHCNCYNNCPW",
+    "melting_point_K": 371,
+    "filename": "1WMT_A.pdb"
+  },
+  "1AHO": {
+    "sequence": "VKDGYIVDDVNCTYFCGRNAYCNEECTKLKGESGYCQWASPYGNACYCYKLPDHVRTKGPGRCH",
+    "melting_point_K": 338,
+    "filename": "1AHO_A.pdb"
+  },
+  "1PTX": {
+    "sequence": "VKDGYIVDDVNCTYFCGRNAYCNEECTKLKGESGYCQWASPYGNACYCYKLPDHVRTKGPGRCH",
+    "melting_point_K": 363,
+    "filename": "1PTX_A.pdb"
+  },
+  "4AEI": {
+    "sequence": "VKDGYIVDDVNCTYFCGRNAYCNEECTKLKGESGYCQWASPYGNACYCYKLPDHVRTKGPGRCHX",
+    "melting_point_K": 333,
+    "filename": "4AEI_A.pdb"
+  },
+  "1SEG": {
+    "sequence": "VKDGYIVKNYNCTYFCFRNAYCNEECTKLKGESGYCQWASPYGNACYCYKLPDHVPIRVPGKCH",
+    "melting_point_K": 332,
+    "filename": "1SEG_A.pdb"
+  },
+  "1CW5": {
+    "sequence": "VNYGNGVSCSKTKCSVNWGQAFQERYTAGINSFVSGVASGAGSIGRRP",
+    "melting_point_K": 356,
+    "filename": "1CW5_A.pdb"
+  },
+  "1LPA": {
+    "sequence": "VPDPRGIIINLDEGELCLNSAQCKSNCCQHDTILSLLRCALKARENSECSAFTLYGVYYKCPCERGLTCEGDKSLVGSITNTNFGICHNVGRSDS",
+    "melting_point_K": 367,
+    "filename": "1LPA_A.pdb"
+  },
+  "1N8S": {
+    "sequence": "VPDPRGIIINLDEGELCLNSAQCKSNCCQHDTILSLLRCALKARENSECSAFTLYGVYYKCPCERGLTCEGDKSLVGSITNTNFGICHNVGRSDS",
+    "melting_point_K": 369,
+    "filename": "1N8S_C.pdb"
+  },
+  "1PCN": {
+    "sequence": "VPDPRGIIINLDEGELCLNSAQCKSNCCQHDTILSLSRCALKARENSECSAFTLYGVYYKCPCERGLTCEGDKSLVGSITNTNFGICHNVGRS",
+    "melting_point_K": 369,
+    "filename": "1PCN_A.pdb"
+  },
+  "1PCO": {
+    "sequence": "VPDPRGIIINLDEGELCLNSAQCKSNCCQHDTILSLSRCALKARENSECSAFTLYGVYYKCPCERGLTCEGDKSLVGSITNTNFGICHNVGRS",
+    "melting_point_K": 336,
+    "filename": "1PCO_A.pdb"
+  },
+  "1ETH": {
+    "sequence": "VPDPRGIIINLDEGELCLNSAQCKSNCCQHDTILSLSRCALKARENSECSAFTLYGVYYKCPCERGLTCEGDKSLVGSITNTNFGICHNVGRSDS",
+    "melting_point_K": 347,
+    "filename": "1ETH_B.pdb"
+  },
+  "1LPB": {
+    "sequence": "VPDPRGIIINLDEGELCLNSAQCKSNCCQHDTILSLSRCALKARENSECSAFTLYGVYYKCPCERGLTCEGDKSLVGSITNTNFGICHNVGRSDS",
+    "melting_point_K": 349,
+    "filename": "1LPB_A.pdb"
+  },
+  "1KCO": {
+    "sequence": "VQCPHFCYELDYELCPDVCYV",
+    "melting_point_K": 359,
+    "filename": "1KCO_A.pdb"
+  },
+  "1LQQ": {
+    "sequence": "VRDAYIAKNYNCVYECFRDSYCNDLCTKNGASSGYCQWAGKYGNACWCYALPDNVPIRVPGKCH",
+    "melting_point_K": 346,
+    "filename": "1LQQ_A.pdb"
+  },
+  "2KBK": {
+    "sequence": "VRDAYIAKPENCVYECGITQDCNKLCTENGAESGYCQWGGKYGNACWCIKLPDSVPIRVPGKCQ",
+    "melting_point_K": 345,
+    "filename": "2KBK_A.pdb"
+  },
+  "1SN4": {
+    "sequence": "VRDAYIAKPENCVYHCAGNEGCNKLCTDNGAESGYCQWGGRYGNACWCIKLPDDVPIRVPGKCH",
+    "melting_point_K": 335,
+    "filename": "1SN4_A.pdb"
+  },
+  "1DJT": {
+    "sequence": "VRDAYIAKPHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 341,
+    "filename": "1DJT_A.pdb"
+  },
+  "1SN1": {
+    "sequence": "VRDAYIAKPHNCVYECARNEYCNDLCTKNGAKSGYCQWVGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 337,
+    "filename": "1SN1_A.pdb"
+  },
+  "1CHZ": {
+    "sequence": "VRDAYIAKPHNCVYECARNEYCNNLCTKNGAKSGYCQWSGKYGNGCWCIELPDNVPIRVPGKCH",
+    "melting_point_K": 352,
+    "filename": "1CHZ_A.pdb"
+  },
+  "2E0H": {
+    "sequence": "VRDAYIAQNYNCVYHCARDAYCNELCTKNGAKSGSCPYLGEHKFACYCKDLPDNVPIRVPGKCH",
+    "melting_point_K": 348,
+    "filename": "2E0H_A.pdb"
+  },
+  "1KV0": {
+    "sequence": "VRDGYIALPHNCAYGCLNNEYCNNLCTKDGAKIGYCNIVGKYGNACWCIQLPDNVPIRVPGRCHPA",
+    "melting_point_K": 335,
+    "filename": "1KV0_A.pdb"
+  },
+  "1BMR": {
+    "sequence": "VRDGYIAQPENCVYHCFPGSSGCDTLCKEKGGTSGHCGFKVGHGLACWCNALPDNVGIIVEGEKCHSX",
+    "melting_point_K": 342,
+    "filename": "1BMR_A.pdb"
+  },
+  "1FH3": {
+    "sequence": "VRDGYIAQPENCVYHCFPGSSGCDTLCKEKGGTSGHCGFKVGHGLACWCNALPDNVGIIVEGEKCHSX",
+    "melting_point_K": 342,
+    "filename": "1FH3_A.pdb"
+  },
+  "1ACW": {
+    "sequence": "VSCEDCPEHCSTQKAQAKCDNDKCVCEPI",
+    "melting_point_K": 355,
+    "filename": "1ACW_A.pdb"
+  },
+  "1TXM": {
+    "sequence": "VSCTGSKDCYAPCRKQTGCPNAKCINKSCKCYGC",
+    "melting_point_K": 342,
+    "filename": "1TXM_A.pdb"
+  },
+  "1WPD": {
+    "sequence": "VSCTGSKDCYAPCRKQTGCPYGKCMNRKCKCNRC",
+    "melting_point_K": 346,
+    "filename": "1WPD_A.pdb"
+  },
+  "1PLO": {
+    "sequence": "VTDNAGAVKFPQLCKFCDVRFSTCDNQKSCMSNCSITSICEKPQEVCVAVWRKNDENITLETVCHDPKLPYHDFILEDAASPKCIMKEKKKPGETFFMCSCSSDECNDNIIFSEEYNTSNPD",
+    "melting_point_K": 342,
+    "filename": "1PLO_A.pdb"
+  },
+  "1TSK": {
+    "sequence": "VVIGQRCYRSPDCYSACKKLVGKATGKCTNGRCDC",
+    "melting_point_K": 330,
+    "filename": "1TSK_A.pdb"
+  },
+  "1FU3": {
+    "sequence": "WCKQSGEMCNLLDQNCCDGYCIVLVCT",
+    "melting_point_K": 344,
+    "filename": "1FU3_A.pdb"
+  },
+  "1C55": {
+    "sequence": "WCSTCLDLACGASRECYDPCFKAFGRAHGKCMNNKCRCYT",
+    "melting_point_K": 358,
+    "filename": "1C55_A.pdb"
+  },
+  "1C56": {
+    "sequence": "WCSTCLDLACGASRECYDPCFKAFGRAHGKCMNNKCRCYT",
+    "melting_point_K": 328,
+    "filename": "1C56_A.pdb"
+  },
+  "1WQB": {
+    "sequence": "WLGCARVKEACGPWEWPCCSGLKCDGSECHPQ",
+    "melting_point_K": 344,
+    "filename": "1WQB_A.pdb"
+  },
+  "1BF0": {
+    "sequence": "WQPPWYCKEPVRIGSCKKQFSSFYFKWTAKKCLPFLFSGCGGNANRFQTIGECRKKCLGK",
+    "melting_point_K": 338,
+    "filename": "1BF0_A.pdb"
+  },
+  "1PAO": {
+    "sequence": "ACKSTQDPMFTPKGCDN",
+    "melting_point_K": 343,
+    "filename": "1PAO_A.pdb"
+  },
+  "1IM7": {
+    "sequence": "IWGCSGKLICTTA",
+    "melting_point_K": 346,
+    "filename": "1IM7_A.pdb"
+  },
+  "1NIL": {
+    "sequence": "KCTSDQDEQFIPKGCSK",
+    "melting_point_K": 338,
+    "filename": "1NIL_A.pdb"
+  },
+  "1KB7": {
+    "sequence": "SCATTVDAKFRPNGCTD",
+    "melting_point_K": 333,
+    "filename": "1KB7_A.pdb"
+  },
+  "1KB8": {
+    "sequence": "SCATTVDAKFRPNGCTD",
+    "melting_point_K": 360,
+    "filename": "1KB8_A.pdb"
+  },
+  "1HY9": {
+    "sequence": "YGQVPMCDAGEQCAVRKGARIGKLCDCPRGTSCNSFLLKCL",
+    "melting_point_K": 341,
+    "filename": "1HY9_A.pdb"
+  },
+  "1H5O": {
+    "sequence": "YKQCHKKGGHCFPKEKICLPPSSDFGKMDCRWRWKCCKKGSG",
+    "melting_point_K": 358,
+    "filename": "1H5O_A.pdb"
+  },
+  "1Z99": {
+    "sequence": "YKQCHKKGGHCFPKEKICLPPSSDFGKMDCRWRWKCCKKGSG",
+    "melting_point_K": 363,
+    "filename": "1Z99_A.pdb"
+  },
+  "4GV5": {
+    "sequence": "YKQCHKKGGHCFPKEKICLPPSSDFGKMDCRWRWKCCKKGSG",
+    "melting_point_K": 364,
+    "filename": "4GV5_A.pdb"
+  },
+  "1J34": {
+    "sequence": "YNSGKLEEFVRGNLERECKEEKCSFEEAREVFENTEKTTEFWKQYV",
+    "melting_point_K": 353,
+    "filename": "1J34_C.pdb"
+  },
+  "1J35": {
+    "sequence": "YNSGKLEEFVRGNLERECKEEKCSFEEAREVFENTEKTTEFWKQYV",
+    "melting_point_K": 351,
+    "filename": "1J35_C.pdb"
+  },
+  "1CIX": {
+    "sequence": "YSRCQLQGFNCVVRSYGLPTIPCCRGLTCRSYFPGSTYGRCQRY",
+    "melting_point_K": 350,
+    "filename": "1CIX_A.pdb"
+  },
+  "4CPA": {
+    "sequence": "ZZHADPICNKPCKTHDDCSGAWFCQACWNSARTCGPYV",
+    "melting_point_K": 355,
+    "filename": "4CPA_I.pdb"
+  },
+  "3JB9": {
+    "sequence": "GUAUGUAU",
+    "melting_point_K": 340,
+    "filename": "3JB9_O.pdb"
+  },
+  "2MXO": {
+    "sequence": "AECKGFWKSCVPGKNECCSGYACSSRDKWCKVLL",
+    "melting_point_K": 348,
+    "filename": "2MXO_A.pdb"
+  },
+  "1P0G": {
+    "sequence": "AKKVFKRLEKLFSKIQNDK",
+    "melting_point_K": 343,
+    "filename": "1P0G_A.pdb"
+  },
+  "1OT0": {
+    "sequence": "AKKVFKRLEKLFAKIQNWK",
+    "melting_point_K": 367,
+    "filename": "1OT0_A.pdb"
+  },
+  "1P0J": {
+    "sequence": "AKKVFKRLAKLFSKIQNWK",
+    "melting_point_K": 352,
+    "filename": "1P0J_A.pdb"
+  },
+  "1P0L": {
+    "sequence": "AKKVFKALEKLFSKIWNDK",
+    "melting_point_K": 327,
+    "filename": "1P0L_A.pdb"
+  },
+  "1P0O": {
+    "sequence": "AKKVFKRLEKLFSKIWNWK",
+    "melting_point_K": 351,
+    "filename": "1P0O_A.pdb"
+  },
+  "1P5K": {
+    "sequence": "AKKVFKRLEKSFSKIQNAK",
+    "melting_point_K": 371,
+    "filename": "1P5K_A.pdb"
+  },
+  "1P5L": {
+    "sequence": "AKKVSKRLEKLFSKIQNDK",
+    "melting_point_K": 334,
+    "filename": "1P5L_A.pdb"
+  },
+  "1WN4": {
+    "sequence": "ALETQKPNHLLEEALVAFAKKGNLGGLP",
+    "melting_point_K": 350,
+    "filename": "1WN4_A.pdb"
+  },
+  "2LB7": {
+    "sequence": "AQRCGDQARGAKCPNCLCCGKYGFCGSGDAYCGAGSCQSQCRGC",
+    "melting_point_K": 346,
+    "filename": "2LB7_A.pdb"
+  },
+  "1PJV": {
+    "sequence": "AVCVYRTCDKDCKRRGYRSGKCINNACKCYPY",
+    "melting_point_K": 360,
+    "filename": "1PJV_A.pdb"
+  },
+  "1QS3": {
+    "sequence": "CANPACGRHYS",
+    "melting_point_K": 329,
+    "filename": "1QS3_A.pdb"
+  },
+  "1N2Y": {
+    "sequence": "CFRARGYGFRGPGLC",
+    "melting_point_K": 367,
+    "filename": "1N2Y_A.pdb"
+  },
+  "2JUE": {
+    "sequence": "CGETCVGGTCNTPGCTCSWPVCTRNGLPV",
+    "melting_point_K": 337,
+    "filename": "2JUE_A.pdb"
+  },
+  "1FYG": {
+    "sequence": "CKAAGKPCSRIAYNCCTGSCRSGKC",
+    "melting_point_K": 365,
+    "filename": "1FYG_A.pdb"
+  },
+  "1FGD": {
+    "sequence": "CPEGYILDDGFICTDIDE",
+    "melting_point_K": 359,
+    "filename": "1FGD_A.pdb"
+  },
+  "1Y58": {
+    "sequence": "CRRWQWRMKKLGC",
+    "melting_point_K": 328,
+    "filename": "1Y58_A.pdb"
+  },
+  "6CMH": {
+    "sequence": "CSASSLLDKEAVYFCHLDIIW",
+    "melting_point_K": 347,
+    "filename": "6CMH_A.pdb"
+  },
+  "6DK5": {
+    "sequence": "CSCSSLMDKECVYFCHLDIIW",
+    "melting_point_K": 351,
+    "filename": "6DK5_A.pdb"
+  },
+  "2BEY": {
+    "sequence": "CTKSIPPICTKSIPPI",
+    "melting_point_K": 328,
+    "filename": "2BEY_A.pdb"
+  },
+  "1MQX": {
+    "sequence": "CAFXLPGGGGVCXLSECI",
+    "melting_point_K": 341,
+    "filename": "1MQX_A.pdb"
+  },
+  "1MQY": {
+    "sequence": "CAFXLPGGGGVCXLASECI",
+    "melting_point_K": 346,
+    "filename": "1MQY_A.pdb"
+  },
+  "1MQZ": {
+    "sequence": "CKFXLPGGGGVCXLKSECI",
+    "melting_point_K": 363,
+    "filename": "1MQZ_A.pdb"
+  },
+  "2KGQ": {
+    "sequence": "DKCKKVYENYPVSKCQLANQCNYDCKLDKHARSGECFYDEKRNLQCICDYCEY",
+    "melting_point_K": 356,
+    "filename": "2KGQ_A.pdb"
+  },
+  "1I2U": {
+    "sequence": "DKLIGSCVWGAVNYTSDCNGECKRRGYKGGHCGSFANVNCWCET",
+    "melting_point_K": 333,
+    "filename": "1I2U_A.pdb"
+  },
+  "1SQK": {
+    "sequence": "DLPKVAENLKSQLEGFNQDKLKNAS",
+    "melting_point_K": 367,
+    "filename": "1SQK_B.pdb"
+  },
+  "3C5T": {
+    "sequence": "DLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
+    "melting_point_K": 369,
+    "filename": "3C5T_B.pdb"
+  },
+  "3C59": {
+    "sequence": "DLSKQMEEEAVRMFIEWLKNGGPSSGAPPPS",
+    "melting_point_K": 356,
+    "filename": "3C59_B.pdb"
+  },
+  "1H6K": {
+    "sequence": "DQHFRGDNEEQEKLLKKSCTLYVGNLSFYTTEEQIYELFSKSGDIKKIIMGLDKMKTACGFCFVEYYSRADAENAMRYINGTRLDDRIIRTDWDAGFK",
+    "melting_point_K": 348,
+    "filename": "1H6K_X.pdb"
+  },
+  "1L4W": {
+    "sequence": "EERGWKHWVYYTCCPDTPYLDITEE",
+    "melting_point_K": 348,
+    "filename": "1L4W_B.pdb"
+  },
+  "1LJZ": {
+    "sequence": "EERGWKHWVYYTCCPDTPYLDITEE",
+    "melting_point_K": 348,
+    "filename": "1LJZ_B.pdb"
+  },
+  "1LFC": {
+    "sequence": "FKCRRWQWRMKKLGAPSITCVRRAF",
+    "melting_point_K": 341,
+    "filename": "1LFC_A.pdb"
+  },
+  "1G92": {
+    "sequence": "FLPLLILGSLLMTPPVIQAIHDAQR",
+    "melting_point_K": 335,
+    "filename": "1G92_A.pdb"
+  },
+  "1RGJ": {
+    "sequence": "FRYYESSLEPWDD",
+    "melting_point_K": 364,
+    "filename": "1RGJ_B.pdb"
+  },
+  "1TYK": {
+    "sequence": "GCLEFWWKCNPNDDKCCRPKLKCSKLFKLCNFSF",
+    "melting_point_K": 348,
+    "filename": "1TYK_A.pdb"
+  },
+  "1QFB": {
+    "sequence": "GCPWEPWC",
+    "melting_point_K": 350,
+    "filename": "1QFB_A.pdb"
+  },
+  "1NXN": {
+    "sequence": "GDCPWKPWC",
+    "melting_point_K": 336,
+    "filename": "1NXN_A.pdb"
+  },
+  "6MZT": {
+    "sequence": "GDIKCSGTRQCWGPCKKQTTCTNSKCMNGKCKCYGCV",
+    "melting_point_K": 357,
+    "filename": "6MZT_A.pdb"
+  },
+  "1ONU": {
+    "sequence": "GEEELQENQELIREKSN",
+    "melting_point_K": 365,
+    "filename": "1ONU_A.pdb"
+  },
+  "1ONT": {
+    "sequence": "GEEEYQKMLENLREAEVKKNA",
+    "melting_point_K": 337,
+    "filename": "1ONT_A.pdb"
+  },
+  "1SBU": {
+    "sequence": "GFASLPILKNG",
+    "melting_point_K": 348,
+    "filename": "1SBU_A.pdb"
+  },
+  "1XC0": {
+    "sequence": "GFFALIPKIISSPLFKTLLSAVGSALSSSGGQE",
+    "melting_point_K": 361,
+    "filename": "1XC0_A.pdb"
+  },
+  "2MLT": {
+    "sequence": "GIGAVLKVLTTGLPALISWIKRKRQQ",
+    "melting_point_K": 342,
+    "filename": "2MLT_A.pdb"
+  },
+  "1VM5": {
+    "sequence": "GLFDIIKKIAESF",
+    "melting_point_K": 352,
+    "filename": "1VM5_A.pdb"
+  },
+  "1VM4": {
+    "sequence": "GLFDIVKKLVSDF",
+    "melting_point_K": 330,
+    "filename": "1VM4_A.pdb"
+  },
+  "1VM3": {
+    "sequence": "GLFDIVKSLVSDF",
+    "melting_point_K": 366,
+    "filename": "1VM3_A.pdb"
+  },
+  "1VM2": {
+    "sequence": "GLFDKLKSLVSDF",
+    "melting_point_K": 368,
+    "filename": "1VM2_A.pdb"
+  },
+  "3GJ7": {
+    "sequence": "GPLGSAGSSWQCDTCLLQNKVTDNKCIACQAAKLPLKETAKQTGIGTPSKSDKPASTSGTGFGDKFKPAIGTWDCDTCLVQNKPEAVKCVACETPKPG",
+    "melting_point_K": 331,
+    "filename": "3GJ7_B.pdb"
+  },
+  "3GJ5": {
+    "sequence": "GPLGSGSWDCEVCLVQNKADSTKCIACESAKPGT",
+    "melting_point_K": 361,
+    "filename": "3GJ5_B.pdb"
+  },
+  "3GJ8": {
+    "sequence": "GPLGSVGSWECPVCCVSNKAEDSRCVSCTSEKPGLVSASSSNSVPVSLPSGGCLGLDKFKKPEGSWDCEVCLVQNKADSTKCIACESAKPGT",
+    "melting_point_K": 364,
+    "filename": "3GJ8_B.pdb"
+  },
+  "1JBL": {
+    "sequence": "GRCTKSIPPICFPD",
+    "melting_point_K": 338,
+    "filename": "1JBL_A.pdb"
+  },
+  "1JBN": {
+    "sequence": "GRCTKSIPPICFPD",
+    "melting_point_K": 359,
+    "filename": "1JBN_A.pdb"
+  },
+  "1O8Y": {
+    "sequence": "GRCTKSIPPICFPD",
+    "melting_point_K": 368,
+    "filename": "1O8Y_A.pdb"
+  },
+  "1O8Z": {
+    "sequence": "GRCTKSIPPICFPD",
+    "melting_point_K": 372,
+    "filename": "1O8Z_A.pdb"
+  },
+  "3P8F": {
+    "sequence": "GRCTKSIPPICFPD",
+    "melting_point_K": 348,
+    "filename": "3P8F_I.pdb"
+  },
+  "4ABI": {
+    "sequence": "GRCTKSIXICFPD",
+    "melting_point_K": 335,
+    "filename": "4ABI_B.pdb"
+  },
+  "4ABJ": {
+    "sequence": "GRCTKSXPICFPD",
+    "melting_point_K": 344,
+    "filename": "4ABJ_B.pdb"
+  },
+  "1WGE": {
+    "sequence": "GSSGSSGMAVFHDEVEIEDFQYDEDSETYFYPCPCGDNFAITKEDLENGEDVATCPSCSLIIKVIYDKDQFMCGETVSGPSSG",
+    "melting_point_K": 337,
+    "filename": "1WGE_A.pdb"
+  },
+  "2UVS": {
+    "sequence": "GVEINVKCSGSPQCLKPCKDAGMRFGKCMNRKCHCTPK",
+    "melting_point_K": 372,
+    "filename": "2UVS_A.pdb"
+  },
+  "1WN8": {
+    "sequence": "GVKSSETTLTMFLKEMQLKGLP",
+    "melting_point_K": 354,
+    "filename": "1WN8_A.pdb"
+  },
+  "1FQJ": {
+    "sequence": "GVQGFGDDIPGMEGLGTDITVICPWEAFNHLELHELAQYGII",
+    "melting_point_K": 332,
+    "filename": "1FQJ_C.pdb"
+  },
+  "1JRJ": {
+    "sequence": "HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
+    "melting_point_K": 342,
+    "filename": "1JRJ_A.pdb"
+  },
+  "1HOY": {
+    "sequence": "HRYYESSLEPWYPD",
+    "melting_point_K": 332,
+    "filename": "1HOY_B.pdb"
+  },
+  "1JBD": {
+    "sequence": "HRYYESSLEPWYPD",
+    "melting_point_K": 363,
+    "filename": "1JBD_B.pdb"
+  },
+  "1QX9": {
+    "sequence": "ICLKKWPWWPWRRCK",
+    "melting_point_K": 354,
+    "filename": "1QX9_A.pdb"
+  },
+  "2JOT": {
+    "sequence": "IDTCRLPSDRGRCKASFERWYFNGRTCAKFIYGGCGGNGNKFPTQEACMKRCAKA",
+    "melting_point_K": 361,
+    "filename": "2JOT_A.pdb"
+  },
+  "1T54": {
+    "sequence": "ILGKIAEGIKSLF",
+    "melting_point_K": 351,
+    "filename": "1T54_A.pdb"
+  },
+  "1T51": {
+    "sequence": "ILGKIWEGIKSLF",
+    "melting_point_K": 335,
+    "filename": "1T51_A.pdb"
+  },
+  "1T52": {
+    "sequence": "ILGKIWKGIKSLF",
+    "melting_point_K": 332,
+    "filename": "1T52_A.pdb"
+  },
+  "1T55": {
+    "sequence": "ILGKIWKPIKKLF",
+    "melting_point_K": 336,
+    "filename": "1T55_A.pdb"
+  },
+  "1K83": {
+    "sequence": "IWGIGCNP",
+    "melting_point_K": 327,
+    "filename": "1K83_M.pdb"
+  },
+  "3CQZ": {
+    "sequence": "IWGIGCNP",
+    "melting_point_K": 349,
+    "filename": "3CQZ_M.pdb"
+  },
+  "1VNA": {
+    "sequence": "KEGYLVKKSDGCKYDCFWLGKNEHCNTECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSC",
+    "melting_point_K": 341,
+    "filename": "1VNA_A.pdb"
+  },
+  "1JC6": {
+    "sequence": "KNRPTFCNLLPETGRCNALIPAFYYNSHLHKCQKFNYGGCGGNANNFKTIDECQRTCAAKYGRSS",
+    "melting_point_K": 333,
+    "filename": "1JC6_A.pdb"
+  },
+  "1YWH": {
+    "sequence": "KSDAFSKYLWSSK",
+    "melting_point_K": 344,
+    "filename": "1YWH_B.pdb"
+  },
+  "1HD9": {
+    "sequence": "LCTASIPPQCY",
+    "melting_point_K": 338,
+    "filename": "1HD9_A.pdb"
+  },
+  "3CMH": {
+    "sequence": "LDKEAVYFCHLDIIW",
+    "melting_point_K": 340,
+    "filename": "3CMH_A.pdb"
+  },
+  "8S2C": {
+    "sequence": "LETVLSLSI",
+    "melting_point_K": 345,
+    "filename": "8S2C_A.pdb"
+  },
+  "1ERH": {
+    "sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCN",
+    "melting_point_K": 334,
+    "filename": "1ERH_A.pdb"
+  },
+  "2KJF": {
+    "sequence": "LVAYGIAQGTAEKVVSLINAGLTVGSIISILGGVTVGLSGVFTAVKAAIAKQGIKKAIQL",
+    "melting_point_K": 354,
+    "filename": "2KJF_A.pdb"
+  },
+  "99999999999999995280522225138166806691251291352861698530421623488512": {
+    "sequence": "MAKEFGIPAAVAGTVLNVVEAGGWVTTIVSILTAVGSGGLSLLAAAGRESIKAYLKKEIKKKGKRAVIAW",
+    "melting_point_K": 343,
+    "filename": null
+  },
+  "1O82": {
+    "sequence": "MAKEFGIPAAVAGTVLNVVEAGGWVTTIVSILTAVGSGGLSLLAAAGRESIKAYLKKEIKKKGKRAVIAW",
+    "melting_point_K": 344,
+    "filename": "1O82_A.pdb"
+  },
+  "1O83": {
+    "sequence": "MAKEFGIPAAVAGTVLNVVEAGGWVTTIVSILTAVGSGGLSLLAAAGRESIKAYLKKEIKKKGKRAVIAW",
+    "melting_point_K": 331,
+    "filename": "1O83_A.pdb"
+  },
+  "2DTB": {
+    "sequence": "MAQDIISTIGDLVKWIIDTVNKFTKK",
+    "melting_point_K": 353,
+    "filename": "2DTB_A.pdb"
+  },
+  "2BTX": {
+    "sequence": "MRYYESSLKSYPD",
+    "melting_point_K": 334,
+    "filename": "2BTX_B.pdb"
+  },
+  "3CTO": {
+    "sequence": "MSISASEARQRLFPLIEQVNTDHQPVRITSRAGDAVLMSADDYDAWQETVYLLRSPENARRLMEAVARDKAGHSAFTKSVDELREMAGGEE",
+    "melting_point_K": 347,
+    "filename": "3CTO_A.pdb"
+  },
+  "2VUM": {
+    "sequence": "NPIWGIGC",
+    "melting_point_K": 329,
+    "filename": "2VUM_M.pdb"
+  },
+  "1KWD": {
+    "sequence": "PCSICSNNPTCWAICK",
+    "melting_point_K": 336,
+    "filename": "1KWD_A.pdb"
+  },
+  "1KWE": {
+    "sequence": "PCSICSNNPTCWAACK",
+    "melting_point_K": 358,
+    "filename": "1KWE_A.pdb"
+  },
+  "2QTV": {
+    "sequence": "PSQPPINAVSGQTPHLNRKANDGWNDLPLKVKEKPSRAKAVSVAPPNIL",
+    "melting_point_K": 364,
+    "filename": "2QTV_D.pdb"
+  },
+  "1KFP": {
+    "sequence": "QCRRLCYKQRCVTYCRGR",
+    "melting_point_K": 343,
+    "filename": "1KFP_A.pdb"
+  },
+  "2A9H": {
+    "sequence": "QFTNVSCTTSKECWSVCQRLHNTSRGKCMNKKCRCYS",
+    "melting_point_K": 343,
+    "filename": "2A9H_E.pdb"
+  },
+  "1PD1": {
+    "sequence": "QLKDLESQI",
+    "melting_point_K": 357,
+    "filename": "1PD1_B.pdb"
+  },
+  "1RKK": {
+    "sequence": "RRWCFRVCYRGFCYRKCR",
+    "melting_point_K": 328,
+    "filename": "1RKK_A.pdb"
+  },
+  "1ICL": {
+    "sequence": "SKYEYTVPSYTFRGPGCPTVKPAISLRCE",
+    "melting_point_K": 348,
+    "filename": "1ICL_A.pdb"
+  },
+  "2PTA": {
+    "sequence": "TISCTNPKQCYPHCKKETGYPNAKCMNRKCKCFGR",
+    "melting_point_K": 363,
+    "filename": "2PTA_A.pdb"
+  },
+  "1TOC": {
+    "sequence": "TSEDHFQPFFNEKTFGAGEADCGLRPLFEKKQVQDQTEKELFESYIEGR",
+    "melting_point_K": 348,
+    "filename": "1TOC_A.pdb"
+  },
+  "2ODY": {
+    "sequence": "TSEDHFQPFFNEKTFGAGEADCGLRPLFEKKQVQDQTEKELFESYIEGR",
+    "melting_point_K": 348,
+    "filename": "2ODY_A.pdb"
+  },
+  "1PD0": {
+    "sequence": "TYNNSNPFMT",
+    "melting_point_K": 355,
+    "filename": "1PD0_B.pdb"
+  },
+  "2KBH": {
+    "sequence": "VKDGYIADDRNCPYFCGRNAYCDGECKKNRAESGYCQWASKYGNACWCYKLPDDARIMKPGRCNGG",
+    "melting_point_K": 354,
+    "filename": "2KBH_A.pdb"
+  },
+  "2KBJ": {
+    "sequence": "VKDGYIADDRNCPYFCGRNAYCDGECKKNRAESGYCQWASKYGNACWCYKLPDDARIMKPGRCNGG",
+    "melting_point_K": 369,
+    "filename": "2KBJ_A.pdb"
+  },
+  "6THI": {
+    "sequence": "VRDGYIADDKNCAYFCGRNAYCDEECKKKGAESGYCQWAGQYGNACWCYKLPDKVPIKVSGKCN",
+    "melting_point_K": 346,
+    "filename": "6THI_A.pdb"
+  },
+  "9FJY": {
+    "sequence": "WKATCPA",
+    "melting_point_K": 341,
+    "filename": "9FJY_G.pdb"
+  },
+  "1HAA": {
+    "sequence": "WRYYESSLEPYPD",
+    "melting_point_K": 327,
+    "filename": "1HAA_B.pdb"
+  },
+  "1HAJ": {
+    "sequence": "WRYYEASLEPYPD",
+    "melting_point_K": 354,
+    "filename": "1HAJ_B.pdb"
+  },
+  "1HC9": {
+    "sequence": "WRYYASSLLPYPD",
+    "melting_point_K": 359,
+    "filename": "1HC9_C.pdb"
+  },
+  "1PAN": {
+    "sequence": "ACKSTQDPMFTPKGCDN",
+    "melting_point_K": 339,
+    "filename": "1PAN_A.pdb"
+  },
+  "1I93": {
+    "sequence": "CHWLRGDMRRC",
+    "melting_point_K": 339,
+    "filename": "1I93_A.pdb"
+  },
+  "1I6Y": {
+    "sequence": "CRVVRGDYLDC",
+    "melting_point_K": 334,
+    "filename": "1I6Y_A.pdb"
+  },
+  "1I8E": {
+    "sequence": "CYCSLRGDCYC",
+    "melting_point_K": 344,
+    "filename": "1I8E_A.pdb"
+  },
+  "7Q5G": {
+    "sequence": "CYWAVCT",
+    "melting_point_K": 355,
+    "filename": "7Q5G_A.pdb"
+  },
+  "1J8N": {
+    "sequence": "IWGCSGKLICTTA",
+    "melting_point_K": 351,
+    "filename": "1J8N_A.pdb"
+  },
+  "1NIM": {
+    "sequence": "KCTSDQDEQFIPKGCSK",
+    "melting_point_K": 369,
+    "filename": "1NIM_A.pdb"
+  },
+  "1PAJ": {
+    "sequence": "KCTSDQDEQFIPKGCSK",
+    "melting_point_K": 344,
+    "filename": "1PAJ_A.pdb"
+  },
+  "1PAK": {
+    "sequence": "KCTSDQDEQFIPKGCSK",
+    "melting_point_K": 354,
+    "filename": "1PAK_A.pdb"
+  },
+  "1JBF": {
+    "sequence": "NLPRCTEGPWGWVCM",
+    "melting_point_K": 334,
+    "filename": "1JBF_A.pdb"
+  },
+  "1XY2": {
+    "sequence": "YIQNCPLG",
+    "melting_point_K": 360,
+    "filename": "1XY2_A.pdb"
+  },
+  "1LUP": {
+    "sequence": "YCQKWMWTCDEERKCCEGLVCRLWCKRIINM",
+    "melting_point_K": 341,
+    "filename": "1LUP_A.pdb"
+  },
+  "1V7F": {
+    "sequence": "YCQKWMWTCDSARKCCEGLVCRLWCKKII",
+    "melting_point_K": 331,
+    "filename": "1V7F_A.pdb"
+  },
+  "1RON": {
+    "sequence": "YPSKPDNPGEDAPAEDMARYYSALRHYINLITRQRY",
+    "melting_point_K": 340,
+    "filename": "1RON_A.pdb"
+  },
+  "1IDG": {
+    "sequence": "YRGWKHWVYYTCCPDTPYS",
+    "melting_point_K": 341,
+    "filename": "1IDG_B.pdb"
+  },
+  "1IDH": {
+    "sequence": "YRGWKHWVYYTCCPDTPYS",
+    "melting_point_K": 353,
+    "filename": "1IDH_B.pdb"
+  },
+  "1LXG": {
+    "sequence": "YRGWKHWVYYTCCPDTPYS",
+    "melting_point_K": 353,
+    "filename": "1LXG_B.pdb"
+  },
+  "1LXH": {
+    "sequence": "YRGWKHWVYYTCCPDTPYS",
+    "melting_point_K": 343,
+    "filename": "1LXH_B.pdb"
+  }
+}
