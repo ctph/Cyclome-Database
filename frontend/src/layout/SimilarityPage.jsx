@@ -28,17 +28,56 @@ const SimilarityPage = () => {
 
   const baseId = useMemo(() => normalizeBaseId(pdbId), [pdbId]);
 
-  // match backend expectation (ideally integer thresholds)
   const t = useMemo(() => {
     const raw = String(threshold || "50").trim();
     return /^\d+$/.test(raw) ? raw : "50";
   }, [threshold]);
 
   const [loading, setLoading] = useState(true);
+  const [seqLoading, setSeqLoading] = useState(true);
   const [error, setError] = useState("");
   const [results, setResults] = useState([]);
   const [count, setCount] = useState(0);
 
+  // Static sequence map from public JSON:
+  // { "1a1p": "SEQUENCE...", ... }
+  const [seqByBase, setSeqByBase] = useState({});
+
+  useEffect(() => {
+    let cancelled = false;
+
+    (async () => {
+      setSeqLoading(true);
+      try {
+        const res = await fetch("/home_page_table_with_filenames.json");
+        const data = await res.json().catch(() => null);
+
+        const map = {};
+        for (const [k, info] of Object.entries(data || {})) {
+          const base = String(k || "")
+            .trim()
+            .toLowerCase();
+          const seq = String(info?.sequence || "")
+            .trim()
+            .toUpperCase();
+          if (base && seq) map[base] = seq;
+        }
+
+        if (!cancelled) setSeqByBase(map);
+      } catch (e) {
+        console.error(e);
+        if (!cancelled) setSeqByBase({});
+      } finally {
+        if (!cancelled) setSeqLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Load similarity list (keep your current routing + action behavior)
   useEffect(() => {
     if (!baseId) return;
 
@@ -55,8 +94,6 @@ const SimilarityPage = () => {
           baseId
         )}/${encodeURIComponent(t)}`;
         const res = await fetch(url);
-
-        // if backend returns JSON error body, surface it
         const data = await res.json().catch(() => null);
 
         if (!res.ok) {
@@ -65,7 +102,6 @@ const SimilarityPage = () => {
           throw new Error(msg);
         }
 
-        // Expected: { pdbId, threshold, key, count, results: [] }
         const arr = Array.isArray(data?.results) ? data.results : [];
         const cleaned = arr
           .map((x) => normalizeBaseId(x))
@@ -75,6 +111,34 @@ const SimilarityPage = () => {
         if (!cancelled) {
           setResults(cleaned);
           setCount(Number(data?.count ?? cleaned.length));
+        }
+
+        // Merge into existing seqByBase, don't overwrite
+        try {
+          const seqRes = await fetch("/api/pdb/sequences", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ids: cleaned }),
+          });
+
+          const seqData = await seqRes.json().catch(() => null);
+
+          if (!cancelled && seqRes.ok) {
+            const map = {};
+            for (const r of seqData?.results || []) {
+              const id = String(r.id || "")
+                .trim()
+                .toLowerCase();
+              const seq = String(r.sequence || "")
+                .trim()
+                .toUpperCase();
+              if (id && seq) map[id] = seq;
+            }
+
+            setSeqByBase((prev) => ({ ...prev, ...map }));
+          }
+        } catch {
+          // ignore batch failures
         }
       } catch (e) {
         const msg = e?.message || "Failed to load similarity results";
@@ -93,16 +157,7 @@ const SimilarityPage = () => {
     };
   }, [baseId, t]);
 
-  const rows = useMemo(
-    () =>
-      results.map((id, idx) => ({
-        key: `${id}-${idx}`,
-        rank: idx + 1,
-        pdbId: id,
-      })),
-    [results]
-  );
-
+  // View -> resolve base -> preferred chain -> /pdb/<chain>
   async function goToPdbChain(base) {
     const baseKey = normalizeBaseId(base);
     if (!baseKey) return;
@@ -120,7 +175,6 @@ const SimilarityPage = () => {
       if (chainIds.length === 0)
         throw new Error("No chains found for this PDB");
 
-      // Prefer *_a if exists, else first
       const lower = chainIds.map((x) => String(x).toLowerCase());
       const preferred = lower.find((x) => x.endsWith("_a")) || lower[0];
 
@@ -131,9 +185,22 @@ const SimilarityPage = () => {
     }
   }
 
+  const rows = useMemo(() => {
+    return results.map((id, idx) => {
+      const seq = seqByBase[id] || "-";
+      return {
+        key: `${id}-${idx}`,
+        rank: idx + 1,
+        pdbId: id,
+        sequence: seq,
+      };
+    });
+  }, [results, seqByBase]);
+
   const columns = useMemo(
     () => [
       { title: "#", dataIndex: "rank", width: 80 },
+
       {
         title: "Similar PDB",
         dataIndex: "pdbId",
@@ -143,6 +210,21 @@ const SimilarityPage = () => {
           </Text>
         ),
       },
+
+      {
+        title: "Sequence",
+        dataIndex: "sequence",
+        render: (seq) =>
+          seq === "-" ? (
+            <Text type="secondary">-</Text>
+          ) : (
+            <Text style={{ fontFamily: "monospace" }}>
+              {String(seq).slice(0, 32)}
+              {String(seq).length > 32 ? "…" : ""}
+            </Text>
+          ),
+      },
+
       {
         title: "Action",
         key: "action",
@@ -154,7 +236,7 @@ const SimilarityPage = () => {
         ),
       },
     ],
-    [navigate]
+    [goToPdbChain]
   );
 
   return (
@@ -168,6 +250,7 @@ const SimilarityPage = () => {
           </Title>
           <Tag color="blue">{t}%</Tag>
           {!loading && !error && <Tag>{count} results</Tag>}
+          {seqLoading && <Tag>Loading sequences…</Tag>}
         </Space>
 
         <Card style={{ borderRadius: 14 }}>
@@ -188,6 +271,7 @@ const SimilarityPage = () => {
             <Table
               columns={columns}
               dataSource={rows}
+              rowKey="key"
               pagination={{ pageSize: 25, showSizeChanger: true }}
             />
           )}

@@ -158,6 +158,44 @@ router.get("/seq-index", (req, res) => {
   res.json({ results });
 });
 
+// POST /api/pdb/sequences
+// body: { ids: ["1cn2","1a1p", ...] }
+// returns: { results: [{ id:"1cn2", sequence:"..." }, ...] }
+router.post("/sequences", express.json(), (req, res) => {
+  const ids = Array.isArray(req.body?.ids) ? req.body.ids : [];
+  const cleaned = ids
+    .map((x) =>
+      String(x || "")
+        .trim()
+        .toLowerCase()
+    )
+    .filter((x) => /^[a-z0-9]+$/.test(x))
+    .slice(0, 500);
+
+  // You need a sequence source here.
+  // If your chainIndex already stores sequence per chain, we can derive base sequence by preferring *_a.
+  // This will only work for PDBs that exist in your cyclic_pdbs index.
+  const out = [];
+
+  for (const base of cleaned) {
+    const entry = pdbIndex[base];
+    if (!entry?.chainIds?.length) continue;
+
+    const chains = entry.chainIds.map((c) => String(c).toLowerCase());
+    const preferred = chains.find((c) => c.endsWith("_a")) || chains[0];
+    const chainEntry = chainIndex[preferred];
+
+    const seq = String(chainEntry?.sequence || "")
+      .trim()
+      .toUpperCase();
+    if (!seq) continue;
+
+    out.push({ id: base, sequence: seq });
+  }
+
+  res.json({ results: out });
+});
+
 /**
  * GET /api/pdb/:pdb/:chain
  */
