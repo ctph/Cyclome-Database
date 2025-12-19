@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Table, Tag } from "antd";
 import { Link } from "react-router-dom";
 
+const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
+
 const PdbTable = () => {
   const [pdbs, setPdbs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,21 +14,23 @@ const PdbTable = () => {
         if (!res.ok) throw new Error("Failed to load JSON");
         return res.json();
       })
+
       .then((data) => {
         const formatted = Object.entries(data)
           .map(([pdbId, info]) => {
             const chainId = String(info.filename || "")
               .toLowerCase()
-              .replace(/\.pdb$/i, ""); // "1ag7_a"
+              .replace(/\.pdb$/i, "");
 
             return {
               id: chainId,
               baseId: pdbId,
               sequence: info.sequence || "-",
               melting_point: info.melting_point_K ?? "-",
-              filepath: `./backend/cyclic_pdbs/${info.filename}`,
+              downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
             };
           })
+          .filter((r) => r.id)
           .sort((a, b) =>
             a.id.localeCompare(b.id, undefined, { numeric: true })
           );
@@ -72,7 +76,7 @@ const PdbTable = () => {
           <Link to={`/pdb/${record.id}`} style={{ marginRight: 8 }}>
             View 3D
           </Link>
-          <a href={record.filepath} download>
+          <a href={record.downloadUrl} download>
             Download
           </a>
         </>
