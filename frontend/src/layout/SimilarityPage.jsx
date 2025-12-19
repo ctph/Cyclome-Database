@@ -103,6 +103,34 @@ const SimilarityPage = () => {
     [results]
   );
 
+  async function goToPdbChain(base) {
+    const baseKey = normalizeBaseId(base);
+    if (!baseKey) return;
+
+    try {
+      const res = await fetch(`/api/pdb/${encodeURIComponent(baseKey)}`);
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        const msg = data?.error || `Failed to fetch chains (${res.status})`;
+        throw new Error(msg);
+      }
+
+      const chainIds = Array.isArray(data?.chainIds) ? data.chainIds : [];
+      if (chainIds.length === 0)
+        throw new Error("No chains found for this PDB");
+
+      // Prefer *_a if exists, else first
+      const lower = chainIds.map((x) => String(x).toLowerCase());
+      const preferred = lower.find((x) => x.endsWith("_a")) || lower[0];
+
+      navigate(`/pdb/${preferred}`);
+    } catch (e) {
+      const msg = e?.message || "Failed to open PDB viewer";
+      message.error(msg);
+    }
+  }
+
   const columns = useMemo(
     () => [
       { title: "#", dataIndex: "rank", width: 80 },
@@ -120,7 +148,7 @@ const SimilarityPage = () => {
         key: "action",
         width: 160,
         render: (_, r) => (
-          <Button type="primary" onClick={() => navigate(`/pdb/${r.pdbId}`)}>
+          <Button type="primary" onClick={() => goToPdbChain(r.pdbId)}>
             View
           </Button>
         ),
