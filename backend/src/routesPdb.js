@@ -13,7 +13,7 @@ if (!fs.existsSync(PDB_DIR)) {
   );
 }
 
-// Build indexes once at startup (FAST)
+// Build indexes once at startup
 const { chainIndex, pdbIndex } = fs.existsSync(PDB_DIR)
   ? buildPdbIndex(PDB_DIR)
   : { chainIndex: {}, pdbIndex: {} };

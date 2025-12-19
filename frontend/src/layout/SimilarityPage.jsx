@@ -14,220 +14,139 @@ import Header from "../components/Header";
 
 const { Title, Text } = Typography;
 
+function normalizeBaseId(x) {
+  return String(x || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\.pdb$/i, "")
+    .split("_")[0];
+}
+
 const SimilarityPage = () => {
   const { pdbId, threshold } = useParams();
   const navigate = useNavigate();
 
-  const baseId = useMemo(
-    () =>
-      String(pdbId || "")
-        .toLowerCase()
-        .split("_")[0],
-    [pdbId]
-  );
-  const t = useMemo(() => String(threshold || "50"), [threshold]);
+  const baseId = useMemo(() => normalizeBaseId(pdbId), [pdbId]);
 
-  // similarity
+  // match backend expectation (ideally integer thresholds)
+  const t = useMemo(() => {
+    const raw = String(threshold || "50").trim();
+    return /^\d+$/.test(raw) ? raw : "50";
+  }, [threshold]);
+
   const [loading, setLoading] = useState(true);
-  const [rows, setRows] = useState([]);
+  const [error, setError] = useState("");
+  const [results, setResults] = useState([]);
+  const [count, setCount] = useState(0);
 
-  // sequence
-  const [seqLoading, setSeqLoading] = useState(true);
-  const [sequence, setSequence] = useState("");
-  const [seqError, setSeqError] = useState("");
-
-  // fetch similarity list
   useEffect(() => {
+    if (!baseId) return;
+
     let cancelled = false;
 
-    async function loadSimilarity() {
+    async function load() {
       setLoading(true);
+      setError("");
+      setResults([]);
+      setCount(0);
+
       try {
-        const res = await fetch(`/api/similarity/${baseId}/${t}`);
-        if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
-        const data = await res.json();
+        const url = `/api/similarity/${encodeURIComponent(
+          baseId
+        )}/${encodeURIComponent(t)}`;
+        const res = await fetch(url);
 
-        const list = Array.isArray(data.results) ? data.results : [];
-        const mapped = list.map((id, idx) => ({
-          key: `${id}-${idx}`,
-          rank: idx + 1,
-          pdb: id,
-        }));
+        // if backend returns JSON error body, surface it
+        const data = await res.json().catch(() => null);
 
-        if (!cancelled) setRows(mapped);
+        if (!res.ok) {
+          const msg =
+            data?.error || data?.detail || `Request failed (${res.status})`;
+          throw new Error(msg);
+        }
+
+        // Expected: { pdbId, threshold, key, count, results: [] }
+        const arr = Array.isArray(data?.results) ? data.results : [];
+        const cleaned = arr
+          .map((x) => normalizeBaseId(x))
+          .filter(Boolean)
+          .filter((x) => x !== baseId);
+
+        if (!cancelled) {
+          setResults(cleaned);
+          setCount(Number(data?.count ?? cleaned.length));
+        }
       } catch (e) {
-        if (!cancelled)
-          message.error(e.message || "Failed to load similarity results");
+        const msg = e?.message || "Failed to load similarity results";
+        if (!cancelled) {
+          setError(msg);
+          message.error(msg);
+        }
       } finally {
         if (!cancelled) setLoading(false);
       }
     }
 
-    if (baseId) loadSimilarity();
+    load();
     return () => {
       cancelled = true;
     };
   }, [baseId, t]);
 
-  // fetch sequence
-  useEffect(() => {
-    let cancelled = false;
+  const rows = useMemo(
+    () =>
+      results.map((id, idx) => ({
+        key: `${id}-${idx}`,
+        rank: idx + 1,
+        pdbId: id,
+      })),
+    [results]
+  );
 
-    async function load() {
-      setLoading(true);
-      setSeqLoading(true);
-      setSeqError("");
-      setSequence("");
-      setRows([]);
-
-      try {
-        const res = await fetch(`/api/similarity/${baseId}/${t}`);
-        if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
-        const data = await res.json();
-
-        const seq = String(data?.Sequence ?? "");
-        const simKey = `similarity_${t}`;
-        const simRaw = String(data?.[simKey] ?? "");
-
-        // Split by comma or semicolon, trim, remove empties, de-dupe
-        const ids = Array.from(
-          new Set(
-            simRaw
-              .split(/[;,]/)
-              .map((s) => s.trim())
-              .filter(Boolean)
-          )
-        );
-
-        const mapped = ids.map((id, idx) => ({
-          key: `${id}-${idx}`,
-          rank: idx + 1,
-          pdb: id,
-          sequence: seq, // same sequence for all rows
-        }));
-
-        if (!cancelled) {
-          setSequence(seq);
-          setRows(mapped);
-        }
-      } catch (e) {
-        if (!cancelled) {
-          const msg = e?.message || "Failed to load";
-          message.error(msg);
-          setSeqError(msg);
-        }
-      } finally {
-        if (!cancelled) {
-          setLoading(false);
-          setSeqLoading(false);
-        }
-      }
-    }
-
-    if (baseId) load();
-    return () => {
-      cancelled = true;
-    };
-  }, [baseId, t]);
-
-  const columns = [
-    { title: "#", dataIndex: "rank", width: 70 },
-    {
-      title: "Similar PDB",
-      dataIndex: "pdb",
-      render: (v) => (
-        <Text style={{ fontFamily: "monospace" }}>
-          {String(v).toUpperCase()}
-        </Text>
-      ),
-    },
-    {
-      title: "Sequence",
-      dataIndex: "sequence",
-      ellipsis: true,
-      render: (seq) => (
-        <Text style={{ fontFamily: "monospace" }}>
-          {seq ? String(seq) : "—"}
-        </Text>
-      ),
-    },
-    {
-      title: "Action",
-      key: "action",
-      width: 140,
-      render: (_, record) => (
-        <Button
-          type="primary"
-          onClick={() => navigate(`/pdb/${String(record.pdb).toLowerCase()}`)}
-        >
-          View
-        </Button>
-      ),
-    },
-  ];
+  const columns = useMemo(
+    () => [
+      { title: "#", dataIndex: "rank", width: 80 },
+      {
+        title: "Similar PDB",
+        dataIndex: "pdbId",
+        render: (v) => (
+          <Text style={{ fontFamily: "monospace" }}>
+            {String(v).toUpperCase()}
+          </Text>
+        ),
+      },
+      {
+        title: "Action",
+        key: "action",
+        width: 160,
+        render: (_, r) => (
+          <Button type="primary" onClick={() => navigate(`/pdb/${r.pdbId}`)}>
+            View
+          </Button>
+        ),
+      },
+    ],
+    [navigate]
+  );
 
   return (
     <div style={{ padding: 16 }}>
       <Header />
 
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>
-        <Space align="center">
+        <Space align="center" wrap>
           <Title level={2} style={{ margin: 0 }}>
-            Similarity: {baseId.toUpperCase()}
+            Similarity: {baseId ? baseId.toUpperCase() : "—"}
           </Title>
           <Tag color="blue">{t}%</Tag>
+          {!loading && !error && <Tag>{count} results</Tag>}
         </Space>
 
-        {/* Sequence card */}
-        <Card
-          title="Sequence"
-          style={{ borderRadius: 14, boxShadow: "0 6px 18px rgba(0,0,0,0.06)" }}
-          bodyStyle={{ padding: 12 }}
-        >
-          {seqLoading ? (
-            <div
-              style={{
-                height: 140,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Spin />
-            </div>
-          ) : seqError ? (
-            <Text type="danger">{seqError}</Text>
-          ) : sequence ? (
-            <pre
-              style={{
-                margin: 0,
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-                fontFamily: "monospace",
-                maxHeight: 220,
-                overflow: "auto",
-                padding: 10,
-                borderRadius: 10,
-                background: "#fafafa",
-                border: "1px solid #f0f0f0",
-              }}
-            >
-              {sequence}
-            </pre>
-          ) : (
-            <Text type="secondary">No sequence found.</Text>
-          )}
-        </Card>
-
-        {/* Similarity table card */}
-        <Card
-          style={{ borderRadius: 14, boxShadow: "0 6px 18px rgba(0,0,0,0.06)" }}
-          bodyStyle={{ padding: 12 }}
-        >
+        <Card style={{ borderRadius: 14 }}>
           {loading ? (
             <div
               style={{
-                height: 320,
+                height: 260,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -235,6 +154,8 @@ const SimilarityPage = () => {
             >
               <Spin />
             </div>
+          ) : error ? (
+            <Text type="danger">{error}</Text>
           ) : (
             <Table
               columns={columns}

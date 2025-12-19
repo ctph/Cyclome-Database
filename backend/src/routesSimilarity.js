@@ -88,7 +88,7 @@ function loadOnce() {
 
 // routes
 
-// Health/debug endpoint (optional but super useful)
+// Health/debug endpoint
 router.get("/health", (req, res) => {
   loadOnce();
   if (loadError) {
@@ -100,59 +100,6 @@ router.get("/health", (req, res) => {
     });
   }
   res.json({ ok: true, indexed: index.size, simPath: SIM_PATH });
-});
-
-// Single lookup
-// Full URL becomes: /api/similarity/:pdbId/:threshold
-router.get("/:pdbId/:threshold", (req, res) => {
-  loadOnce();
-  if (loadError) {
-    return res.status(500).json({
-      error: "Similarity data failed to load",
-      detail: String(loadError.message || loadError),
-    });
-  }
-
-  try {
-    const id = baseId(req.params.pdbId);
-    const threshold = String(req.params.threshold || "").trim();
-
-    // Validate
-    if (!id) return res.status(400).json({ error: "Invalid pdbId" });
-    if (!/^\d+(\.\d+)?$/.test(threshold)) {
-      return res.status(400).json({ error: "Invalid threshold" });
-    }
-
-    const key = `similarity_${threshold}`;
-
-    const row = index.get(id);
-    if (!row) {
-      return res.status(404).json({ error: `No similarity record for ${id}` });
-    }
-
-    if (!(key in row)) {
-      return res.status(404).json({ error: `No field ${key} for ${id}` });
-    }
-
-    const rawList = row[key];
-    const results = splitIds(rawList);
-
-    const unique = [...new Set(results)].filter((x) => x !== id);
-
-    res.json({
-      pdbId: id,
-      threshold: Number(threshold),
-      key,
-      count: unique.length,
-      results: unique,
-    });
-  } catch (e) {
-    console.error("[similarity] route error:", e);
-    res.status(500).json({
-      error: "Internal error in similarity route",
-      detail: String(e.message || e),
-    });
-  }
 });
 
 // Batch lookup
@@ -215,6 +162,58 @@ router.get("/batch/:threshold", (req, res) => {
     console.error("[similarity] batch route error:", e);
     res.status(500).json({
       error: "Internal error in similarity batch route",
+      detail: String(e.message || e),
+    });
+  }
+});
+// Single lookup
+// Full URL becomes: /api/similarity/:pdbId/:threshold
+router.get("/:pdbId/:threshold", (req, res) => {
+  loadOnce();
+  if (loadError) {
+    return res.status(500).json({
+      error: "Similarity data failed to load",
+      detail: String(loadError.message || loadError),
+    });
+  }
+
+  try {
+    const id = baseId(req.params.pdbId);
+    const threshold = String(req.params.threshold || "").trim();
+
+    // Validate
+    if (!id) return res.status(400).json({ error: "Invalid pdbId" });
+    if (!/^\d+(\.\d+)?$/.test(threshold)) {
+      return res.status(400).json({ error: "Invalid threshold" });
+    }
+
+    const key = `similarity_${threshold}`;
+
+    const row = index.get(id);
+    if (!row) {
+      return res.status(404).json({ error: `No similarity record for ${id}` });
+    }
+
+    if (!(key in row)) {
+      return res.status(404).json({ error: `No field ${key} for ${id}` });
+    }
+
+    const rawList = row[key];
+    const results = splitIds(rawList);
+
+    const unique = [...new Set(results)].filter((x) => x !== id);
+
+    res.json({
+      pdbId: id,
+      threshold: Number(threshold),
+      key,
+      count: unique.length,
+      results: unique,
+    });
+  } catch (e) {
+    console.error("[similarity] route error:", e);
+    res.status(500).json({
+      error: "Internal error in similarity route",
       detail: String(e.message || e),
     });
   }
