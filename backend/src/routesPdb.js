@@ -65,6 +65,40 @@ router.get("/search", (req, res) => {
 });
 
 /**
+ * GET /api/pdb/sequence-search?q=SEQUENCE&limit=5
+ * Performs substring search over chain sequences
+ */
+router.get("/sequence-search", (req, res) => {
+  const q = String(req.query.q || "")
+    .trim()
+    .toUpperCase();
+
+  const limit = Math.min(parseInt(req.query.limit || "5", 10), 50);
+
+  if (q.length < 5) {
+    return res.json({ results: [] });
+  }
+
+  const results = [];
+
+  for (const [chainKey, entry] of Object.entries(chainIndex)) {
+    const seq = entry.sequence;
+    if (!seq) continue;
+
+    if (seq.includes(q)) {
+      results.push({
+        id: entry.id, // "1ag7_a"
+        sequence: seq,
+      });
+
+      if (results.length >= limit) break;
+    }
+  }
+
+  res.json({ results });
+});
+
+/**
  * GET /api/pdb/all
  * Returns all chain IDs for frontend levenshtein suggestions
  */
@@ -95,6 +129,33 @@ router.get("/file/:id", (req, res) => {
 
   res.setHeader("Content-Type", "chemical/x-pdb; charset=utf-8");
   fs.createReadStream(filePath).pipe(res);
+});
+
+/**
+ * GET /api/pdb/seq-index
+ * Returns list of { id: "1a1p_a", sequence: "...." } for dropdown + filtering.
+ */
+router.get("/seq-index", (req, res) => {
+  const results = [];
+
+  for (const entry of Object.values(chainIndex)) {
+    const id = String(entry?.id || "")
+      .trim()
+      .toLowerCase(); // expect chain id
+    const seq = String(entry?.sequence || "")
+      .trim()
+      .toUpperCase();
+
+    if (!id || !seq) continue;
+    if (!/^[a-z0-9]+_[a-z0-9]+$/.test(id)) continue;
+
+    results.push({ id, sequence: seq });
+  }
+
+  results.sort((a, b) =>
+    a.id.localeCompare(b.id, undefined, { numeric: true })
+  );
+  res.json({ results });
 });
 
 /**
