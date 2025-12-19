@@ -128,148 +128,161 @@ const PdbPage = () => {
   };
 
   return (
-    <div style={{ padding: 16 }}>
-      {/* header */}
-      <Header />
+    <div style={{ padding: 24 }}>
+      {/* ✅ Page container: centralized like your example */}
+      <div
+        style={{
+          maxWidth: 1100,
+          margin: "0 auto",
+        }}
+      >
+        <Header />
 
-      <Divider style={{ margin: "12px 0" }} />
+        <Divider style={{ margin: "12px 0 20px" }} />
 
-      {/* title and action */}
-      <Flex justify="space-between" align="center" wrap="wrap" gap={16}>
-        <Title level={2} style={{ margin: 0 }}>
-          {pdbId.toUpperCase()} Structure Viewer
-        </Title>
+        {/* Controls layout */}
+        <Flex direction="column" gap={10} style={{ marginBottom: 18 }}>
+          {/* Row 1 */}
+          <Flex align="center" gap={16} wrap="wrap">
+            {/* Left: Title */}
+            <div style={{ flex: 1, minWidth: 260 }}>
+              <Title level={2} style={{ margin: 0 }}>
+                {pdbId.toUpperCase()} Structure Viewer
+              </Title>
+            </div>
 
-        <Space wrap>
-          <Text strong>Cluster of similarity:</Text>
+            {/* Right: Similarity */}
+            <div style={{ flex: "none" }}>
+              <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
+                <Text strong>Similarity:</Text>
 
-          <Button.Group>
-            <Button onClick={() => handleSimilarityClick(50)}>50%</Button>
-            <Button onClick={() => handleSimilarityClick(65)}>65%</Button>
-            <Button onClick={() => handleSimilarityClick(75)}>75%</Button>
-          </Button.Group>
+                <Button.Group>
+                  <Button onClick={() => handleSimilarityClick(50)}>50%</Button>
+                  <Button onClick={() => handleSimilarityClick(65)}>65%</Button>
+                  <Button onClick={() => handleSimilarityClick(75)}>75%</Button>
+                </Button.Group>
 
-          <Button
-            type="primary"
-            href={`https://www.rcsb.org/structure/${pdbId
-              .split("_")[0]
-              .toUpperCase()}`}
-            target="_blank"
-          >
-            View on RCSB
-          </Button>
-        </Space>
-
-        {/* cycliczation button */}
-        <Flex align="center" gap={8} style={{ marginLeft: "auto" }}>
-          <Text strong>Cyclization Class:</Text>
-
-          <Button.Group>
-            <Button>s2s</Button>
-            <Button>s2e</Button>
-            <Button>e2e</Button>
-            <Button>e2e + s2s</Button>
-            <Button>s2e + s2s</Button>
-          </Button.Group>
-        </Flex>
-      </Flex>
-
-      <Divider />
-
-      {/*main content */}
-      <Row gutter={[16, 16]} align="stretch">
-        {/* left: JSmol */}
-        <Col xs={24} lg={16}>
-          <Card
-            title={
-              <Space style={{ width: "100%", justifyContent: "space-between" }}>
-                <Title level={4} style={{ margin: 0 }}>
-                  PDB Viewer: {pdbIdUpper}
-                </Title>
-                <Button onClick={handleToggleView}>
-                  Switch to {viewMode === "cartoon" ? "Stick" : "Cartoon"}
+                <Button
+                  type="primary"
+                  href={`https://www.rcsb.org/structure/${pdbId
+                    .split("_")[0]
+                    .toUpperCase()}`}
+                  target="_blank"
+                >
+                  View on RCSB
                 </Button>
-              </Space>
-            }
-            style={{
-              borderRadius: 14,
-              boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-              height: 640,
-            }}
-            bodyStyle={{
-              padding: 12,
-              height: 584,
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <div
-              ref={containerRef}
-              style={{
-                flex: 1,
-                minHeight: 520,
-                width: "100%",
-                borderRadius: 12,
-                overflow: "hidden",
-                background: "#fff",
-                border: "1px solid rgba(0,0,0,0.06)",
-              }}
-            />
-          </Card>
-        </Col>
+              </Flex>
+            </div>
+          </Flex>
 
-        {/* right: Metadata */}
-        <Col xs={24} lg={8}>
-          <Card
-            title={<Text strong>Metadata</Text>}
-            style={{
-              borderRadius: 14,
-              boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-              height: 640,
-            }}
-            bodyStyle={{
-              padding: 16,
-              height: 584,
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            {metaLoading ? (
+          {/* Row 2 */}
+          <Flex align="center" gap={16} wrap="wrap">
+            {/* Left: Viewer */}
+            <div style={{ flex: 1, minWidth: 260 }}>
+              <Flex align="center" gap={8} wrap="wrap">
+                <Text strong>Viewer:</Text>
+
+                <Button.Group>
+                  <Button
+                    type={viewMode === "cartoon" ? "primary" : "default"}
+                    onClick={() =>
+                      viewMode !== "cartoon" && setViewMode("cartoon")
+                    }
+                  >
+                    Cartoon
+                  </Button>
+                  <Button
+                    type={viewMode === "stick" ? "primary" : "default"}
+                    onClick={() => viewMode !== "stick" && setViewMode("stick")}
+                  >
+                    Stick
+                  </Button>
+                </Button.Group>
+              </Flex>
+            </div>
+
+            {/* Right: Cyclization */}
+            <div style={{ flex: "none" }}>
+              <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
+                <Text strong>Cyclization:</Text>
+
+                <Button.Group>
+                  <Button>s2s</Button>
+                  <Button>s2e</Button>
+                  <Button>e2e</Button>
+                  <Button>e2e + s2s</Button>
+                  <Button>s2e + s2s</Button>
+                </Button.Group>
+              </Flex>
+            </div>
+          </Flex>
+        </Flex>
+
+        {/* Two-card layout centered inside the container */}
+        <Row gutter={[18, 18]} justify="center" align="stretch">
+          {/* left: Viewer */}
+          <Col xs={24} lg={14}>
+            <Card
+              style={{
+                borderRadius: 14,
+                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
+                height: 560,
+              }}
+              bodyStyle={{
+                padding: 12,
+                height: 560,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <div
+                ref={containerRef}
                 style={{
                   flex: 1,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  width: "100%",
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  background: "#fff",
+                  border: "1px solid rgba(0,0,0,0.06)",
                 }}
-              >
-                <Spin />
-              </div>
-            ) : metaError ? (
-              <Text type="danger">{metaError}</Text>
-            ) : !metaRecord ? (
-              <Text type="secondary">No metadata found for {pdbIdUpper}</Text>
-            ) : (
-              <div style={{ flex: 1, overflowY: "auto" }}>
-                <Space
-                  direction="vertical"
-                  size="middle"
-                  style={{ width: "100%" }}
+              />
+            </Card>
+          </Col>
+
+          {/* right: Metadata */}
+          <Col xs={24} lg={10}>
+            <Card
+              title={<Text strong>Structure Information</Text>}
+              style={{
+                borderRadius: 14,
+                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
+                height: 560,
+              }}
+              bodyStyle={{
+                padding: 16,
+                height: 504, // 560 - title area approx
+                overflowY: "auto",
+              }}
+            >
+              {metaLoading ? (
+                <div
+                  style={{
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
                 >
-                  <div>
-                    <Text type="secondary">Cyclization</Text>
-                    <div style={{ marginTop: 6 }}>
-                      <Tag
-                        color="blue"
-                        style={{ borderRadius: 999, padding: "2px 10px" }}
-                      >
-                        {metaRecord.Cyclization || "Unknown"}
-                      </Tag>
-                    </div>
-                  </div>
-
-                  <Divider style={{ margin: "8px 0" }} />
-
+                  <Spin />
+                </div>
+              ) : metaError ? (
+                <Text type="danger">{metaError}</Text>
+              ) : !metaRecord ? (
+                <Text type="secondary">
+                  No metadata found for {pdbId.toUpperCase()}
+                </Text>
+              ) : (
+                <>
                   <Descriptions
                     size="small"
                     column={1}
@@ -277,52 +290,51 @@ const PdbPage = () => {
                     labelStyle={{ width: 120, color: "rgba(0,0,0,0.55)" }}
                     contentStyle={{ color: "rgba(0,0,0,0.88)" }}
                   >
-                    <Descriptions.Item label="Organism">
-                      {metaRecord.Organism_Scientific_Name || "N/A"}
+                    <Descriptions.Item label="Title">
+                      {metaRecord.Title || "N/A"}
                     </Descriptions.Item>
+
                     <Descriptions.Item label="Method">
                       {metaRecord.Method || "N/A"}
                     </Descriptions.Item>
-                    <Descriptions.Item label="Release Date">
+
+                    <Descriptions.Item label="Released">
                       {metaRecord.Release_Date || "N/A"}
+                    </Descriptions.Item>
+
+                    <Descriptions.Item label="Organism">
+                      {metaRecord.Organism_Scientific_Name || "N/A"}
+                    </Descriptions.Item>
+
+                    <Descriptions.Item label="Classification">
+                      {metaRecord.Keywords || "N/A"}
                     </Descriptions.Item>
                   </Descriptions>
 
-                  <Divider style={{ margin: "8px 0" }} />
+                  <Divider style={{ margin: "12px 0" }} />
 
-                  <div>
-                    <Text type="secondary">Keywords</Text>
-                    <div style={{ marginTop: 6, wordBreak: "break-word" }}>
-                      {metaRecord.Keywords || "N/A"}
-                    </div>
+                  <Text type="secondary">Sequence</Text>
+                  <div
+                    style={{
+                      marginTop: 8,
+                      fontFamily:
+                        "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+                      fontSize: 12,
+                      background: "rgba(0,0,0,0.03)",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                      borderRadius: 10,
+                      padding: 10,
+                      wordBreak: "break-word",
+                    }}
+                  >
+                    {metaRecord.Sequence || "N/A"}
                   </div>
-
-                  <Divider style={{ margin: "8px 0" }} />
-
-                  <div>
-                    <Text type="secondary">Sequence</Text>
-                    <div
-                      style={{
-                        marginTop: 6,
-                        fontFamily:
-                          "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
-                        fontSize: 12,
-                        background: "rgba(0,0,0,0.03)",
-                        border: "1px solid rgba(0,0,0,0.06)",
-                        borderRadius: 10,
-                        padding: 10,
-                        wordBreak: "break-word",
-                      }}
-                    >
-                      {metaRecord.Sequence || "N/A"}
-                    </div>
-                  </div>
-                </Space>
-              </div>
-            )}
-          </Card>
-        </Col>
-      </Row>
+                </>
+              )}
+            </Card>
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 };
