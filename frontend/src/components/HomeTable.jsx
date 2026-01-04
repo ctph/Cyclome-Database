@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Table, Tag, Tooltip } from "antd";
+import { Table, Tag } from "antd";
 import { Link } from "react-router-dom";
 
 const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
@@ -65,21 +65,19 @@ const HomeTable = () => {
       render: (seq) => (
         <span style={{ fontFamily: "monospace" }}>
           {seq.slice(0, 40)}
-          {seq.length > 40 ? "…" : ""}
+          {seq.length > 40 ? "..." : ""}
         </span>
       )
     },
     {
       title: "PDB Structures",
       key: "structures",
-      align: "center",
       render: (_, record) => record.pdbs.length
     },
     {
       title: "CyMelt (K)",
       dataIndex: "melting_point",
       key: "melting_point",
-      align: "center",
       render: (temp) => (temp !== "-" ? `${temp} K` : "-")
     }
   ];
@@ -101,7 +99,7 @@ const HomeTable = () => {
         key: "actions",
         render: (_, row) => (
           <>
-            <Link to={`/pdb/${row.chainId}`} style={{ marginRight: 12 }}>
+            <Link to={`/pdb/${row.chainId}`} style={{ marginRight: 8 }}>
               View 3D
             </Link>
             <a href={row.downloadUrl} download>
@@ -131,27 +129,8 @@ const HomeTable = () => {
         loading={loading}
         columns={columns}
         dataSource={groupedRows}
-        rowKey="key"
+        expandable={{ expandedRowRender }}
         pagination={{ pageSize: 10 }}
-        expandable={{
-          expandedRowRender,
-          rowExpandable: (record) => record.pdbs.length > 1,
-          expandIcon: ({ expanded, onExpand, record }) =>
-            record.pdbs.length > 1 ? (
-              <Tooltip title="Multiple PDB structures share this sequence">
-                <span
-                  onClick={(e) => onExpand(record, e)}
-                  style={{
-                    cursor: "pointer",
-                    marginRight: 8,
-                    fontSize: 16
-                  }}
-                >
-                  {expanded ? "−" : "+"}
-                </span>
-              </Tooltip>
-            ) : null
-        }}
       />
     </div>
   );
