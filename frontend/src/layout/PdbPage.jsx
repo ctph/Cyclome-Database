@@ -1,4 +1,3 @@
-// frontend/src/PdbPage.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../components/Header";
 
@@ -18,22 +17,6 @@ import {
 
 const { Title, Text } = Typography;
 
-function normalizeCyclization(x) {
-  return String(x || "")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "")
-    .replace(/\+/g, "+");
-}
-
-const CYC_BUTTONS = [
-  { key: "s2s", label: "s2s" },
-  { key: "s2e", label: "s2e" },
-  { key: "e2e", label: "e2e" },
-  { key: "e2e+s2s", label: "e2e + s2s" },
-  { key: "s2e+s2s", label: "s2e + s2s" },
-];
-
 const PdbPage = () => {
   const { pdbId } = useParams();
   const pdbIdUpper = useMemo(() => String(pdbId || "").toUpperCase(), [pdbId]);
@@ -46,6 +29,10 @@ const PdbPage = () => {
   const [metaLoading, setMetaLoading] = useState(true);
   const [metaError, setMetaError] = useState(null);
   const [metaRecord, setMetaRecord] = useState(null);
+
+  const [pdbLoading, setPdbLoading] = useState(true);
+  const [pdbError, setPdbError] = useState(null);
+
   const navigate = useNavigate();
 
   const runJsmol = (cmd) => {
@@ -55,7 +42,64 @@ const PdbPage = () => {
     } catch {}
   };
 
+  // Pre-check the PDB file endpoint before initializing JSmol
   useEffect(() => {
+    let cancelled = false;
+    const ctrl = new AbortController();
+
+    async function precheckPdb() {
+      setPdbLoading(true);
+      setPdbError(null);
+
+      try {
+        const url = `/api/pdb/file/${pdbId}`;
+        const res = await fetch(url, { signal: ctrl.signal });
+
+        if (!res.ok) {
+          let detail = "";
+          try {
+            const ct = res.headers.get("content-type") || "";
+            if (ct.includes("application/json")) {
+              const j = await res.json();
+              detail = j?.error ? `: ${j.error}` : "";
+            } else {
+              const t = await res.text();
+              detail = t ? `: ${t}` : "";
+            }
+          } catch {}
+          throw new Error(`PDB file not available (${res.status})${detail}`);
+        }
+
+        const ct = (res.headers.get("content-type") || "").toLowerCase();
+        if (ct.includes("text/html")) {
+          throw new Error("PDB endpoint returned HTML (likely wrong route/proxy).");
+        }
+
+        if (!cancelled) {
+          setPdbLoading(false);
+          setPdbError(null);
+        }
+      } catch (e) {
+        if (!cancelled) {
+          setPdbLoading(false);
+          setPdbError(e?.message || "Failed to load PDB file");
+        }
+      }
+    }
+
+    if (pdbId) precheckPdb();
+
+    return () => {
+      cancelled = true;
+      ctrl.abort();
+    };
+  }, [pdbId]);
+
+  // Init JSmol ONLY if precheck passed
+  useEffect(() => {
+    if (pdbLoading) return;
+    if (pdbError) return;
+
     if (!window.Jmol) {
       message.error(
         "JSmol not loaded. Check /public/jsmol and index.html script tag."
@@ -86,17 +130,18 @@ const PdbPage = () => {
     containerRef.current.innerHTML = window.Jmol.getAppletHtml(applet);
 
     setViewMode("cartoon");
-  }, [pdbId]);
+  }, [pdbId, pdbLoading, pdbError]);
 
   useEffect(() => {
     if (!appletRef.current) return;
 
     if (viewMode === "stick") {
-      runJsmol("select all; cartoons off; spacefill off; wireframe 0.2; color cpk;");
+      runJsmol(
+        "select all; cartoons off; spacefill off; wireframe 0.2; color cpk;"
+      );
     } else {
       runJsmol("select all; cartoons only; color structure;");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewMode]);
 
   // Metadata from backend
@@ -134,16 +179,6 @@ const PdbPage = () => {
     navigate(`/similarity/${baseId}/${threshold}`);
   };
 
-  const baseId = useMemo(() => String(pdbId || "").split("_")[0].toLowerCase(), [pdbId]);
-
-  const activeCycl = useMemo(() => {
-    return normalizeCyclization(metaRecord?.Cyclization);
-  }, [metaRecord]);
-
-  const handleCyclizationClick = (cyclKey) => {
-    navigate(`/cyclization/${baseId}/${cyclKey}`);
-  };
-
   return (
     <div style={{ padding: 24 }}>
       <div
@@ -176,7 +211,7 @@ const PdbPage = () => {
 
                 <Button
                   type="primary"
-                  href={`https://www.rcsb.org/structure/${String(pdbId || "")
+                  href={`https://www.rcsb.org/structure/${pdbId
                     .split("_")[0]
                     .toUpperCase()}`}
                   target="_blank"
@@ -195,13 +230,17 @@ const PdbPage = () => {
                 <Button.Group>
                   <Button
                     type={viewMode === "cartoon" ? "primary" : "default"}
-                    onClick={() => viewMode !== "cartoon" && setViewMode("cartoon")}
+                    onClick={() =>
+                      viewMode !== "cartoon" && setViewMode("cartoon")
+                    }
+                    disabled={!!pdbError || pdbLoading}
                   >
                     Cartoon
                   </Button>
                   <Button
                     type={viewMode === "stick" ? "primary" : "default"}
                     onClick={() => viewMode !== "stick" && setViewMode("stick")}
+                    disabled={!!pdbError || pdbLoading}
                   >
                     Stick
                   </Button>
@@ -214,19 +253,11 @@ const PdbPage = () => {
                 <Text strong>Cyclization:</Text>
 
                 <Button.Group>
-                  {CYC_BUTTONS.map((b) => {
-                    const isActive = Boolean(activeCycl) && activeCycl === b.key;
-                    return (
-                      <Button
-                        key={b.key}
-                        type={isActive ? "primary" : "default"}
-                        disabled={!isActive}
-                        onClick={() => isActive && handleCyclizationClick(b.key)}
-                      >
-                        {b.label}
-                      </Button>
-                    );
-                  })}
+                  <Button>s2s</Button>
+                  <Button>s2e</Button>
+                  <Button>e2e</Button>
+                  <Button>e2e + s2s</Button>
+                  <Button>s2e + s2s</Button>
                 </Button.Group>
               </Flex>
             </div>
@@ -248,17 +279,53 @@ const PdbPage = () => {
                 flexDirection: "column",
               }}
             >
-              <div
-                ref={containerRef}
-                style={{
-                  flex: 1,
-                  width: "100%",
-                  borderRadius: 12,
-                  overflow: "hidden",
-                  background: "#fff",
-                  border: "1px solid rgba(0,0,0,0.06)",
-                }}
-              />
+              {pdbLoading ? (
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Spin />
+                </div>
+              ) : pdbError ? (
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 24,
+                    textAlign: "center",
+                  }}
+                >
+                  <div>
+                    <Title level={4} style={{ marginBottom: 8 }}>
+                      Viewer unavailable
+                    </Title>
+                    <Text type="danger">{pdbError}</Text>
+                    <div style={{ marginTop: 12 }}>
+                      <Text type="secondary">
+                        This usually means the PDB chain file does not exist on the backend.
+                      </Text>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  ref={containerRef}
+                  style={{
+                    flex: 1,
+                    width: "100%",
+                    borderRadius: 12,
+                    overflow: "hidden",
+                    background: "#fff",
+                    border: "1px solid rgba(0,0,0,0.06)",
+                  }}
+                />
+              )}
             </Card>
           </Col>
 
@@ -330,7 +397,7 @@ const PdbPage = () => {
                       fontFamily:
                         "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
                       fontSize: 12,
-                      background: "rgba(0,0,0,0.0303)",
+                      background: "rgba(0,0,0,0.03)",
                       border: "1px solid rgba(0,0,0,0.06)",
                       borderRadius: 10,
                       padding: 10,
