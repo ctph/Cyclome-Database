@@ -17,6 +17,54 @@ function getMeta() {
   return CACHE;
 }
 
+function normalizeCyclization(x) {
+  return String(x || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "")
+    .replace(/\+/g, "+");
+}
+
+function parsePdbList(rowPdbField) {
+  return String(rowPdbField || "")
+    .split(";")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => s.replace(/\.pdb$/i, ""))
+    .map((s) => s.toLowerCase());
+}
+
+// GET /api/meta/cyclization/:type
+router.get("/cyclization/:type", (req, res) => {
+  const requested = normalizeCyclization(req.params.type);
+
+  if (!requested) {
+    return res.status(400).json({ error: "Missing cyclization type" });
+  }
+
+  const data = getMeta();
+  const out = [];
+
+  for (const row of data) {
+    const rowType = normalizeCyclization(row?.Cyclization);
+    if (!rowType || rowType !== requested) continue;
+
+    const chains = parsePdbList(row?.PDB);
+    for (const c of chains) out.push(c);
+  }
+
+  // de-dupe + sort
+  const unique = Array.from(new Set(out)).sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true })
+  );
+
+  res.json({
+    cyclization: requested,
+    count: unique.length,
+    results: unique,
+  });
+});
+
 // GET /api/meta/:id
 router.get("/:id", (req, res) => {
   const id = String(req.params.id || "")
