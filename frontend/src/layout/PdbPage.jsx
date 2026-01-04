@@ -1,3 +1,4 @@
+// frontend/src/PdbPage.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../components/Header";
 
@@ -6,8 +7,6 @@ import {
   Card,
   Spin,
   Typography,
-  Tag,
-  Space,
   Divider,
   Row,
   Col,
@@ -18,6 +17,22 @@ import {
 } from "antd";
 
 const { Title, Text } = Typography;
+
+function normalizeCyclization(x) {
+  return String(x || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "")
+    .replace(/\+/g, "+");
+}
+
+const CYC_BUTTONS = [
+  { key: "s2s", label: "s2s" },
+  { key: "s2e", label: "s2e" },
+  { key: "e2e", label: "e2e" },
+  { key: "e2e+s2s", label: "e2e + s2s" },
+  { key: "s2e+s2s", label: "s2e + s2s" },
+];
 
 const PdbPage = () => {
   const { pdbId } = useParams();
@@ -77,20 +92,12 @@ const PdbPage = () => {
     if (!appletRef.current) return;
 
     if (viewMode === "stick") {
-      // stick view
-      runJsmol(
-        "select all; cartoons off; spacefill off; wireframe 0.2; color cpk;"
-      );
+      runJsmol("select all; cartoons off; spacefill off; wireframe 0.2; color cpk;");
     } else {
-      // cartoon view
       runJsmol("select all; cartoons only; color structure;");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewMode]);
-
-  const handleToggleView = () => {
-    setViewMode((prev) => (prev === "cartoon" ? "stick" : "cartoon"));
-  };
 
   // Metadata from backend
   useEffect(() => {
@@ -127,9 +134,18 @@ const PdbPage = () => {
     navigate(`/similarity/${baseId}/${threshold}`);
   };
 
+  const baseId = useMemo(() => String(pdbId || "").split("_")[0].toLowerCase(), [pdbId]);
+
+  const activeCycl = useMemo(() => {
+    return normalizeCyclization(metaRecord?.Cyclization);
+  }, [metaRecord]);
+
+  const handleCyclizationClick = (cyclKey) => {
+    navigate(`/cyclization/${baseId}/${cyclKey}`);
+  };
+
   return (
     <div style={{ padding: 24 }}>
-      {/* ✅ Page container: centralized like your example */}
       <div
         style={{
           maxWidth: 1100,
@@ -140,18 +156,14 @@ const PdbPage = () => {
 
         <Divider style={{ margin: "12px 0 20px" }} />
 
-        {/* Controls layout */}
         <Flex direction="column" gap={10} style={{ marginBottom: 18 }}>
-          {/* Row 1 */}
           <Flex align="center" gap={16} wrap="wrap">
-            {/* Left: Title */}
             <div style={{ flex: 1, minWidth: 260 }}>
               <Title level={2} style={{ margin: 0 }}>
-                {pdbId.toUpperCase()} Structure Viewer
+                {pdbIdUpper} Structure Viewer
               </Title>
             </div>
 
-            {/* Right: Similarity */}
             <div style={{ flex: "none" }}>
               <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
                 <Text strong>Similarity:</Text>
@@ -164,7 +176,7 @@ const PdbPage = () => {
 
                 <Button
                   type="primary"
-                  href={`https://www.rcsb.org/structure/${pdbId
+                  href={`https://www.rcsb.org/structure/${String(pdbId || "")
                     .split("_")[0]
                     .toUpperCase()}`}
                   target="_blank"
@@ -175,9 +187,7 @@ const PdbPage = () => {
             </div>
           </Flex>
 
-          {/* Row 2 */}
           <Flex align="center" gap={16} wrap="wrap">
-            {/* Left: Viewer */}
             <div style={{ flex: 1, minWidth: 260 }}>
               <Flex align="center" gap={8} wrap="wrap">
                 <Text strong>Viewer:</Text>
@@ -185,9 +195,7 @@ const PdbPage = () => {
                 <Button.Group>
                   <Button
                     type={viewMode === "cartoon" ? "primary" : "default"}
-                    onClick={() =>
-                      viewMode !== "cartoon" && setViewMode("cartoon")
-                    }
+                    onClick={() => viewMode !== "cartoon" && setViewMode("cartoon")}
                   >
                     Cartoon
                   </Button>
@@ -201,26 +209,31 @@ const PdbPage = () => {
               </Flex>
             </div>
 
-            {/* Right: Cyclization */}
             <div style={{ flex: "none" }}>
               <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
                 <Text strong>Cyclization:</Text>
 
                 <Button.Group>
-                  <Button>s2s</Button>
-                  <Button>s2e</Button>
-                  <Button>e2e</Button>
-                  <Button>e2e + s2s</Button>
-                  <Button>s2e + s2s</Button>
+                  {CYC_BUTTONS.map((b) => {
+                    const isActive = Boolean(activeCycl) && activeCycl === b.key;
+                    return (
+                      <Button
+                        key={b.key}
+                        type={isActive ? "primary" : "default"}
+                        disabled={!isActive}
+                        onClick={() => isActive && handleCyclizationClick(b.key)}
+                      >
+                        {b.label}
+                      </Button>
+                    );
+                  })}
                 </Button.Group>
               </Flex>
             </div>
           </Flex>
         </Flex>
 
-        {/* Two-card layout centered inside the container */}
         <Row gutter={[18, 18]} justify="center" align="stretch">
-          {/* left: Viewer */}
           <Col xs={24} lg={14}>
             <Card
               style={{
@@ -249,7 +262,6 @@ const PdbPage = () => {
             </Card>
           </Col>
 
-          {/* right: Metadata */}
           <Col xs={24} lg={10}>
             <Card
               title={<Text strong>Structure Information</Text>}
@@ -260,7 +272,7 @@ const PdbPage = () => {
               }}
               bodyStyle={{
                 padding: 16,
-                height: 504, // 560 - title area approx
+                height: 504,
                 overflowY: "auto",
               }}
             >
@@ -278,9 +290,7 @@ const PdbPage = () => {
               ) : metaError ? (
                 <Text type="danger">{metaError}</Text>
               ) : !metaRecord ? (
-                <Text type="secondary">
-                  No metadata found for {pdbId.toUpperCase()}
-                </Text>
+                <Text type="secondary">No metadata found for {pdbIdUpper}</Text>
               ) : (
                 <>
                   <Descriptions
@@ -320,7 +330,7 @@ const PdbPage = () => {
                       fontFamily:
                         "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
                       fontSize: 12,
-                      background: "rgba(0,0,0,0.03)",
+                      background: "rgba(0,0,0,0.0303)",
                       border: "1px solid rgba(0,0,0,0.06)",
                       borderRadius: 10,
                       padding: 10,
