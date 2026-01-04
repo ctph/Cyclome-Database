@@ -5,9 +5,16 @@ import { buildPdbIndex, getPdbDirAbs } from "./indexPdb.js";
 
 const router = express.Router();
 
+const META_PATH = path.resolve(
+  "metadata",
+  "cyclome_for_website_with_metadata.json"
+);
+
+const metaData = JSON.parse(fs.readFileSync(META_PATH, "utf-8"));
+
 const PDB_DIR = getPdbDirAbs();
 if (!fs.existsSync(PDB_DIR)) {
-  console.error(`❌ PDB folder not found: ${PDB_DIR}`);
+  console.error(`PDB folder not found: ${PDB_DIR}`);
   console.error(
     "Create backend/cyclic_pdbs and put your .pdb files inside it."
   );
@@ -17,6 +24,29 @@ if (!fs.existsSync(PDB_DIR)) {
 const { chainIndex, pdbIndex } = fs.existsSync(PDB_DIR)
   ? buildPdbIndex(PDB_DIR)
   : { chainIndex: {}, pdbIndex: {} };
+
+const sequenceMap = new Map();
+
+for (const row of metaData) {
+  const seq = String(row.Sequence || "").trim().toUpperCase();
+  if (!seq) continue;
+
+  const pdbs = String(row.PDB || "")
+    .split(";")
+    .map(s => s.trim().replace(/\.pdb$/i, "").toLowerCase())
+    .filter(Boolean);
+
+  for (const pdb of pdbs) {
+    sequenceMap.set(pdb, seq);
+  }
+}
+
+// inject sequences
+for (const key of Object.keys(chainIndex)) {
+  if (sequenceMap.has(key)) {
+    chainIndex[key].sequence = sequenceMap.get(key);
+  }
+}
 
 router.get("/stats", (req, res) => {
   res.json({

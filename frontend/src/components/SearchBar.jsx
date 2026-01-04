@@ -10,7 +10,9 @@ const SearchBar = () => {
   const [options, setOptions] = useState([]);
   const [allPdbIds, setAllPdbIds] = useState([]);
   const navigate = useNavigate();
-  const lastSearchedTerm = useRef(null);
+
+  const lastSearchTerm = useRef("");
+  const lastInfoKey = useRef(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -21,10 +23,11 @@ const SearchBar = () => {
         const data = await res.json();
 
         if (!cancelled && Array.isArray(data.results)) {
-          setAllPdbIds(data.results);
+          const ids = data.results.map((x) => String(x || "").trim()).filter(Boolean);
+          setAllPdbIds(ids);
 
           setOptions(
-            data.results.map((id) => ({
+            ids.slice(0, 200).map((id) => ({
               label: id.toUpperCase(),
               value: id.toLowerCase(),
             }))
@@ -42,9 +45,11 @@ const SearchBar = () => {
   }, []);
 
   const findNearestMatches = (searchTerm) => {
+    const term = String(searchTerm || "").toLowerCase();
+
     const distances = allPdbIds.map((pdbId) => ({
       pdbId,
-      distance: levenshtein.get(searchTerm.toLowerCase(), pdbId.toLowerCase()),
+      distance: levenshtein.get(term, String(pdbId || "").toLowerCase()),
     }));
 
     return distances
@@ -53,80 +58,99 @@ const SearchBar = () => {
       .map((item) => item.pdbId);
   };
 
-  const handleSearch = async (searchTerm) => {
-    if (!searchTerm || searchTerm.length < 4) return;
-    if (searchTerm === lastSearchedTerm.current) return;
-
-    lastSearchedTerm.current = searchTerm;
-
-    try {
-      const res = await fetch(
-        `${API_BASE}/api/pdb/search?q=${encodeURIComponent(
-          searchTerm.toLowerCase()
-        )}&limit=50`
-      );
-      const data = await res.json();
-      const ids = Array.isArray(data?.results) ? data.results : [];
-
+  const setPrefixOptions = (termLower, limit = 200) => {
+    if (!termLower) {
       setOptions(
-        ids.map((id) => ({
+        allPdbIds.slice(0, limit).map((id) => ({
           label: id.toUpperCase(),
           value: id.toLowerCase(),
         }))
       );
-    } catch (e) {
-      // fail quietly
+      return;
     }
 
-    const exactMatch = allPdbIds.find(
-      (pdbId) => pdbId.toLowerCase() === searchTerm.toLowerCase()
+    const matches = allPdbIds
+      .filter((id) => String(id).toLowerCase().startsWith(termLower))
+      .slice(0, limit);
+
+    setOptions(
+      matches.map((id) => ({
+        label: id.toUpperCase(),
+        value: id.toLowerCase(),
+      }))
     );
+  };
 
-    if (!exactMatch) {
-      const nearestMatches = findNearestMatches(searchTerm);
-      const key = `search-suggestions-${Date.now()}`;
+  const handleSearch = (searchTerm) => {
+    const term = String(searchTerm || "").trim().toLowerCase();
 
-      message.info({
-        content: (
-          <div>
-            <p>No exact match found. Did you mean:</p>
-            <ul style={{ marginTop: 8, marginBottom: 0 }}>
-              {nearestMatches.map((match) => (
-                <li key={match}>
-                  <a
-                    onClick={() => {
-                      message.destroy(key);
-                      navigate(`/pdb/${match.toLowerCase()}`);
-                    }}
-                  >
-                    {match.toUpperCase()}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ),
-        key,
-        duration: 5,
-      });
+    if (term === lastSearchTerm.current) return;
+    lastSearchTerm.current = term;
+
+    // Pure prefix filtering from 1+ chars (instant)
+    setPrefixOptions(term, 200);
+
+    // Only show "Did you mean" suggestions when user has typed enough
+    // and prefix filtering found nothing.
+    if (term.length >= 4) {
+      const anyPrefix = allPdbIds.some((id) => String(id).toLowerCase().startsWith(term));
+      if (!anyPrefix) {
+        const nearest = findNearestMatches(term);
+
+        const key = `search-suggestions-${Date.now()}`;
+        lastInfoKey.current = key;
+
+        message.info({
+          content: (
+            <div>
+              <p>No prefix match found. Did you mean:</p>
+              <ul style={{ marginTop: 8, marginBottom: 0 }}>
+                {nearest.map((match) => (
+                  <li key={match}>
+                    <a
+                      onClick={() => {
+                        message.destroy(key);
+                        navigate(`/pdb/${String(match).toLowerCase()}`);
+                      }}
+                    >
+                      {String(match).toUpperCase()}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ),
+          key,
+          duration: 5,
+        });
+      }
     }
   };
 
   const handleChange = (selectedIdLower) => {
     setValue(selectedIdLower);
     navigate(`/pdb/${selectedIdLower}`);
-    lastSearchedTerm.current = null;
+    lastSearchTerm.current = "";
+  };
+
+  const handleClear = () => {
+    setValue(null);
+    lastSearchTerm.current = "";
+    setPrefixOptions("", 200);
+    if (lastInfoKey.current) message.destroy(lastInfoKey.current);
   };
 
   return (
     <Select
       showSearch
+      allowClear
       value={value}
-      placeholder="Search PDBs (min 4 chars, e.g. 1A1P)"
+      placeholder="Search PDBs by prefix (e.g. 1C, 2B, 1A1P)"
       style={{ width: "100%" }}
       options={options}
       onChange={handleChange}
       onSearch={handleSearch}
+      onClear={handleClear}
       filterOption={false}
     />
   );
