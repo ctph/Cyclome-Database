@@ -1,207 +1,282 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Select, message } from "antd";
-import { useNavigate } from "react-router-dom";
 
 const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
 
 const SequenceSearchBar = () => {
-  const [value, setValue] = useState(null);
+  const [allSequences, setAllSequences] = useState([]);
   const [options, setOptions] = useState([]);
-  const [sequenceMap, setSequenceMap] = useState({}); // { "1a1p_a": "SEQUENCE..." }
-  const [allIds, setAllIds] = useState([]); // ["1a1p_a", ...]
-  const navigate = useNavigate();
-  const lastSearchedTerm = useRef(null);
+  const [value, setValue] = useState(null);
 
-  // Load JSON once and build maps/options
   useEffect(() => {
-    let cancelled = false;
-
-    async function loadSequences() {
-      try {
-        const res = await fetch(`${API_BASE}/api/pdb/all`);
-        if (!res.ok) throw new Error("Failed to fetch JSON");
-
-        const data = await res.json();
-
-        const map = {};
-        const ids = [];
-
-        for (const row of Array.isArray(data) ? data : []) {
-          const rawId = row?.PDB;
-          const seq = row?.Sequence;
-
-          if (!rawId || !seq) continue;
-
-          const id = String(rawId).trim().toLowerCase(); // "1a1p_a"
-          const sequence = String(seq).trim().toUpperCase();
-
-          // basic validation: keep IDs consistent with backend chainIndex keys
-          if (!/^[a-z0-9]+_[a-z0-9]+$/.test(id)) continue;
-
-          map[id] = sequence;
-          ids.push(id);
+    fetch(`${API_BASE}/api/meta/sequences/all`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!Array.isArray(data.results)) {
+          throw new Error("Invalid response");
         }
 
-        ids.sort();
+        setAllSequences(data.results);
 
-        if (!cancelled) {
-          setSequenceMap(map);
-          setAllIds(ids);
-
-          // show all by default
-          setOptions(
-            ids.map((id) => ({
-              label: id.toUpperCase(),
-              value: id, // keep lowercase for routes
-              sequence: map[id]?.toLowerCase() || "",
-            }))
-          );
-        }
-      } catch (e) {
-        if (!cancelled) message.error("Failed to load sequence JSON");
-      }
-    }
-
-    loadSequences();
-    return () => {
-      cancelled = true;
-    };
+        // preload first 200 like SearchBar
+        setOptions(
+          data.results.slice(0, 200).map((seq) => ({
+            label: seq,
+            value: seq,
+          }))
+        );
+      })
+      .catch(() => {
+        message.error("Failed to load sequences");
+      });
   }, []);
 
-  const goToPdbPage = (id) => {
-    const chainId = String(id || "")
-      .trim()
-      .toLowerCase();
-    if (!chainId) return;
-    navigate(`/pdb/${chainId}`);
-  };
-
   const handleSearch = (input) => {
-    const term = String(input || "").trim();
-    if (!term) return;
-
-    // prevent repeated work
-    if (term === lastSearchedTerm.current) return;
-    lastSearchedTerm.current = term;
-
-    const termLower = term.toLowerCase();
-    const termUpper = term.toUpperCase();
-
-    // 1) ID prefix match
-    const idMatches = allIds
-      .filter((id) => id.startsWith(termLower))
-      .slice(0, 20);
-
-    if (idMatches.length > 0) {
+    const term = String(input || "").trim().toUpperCase();
+    if (!term) {
       setOptions(
-        idMatches.map((id) => ({
-          label: id.toUpperCase(),
-          value: id,
-          sequence: (sequenceMap[id] || "").toLowerCase(),
+        allSequences.slice(0, 200).map((seq) => ({
+          label: seq,
+          value: seq,
         }))
       );
-
-      // auto-route if exactly one match
-      if (idMatches.length === 1) {
-        goToPdbPage(idMatches[0]);
-      }
       return;
     }
 
-    // 2) sequence substring match
-    if (term.length < 5) return;
+    const matches = allSequences
+      .filter((seq) => seq.startsWith(term))
+      .slice(0, 20);
 
-    const sequenceMatches = [];
-    for (const id of allIds) {
-      const seq = sequenceMap[id];
-      if (!seq) continue;
-
-      if (seq.includes(termUpper)) {
-        sequenceMatches.push([id, seq]);
-        if (sequenceMatches.length >= 5) break;
-      }
-    }
-
-    if (sequenceMatches.length === 1) {
-      goToPdbPage(sequenceMatches[0][0]);
-      return;
-    }
-
-    if (sequenceMatches.length === 0) return;
-
-    const displayLength = 30;
-    const key = `search-suggestions-${Date.now()}`;
-
-    message.info({
-      content: (
-        <div>
-          <p>No exact ID match. Sequence matches:</p>
-          <ul style={{ marginTop: 8, marginBottom: 0, paddingLeft: 16 }}>
-            {sequenceMatches.map(([id, seq]) => {
-              let preview = seq.slice(0, displayLength);
-              if (seq.length > displayLength) preview += "...";
-              else preview = preview.padEnd(displayLength, " ");
-
-              return (
-                <li key={id}>
-                  <a
-                    onClick={() => {
-                      message.destroy(key);
-                      goToPdbPage(id);
-                    }}
-                  >
-                    <strong>{id.toUpperCase()}</strong>
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: "#888",
-                        marginLeft: 8,
-                        fontFamily: "monospace",
-                        whiteSpace: "pre",
-                      }}
-                    >
-                      {preview}
-                    </span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      ),
-      key,
-      duration: 6,
-    });
-  };
-
-  const handleChange = (selectedId) => {
-    setValue(selectedId);
-    goToPdbPage(selectedId);
-    lastSearchedTerm.current = null;
+    setOptions(
+      matches.map((seq) => ({
+        label: seq,
+        value: seq,
+      }))
+    );
   };
 
   return (
     <Select
       showSearch
+      allowClear
       value={value}
-      placeholder="Search by PDB ID or sequence (sequence min 5 chars)"
+      placeholder="Search by sequence prefix (e.g. ALLV)"
       style={{ width: "100%" }}
       options={options}
-      onChange={handleChange}
       onSearch={handleSearch}
-      filterOption={(input, option) => {
-        const t = String(input || "").toLowerCase();
-        if (!t) return true;
-
-        const label = String(option?.label || "").toLowerCase();
-        const seq = String(option?.sequence || "");
-        return label.includes(t) || seq.includes(t);
-      }}
+      onChange={setValue}
+      filterOption={false}
     />
   );
 };
 
 export default SequenceSearchBar;
+
+
+// import React, { useState, useEffect, useRef } from "react";
+// import { Select, message } from "antd";
+// import { useNavigate } from "react-router-dom";
+
+// const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
+
+// const SequenceSearchBar = () => {
+//   const [value, setValue] = useState(null);
+//   const [options, setOptions] = useState([]);
+//   const [sequenceMap, setSequenceMap] = useState({}); // { "1a1p_a": "SEQUENCE..." }
+//   const [allIds, setAllIds] = useState([]); // ["1a1p_a", ...]
+//   const navigate = useNavigate();
+//   const lastSearchedTerm = useRef(null);
+
+//   // Load JSON once and build maps/options
+//   useEffect(() => {
+//     let cancelled = false;
+
+//     async function loadSequences() {
+//       try {
+//         const res = await fetch(`${API_BASE}/api/pdb/all`);
+//         if (!res.ok) throw new Error("Failed to fetch JSON");
+
+//         const data = await res.json();
+
+//         const map = {};
+//         const ids = [];
+
+//         for (const row of Array.isArray(data) ? data : []) {
+//           const rawId = row?.PDB;
+//           const seq = row?.Sequence;
+
+//           if (!rawId || !seq) continue;
+
+//           const id = String(rawId).trim().toLowerCase(); // "1a1p_a"
+//           const sequence = String(seq).trim().toUpperCase();
+
+//           // basic validation: keep IDs consistent with backend chainIndex keys
+//           if (!/^[a-z0-9]+_[a-z0-9]+$/.test(id)) continue;
+
+//           map[id] = sequence;
+//           ids.push(id);
+//         }
+
+//         ids.sort();
+
+//         if (!cancelled) {
+//           setSequenceMap(map);
+//           setAllIds(ids);
+
+//           // show all by default
+//           setOptions(
+//             ids.map((id) => ({
+//               label: id.toUpperCase(),
+//               value: id, // keep lowercase for routes
+//               sequence: map[id]?.toLowerCase() || "",
+//             }))
+//           );
+//         }
+//       } catch (e) {
+//         if (!cancelled) message.error("Failed to load sequence JSON");
+//       }
+//     }
+
+//     loadSequences();
+//     return () => {
+//       cancelled = true;
+//     };
+//   }, []);
+
+//   const goToPdbPage = (id) => {
+//     const chainId = String(id || "")
+//       .trim()
+//       .toLowerCase();
+//     if (!chainId) return;
+//     navigate(`/pdb/${chainId}`);
+//   };
+
+//   const handleSearch = (input) => {
+//     const term = String(input || "").trim();
+//     if (!term) return;
+
+//     // prevent repeated work
+//     if (term === lastSearchedTerm.current) return;
+//     lastSearchedTerm.current = term;
+
+//     const termLower = term.toLowerCase();
+//     const termUpper = term.toUpperCase();
+
+//     // 1) ID prefix match
+//     const idMatches = allIds
+//       .filter((id) => id.startsWith(termLower))
+//       .slice(0, 20);
+
+//     if (idMatches.length > 0) {
+//       setOptions(
+//         idMatches.map((id) => ({
+//           label: id.toUpperCase(),
+//           value: id,
+//           sequence: (sequenceMap[id] || "").toLowerCase(),
+//         }))
+//       );
+
+//       // auto-route if exactly one match
+//       if (idMatches.length === 1) {
+//         goToPdbPage(idMatches[0]);
+//       }
+//       return;
+//     }
+
+//     // 2) sequence substring match
+//     if (term.length < 5) return;
+
+//     const sequenceMatches = [];
+//     for (const id of allIds) {
+//       const seq = sequenceMap[id];
+//       if (!seq) continue;
+
+//       if (seq.includes(termUpper)) {
+//         sequenceMatches.push([id, seq]);
+//         if (sequenceMatches.length >= 5) break;
+//       }
+//     }
+
+//     if (sequenceMatches.length === 1) {
+//       goToPdbPage(sequenceMatches[0][0]);
+//       return;
+//     }
+
+//     if (sequenceMatches.length === 0) return;
+
+//     const displayLength = 30;
+//     const key = `search-suggestions-${Date.now()}`;
+
+//     message.info({
+//       content: (
+//         <div>
+//           <p>No exact ID match. Sequence matches:</p>
+//           <ul style={{ marginTop: 8, marginBottom: 0, paddingLeft: 16 }}>
+//             {sequenceMatches.map(([id, seq]) => {
+//               let preview = seq.slice(0, displayLength);
+//               if (seq.length > displayLength) preview += "...";
+//               else preview = preview.padEnd(displayLength, " ");
+
+//               return (
+//                 <li key={id}>
+//                   <a
+//                     onClick={() => {
+//                       message.destroy(key);
+//                       goToPdbPage(id);
+//                     }}
+//                   >
+//                     <strong>{id.toUpperCase()}</strong>
+//                     <span
+//                       style={{
+//                         fontSize: "12px",
+//                         color: "#888",
+//                         marginLeft: 8,
+//                         fontFamily: "monospace",
+//                         whiteSpace: "pre",
+//                       }}
+//                     >
+//                       {preview}
+//                     </span>
+//                   </a>
+//                 </li>
+//               );
+//             })}
+//           </ul>
+//         </div>
+//       ),
+//       key,
+//       duration: 6,
+//     });
+//   };
+
+//   const handleChange = (selectedId) => {
+//     setValue(selectedId);
+//     goToPdbPage(selectedId);
+//     lastSearchedTerm.current = null;
+//   };
+
+//   return (
+//     <Select
+//       showSearch
+//       value={value}
+//       placeholder="Search by PDB ID or sequence (sequence min 5 chars)"
+//       style={{ width: "100%" }}
+//       options={options}
+//       onChange={handleChange}
+//       onSearch={handleSearch}
+//       filterOption={(input, option) => {
+//         const t = String(input || "").toLowerCase();
+//         if (!t) return true;
+
+//         const label = String(option?.label || "").toLowerCase();
+//         const seq = String(option?.sequence || "");
+//         return label.includes(t) || seq.includes(t);
+//       }}
+//     />
+//   );
+// };
+
+// export default SequenceSearchBar;
 
 // import React, { useEffect, useRef, useState } from "react";
 // import { Select, message } from "antd";

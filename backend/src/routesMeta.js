@@ -86,4 +86,35 @@ router.get("/:id", (req, res) => {
   res.json(found);
 });
 
+/**
+ * GET /sequences/all
+ */
+router.get("/sequences/all", (req, res) => {
+  try {
+    const filePath = path.resolve(
+      "metadata",
+      "cyclome_for_website_with_metadata.json"
+    );
+
+    const raw = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+
+    const seen = new Set();
+    const results = [];
+
+    for (const row of raw) {
+      const seq = String(row.Sequence || "").trim().toUpperCase();
+      if (!seq) continue;
+      if (seen.has(seq)) continue;
+
+      seen.add(seq);
+      results.push(seq);
+    }
+
+    res.json({ results });
+  } catch (err) {
+    console.error("Failed to load sequences:", err);
+    res.status(500).json({ results: [] });
+  }
+});
+
 export default router;
