@@ -99,28 +99,30 @@ router.get("/search", (req, res) => {
  * Performs substring search over chain sequences
  */
 router.get("/sequence-search", (req, res) => {
-  const q = String(req.query.q || "")
-    .trim()
-    .toUpperCase();
-
+  const raw = String(req.query.q || "").trim().toUpperCase();
   const limit = Math.min(parseInt(req.query.limit || "5", 10), 50);
 
-  if (q.length < 5) {
+  // minimum length
+  if (raw.length < 5) {
+    return res.json({ results: [] });
+  }
+
+  // valid amino acids only (ACDEFGHIKLMNPQRSTVWYX)
+  if (!/^[ACDEFGHIKLMNPQRSTVWYX]+$/.test(raw)) {
     return res.json({ results: [] });
   }
 
   const results = [];
 
-  for (const [chainKey, entry] of Object.entries(chainIndex)) {
+  for (const entry of Object.values(chainIndex)) {
     const seq = entry.sequence;
     if (!seq) continue;
 
-    if (seq.includes(q)) {
+    if (seq.includes(raw)) {
       results.push({
-        id: entry.id, // "1ag7_a"
+        id: entry.id,
         sequence: seq,
       });
-
       if (results.length >= limit) break;
     }
   }
@@ -137,6 +139,7 @@ router.get("/all", (req, res) => {
     results: Object.values(chainIndex).map((e) => e.id),
   });
 });
+
 /**
  * GET /api/pdb/file/:id
  */
