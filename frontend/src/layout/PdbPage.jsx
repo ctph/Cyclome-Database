@@ -10,7 +10,6 @@ import {
   Divider,
   Row,
   Col,
-  Button,
   Descriptions,
   Flex,
   message,
@@ -41,11 +40,13 @@ const PdbPage = () => {
   const containerRef = useRef(null);
   const appletRef = useRef(null);
 
-  const [viewMode, setViewMode] = useState("cartoon"); // "cartoon" | "stick"
+  const [viewMode, setViewMode] = useState("cartoon");
 
   const [metaLoading, setMetaLoading] = useState(true);
   const [metaError, setMetaError] = useState(null);
   const [metaRecord, setMetaRecord] = useState(null);
+  const [viewerStatus, setViewerStatus] = useState("loading");
+
   const navigate = useNavigate();
 
   const runJsmol = (cmd) => {
@@ -56,50 +57,80 @@ const PdbPage = () => {
   };
 
   useEffect(() => {
-    if (!window.Jmol) {
-      message.error(
-        "JSmol not loaded. Check /public/jsmol and index.html script tag."
-      );
-      return;
+    let cancelled = false;
+
+    async function initViewer() {
+      setViewerStatus("loading");
+
+      if (!window.Jmol) {
+        message.error(
+          "JSmol not loaded. Check /public/jsmol and index.html script tag."
+        );
+        setViewerStatus("unavailable");
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/pdb/file/${pdbId}`, { method: "HEAD" });
+
+        if (!res.ok) {
+          setViewerStatus("unavailable");
+          return;
+        }
+
+        if (cancelled) return;
+
+        if (!containerRef.current) return;
+        containerRef.current.innerHTML = "";
+
+        const Info = {
+          width: "100%",
+          height: 520,
+          use: "HTML5",
+          j2sPath: "/jsmol/j2s",
+          serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+          script: `
+            load "/api/pdb/file/${pdbId}";
+            set antialiasDisplay true;
+            set cartoonFancy true;
+            cartoon only;
+            color structure;
+          `,
+        };
+
+        const applet = window.Jmol.getApplet("jsmolApplet", Info);
+        appletRef.current = applet;
+        containerRef.current.innerHTML =
+          window.Jmol.getAppletHtml(applet);
+
+        setViewMode("cartoon");
+        setViewerStatus("ready");
+      } catch {
+        setViewerStatus("unavailable");
+      }
     }
-    if (!containerRef.current) return;
 
-    containerRef.current.innerHTML = "";
+    if (pdbId) initViewer();
 
-    const Info = {
-      width: "100%",
-      height: 520,
-      use: "HTML5",
-      j2sPath: "/jsmol/j2s",
-      serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
-      script: `
-        load "/api/pdb/file/${pdbId}";
-        set antialiasDisplay true;
-        set cartoonFancy true;
-        cartoon only;
-        color structure;
-      `,
+    return () => {
+      cancelled = true;
     };
-
-    const applet = window.Jmol.getApplet("jsmolApplet", Info);
-    appletRef.current = applet;
-    containerRef.current.innerHTML = window.Jmol.getAppletHtml(applet);
-
-    setViewMode("cartoon");
   }, [pdbId]);
 
+  // View mode switching (only if viewer is ready)
   useEffect(() => {
+    if (viewerStatus !== "ready") return;
     if (!appletRef.current) return;
 
     if (viewMode === "stick") {
-      runJsmol("select all; cartoons off; spacefill off; wireframe 0.2; color cpk;");
+      runJsmol(
+        "select all; cartoons off; spacefill off; wireframe 0.2; color cpk;"
+      );
     } else {
       runJsmol("select all; cartoons only; color structure;");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [viewMode]);
-
-  // Metadata from backend
+  }, [viewMode, viewerStatus]);
+ 
   useEffect(() => {
     let cancelled = false;
 
@@ -134,7 +165,10 @@ const PdbPage = () => {
     navigate(`/similarity/${baseId}/${threshold}`);
   };
 
-  const baseId = useMemo(() => String(pdbId || "").split("_")[0].toLowerCase(), [pdbId]);
+  const baseId = useMemo(
+    () => String(pdbId || "").split("_")[0].toLowerCase(),
+    [pdbId]
+  );
 
   const activeCycl = useMemo(() => {
     return normalizeCyclization(metaRecord?.Cyclization);
@@ -146,197 +180,75 @@ const PdbPage = () => {
 
   return (
     <div style={{ padding: 24 }}>
-      <div
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-        }}
-      >
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <Header />
 
         <Divider style={{ margin: "12px 0 20px" }} />
 
         <Flex direction="column" gap={10} style={{ marginBottom: 18 }}>
-          <Flex align="center" gap={16} wrap="wrap">
-            <div style={{ flex: 1, minWidth: 260 }}>
-              <Title level={2} style={{ margin: 0 }}>
-                {pdbIdUpper} Structure Viewer
-              </Title>
-            </div>
-
-            <div style={{ flex: "none" }}>
-              <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
-                <Text strong>Similarity:</Text>
-
-                <Button.Group>
-                  <Button onClick={() => handleSimilarityClick(50)}>50%</Button>
-                  <Button onClick={() => handleSimilarityClick(65)}>65%</Button>
-                  <Button onClick={() => handleSimilarityClick(75)}>75%</Button>
-                </Button.Group>
-
-                <Button
-                  type="primary"
-                  href={`https://www.rcsb.org/structure/${String(pdbId || "")
-                    .split("_")[0]
-                    .toUpperCase()}`}
-                  target="_blank"
-                >
-                  View on RCSB
-                </Button>
-              </Flex>
-            </div>
-          </Flex>
-
-          <Flex align="center" gap={16} wrap="wrap">
-            <div style={{ flex: 1, minWidth: 260 }}>
-              <Flex align="center" gap={8} wrap="wrap">
-                <Text strong>Viewer:</Text>
-
-                <Button.Group>
-                  <Button
-                    type={viewMode === "cartoon" ? "primary" : "default"}
-                    onClick={() => viewMode !== "cartoon" && setViewMode("cartoon")}
-                  >
-                    Cartoon
-                  </Button>
-                  <Button
-                    type={viewMode === "stick" ? "primary" : "default"}
-                    onClick={() => viewMode !== "stick" && setViewMode("stick")}
-                  >
-                    Stick
-                  </Button>
-                </Button.Group>
-              </Flex>
-            </div>
-
-            <div style={{ flex: "none" }}>
-              <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
-                <Text strong>Cyclization:</Text>
-
-                <Button.Group>
-                  {CYC_BUTTONS.map((b) => {
-                    const isActive = Boolean(activeCycl) && activeCycl === b.key;
-                    return (
-                      <Button
-                        key={b.key}
-                        type={isActive ? "primary" : "default"}
-                        disabled={!isActive}
-                        onClick={() => isActive && handleCyclizationClick(b.key)}
-                      >
-                        {b.label}
-                      </Button>
-                    );
-                  })}
-                </Button.Group>
-              </Flex>
-            </div>
-          </Flex>
+          <Title level={2} style={{ margin: 0 }}>
+            {pdbIdUpper} Structure Viewer
+          </Title>
         </Flex>
 
         <Row gutter={[18, 18]} justify="center" align="stretch">
           <Col xs={24} lg={14}>
             <Card
-              style={{
-                borderRadius: 14,
-                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-                height: 560,
-              }}
+              style={{ borderRadius: 14, height: 560 }}
               bodyStyle={{
                 padding: 12,
                 height: 560,
                 display: "flex",
                 flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
+              {viewerStatus === "loading" && <Spin />}
+
+              {viewerStatus === "unavailable" && (
+                <Text type="secondary">
+                  This structure is not available locally.
+                </Text>
+              )}
+
               <div
                 ref={containerRef}
                 style={{
-                  flex: 1,
+                  display: viewerStatus === "ready" ? "block" : "none",
                   width: "100%",
-                  borderRadius: 12,
-                  overflow: "hidden",
-                  background: "#fff",
-                  border: "1px solid rgba(0,0,0,0.06)",
+                  height: "100%",
                 }}
               />
             </Card>
           </Col>
 
           <Col xs={24} lg={10}>
-            <Card
-              title={<Text strong>Structure Information</Text>}
-              style={{
-                borderRadius: 14,
-                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-                height: 560,
-              }}
-              bodyStyle={{
-                padding: 16,
-                height: 504,
-                overflowY: "auto",
-              }}
-            >
+            <Card title="Structure Information" style={{ height: 560 }}>
               {metaLoading ? (
-                <div
-                  style={{
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Spin />
-                </div>
+                <Spin />
               ) : metaError ? (
                 <Text type="danger">{metaError}</Text>
               ) : !metaRecord ? (
-                <Text type="secondary">No metadata found for {pdbIdUpper}</Text>
+                <Text type="secondary">No metadata found</Text>
               ) : (
                 <>
-                  <Descriptions
-                    size="small"
-                    column={1}
-                    colon={false}
-                    labelStyle={{ width: 120, color: "rgba(0,0,0,0.55)" }}
-                    contentStyle={{ color: "rgba(0,0,0,0.88)" }}
-                  >
+                  <Descriptions size="small" column={1} colon={false}>
                     <Descriptions.Item label="Title">
                       {metaRecord.Title || "N/A"}
                     </Descriptions.Item>
-
                     <Descriptions.Item label="Method">
                       {metaRecord.Method || "N/A"}
                     </Descriptions.Item>
-
                     <Descriptions.Item label="Released">
                       {metaRecord.Release_Date || "N/A"}
                     </Descriptions.Item>
-
-                    <Descriptions.Item label="Organism">
-                      {metaRecord.Organism_Scientific_Name || "N/A"}
-                    </Descriptions.Item>
-
-                    <Descriptions.Item label="Classification">
-                      {metaRecord.Keywords || "N/A"}
-                    </Descriptions.Item>
                   </Descriptions>
 
-                  <Divider style={{ margin: "12px 0" }} />
+                  <Divider />
 
                   <Text type="secondary">Sequence</Text>
-                  <div
-                    style={{
-                      marginTop: 8,
-                      fontFamily:
-                        "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
-                      fontSize: 12,
-                      background: "rgba(0,0,0,0.0303)",
-                      border: "1px solid rgba(0,0,0,0.06)",
-                      borderRadius: 10,
-                      padding: 10,
-                      wordBreak: "break-word",
-                    }}
-                  >
+                  <div style={{ fontFamily: "monospace", fontSize: 12 }}>
                     {metaRecord.Sequence || "N/A"}
                   </div>
                 </>
