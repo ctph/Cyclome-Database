@@ -25,7 +25,7 @@ const HomeTable = () => {
   }, []);
 
   /**
-   * Group entries by sequence
+   * Group entries by sequences
    */
   const groupedRows = useMemo(() => {
     const seqMap = new Map();
@@ -39,7 +39,7 @@ const HomeTable = () => {
           key: sequence,
           sequence,
           melting_point: info.melting_point_K ?? "-",
-          pdbs: []
+          pdbs: [],
         });
       }
 
@@ -50,7 +50,7 @@ const HomeTable = () => {
       seqMap.get(sequence).pdbs.push({
         baseId,
         chainId,
-        downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`
+        downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
       });
     });
 
@@ -67,19 +67,19 @@ const HomeTable = () => {
           {seq.slice(0, 40)}
           {seq.length > 40 ? "..." : ""}
         </span>
-      )
+      ),
     },
     {
       title: "PDB Structures",
       key: "structures",
-      render: (_, record) => record.pdbs.length
+      render: (_, record) => record.pdbs.length,
     },
     {
       title: "CyMelt (K)",
       dataIndex: "melting_point",
       key: "melting_point",
-      render: (temp) => (temp !== "-" ? `${temp} K` : "-")
-    }
+      render: (temp) => (temp !== "-" ? `${temp} K` : "-"),
+    },
   ];
 
   const expandedRowRender = (record) => {
@@ -92,7 +92,7 @@ const HomeTable = () => {
           <Link to={`/pdb/${id}`}>
             <Tag color="blue">{id}</Tag>
           </Link>
-        )
+        ),
       },
       {
         title: "Actions",
@@ -106,8 +106,8 @@ const HomeTable = () => {
               Download
             </a>
           </>
-        )
-      }
+        ),
+      },
     ];
 
     return (
@@ -115,7 +115,7 @@ const HomeTable = () => {
         columns={innerColumns}
         dataSource={record.pdbs.map((p) => ({
           key: p.chainId,
-          ...p
+          ...p,
         }))}
         pagination={false}
         size="small"
