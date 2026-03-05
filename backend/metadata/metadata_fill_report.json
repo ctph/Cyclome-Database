@@ -1,0 +1,12 @@
+{
+  "frontend_ids": 904,
+  "missing_before": 70,
+  "added_rows_meta": 70,
+  "added_rows_sim": 70,
+  "meta_total_after": 1000,
+  "sim_total_after": 1000,
+  "missing_after_meta": 0,
+  "missing_after_sim": 0,
+  "missing_after_meta_ids": [],
+  "missing_after_sim_ids": []
+}
