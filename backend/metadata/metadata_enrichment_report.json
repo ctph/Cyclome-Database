@@ -1,0 +1,194 @@
+{
+  "new_ids_count": 70,
+  "cyclization_normalized_rows": 178,
+  "enriched_new_rows_processed": 70,
+  "filled_counts": {
+    "Method": 68,
+    "Release_Date": 68,
+    "Keywords": 68,
+    "Organism_Scientific_Name": 50,
+    "Title": 70
+  },
+  "new_ids_with_unknown_cyclization": 68,
+  "unknown_cyclization_ids": [
+    "1CYA",
+    "1D7T",
+    "1DFY",
+    "1DFZ",
+    "1DG0",
+    "1EGT",
+    "1ERG",
+    "1ERH",
+    "1FGD",
+    "1FGE",
+    "1FQJ",
+    "1G92",
+    "1H6K",
+    "1HD9",
+    "1JRJ",
+    "1K83",
+    "1MPV",
+    "1MQX",
+    "1MQY",
+    "1MQZ",
+    "1NXN",
+    "1ONT",
+    "1ONU",
+    "1OT0",
+    "1P0G",
+    "1P0J",
+    "1P0L",
+    "1P0O",
+    "1P5K",
+    "1P5L",
+    "1PD0",
+    "1PD1",
+    "1QS3",
+    "1RON",
+    "1SBU",
+    "1SQK",
+    "1T51",
+    "1T52",
+    "1T54",
+    "1T55",
+    "1VM2",
+    "1VM3",
+    "1VM4",
+    "1VM5",
+    "1WGE",
+    "1WN4",
+    "1WN8",
+    "1XC0",
+    "1XY2",
+    "2DTB",
+    "2MGO",
+    "2MLT",
+    "2QTV",
+    "2VUM",
+    "3CH5",
+    "3CMH",
+    "3CQZ",
+    "3CTO",
+    "3GJ3",
+    "3GJ5",
+    "3GJ7",
+    "3GJ8",
+    "3JB9",
+    "4D4O",
+    "4D4P",
+    "6CMH",
+    "7Q5G",
+    "8S2C"
+  ],
+  "new_ids_with_missing_structure_fields": 18,
+  "missing_structure_details": [
+    {
+      "id": "1G92",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1JRJ",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1MPV",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1P0G",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1P0J",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1P0L",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1P0O",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1P5K",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1P5L",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1QS3",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1VM2",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1WN4",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1WN8",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1XC0",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "1XY2",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "2MGO",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "3CMH",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    },
+    {
+      "id": "6CMH",
+      "missing": [
+        "Organism_Scientific_Name"
+      ]
+    }
+  ]
+}

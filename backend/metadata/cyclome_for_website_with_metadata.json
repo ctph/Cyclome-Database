@@ -2,7 +2,7 @@
   {
     "Sequence": "GIPCGESCVWIPCISSAIGCSCKSKVCYRN",
     "PDB": "2KCG_A.pdb;2KNM_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLIC CYSTINE KNOT, CYTOLYSIS, HEMOLYSIS, KNOTTIN, PLANT DEFENSE, PLANT PROTEIN; CYCLOTIDE, CYCLIC CYSTINE KNOT, CIRCULAR PROTEIN, CYTOLYSIS, DISULFIDE BOND, HEMOLYSIS, KNOTTIN, PLANT DEFENSE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -42,7 +42,7 @@
   {
     "Sequence": "KCLAEAADCSPWSGDSCCKPYLCSCIFFYPCSCRPKGW",
     "PDB": "1KQI_A.pdb;1KQH_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Hadronyche infensa",
     "Keywords": "HADRONYCHE INFENSA, FUNNEL WEB, SPIDER VENOM, CIS-TRANS ISOMERISATION, DISULFIDE RICH, CYSTINE KNOT, SOLUTION STRUCTURE, NMR SPECTROSCOPY, TOXIN",
     "Method": "SOLUTION NMR",
@@ -92,7 +92,7 @@
   {
     "Sequence": "GADDVVDSSKSFVMENFSSYHGTKPGYVDSIQKGIQKPNYDDDWKGFYSTDNKYDAAGYSVDNENPLSGKAGGVVKVTYPGLTKVLALKVDNAETIKKELGLSLTEPLMEQVGTEEFIKRFGDGASRVVLSLPFAEGSSSVEYINNWEQAKALSVELEINFETRGKRGQDAMYEYMAQACAGSCINLDWDVIRDKTKTKIESLKEHGPIKNKMSESPNKTVSEEKAKQYLEEFHQTALEHPELSELKTVTGTNPVFAGANYAAWAVNVAQVIDSETADNLEKTTAALSILPGIGSVMGIADGAVHHNTEEIVAQSIALSSLMVAQAIPLVGELVDIGFAAYNFVESIINLFQVVHNSYNRPAYSPGHKTQPFLHDGYAVSWNTVEDSIIRTGFQGESGHDIKITAENTPLPIAGVLLPTIPGKLDVNKSKTHISVNGRKIRMRCRAIDGDVTFCRPKSPVYVGNGVHANLHVAFHRSSSEKIHSNEISSDSIGVLGYQKTVDHTKVNSKLSLFFEIKS",
     "PDB": "1XDT_T.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Homo sapiens",
     "Keywords": "COMPLEX (TOXIN-GROWTH FACTOR), DIPHTHERIA TOXIN, RECEPTOR, HEPARIN- BINDING EPIDERMAL GROWTH FACTOR, EPIDERMAL GROWTH FACTOR, COMPLEX (TOXIN-GROWTH FACTOR) COMPLEX",
     "Method": "X-RAY DIFFRACTION",
@@ -122,7 +122,7 @@
   {
     "Sequence": "KDGYLVEKTGCKKTCYKLGENDFCNRECKWKHIGGSYGYCYGFGCYCEGLPDSTQTWPLPNKTC",
     "PDB": "2B3C_A.pdb;1B3C_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Centruroides sculpturatus",
     "Keywords": "SCORPION NEUROTOXIN, BETA-TOXIN, NEW WORLD TOXIN, TOXIN; SCORPION NEUROTOXIN, NEW WORLD TOXIN, TOXIN",
     "Method": "SOLUTION NMR",
@@ -232,7 +232,7 @@
   {
     "Sequence": "GTPCGESCVYIPCISGVIGCSCTDKVCYLN",
     "PDB": "2KUX_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, PLANT DEFENSE PEPTIDE, CIRCULAR BACKBONE, DISULFIDE BOND, KNOTTIN, PLANT DEFENSE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -292,7 +292,7 @@
   {
     "Sequence": "RKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
     "PDB": "4OM5_D.pdb;4OM5_B.pdb;4OM5_C.pdb;4OM5_A.pdb;1KBS_A.pdb;1KBT_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja atra",
     "Keywords": "FIVE BETA SHEETS, THREE FUNCTIONAL LOOPS, ENDOCYTOSIS, HEPARIN, HEPARAN SULFATE, TOXIN; VENOM, CYTOTOXIN, CARDIOTOXIN, MULTIGENE FAMILY",
     "Method": "X-RAY DIFFRACTION; SOLUTION NMR",
@@ -422,7 +422,7 @@
   {
     "Sequence": "GCCSDPRCNYDHPEIC",
     "PDB": "2H8S_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "ALPHA-CONOTOXIN, ALPHA-HELIX, DISULFIDE BONDS, AMIDATED C-TERMINUS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -452,7 +452,7 @@
   {
     "Sequence": "PSWDLAGYLLYCPCMGRFGNQADHFLGSLAFAKLLNRTLAVPPWIEYQHHKPPFTNLHVSYQKYFKLEPLQAYHRVVSLEDFMENLAPSHWPPEKRVAYCFEVAAQRSPDKKTCPMKEGNPFGPFWDQFHVSFNKSELFTGISFSASYKEQWTQRFPAKEHPVLALPGAPAQFPVLEEHRELQKYMVWSDEMVRTGEALISAHLVRPYVGIHLRIGSDWKNACAMLKDGTAGSHFMASPQCVGYSATPLTMTMCLPDLKEIQRAVTLWVRALNARSVYIATDSESYVSEIQQLFKDKVRVVSLKPEVAQIDLYILGQADHFIGNCVSSFTAFVKRERDLHGRQSSFFGMD",
     "PDB": "5KY9_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "GLYCOSYLTRANSFERASE, TRANSFERASE",
     "Method": "X-RAY DIFFRACTION",
@@ -492,7 +492,7 @@
   {
     "Sequence": "IRCFITPDITSKDCPNGHVCYTKTWCDAFCSIRGKRVDLGCAATCPTVKTGVDIQCCSTDNCNPFPTRKRP",
     "PDB": "1CTX_A.pdb;1LXH_A.pdb;1LXG_A.pdb;2CTX_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja siamensis; Torpedo californica; Naja naja",
     "Keywords": "TOXIN; TOXIN, ALPHA-COBRATOXIN, NICOTINIC ACETYLCHOLINE RECEPTOR, PROTEIN- PROTEIN INTERACTION; NEUROTOXIN",
     "Method": "X-RAY DIFFRACTION; SOLUTION NMR",
@@ -562,7 +562,7 @@
   {
     "Sequence": "ICCNPACGPKYSC",
     "PDB": "1HJE_A.pdb;1QMW_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus striatus",
     "Keywords": "CONOTOXIN, NICOTINIC ACETYLCHOLINE RECEPTOR, TOXIN, VENOM",
     "Method": "X-RAY DIFFRACTION; SOLUTION NMR",
@@ -572,7 +572,7 @@
   {
     "Sequence": "AACSDRAHGHICESFKSFCKDSGRNGVKLRANCKKTCGLC",
     "PDB": "2LG4_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Aurelia aurita",
     "Keywords": "ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -592,7 +592,7 @@
   {
     "Sequence": "GGCCSHPACAANNQDC",
     "PDB": "7N21_A.pdb;7N20_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus anemone",
     "Keywords": "ALPHA-CONOTOXIN, CC-C-C FRAMEWORK, ALPHA4/7 PATTERN, SULFOTYROSINE, TOXIN",
     "Method": "SOLUTION NMR",
@@ -622,7 +622,7 @@
   {
     "Sequence": "SWPVCTRNGLPVCGETCVGGTCNTPGCTC",
     "PDB": "1KAL_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -632,7 +632,7 @@
   {
     "Sequence": "CAKKRNWCGKTEDCCCPMKCVYAWYNEQGSCQSTISALWKKC",
     "PDB": "1VTX_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Hadronyche versuta",
     "Keywords": "NEUROTOXIN, SODIUM CHANNEL TOXIN, CYSTEINE KNOT, VENOM",
     "Method": "SOLUTION NMR",
@@ -672,7 +672,7 @@
   {
     "Sequence": "GIPCGSCVWIPCISSAIGCSCKSKVCYRN",
     "PDB": "2KNN_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLOTIDE, CYCLIC CYSTINE KNOT, CIRCULAR PROTEIN, METHYLATION, CYTOLYSIS, DISULFIDE BOND, HEMOLYSIS, KNOTTIN, PLANT DEFENSE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -742,7 +742,7 @@
   {
     "Sequence": "CEAIYAAPKCRRDSDCPGACICRGNGYCGEAIYAAPFAR",
     "PDB": "2MT8_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Synthetic peptide",
     "Keywords": "CYCLOTIDE, TRYPSIN INHIBITOR, HYDROLASE INHIBITOR",
     "Method": "SOLUTION NMR",
@@ -792,7 +792,7 @@
   {
     "Sequence": "CAESCVWIPCTVTALLGCSCSNKVCYNGIP",
     "PDB": "1VB8_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola hederacea",
     "Keywords": "CYCLOTIDE, CYSTINE KNOT, CIRCULAR, VIOLA, CCK, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -812,7 +812,7 @@
   {
     "Sequence": "CRINQKCFQHLDDCCSRKCNRFNKCVLPETGGG",
     "PDB": "2N8E_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Conus purpurascens",
     "Keywords": "CYSTINE KNOT, INHIBITOR, TOXIN",
     "Method": "SOLUTION NMR",
@@ -822,7 +822,7 @@
   {
     "Sequence": "SCNNSCQSHSDCASHCICTFRGCGAVNGLP",
     "PDB": "2MSO_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Conus gloriamaris",
     "Keywords": "CONOTOXINS, CYCLIC PEPTIDES, CYCLIZATION, CYSTINE KNOT, DRUG DESIGN, TOXIN",
     "Method": "SOLUTION NMR",
@@ -862,7 +862,7 @@
   {
     "Sequence": "IRDCCSNPACRVNNHVC",
     "PDB": "1MTQ_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Synthetic peptide",
     "Keywords": "ALPHA-HELIX, TOXIN",
     "Method": "SOLUTION NMR",
@@ -912,7 +912,7 @@
   {
     "Sequence": "KEGYLVDKNTGCKYECLKLGDNDYCLRECKQQYGKGAGGYCYAFACWCTHLYEQAIVWPLPNKRC",
     "PDB": "2YC1_C.pdb;2YC1_F.pdb;2YBR_F.pdb;2YBR_C.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Centruroides noxius hoffmann",
     "Keywords": "IMMUNE SYSTEM-TOXIN COMPLEX, SCORPION TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -932,7 +932,7 @@
   {
     "Sequence": "MKCKICNFDTCRAGELKVCASGEKYCFKESWREARGTRIERGCAATCPKGSVYGLYVLCCTTDDCN",
     "PDB": "1JGK_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Bungarus candidus",
     "Keywords": "BETA SHEET, SNAKE VENOM PROTEIN, BUNGARUS CANDIDUS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -1002,7 +1002,7 @@
   {
     "Sequence": "ALDTNYCFRNLEENCCVRPLYIDFRQDLGWKWVHEPKGYYANFCSGPCPYLRSADTTHSTVLGLYNTLNPEASASPCCVPQDLEPLTILYYVGRTPKVEQLSNMVVKSCKCS",
     "PDB": "2PJY_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Homo sapiens",
     "Keywords": "TERNARY COMPLEX, THREE FINGER TOXIN, CYTOKINE-CYTOKINE RECEPTOR COMPLEX",
     "Method": "X-RAY DIFFRACTION",
@@ -1022,7 +1022,7 @@
   {
     "Sequence": "GLPVCAETCVGGTCNTPGCTCSWPVCTRN",
     "PDB": "4TTN_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Synthetic peptide",
     "Keywords": "CYCLIC PEPTIDE, DISULFIDE BONDS, PLANT PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -1032,7 +1032,7 @@
   {
     "Sequence": "SWPVCTRNGAPICGESCFTGKCYTVQCSC",
     "PDB": "1ZLO_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLIC, MACROCYCLIC, CYCLOTIDE, VIOLA ODORATA, VODO M, CYCLIC CYSTEIN KNOT (CCK) MOTIF",
     "Method": "THEORETICAL MODEL",
@@ -1062,7 +1062,7 @@
   {
     "Sequence": "TFCGETCRVIPVCTYSAALGCTCDDRSDGLCKRNGDP",
     "PDB": "1R1F_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Palicourea condensata",
     "Keywords": "PALICOUREIN, CYCLOTIDE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -1092,7 +1092,7 @@
   {
     "Sequence": "GCCSLPPCAANNPDC",
     "PDB": "7N1Z_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus pennaceus",
     "Keywords": "ALPHA-CONOTOXIN, CC-C-C FRAMEWORK, ALPHA4/7 PATTERN, SULFOTYROSINE, TOXIN",
     "Method": "SOLUTION NMR",
@@ -1172,7 +1172,7 @@
   {
     "Sequence": "ASCRTPKDCADPCRKETGCPYGKCMNRKCKCNRC",
     "PDB": "1QUZ_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "SCORPION TOXIN, ALPHA BETA, MOLECULAR MODELING, POTASSIUM CHANNEL, TOXIN",
     "Method": "SOLUTION NMR",
@@ -1252,7 +1252,7 @@
   {
     "Sequence": "KEVCYERLGCFSDDSPWSGITERPLHILPWSPKDVNTRFLLYTNENPNNFQEVAADSSSISGSNFKTNRKTRFIIHGFIDKGEENWLANVCKNLFKVESVNCICVDWKGGSRTGYTQASQNIRIVGAEVAYFVEFLQSAFGYSPSNVHVIGHSLGAHAAGEAGRRTNGTIGRITGLDPAEPCFQGTPELVRLDPSDAKFVDVIHTDGAPIVPNLGFGMSQVVGHLDFFPNGGVEMPGCKKNILSQIVDIDGIWEGTRDFAACNHLRSYKYYTDSIVNPDGFAGFPCASYNVFTANKCFPCPSGGCPQMGHYADRYPGKTNDVGQKFYLDTGDASNFARWRYKVSVTLSGKKVTGHILVSLFGNKGNSKQYEIFKGTLKPDSTHSNEFDSDVDVGDLQMVKFIWYNNVINPTLPRVGASKIIVETNVGKQFNFCSPETVREEVLLTLTPC",
     "PDB": "1N8S_A.pdb;1LPB_B.pdb;1LPA_B.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Sus scrofa; Homo sapiens",
     "Keywords": "HYDROLASE, PANCREAS; HYDROLASE(CARBOXYLIC ESTERASE)",
     "Method": "X-RAY DIFFRACTION",
@@ -1332,7 +1332,7 @@
   {
     "Sequence": "ATCDLLSGTGINHSACAAHCLLRGNRGGYCNGKAVCVCRN",
     "PDB": "1L4V_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Sarcophaga peregrina",
     "Keywords": "ANTIBACTERIAL PROTEIN, INSECT DEFENSIN, ANTIBIOTIC",
     "Method": "SOLUTION NMR",
@@ -1342,7 +1342,7 @@
   {
     "Sequence": "GLPVCGETCTLGTCYTQGCTCSWPICKRN",
     "PDB": "2M9O_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "BETA HAIRPIN, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -1362,7 +1362,7 @@
   {
     "Sequence": "SCVYIPCTVTALLGCSCSNRVCYNGIPCAE",
     "PDB": "1DF6_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLIC CYSTINE KNOT, BACKBONE CYCLIC, 3-10 HELIX, DOUBLE-STRANDED ANTI- PARALLEL BETA-SHEET, HAIRPIN BENDS, LOOPS, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -1382,7 +1382,7 @@
   {
     "Sequence": "ECCNPACGRHYSC",
     "PDB": "1XGB_A.pdb;1XGC_A.pdb;1XGA_A.pdb;1NOT_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan; Conus geographus",
     "Keywords": "ALPHA-CONOTOXIN, NICOTINIC ACETYLCHOLINE RECEPTOR, DISULFIDE BOND ISOMERS, TOXIN; NEUROTOXIN, ALPHA-CONOTOXIN, NICOTINIC ACETYLCHOLINE RECEPTO DISULFIDE BOND ISOMERS; VENOM, DISULPHIDE LOOP, CONOTOXIN, ACETYLCHOLINE RECEPTOR",
     "Method": "SOLUTION NMR; X-RAY DIFFRACTION",
@@ -1392,7 +1392,7 @@
   {
     "Sequence": "NLNQFRLMIKCTNDRVWADFVDYGCYCVARDSNTPVDDLDRCCQAQKQCYDEAVKVHGCKPLVMFYSFECRYLASDLDCSGNNTKCRNFVCNCDRTATLCILTATYNRNNHKIDPSRC",
     "PDB": "4NTX_C.pdb;4NTY_C.pdb;4NTW_C.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Micrurus tener tener",
     "Keywords": "KUNITZ, PHOSPHOLIPASE A2-LIKE, ION CHANNEL, NOCICEPTION, MEMBRANE, TRANSPORT PROTEIN-TOXIN COMPLEX",
     "Method": "X-RAY DIFFRACTION",
@@ -1412,7 +1412,7 @@
   {
     "Sequence": "RKCLNTPLPLIYTTCPIGQDKCVKMTDVIRGCIDICPKSSADVEVLCCDTNKCN",
     "PDB": "3PLC_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Ophiophagus hannah",
     "Keywords": "BETA-CARDIOTOXIN, BETA-SHEET, NOVEL CARDIOTOXIN, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -1482,7 +1482,7 @@
   {
     "Sequence": "FNWRCCLIPACRRNHKKFC",
     "PDB": "1IEN_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CONOTOXIN, ALPHA1-ADRENOCEPTORS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -1512,7 +1512,7 @@
   {
     "Sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVATPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
     "PDB": "2CRT_A.pdb;2BHI_B.pdb;1XT3_B.pdb;2BHI_A.pdb;1XT3_A.pdb;2CRS_A.pdb;1I02_A.pdb;1H0J_A.pdb;1H0J_C.pdb;1H0J_B.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja atra",
     "Keywords": "CARDIOTOXIN; CARDIOTOXIN, COBRA CARDIOTOXIN, SULFOGALACTOCERAMIDE SULFATIDE, GLYCOSPHINGOLIPID, MEMBRANE PORE FORMATION, CYTOLYSIS; CTX-3, HEPARIN, CITRATE, TOXIN; CARDIOTOXIN, CTX, CYTOTOXIN, HEMOLYSIS, MEMBRANE BINDING PROTEIN, GAG BINDING PROTEIN, BOUND WATER, THREE-FINGER TYPE, TOXIN; CARDIOTOXIN, SODIUM DODECYL SULFATE, VENOM, CYTOTOXIN",
     "Method": "SOLUTION NMR; X-RAY DIFFRACTION",
@@ -1542,7 +1542,7 @@
   {
     "Sequence": "SGSDGGVCPKILKKCRRDSDCPGACICRGNGYCG",
     "PDB": "1IB9_A.pdb;1HA9_A.pdb;4GUX_F.pdb;4GUX_E.pdb;4GUX_D.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Momordica cochinchinensis",
     "Keywords": "CYCLIC CYSTINE KNOT, CYCLOTIDE, CIRCULAR PROTEIN, BETA-HAIRPIN, PLANT PROTEIN; PROTEASE INHIBITOR, PLANT PROTEIN, CYCLIC KNOTTIN, BACKBONE CYCLIC, 3-10 HELIX, TRIPLE- STRANDED ANTI-PARALLEL BETA-SHEET; CYCLOTIDE, CYCLIC PEPTIDE, HYDROLASE-HYDROLASE INHIBITOR COMPLEX",
     "Method": "SOLUTION NMR; X-RAY DIFFRACTION",
@@ -1592,7 +1592,7 @@
   {
     "Sequence": "VSCTGSKDCYAPCRKQTGCPYGKCMNRKCKCNRC",
     "PDB": "1WPD_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Scorpio palmatus, heterometrus spinifer",
     "Keywords": "NEUROTOXIN, CHIMERA, TOXIN",
     "Method": "SOLUTION NMR",
@@ -1612,7 +1612,7 @@
   {
     "Sequence": "KTCENLADTFRGPCFTDGSCDDHCKNKEHLIKGRCRDDFRCWCTRNC",
     "PDB": "3PSM_B.pdb;3PSM_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Pachyrhizus erosus",
     "Keywords": "DIMER, DEFENSIN, ANTIMICROBIAL PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -1642,7 +1642,7 @@
   {
     "Sequence": "LKCHNKLVPFLSKTCPEGKNLCYKMTLMKMPKIPIKRGCTDACPKSSLLVKVVCCNKDKCN",
     "PDB": "3VTS_B.pdb;3VTS_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Hemachatus haemachatus",
     "Keywords": "THREE FINGER TOXIN, VENOM TOXIN, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -1702,7 +1702,7 @@
   {
     "Sequence": "CYCSLRGDCYC",
     "PDB": "1I8E_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "INTEGRIN, RGD, CELL ADHESION",
     "Method": "SOLUTION NMR",
@@ -1802,7 +1802,7 @@
   {
     "Sequence": "VGINVKCKHSGQCLKPCKKAGMRFGKCINGKCDCTPK",
     "PDB": "2MLA_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mesobuthus martensii",
     "Keywords": "TOXIN",
     "Method": "SOLUTION NMR",
@@ -1822,7 +1822,7 @@
   {
     "Sequence": "CVRLHESCLGQQVPCCDPAATCYCRFFNAFCYCR",
     "PDB": "1MR0_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "RATIONAL PROTEIN DESIGN, ICK, INHIBITOR CYSTINE KNOT, AGRP, AGOUTI- RELATED PROTEIN, MELANOCORTIN, SIGNALING PROTEIN",
     "Method": "SOLUTION NMR",
@@ -1902,7 +1902,7 @@
   {
     "Sequence": "CKLKGQSCRKTSYDCCSGSCGRSGKC",
     "PDB": "1MVJ_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus striatus",
     "Keywords": "CONUS STRIATUS PEPTIDE SPECIFIC TO P/Q-TYPE VOLTAGE SENSITIVE CALCIUM CHANNEL, NEUROTOXIN",
     "Method": "SOLUTION NMR",
@@ -1952,7 +1952,7 @@
   {
     "Sequence": "SEVCFPRLGCFSDDAPWAGIVQRPLKILPWSPKDVDTRFLLYTNQNQNNYQELVADPSTITNSNFRMDRKTRFIIHGFIDKGEEDWLSNICKNLFKVESVNCICVDWKGGSRTGYTQASQNIRIVGAEVAYFVEVLKSSLGYSPSNVHVIGHSLGSHAAGEAGRRTNGTIERITGLDPAEPCFQGTPELVRLDPSDAKFVDVIHTDAAPIIPNLGFGMSQTVGHLDFFPNGGKQMPGCQKNILSQIVDIDGIWEGTRDFVACNHLRSYKYYADSILNPDGFAGFPCDSYNVFTANKCFPCPSEGCPQMGHYADRFPGKTNGVSQVFYLNTGDASNFARWRYKVSVTLSGKKVTGHILVSLFGNEGNSRQYEIYKGTLQPDNTHSDEFDSDVEVGDLQKVKFIWYNVINPTLPRVGASKITVERNDGKVYDFCSQETVREEVLLTLNPC",
     "PDB": "1ETH_A.pdb;1ETH_C.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Sus scrofa",
     "Keywords": "COMPLEX (HYDROLASE-COFACTOR), LIPID DEGRADATION, COMPLEX (HYDROLASE- COFACTOR) COMPLEX",
     "Method": "X-RAY DIFFRACTION",
@@ -2002,7 +2002,7 @@
   {
     "Sequence": "KEGYLVKKSDGCKYDCFWLGKNEHCNTECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSC",
     "PDB": "1VNA_A.pdb;1VNB_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Centruroides sculpturatus",
     "Keywords": "NEUROTOXIN",
     "Method": "SOLUTION NMR",
@@ -2092,7 +2092,7 @@
   {
     "Sequence": "GFPCGESCVYIPCFTAAIGCSCKSKVCYKN",
     "PDB": "7RN3_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Hybanthus enneaspermus",
     "Keywords": "CYCLOTIDES, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -2212,7 +2212,7 @@
   {
     "Sequence": "GCCSYPPCFATNPDC",
     "PDB": "1MXN_A.pdb;1MXP_A.pdb;1DG2_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan; Conus aulicus",
     "Keywords": "ALPHA HELIX, TOXIN; TURNS, TOXIN; A-HELIX, TWO DISULFIDE BONDS AND C-TERM AMIDATION, TOXIN",
     "Method": "SOLUTION NMR",
@@ -2322,7 +2322,7 @@
   {
     "Sequence": "GCCSDPRCNMNNPDC",
     "PDB": "7N25_A.pdb;7N24_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus episcopatus",
     "Keywords": "ALPHA-CONOTOXIN, CC-C-C FRAMEWORK, ALPHA4/7 PATTERN, SULFOTYROSINE, TOXIN; ALPHA CONOTOXIN, CC-C-C FRAMEWORK, ALPHA4/7 PATTERN, SULFOTYROSINE, TOXIN",
     "Method": "SOLUTION NMR",
@@ -2332,7 +2332,7 @@
   {
     "Sequence": "CAKKRNWCGKNEDCCCPMKCIYAWYNQQGSCQTTITGLFKKC",
     "PDB": "1QDP_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Atrax robustus",
     "Keywords": "NEUROTOXIN, ATRAX ROBUSTUS, ROBUSTOXIN, CYSTINE KNOT, INHIBITOR CYSTINE KNOT MOTIF, SODIUM CHANNEL MODULATOR, FUNNEL WEB SPIDER, VENOM",
     "Method": "SOLUTION NMR",
@@ -2352,7 +2352,7 @@
   {
     "Sequence": "ARQCKAESNTFTGICIAKPPCRQACIREKFTDGHCSKVLRRCLCTKRC",
     "PDB": "6MRY_J.pdb;6MRY_G.pdb;6MRY_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nicotiana occidentalis",
     "Keywords": "DEFENSIN, PLANT, CANCER, ANTITUMOR PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -2392,7 +2392,7 @@
   {
     "Sequence": "LKCKKLVPLFSKTCPAGKNLCYKMFMVAAPHVPVKRGCIDVCPKSSLLVKYVCCNTDKCN",
     "PDB": "1FFJ_A.pdb;1CCQ_A.pdb;1CB9_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja oxiana",
     "Keywords": "ALL-BETA SHEET PROTEIN, MEMBRANE PERTURBATION, TOXIN; CYTOTOXIN (CARDIOTOXIN), MEMBRANE PERTURBATION, CIS/TRANS ISOMERIZATION, BOUND WATER, TOXIN; CYTOXIN (CARDIOTOXIN), MEMBRANE PERTURBATION, CIS/TRANS ISOMERIZATION, BOUND WATER, TOXIN",
     "Method": "SOLUTION NMR",
@@ -2422,7 +2422,7 @@
   {
     "Sequence": "ATCKAECPTWDSVCINKKPCVACCKKAKFSDGHCSKILRRCLCTKEC",
     "PDB": "1N4N_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Petunia x hybrida",
     "Keywords": "CYSTEINE-STABILISED ALPHA-BETA MOTIF, FIFTH DISULFIDE BOND, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -2432,7 +2432,7 @@
   {
     "Sequence": "VCRDWFKETACRHAKSLGNCRTSQKYRANCAKTCELC",
     "PDB": "1BGK_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Bunodosoma granulifera",
     "Keywords": "NEUROTOXIN, POTASSIUM CHANNEL INHIBITOR",
     "Method": "SOLUTION NMR",
@@ -2682,7 +2682,7 @@
   {
     "Sequence": "GCCSNPVCHLEHSNLCGGAAGG",
     "PDB": "2AJW_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "ALPHA-HELIX, CYCLIC BACKBONE, TOXIN",
     "Method": "SOLUTION NMR",
@@ -2692,7 +2692,7 @@
   {
     "Sequence": "LKCNKLVPLFYKTCPAGKNLCYKMFMVSNLTVPVKRGCIDVCPKNSALVKYVCCNTDRCN",
     "PDB": "1CRF_A.pdb;4OM4_D.pdb;4OM4_E.pdb;4OM4_A.pdb;4OM4_B.pdb;1CRE_A.pdb;4OM4_C.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja atra",
     "Keywords": "CARDIOTOXIN; FIVE BETA SHEETS, THREE FUNCTIONAL LOOPS, ENDOCYTOSIS, HEPARIN, HEPARAN SULFATE, TOXIN",
     "Method": "SOLUTION NMR; X-RAY DIFFRACTION",
@@ -2732,7 +2732,7 @@
   {
     "Sequence": "CGETCLLGTCYTTGCTCNKYRVCTKDGSVLN",
     "PDB": "2B38_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLIC BACKBONE, CYSTINE KNOT, BETA-HAIRPIN, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -2772,7 +2772,7 @@
   {
     "Sequence": "DCMFGNGKGYRGKKATTVTGTPCQEWAAQEPHRHSTFIPGTNKWAGLEKNYCRNPDGDINGPWCYTMNPRKLFDYCDIPLC",
     "PDB": "4BVV_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Homo sapiens",
     "Keywords": "HYDROLASE, CARDIOVASCULAR DISEASE, DRUG DISCOVERY, OPTICAL BIOSENSORS",
     "Method": "X-RAY DIFFRACTION",
@@ -2782,7 +2782,7 @@
   {
     "Sequence": "GVPICGETCTLGTCYTAGCSCSWPVCTRN",
     "PDB": "2K7G_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola arvensis",
     "Keywords": "CYCLOTIDE, CYSTINE KNOT, KNOTTIN, PLANT DEFENSE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -2862,7 +2862,7 @@
   {
     "Sequence": "GKECDCSSPENPCCDAATCKLRPGAQCGEGLCCEQCKFSRAGKICRIARGDWNDDRCTGQSADCPRYH",
     "PDB": "2M75_A.pdb;1Q7I_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Calloselasma rhodostoma",
     "Keywords": "RHODOSTOMIN MUTANT PROTEIN, HYDROLASE; DISINTEGRIN, INTEGRIN, RHODOSTOMIN, BLOOD CLOTTING, HYDROLASE",
     "Method": "SOLUTION NMR",
@@ -2892,7 +2892,7 @@
   {
     "Sequence": "CGETCVGGTCNTPGCTCSWPVCGHFRWGV",
     "PDB": "2LUR_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "BETA HAIRPIN, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -2922,7 +2922,7 @@
   {
     "Sequence": "CGETCVGGTCNTPGCTCSWPVCTRNGLPV",
     "PDB": "1NB1_A.pdb;1ZNU_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, CYCLIC BACKBONE, CYSTINE KNOT, CCK, INSECTICIDAL, ANTIBIOTIC; CYCLOTIDE, CYCLIC PEPTIDE, KNOTTIN, CYSTINE KNOT, ANTIMICROBIAL PEPTIDE, PLANT PROTEIN, ANTIBIOTIC",
     "Method": "SOLUTION NMR",
@@ -2992,7 +2992,7 @@
   {
     "Sequence": "GSKKPVPIIYCNRRTGKCQRF",
     "PDB": "5XO3_A.pdb;6AFQ_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Podisus maculiventris",
     "Keywords": "CYANA 2.1, ANTIMICROBIAL PROTEIN; ANTIMICROBIAL, THANATIN, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3002,7 +3002,7 @@
   {
     "Sequence": "GLPVCGETCVGGTCNTPGCTCSWPACTRN",
     "PDB": "4TTO_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Synthetic peptide",
     "Keywords": "CYCLIC PEPTIDE, DISULFIDE BONDS, PLANT PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -3092,7 +3092,7 @@
   {
     "Sequence": "GLLCYCRKGHCKRGGRVRGTCGIRFLYCCPRR",
     "PDB": "2LEW_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3102,7 +3102,7 @@
   {
     "Sequence": "VGVCCGYKLCHC",
     "PDB": "1IEO_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CONOTOXIN, NEURONAL NORADRENALINE TRANSPORTER, TOXIN",
     "Method": "SOLUTION NMR",
@@ -3192,7 +3192,7 @@
   {
     "Sequence": "DRCRYTLCCDGALKAVSACLHESESCLVPGDCCRGKSRLTLCSYGEGGNGFQCPTGYRQC",
     "PDB": "1KG1_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Rhynchosporium secalis",
     "Keywords": "ANTIPARALEL BETA SHEETS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -3252,7 +3252,7 @@
   {
     "Sequence": "GLPICGETCLLGKCYTPGCSCRRPVCYKN",
     "PDB": "6DHR_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Rinorea virgata",
     "Keywords": "CYCLOTIDE CYCLIC PEPTIDE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3302,7 +3302,7 @@
   {
     "Sequence": "ALCNCNRIIIPHMCWKKCGKK",
     "PDB": "1TER_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Apis mellifera",
     "Keywords": "TOXIN",
     "Method": "SOLUTION NMR",
@@ -3362,7 +3362,7 @@
   {
     "Sequence": "CGESCAMISFCFTEVIGCSCKNKVCYLNSIS",
     "PDB": "1ZA8_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola hederacea",
     "Keywords": "CIRCULAR PROTEIN, CYCLIC CYSTINE KNOT MOTIF, ANTIVIRAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3392,7 +3392,7 @@
   {
     "Sequence": "ECCPACGRHYSC",
     "PDB": "2FRB_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus geographus",
     "Keywords": "ALPHA-CONOTOXIN GI, BENZOPHENONE ANALOGS, NICOTINIC ACETYLCHOLINE RECEPTOR ANTAGONIST, TOXIN",
     "Method": "SOLUTION NMR",
@@ -3472,7 +3472,7 @@
   {
     "Sequence": "LKCNQLIPPFYKTCAAGKNLCYKMFMVAAPKVPVKRGCIDVCPKSSLLVKYVCCNTDRCN",
     "PDB": "1UG4_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja atra",
     "Keywords": "CARDIOTOXIN, COBRA, VENOM, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -3482,7 +3482,7 @@
   {
     "Sequence": "GCCNGPKGCSSKWCRDHARCC",
     "PDB": "2YEN_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus consors",
     "Keywords": "TOXIN, CONOTOXIN, NEUROTOXIN, AMIDATED C-TERMINUS",
     "Method": "SOLUTION NMR",
@@ -3512,7 +3512,7 @@
   {
     "Sequence": "AIPCGESCVYIPCISVVIGCSCRNKVCYR",
     "PDB": "7KPD_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Rinorea bengalensis",
     "Keywords": "ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3522,7 +3522,7 @@
   {
     "Sequence": "GFCRCLCRRGVCRCICTR",
     "PDB": "1HVZ_A.pdb;2LYF_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYCLIC, BETA-SHEET, DISULFIDE-RICH, ANTIMICROBIAL PROTEIN; THETA-DEFENSIN, CYCLIC PEPTIDES, CYCLIC CYSTINE LADDER, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3532,7 +3532,7 @@
   {
     "Sequence": "RICRRRSAGFKGPCVSNKNCAQVCMQEGWGGGNCDGPLRRCKCMRRC",
     "PDB": "1GPT_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Hordeum vulgare",
     "Keywords": "PLANT TOXIN",
     "Method": "SOLUTION NMR",
@@ -3632,7 +3632,7 @@
   {
     "Sequence": "CKAAGKPCSRIAYNCCTGSCRSGKC",
     "PDB": "1FYG_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "BETA SHEET, TOXIN",
     "Method": "SOLUTION NMR",
@@ -3662,7 +3662,7 @@
   {
     "Sequence": "NGLPVCGETCVGGTCNTPGCTCSWPVCTR",
     "PDB": "1JJZ_A.pdb;1K48_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLIC PEPTIDE, CYCLOTIDE, DISULFIDE PAIRING, UTEROTONIC, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3692,7 +3692,7 @@
   {
     "Sequence": "GLPVCGETCVGGTCNTPGCTCSWPVCTRN",
     "PDB": "4TTM_A.pdb;2KHB_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLIC PEPTIDE, DISULFIDE BONDS, PLANT PROTEIN; CYCLOTIDE, ANTIMICROBIAL PROTEIN, CYTOLYSIS, DISULFIDE BOND, HEMOLYSIS, KNOTTIN, OXIDATION, PHARMACEUTICAL, PLANT DEFENSE",
     "Method": "X-RAY DIFFRACTION; SOLUTION NMR",
@@ -3892,7 +3892,7 @@
   {
     "Sequence": "SWDLAGYLLYCPCMGRFGNQADHFLGSLAFAKLLNRTLAVPPWIEYQHHKPPFTNLHVSYQKYFKLEPLQAYHRVVSLEDFMENLAPSHWPPEKRVAYCFEVAAQRSPDKKTCPMKEGNPFGPFWDQFHVSFNKSELFTGISFSASYKEQWTQRFPAKEHPVLALPGAPAQFPVLEEHRELQKYMVWSDEMVRTGEALISAHLVRPYVGIHLRIGSDWKNACAMLKDGTAGSHFMASPQCVGYSRSTATPLTMTMCLPDLKEIQRAVTLWVRALNARSVYIATDSESYVSEIQQLFKDKVRVVSLKPEVAQIDLYILGQADHFIGNCVSSFTAFVKRERDLHGRQSSFFGMD",
     "PDB": "5KY8_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "GLYCOSYLTRANSFERASE, TRANSFERASE",
     "Method": "X-RAY DIFFRACTION",
@@ -3932,7 +3932,7 @@
   {
     "Sequence": "CKGTGKSCSRIAYNCCTGSCRSGKC",
     "PDB": "2KM9_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "OMEGA CONOTOXIN, FVIA, NEUROPEPTIDE",
     "Method": "SOLUTION NMR",
@@ -3942,7 +3942,7 @@
   {
     "Sequence": "CGETCFGGTCNTPGCSCTWPICTRDGLPV",
     "PDB": "1PT4_A.pdb;2KCH_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, KALATA, CIRCULAR PROTEIN, CYCLIC CYSTINE KNOT, CCK, ANTIBIOTIC; CYCLIC CYSTINE KNOT, CYTOLYSIS, HEMOLYSIS, KNOTTIN, OXIDATION, PLANT DEFENSE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -3982,7 +3982,7 @@
   {
     "Sequence": "SCGGSCFGGCWGCSCYARTCFRDGLP",
     "PDB": "2MSQ_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Synthetic peptide",
     "Keywords": "CONOTOXINS, CYCLIC PEPTIDES, CYCLIZATION, CYSTINE KNOT, DRUG DESIGN, TOXIN",
     "Method": "SOLUTION NMR",
@@ -4052,7 +4052,7 @@
   {
     "Sequence": "GCCSHPVCSAMSPIC",
     "PDB": "2M3I_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus lividus",
     "Keywords": "ALPHA-CONOTOXIN, ALPHA-HELIX, DISULFIDE BONDS, AMIDATED C-TERMINUS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -4072,7 +4072,7 @@
   {
     "Sequence": "KEGYLMDHEGCKLSCFIRPSGYCGRECGIKKGSSGYCAWPACYCYGLPNWVKVWDRATNKC",
     "PDB": "1NPI_A.pdb;1B7D_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Tityus serrulatus",
     "Keywords": "XCITATORY NEUROTOXIN, TOXIN; LONG-CHAIN NEUROTOXIN, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -4082,7 +4082,7 @@
   {
     "Sequence": "CKQAGESCDIFSQNCCVGTCAFICIE",
     "PDB": "1YZ2_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus amadis",
     "Keywords": "DELTA CONOTOXIN, MOLLUSCIVOROUS SNAIL, INHIBITORY CYSTEINE KNOT MOTIF, 15 STRUCTURES, TOXIN",
     "Method": "SOLUTION NMR",
@@ -4122,7 +4122,7 @@
   {
     "Sequence": "KLCERPSGTWSGVCGNNNACKNQCINLEKARHGSCNYVFPAHKCICYFPC",
     "PDB": "1AYJ_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Raphanus sativus var. niger",
     "Keywords": "FUNGICIDE, PLANT DEFENSIN, CYSTEINE-STABILIZED ALFA/BETA MOTIF",
     "Method": "SOLUTION NMR",
@@ -4182,7 +4182,7 @@
   {
     "Sequence": "SWPICKRNGLPVCGETCTLGTCSTQGCTC",
     "PDB": "2MW0_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "KALATA B7, PROTEIN BINDING",
     "Method": "SOLUTION NMR",
@@ -4312,7 +4312,7 @@
   {
     "Sequence": "VRDAYIAKPENCVYECGITQDCNKLCTENGAESGYCQWGGKYGNACWCIKLPDSVPIRVPGKCQ",
     "PDB": "2KBK_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mesobuthus martensii",
     "Keywords": "PROTEIN, IONIC CHANNEL INHIBITOR, NEUROTOXIN, SECRETED, SODIUM CHANNEL INHIBITOR, TOXIN",
     "Method": "SOLUTION NMR",
@@ -4322,7 +4322,7 @@
   {
     "Sequence": "GDCLPHLKRCKADNDCCGKKCKRRGTNAEKRCR",
     "PDB": "1IE6_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "TRIPLE STRANDED ANTIPARELLEL BETA-SHEET, INHIBITORY CYSTINE KNOT, TOXIN",
     "Method": "SOLUTION NMR",
@@ -4572,7 +4572,7 @@
   {
     "Sequence": "GLPTCGETCTLGTCYVPDCSCSWPICMKN",
     "PDB": "2LAM_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Clitoria ternatea",
     "Keywords": "INSECTICIDAL PEPTIDE, ANTIVIRAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -4682,7 +4682,7 @@
   {
     "Sequence": "PSWDLAGYLLYCPCMGRFGNQADHFLGSLAFAKLLNRTLAVPPWIEYQHHKPPFTNLHVSYQKYFKLEPLQAYHRVVSLEDFMENLAPSHWPPEKRVAYCFEVAAQRSPDKKTCPMKEGNPFGPFWDQFHVSFNKSELFTGISFSASYKEQWTQRFPAKEHPVLALPGAPAQFPVLEEHRELQKYMVWSDEMVRTGEALISAHLVRPYVGIHLRIGSDWKNACAMLKAGSHFMASPQCVGYSRSTATPLTMTMCLPDLKEIQRAVTLWVRALNARSVYIATDSESYVSEIQQLFKDKVRVVSLKPEVAQIDLYILGQADHFIGNCVSSFTAFVKRERDLHGRQSSFFGMD",
     "PDB": "5KXH_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "GLYCOSYLTRANSFERASE O-FUCOSYLATION GT-B INVERTING, TRANSFERASE",
     "Method": "X-RAY DIFFRACTION",
@@ -4762,7 +4762,7 @@
   {
     "Sequence": "RCGSQGGGGTCPALWCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGSKCQYRC",
     "PDB": "1EN2_A.pdb;1ENM_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Urtica dioica",
     "Keywords": "LECTIN, HEVEIN DOMAIN, UDA, SUPERANTIGEN, SACCHARIDE BINDING, SUGAR BINDING PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -4772,7 +4772,7 @@
   {
     "Sequence": "NGVCCGYKLCHC",
     "PDB": "2EW4_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus marmoreus",
     "Keywords": "BETA HAIRPIN, GAMMA TURN, TOXIN",
     "Method": "SOLUTION NMR",
@@ -4802,7 +4802,7 @@
   {
     "Sequence": "CAESCVYIPCTVTALLGCSCSNRVCYNGIP",
     "PDB": "1NBJ_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLOTIDE, CYCLIC BACKBONE, CYSTINE KNOT, CCK, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -4852,7 +4852,7 @@
   {
     "Sequence": "ECKTESNTFPGICITKPPCRKACISEKFTDGHCSKILRRCLCTKPC",
     "PDB": "4AB0_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nicotiana alata",
     "Keywords": "ANTIMICROBIAL PROTEIN, INNATE IMMUNITY",
     "Method": "X-RAY DIFFRACTION",
@@ -4962,7 +4962,7 @@
   {
     "Sequence": "GHACYRNCWREGNDEETCKERC",
     "PDB": "1HP9_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "SCORPION TOXIN, GATING MODIFIER, VOLTAGE-GATED POTASSIUM CHANNEL, TOXIN",
     "Method": "SOLUTION NMR",
@@ -5042,7 +5042,7 @@
   {
     "Sequence": "SAFTVWSGPGCNNRAERYSKCGCSAIHQKGGYDFSYTGQTAALYNQAGCSGVAHTRFGSSARACNPFGWKSIFIQC",
     "PDB": "1C01_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Macadamia integrifolia",
     "Keywords": "GREEK KEY, BETA-BARREL, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -5132,7 +5132,7 @@
   {
     "Sequence": "LKCNKLIPIAYKTCPEGKNLCYKMMLASKKMVPVKRGCINVCPKNSALVKYVCCSTDRCN",
     "PDB": "1CDT_B.pdb;1CDT_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja mossambica",
     "Keywords": "CYTOTOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -5142,7 +5142,7 @@
   {
     "Sequence": "GCCSDPRCAWEC",
     "PDB": "1E74_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus imperialis",
     "Keywords": "PEPTIDE TOXIN, NEUROTOXIN, NEURONAL NICOTINIC ACETYLCHOLINE RECEPTOR ANTAGONIST, ALPHA-CONOTOXIN, NMR SOLUTION STRUCTURE",
     "Method": "SOLUTION NMR",
@@ -5152,7 +5152,7 @@
   {
     "Sequence": "TQSHAGQCGGIGYSGPTVCASGTTCQVLNPYYSQCL",
     "PDB": "1AZ6_A.pdb;1AZH_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Hypocrea jecorina",
     "Keywords": "CELLULASE, NUCLEAR MAGNETIC RESONANCE SPECTROSCOPY, PROTEIN- CARBOHYDRATE INTERACTION",
     "Method": "SOLUTION NMR",
@@ -5172,7 +5172,7 @@
   {
     "Sequence": "VKDGYIVDDVNCTYFCGRNAYCNEECTKLKGESGYCQWASPYGNACYCYKLPDHVRTKGPGRCH",
     "PDB": "4AEI_C.pdb;4AEI_B.pdb;4AEI_A.pdb;1PTX_A.pdb;1AHO_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus; Androctonus australis",
     "Keywords": "IMMUNE SYSTEM-TOXIN COMPLEX, ALPHA-TOXIN, CONFORMATIONAL REARRANGEMENT, COMBINING SITE, EPITOPE, PHARMACOLOGICAL SITE, VENOM, VOLTAGE-ACTIVATED SODIUM CHANNEL; TOXIN; TOXIN II, SCORPION, AB INITIO PHASING, NEUROTOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -5212,7 +5212,7 @@
   {
     "Sequence": "GAPSWDLAGYLLYCPCMGRFGNQADHFLGSLAFAKLLNRTLAVPPWIEYQHHKPPFTNLHVSYQKYFKLEPLQAYHRVVSLEDFMENLAPSHWPPEKRVAYCFEVAAQRSPDKKTCPMKEGNPFGPFWDQFHVSFNKSELFTGISFSASYKEQWTQRFPAKEHPVLALPGAPAQFPVLEEHRELQKYMVWSDEMVRTGEALISAHLVRPYVGIHLRIGSDWKNACAMLKDGTAGSHFMASPQCVGYSRSTATPLTMTMCLPDLKEIQRAVTLWVRALNARSVYIATDSESYVSEIQQLFKDKVRVVSLKPEVAQIDLYILGQADHFIGNCVSSFTAFVKRERDLHGRQSSFFGMD",
     "PDB": "5KY2_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "GLYCOSYLTRANSFERASE, TRANSFERASE",
     "Method": "X-RAY DIFFRACTION",
@@ -5222,7 +5222,7 @@
   {
     "Sequence": "VCCGYKLCHC",
     "PDB": "2IHA_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Synthetic peptide",
     "Keywords": "CONOTOXIN, DISULFIDE LINKAGE, TOXIN",
     "Method": "SOLUTION NMR",
@@ -5232,7 +5232,7 @@
   {
     "Sequence": "NGVCCGYKLCHCAG",
     "PDB": "2J15_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Conus marmoreus",
     "Keywords": "TOXIN",
     "Method": "SOLUTION NMR",
@@ -5252,7 +5252,7 @@
   {
     "Sequence": "MPCSCKKYCDPWEVIDGSCGLFNSKYICCREK",
     "PDB": "1EWS_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Oryctolagus cuniculus",
     "Keywords": "ALPHA DEFENSIN, TRIPLE-STRANDED BETA-SHEET, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -5262,7 +5262,7 @@
   {
     "Sequence": "GCCSDPRCAWRC",
     "PDB": "1CNL_A.pdb;2IGU_A.pdb;1G2G_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CONOTOXIN, NICOTINIC ACETYLCHOLINE RECEPTOR BLOCKER, TOXIN; CONOTOXIN, DISULFIDE LINKAGE, RIBBON CONFORMATION, TOXIN; ALPHA-HELIX, 3-10 HELIX, TOXIN",
     "Method": "SOLUTION NMR",
@@ -5322,7 +5322,7 @@
   {
     "Sequence": "CGETCVGGTCNTPGCTCSWDKCTRNGLPV",
     "PDB": "2F2I_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYSTINE KNOT, CIRCULAR BACKBONE, BETA-HAIRPIN, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -5572,7 +5572,7 @@
   {
     "Sequence": "CPKILKKCRRDSDCPGACICRGNGYCGSGSDGGV",
     "PDB": "2PO8_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Momordica cochinchinensis",
     "Keywords": "OXIDATIVE FOLDING INTERMEDIATE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -5642,7 +5642,7 @@
   {
     "Sequence": "RDCCYHPTCNMSNPQIC",
     "PDB": "1K64_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "OMEGA-SHAPED CONTAINING A-HELIX, TOXIN",
     "Method": "SOLUTION NMR",
@@ -5762,7 +5762,7 @@
   {
     "Sequence": "KWCFRVCYRGICYRRCRG",
     "PDB": "6PIN_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Tachypleus tridentatus",
     "Keywords": "DEFENSE PEPTIDE, CYCLIC PEPTIDE, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -5822,7 +5822,7 @@
   {
     "Sequence": "CGESCVFIPCISTLLGCSCKNKVCYRNGVIP",
     "PDB": "2ERI_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Chassalia parviflora",
     "Keywords": "CYSTINE KNOT, BETA HAIRPIN, BETA TURN, ANTIBIOTIC",
     "Method": "SOLUTION NMR",
@@ -5932,7 +5932,7 @@
   {
     "Sequence": "APSWDLAGYLLYCPCMGRFGNQADHFLGSLAFAKLLNRTLAVPPWIEYQHHKPPFTNLHVSYQKYFKLEPLQAYHRVVSLEDFMENLAPSHWPPEKRVAYCFEVAAQRSPDKKTCPMKEGNPFGPFWDQFHVSFNKSELFTGISFSASYKEQWTQRFPAKEHPVLALPGAPAQFPVLEEHRELQKYMVWSDEMVRTGEALISAHLVRPYVGIHLRIGSDWKNACAMLGSHFMASPQCVGYSRSTATPLTMTMCLPDLKEIQRAVTLWVRALNARSVYIATDSESYVSEIQQLFKDKVRVVSLKPEVAQIDLYILGQADHFIGNCVSSFTAFVKRERDLHGRQSSFFGMD",
     "PDB": "5KY0_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "GLYCOSYLTRANSFERASE, TRANSFERASE",
     "Method": "X-RAY DIFFRACTION",
@@ -5942,7 +5942,7 @@
   {
     "Sequence": "RSCIDTIPKSRCTAFQCKHSMKYRLSFCRKTCGTC",
     "PDB": "1ROO_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Stichodactyla helianthus",
     "Keywords": "NEUROTOXIN, POTASSIUM CHANNEL INHIBITOR",
     "Method": "SOLUTION NMR",
@@ -5962,7 +5962,7 @@
   {
     "Sequence": "GCCSLPPCALSNPDYC",
     "PDB": "1AKG_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus pennaceus",
     "Keywords": "ACETYLCHOLINE RECEPTOR ANTAGONIST, ALPHA-CONOTOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -5982,7 +5982,7 @@
   {
     "Sequence": "CGESCVWIPCISAALGCSCKNKVCYRNGIP",
     "PDB": "1BH4_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Chassalia parviflora",
     "Keywords": "CYCLIC PEPTIDE, CYSTINE KNOT, ANTI-HIV ACTIVITY",
     "Method": "SOLUTION NMR",
@@ -6062,7 +6062,7 @@
   {
     "Sequence": "CKGKGAPCRKTMYDCCSGSCGRRGKC",
     "PDB": "1CNN_A.pdb;1OMN_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan; Conus magus",
     "Keywords": "VOLTAGE-SENSITIVE CALCIUM CHANNEL ANTAGONIST, PEPTIDE HYBRIDS, TOXIN; P-TYPE CALCIUM CHANNEL BLOCKER, CONUS VENOM, PRESYNAPTIC NEUROTOXIN, CONOTOXIN, NEUROTOXIN",
     "Method": "SOLUTION NMR",
@@ -6072,7 +6072,7 @@
   {
     "Sequence": "SWPVCYRNGLPVCGETCTLGKCYTAGCSC",
     "PDB": "2AKS_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLIC, MACROCYCLIC, CYCLOTIDE, VIOLA ODORATA, VODO N, CYCLIC CYSTINE KNOT (CCK) MOTIF",
     "Method": "THEORETICAL MODEL",
@@ -6162,7 +6162,7 @@
   {
     "Sequence": "WLGCARVKEACGPWEWPCCSGLKCDGSECHPQ",
     "PDB": "1WQB_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "TOXIN, SPIDER'S VENOM, CYSTEIN FRAMEWORK, CYSTINE KNOT MOTIF",
     "Method": "SOLUTION NMR",
@@ -6182,7 +6182,7 @@
   {
     "Sequence": "GSVGCAECPMHCKGKMAKPTCENEVCKCNIGKKD",
     "PDB": "2KTC_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mesobuthus tamulus",
     "Keywords": "BTK-2, SCORPION TOXIN, KV1.1, DISULFIDE BOND, IONIC CHANNEL INHIBITOR, NEUROTOXIN, POTASSIUM CHANNEL INHIBITOR, SECRETED, TOXIN",
     "Method": "SOLUTION NMR",
@@ -6262,7 +6262,7 @@
   {
     "Sequence": "GCCSDPRCNYAHPAICGGAAGG",
     "PDB": "6CGX_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Conus victoriae",
     "Keywords": "STRUCTURE FROM MOLMOL, TOXIN",
     "Method": "SOLUTION NMR",
@@ -6292,7 +6292,7 @@
   {
     "Sequence": "GCCSNPACILNNPNQC",
     "PDB": "2NAY_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus betulinus",
     "Keywords": "HELIX, DE NOVO PROTEIN",
     "Method": "SOLUTION NMR",
@@ -6322,7 +6322,7 @@
   {
     "Sequence": "SGSGASKAPTSFAEYWNLLSAGGVCPKILQRCRRDSDCPGACICRGNGYCG",
     "PDB": "2M86_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Homo sapiens",
     "Keywords": "HDM2 ONCOPROTEIN, MCOTI-I CYCLOTIDE, P53 TUMOR SUPPRESSOR, PROTEIN BINDING-SIGNALING PROTEIN COMPLEX",
     "Method": "SOLUTION NMR",
@@ -6352,7 +6352,7 @@
   {
     "Sequence": "LKCNQLIPPFWKTCPKGKNLCYKMTMRAAPMVPVKRGCIDVCPKSSLLIKYMCCNTDKCN",
     "PDB": "1TGX_A.pdb;1CXN_A.pdb;1TGX_B.pdb;1TGX_C.pdb;1CXO_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja nigricollis",
     "Keywords": "CYTOTOXIN",
     "Method": "X-RAY DIFFRACTION; SOLUTION NMR",
@@ -6362,7 +6362,7 @@
   {
     "Sequence": "IPCGESCVWIPCISSAIGCSCKSKVCYRNG",
     "PDB": "7RMQ_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLIC PEPTIDES, CYCLOTIDES, QUASI-RACEMIC, PLANT PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -6382,7 +6382,7 @@
   {
     "Sequence": "GCCSNPVCHLEHSNLC",
     "PDB": "1MII_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "NEUROTOXIN, NICOTINIC ACETYLCHOLINE RECEPTOR, HYDROLASE",
     "Method": "SOLUTION NMR",
@@ -6412,7 +6412,7 @@
   {
     "Sequence": "APSWDLAGYLLYCPCMGRFGNQADHFLGSLAFAKLLNRTLAVPPWIEYQHHKPPFTNLHVSYQKYFKLEPLQAYHRVVSLEDFMENLAPSHWPPEKRVAYCFEVAAQRSPDKKTCPMKEGNPFGPFWDQFHVSFNKSELFTGISFSASYKEQWTQRFPAKEHPVLALPGAPAQFPVLEEHRELQKYMVWSDEMVRTGEALISAHLVRPYVGIHLRIGSDWKNACAMLKDGTAGSHFMASPQCVGYSRSTATPLTMTMCLPDLKEIQRAVTLWVRALNARSVYIATDSESYVSEIQQLFKDKVRVVSLKPEVAQIDLYILGQADHFIGNCVSSFTAFVKRERDLHGRQSSFFGMD",
     "PDB": "5KY4_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mus musculus",
     "Keywords": "GLYCOSYLTRANSFERASE, TRANSFERASE",
     "Method": "X-RAY DIFFRACTION",
@@ -6432,7 +6432,7 @@
   {
     "Sequence": "GLPVCGETCVGGTCNTPGCTCSWWPVCTRN",
     "PDB": "2MN1_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, UNKNOWN FUNCTION",
     "Method": "SOLUTION NMR",
@@ -6452,7 +6452,7 @@
   {
     "Sequence": "SVVIGQRCYRSPDCYSACKKLVGKATGKCTNGRCDC",
     "PDB": "6ATL_C.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Tityus serrulatus",
     "Keywords": "KNOTTINS, CYSTINE KNOT, TOXINS, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -6492,7 +6492,7 @@
   {
     "Sequence": "ATCDLASKWNWNHTLCAAHCIARRYRGGYCNSKAVCVCRN",
     "PDB": "2E3G_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Anopheles gambiae",
     "Keywords": "INSECT DEFENSIN; CSAB MOTIF; ANTIBACTERIAL, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -6642,7 +6642,7 @@
   {
     "Sequence": "GSLCGDTCFVLGCNDSSCSCNYPICVKD",
     "PDB": "2KVX_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "KALATA, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -6652,7 +6652,7 @@
   {
     "Sequence": "GVCCGVSFCYC",
     "PDB": "2M62_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus araneosus",
     "Keywords": "CHI/LAMBDA CONOTOXIN, BETA-HAIRPIN, VERMIVOROUS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -6732,7 +6732,7 @@
   {
     "Sequence": "GLPVCGETCVGGTCNTPGCVCSWPVCTRN",
     "PDB": "7K7X_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Psychotria vellosiana",
     "Keywords": "CYCLIC PEPTIDE, RUBIACEAE, T-CELL PROLIFERATION, CYTOTOXIC, HEMOLYTIC, IMMUNOSUPPRESSANT",
     "Method": "SOLUTION NMR",
@@ -6772,7 +6772,7 @@
   {
     "Sequence": "GGVCPKILQRCRRDSDCPGACICRGNGYCGSGSD",
     "PDB": "5WOV_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Momordica cochinchinensis",
     "Keywords": "CYCLOTIDE, PLANT PEPTIDE, CYCLIC CYSTINE KNOT, DE NOVO PROTEIN",
     "Method": "SOLUTION NMR",
@@ -6792,7 +6792,7 @@
   {
     "Sequence": "DTCGSGYNVDQRRTNSGCKAGNGDRHFCGCDRTGVVECKGGKWTEVQDCGSSSCKGTSNGGATC",
     "PDB": "1UOY_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Penicillium brevicompactum",
     "Keywords": "EXUDATE PROTEIN, SULFUR PHASING, POTENTIAL KILLER TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -6892,7 +6892,7 @@
   {
     "Sequence": "VRPFLDVYQRSACQTRETLVSILQEHPDEISDIFRPSCVAVLRCSGCCTDESMKCTPVGKHTADIQIMRMNPRTHSSKMEVMKFMEHTACECRPA",
     "PDB": "1WQ9_B.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Daboia russellii russellii",
     "Keywords": "SNAKE VENOM, VASCULAR ENDOTHELIAL GROWTH FACTOR, VEGF, VEGF-F, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -6912,7 +6912,7 @@
   {
     "Sequence": "GSAFCNLRRCELSCRSLGLLGKCIGEECKCVPY",
     "PDB": "2KY3_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Mesobuthus tamulus",
     "Keywords": "ALPHA/BETA SCAFFOLD, BETA SHEET, ALPHA HELIX, SCOPRION K+ TOXIN, GS- ALPHA-KTX5.4, AKTX5.4, MESOBUTHUS TAMULUS, POTASSIUM BLOCKER, TOXIN",
     "Method": "SOLUTION NMR",
@@ -6922,7 +6922,7 @@
   {
     "Sequence": "GCCSHPACAGNNQHIC",
     "PDB": "1UL2_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "ALPHA-HELIX, BETA-TURN, TWO DISULFIDE BONDS, C-TERMINAL AMIDATION, TOXIN",
     "Method": "SOLUTION NMR",
@@ -6932,7 +6932,7 @@
   {
     "Sequence": "GLPVCGETCVGGTCNTPGCKCSWPVCTRN",
     "PDB": "7LHC_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, CCK MOTIF, KNOTTIN, CYCLIC PEPTIDE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -7072,7 +7072,7 @@
   {
     "Sequence": "WCSTCLDLACTGSKDCYAPCRKQTGCPNAKCINKSCKCYGC",
     "PDB": "1WT7_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "MAUROTOXIN, BUTANTOXIN, SCORPION TOXIN, K+ CHANNELS, MOLECULAR CONTACTS, TOXIN AFFINITY, TOXIN",
     "Method": "SOLUTION NMR",
@@ -7172,7 +7172,7 @@
   {
     "Sequence": "KKKCQLPSDVGKGKASFTRYYYNEESGKCETFIYGGVGGNSNNFLTKEDCCRECAQGSC",
     "PDB": "2M01_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Lychas mucronatus",
     "Keywords": "SCORPION POTASSIUM CHANNEL TOXIN, KUNITZ-TYPE NEUROTOXIN, TOXIN",
     "Method": "SOLUTION NMR",
@@ -7212,7 +7212,7 @@
   {
     "Sequence": "GSVVIGQRCYRSPDCYSACKKLVGKATGKCTNGRCDC",
     "PDB": "6ATL_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Tityus serrulatus",
     "Keywords": "KNOTTINS, CYSTINE KNOT, TOXINS, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -7332,7 +7332,7 @@
   {
     "Sequence": "LKCHNTQLPFIYKTCPEGKNLCFKATLKKFPLKFPVKRGCADNCPKNSALLKYVCCSTDKCN",
     "PDB": "1CVO_A.pdb;1KXI_B.pdb;1KXI_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Naja atra",
     "Keywords": "CYTOTOXIN; VENOM, CYTOTOXIN, CARDIOTOXIN, MULTIGENE FAMILY",
     "Method": "SOLUTION NMR; X-RAY DIFFRACTION",
@@ -7362,7 +7362,7 @@
   {
     "Sequence": "CGETCFTGTCYTNGCTCDPWPVCTRNGLPV",
     "PDB": "2KUK_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola hederacea",
     "Keywords": "BETA STRANDS, BETA TURN, DISULFIDE BOND, KNOTTIN, PLANT DEFENSE, ANTIVIRAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -7402,7 +7402,7 @@
   {
     "Sequence": "AGETCVGGTCNTPGATCSWPVCTRNGLPV",
     "PDB": "1N1U_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYSTINE KNOT, TRIPLE STRANDED BETA SHEET, CYCLIC PEPTIDE, ANTIBIOTIC",
     "Method": "SOLUTION NMR",
@@ -7442,7 +7442,7 @@
   {
     "Sequence": "CGETCVGGTCNTPGCTCSKNKCTRNGLPV",
     "PDB": "2F2J_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYSTINE KNOT, CIRCULAR BACKBONE, BETA-HAIRPIN, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -7462,7 +7462,7 @@
   {
     "Sequence": "RWCFRVCYRGICYRKCRG",
     "PDB": "6PIO_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Tachypleus tridentatus",
     "Keywords": "DEFENSE PEPTIDE, CYCLIC PEPTIDE, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -7472,7 +7472,7 @@
   {
     "Sequence": "SCSGRDSRCVCCMGLMCSRGKCVSIYGE",
     "PDB": "1EYO_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYSTINE KNOT MOTIF, TOXIN",
     "Method": "SOLUTION NMR",
@@ -7602,7 +7602,7 @@
   {
     "Sequence": "RLCCGFKSCRSRQCKHRC",
     "PDB": "1R9I_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus purpurascens",
     "Keywords": "CONOTOXIN, CYSTEINE KNOT, TOXIN",
     "Method": "SOLUTION NMR",
@@ -7612,7 +7612,7 @@
   {
     "Sequence": "LCNERPSQTWSGNCGNTAHCDKQCQDWEKASHGACHKRENHWKCFCYFNC",
     "PDB": "1BK8_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Aesculus hippocastanum",
     "Keywords": "PLANT DEFENSIN, ANTIMICROBIAL, CYSTEINE-STABILIZED ALFA/ BETA MOTIF",
     "Method": "SOLUTION NMR",
@@ -7722,7 +7722,7 @@
   {
     "Sequence": "GFPCGESCVYGPCFTAAIGCSCKSKVCYKN",
     "PDB": "7RIJ_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Hybanthus enneaspermus",
     "Keywords": "CYTOTOXICITY, CYCLOTIDES, QUASI-RACEMIC CRYSTALLOGRAPHY, PLANT PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -7742,7 +7742,7 @@
   {
     "Sequence": "RTCNKTFSDQSKICPPGENICYTKTWCDAFCSQRGKRVELGCAATCPKVKAGVEIKCCSTDNCN",
     "PDB": "4LFT_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Dendroaspis polylepis polylepis",
     "Keywords": "LONG NEUROTOXIN, THREE-FINGER-TOXIN, DISULFIDE-RICH, ACETYLCHOLINE RECEPTOR INHIBITOR ACTIVITY, EXPRESSED BY THE VENOM GLAND, TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -7772,7 +7772,7 @@
   {
     "Sequence": "KEGYLVKKSDGCKYGCLKLGENEGCDTECKAKNQGGSYGYCYAFACWCEGLPESTPTYPLPNKSC",
     "PDB": "2SN3_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Centruroides exilicauda",
     "Keywords": "TOXIN",
     "Method": "X-RAY DIFFRACTION",
@@ -7812,7 +7812,7 @@
   {
     "Sequence": "LFECSFSCEIEKEGDKPCKKKKCKGGWKCKFNMCVKV",
     "PDB": "1I25_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Ornithoctonus huwena",
     "Keywords": "NEUROTOXIN, INSECTICIDAL TOXIN, DISULFIDE BONDS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -7842,7 +7842,7 @@
   {
     "Sequence": "RCGSQGGGGTCPGLRCCSIWGWCGDSEPYCGRTCENKCWSGERSDHRCGAAVGNPPCGQDRCCSVHGWCGGGNDYCSGGNCQYRC",
     "PDB": "1EIS_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Urtica dioica",
     "Keywords": "LECTIN, HEVEIN DOMAIN, UDA, SUPERANTIGEN, SUGAR BINDING PROTEIN",
     "Method": "X-RAY DIFFRACTION",
@@ -7892,7 +7892,7 @@
   {
     "Sequence": "CGETCTLGTCYTAGCSCSWPVCTRNGVPI",
     "PDB": "3E4H_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola arvensis",
     "Keywords": "CYCLOTIDE, CIRCULAR PROTEINS, CYSTINE KNOT, CYCLIZATION, PLANT PROTEIN, KNOTTIN, PLANT DEFENSE",
     "Method": "X-RAY DIFFRACTION",
@@ -7962,7 +7962,7 @@
   {
     "Sequence": "GCCSDPLCAWRC",
     "PDB": "1E75_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus imperialis",
     "Keywords": "PEPTIDE TOXIN, NEUROTOXIN, NEURONAL NICOTINIC ACETYLCHOLINE RECEPTOR ANTAGONIST, ALPHA-CONOTOXIN, NMR SOLUTION STRUCTURE",
     "Method": "SOLUTION NMR",
@@ -8142,7 +8142,7 @@
   {
     "Sequence": "CKGKGAKCSKLMYDCCTGSCRSGKC",
     "PDB": "1TT3_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYSTEINE KNOT, FOUR LOOP FRAME WORK, TOXIN",
     "Method": "SOLUTION NMR",
@@ -8202,7 +8202,7 @@
   {
     "Sequence": "GSIPACGESCFKGKCYTPGCSCSKYPLCAKN",
     "PDB": "2GJ0_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola odorata",
     "Keywords": "CYCLOTIDE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -8232,7 +8232,7 @@
   {
     "Sequence": "KTCENLSDSFKGPCIPDGNCNKHCKEKEHLLSGRCRDDFRCWCTRNC",
     "PDB": "2LJ7_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Lens culinaris subsp. culinaris",
     "Keywords": "ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -8472,7 +8472,7 @@
   {
     "Sequence": "CGETCTLGTCYTQGCTCSWPICKRNGLPV",
     "PDB": "2JWM_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, CYCTINE KNOT, DIVALENT CATION-BINDING SITE, CYTOLYSIS, HEMOLYSIS, KNOTTIN, PLANT DEFENSE, PLANT PROTEIN",
     "Method": "SOLUTION NMR",
@@ -8502,7 +8502,7 @@
   {
     "Sequence": "AWLVPSQITTCCGYNGTMCSCMCTNTC",
     "PDB": "4B1Q_P.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus consors",
     "Keywords": "TOXIN, O-GLYCAN",
     "Method": "SOLUTION NMR",
@@ -8542,7 +8542,7 @@
   {
     "Sequence": "SPTCIPSGQPCPYNENCCSQSCTFKENENGNTVKRCD",
     "PDB": "1AXH_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Hadronyche versuta",
     "Keywords": "NEUROTOXIN, INSECTICIDAL TOXIN, CYSTINE KNOT, FUNNEL-WEB",
     "Method": "SOLUTION NMR",
@@ -8552,7 +8552,7 @@
   {
     "Sequence": "CGESCFLGTCYTKGCSCGEWKLCYGTNGGTIFD",
     "PDB": "1YP8_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Viola tricolor",
     "Keywords": "BETA-SHEET, CYSTINE KNOT, CYCLIC BACKBONE, CYCLOTIDE, CELL CYCLE",
     "Method": "SOLUTION NMR",
@@ -8632,7 +8632,7 @@
   {
     "Sequence": "TCEICAYAACTGC",
     "PDB": "1GNA_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Homo sapiens",
     "Keywords": "HORMONE",
     "Method": "SOLUTION NMR",
@@ -8642,7 +8642,7 @@
   {
     "Sequence": "FQCGRQAGGARCSNGLCCSQFGYCGSTPPYCGAGQCQSQC",
     "PDB": "5XDI_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Vaccaria hispanica",
     "Keywords": "HEVEIN-LIKE PEPTIDE, CYSTEIN, ANTIFUNGAL, VACCARIA HISPANICA, ANTIFUNGAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -8662,7 +8662,7 @@
   {
     "Sequence": "GCCSNPVCHLEHSNLCGAGGAAG",
     "PDB": "2AK0_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "ALPHA-HELIX, CYCLIC BACKBONE, TOXIN",
     "Method": "SOLUTION NMR",
@@ -8702,7 +8702,7 @@
   {
     "Sequence": "GICRCICGRRICRCICGR",
     "PDB": "2LZI_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "THETA-DEFENSIN, CYCLIC PEPTIDES, CYCLIC CYSTINE LADDER, ANTIVIRAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -8842,7 +8842,7 @@
   {
     "Sequence": "RDPCCSNPVCTVHNPQIC",
     "PDB": "1ZLC_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "ALPHA-HELIX, BETA-TURN, TWO DISULFIDE BONDS, C-TERMINAL AMIDATION, TOXIN",
     "Method": "SOLUTION NMR",
@@ -8932,7 +8932,7 @@
   {
     "Sequence": "IRDECCSNPVCRVNNHVC",
     "PDB": "5UG3_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus geographus",
     "Keywords": "NEUROTOXIN, NEURONAL NICOTINIC ACETYLCHOLINE RECEPTORS, TOXIN",
     "Method": "SOLUTION NMR",
@@ -9092,7 +9092,7 @@
   {
     "Sequence": "GCCSLPPCAANNPDYC",
     "PDB": "1PEN_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Conus pennaceus",
     "Keywords": "NEUROTOXIN, ACETYLCHOLINE RECEPTOR, POSTSYNAPTIC, ANTAGONIST, ACETYLCHOLINE RECEPTOR INHIBITOR",
     "Method": "X-RAY DIFFRACTION",
@@ -9102,7 +9102,7 @@
   {
     "Sequence": "KTCENLSGTFKGPCIPDGNCNKHCRNNEHLLSGRCRDDFRCWCTNRC",
     "PDB": "6NOM_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Pisum sativum",
     "Keywords": "PSD1, PSD2, PLANT DEFENSINS, ANTIMICROBIAL PEPTIDES, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -9182,7 +9182,7 @@
   {
     "Sequence": "CIPSGQPCPYNENCCSQSCTGGRCD",
     "PDB": "1HVW_A.pdb",
-    "Cyclization": "s2e with s2s",
+    "Cyclization": "s2e+s2s",
     "Organism_Scientific_Name": "Nan",
     "Keywords": "CYSTINE KNOT, BETA-HAIRPIN, TOXIN",
     "Method": "SOLUTION NMR",
@@ -9202,7 +9202,7 @@
   {
     "Sequence": "GGVCPKILQRCRRDSDCPGACICRGNGYCGYPYDVPDYA",
     "PDB": "5WOW_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Momordica cochinchinensis",
     "Keywords": "CYCLOTIDE, PLANT PEPTIDE, CYCLIC CYSTINE KNOT, GRAFTED PEPTIDE, BIOACTIVE EPITOPE, DE NOVO PROTEIN",
     "Method": "SOLUTION NMR",
@@ -9242,7 +9242,7 @@
   {
     "Sequence": "KWCFRVCYRGICYRKCRG",
     "PDB": "6PIP_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Tachypleus gigas",
     "Keywords": "DEFENSE PEPTIDE, CYCLIC PEPTIDE, ANTIMICROBIAL PROTEIN",
     "Method": "SOLUTION NMR",
@@ -9292,7 +9292,7 @@
   {
     "Sequence": "GGGCGETCVGGTCNTPGCTCSWPVCTRNGLPVT",
     "PDB": "2MH1_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "KALATA B1, SORTASE A, CYCLIC CYSTEINE KNOT, CYCLOTIDE, STRUCTURAL PROTEIN, DE NOVO PROTEIN",
     "Method": "SOLUTION NMR",
@@ -9303,681 +9303,749 @@
     "Sequence": "ALLVTAGLVLA",
     "PDB": "1CYA_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 11
+    "Organism_Scientific_Name": "TOLYPOCLADIUM INFLATUM",
+    "Keywords": "IMMUNOSUPPRESSANT",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "31-JAN-94",
+    "Sequence_length": 11,
+    "Title": "NMR STUDIES OF (U-13C)CYCLOSPORIN A BOUND TO CYCLOPHILIN: BOUND CONFORMATION AND PORTIONS OF CYCLOSPORIN INVOLVED IN BINDING"
   },
   {
     "Sequence": "GCPYNPKC",
     "PDB": "1D7T_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "synthetic construct",
+    "Keywords": "DE NOVO PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "13-SEP-00",
+    "Sequence_length": 8,
+    "Title": "NMR STRUCTURE OF AN ENGINEERED CONTRYPHAN CYCLIC PEPTIDE (MOTIF CPXXPXC)"
   },
   {
     "Sequence": "GCPWQPWC",
     "PDB": "1DFY_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "Conus stercusmuscarum",
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "01-MAY-02",
+    "Sequence_length": 8,
+    "Title": "NMR STRUCTURE OF CONTRYPHAN-SM CYCLIC PEPTIDE (MAJOR FORM-CIS)"
   },
   {
     "Sequence": "GCPWQPWC",
     "PDB": "1DFZ_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "Conus stercusmuscarum",
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "01-MAY-02",
+    "Sequence_length": 8,
+    "Title": "NMR STRUCTURE OF CONTRYPHAN-SM CYCLIC PEPTIDE (MINOR FORM-TRANS)"
   },
   {
     "Sequence": "CPWQPWC",
     "PDB": "1DG0_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 7
+    "Organism_Scientific_Name": "Conus radiatus",
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "09-SEP-03",
+    "Sequence_length": 7,
+    "Title": "NMR STRUCTURE OF DES[GLY1]-CONTRYPHAN-R CYCLIC PEPTIDE (MAJOR FORM)"
   },
   {
     "Sequence": "CPEGYILDDGFCTDIDE",
     "PDB": "1EGT_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 17
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "BLOOD COAGULATION INHIBITOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "15-NOV-95",
+    "Sequence_length": 17,
+    "Title": "THROMBIN-BOUND STRUCTURE OF AN EGF SUBDOMAIN FROM HUMAN THROMBOMODULIN DETERMINED BY TRANSFERRED NUCLEAR OVERHAUSER EFFECTS"
   },
   {
     "Sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCN",
     "PDB": "1ERG_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 70
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "COMPLEMENT FACTOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "30-APR-94",
+    "Sequence_length": 70,
+    "Title": "THREE-DIMENSIONAL SOLUTION STRUCTURE OF THE EXTRACELLULAR REGION OF THE COMPLEMENT REGULATORY PROTEIN, CD59, A NEW CELL SURFACE PROTEIN DOMAIN RELATED TO NEUROTOXINS"
   },
   {
     "Sequence": "LQCYNCPNPTADCKTAVNCSSDFDACLITKAGLQVYNKCWKFEHCNFNDVTTRLRENELTYYCCKKDLCN",
     "PDB": "1ERH_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 70
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "COMPLEMENT FACTOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "30-APR-94",
+    "Sequence_length": 70,
+    "Title": "THREE-DIMENSIONAL SOLUTION STRUCTURE OF THE EXTRACELLULAR REGION OF THE COMPLEMENT REGULATORY PROTEIN, CD59, A NEW CELL SURFACE PROTEIN DOMAIN RELATED TO NEUROTOXINS"
   },
   {
     "Sequence": "CPEGYILDDGFICTDIDE",
     "PDB": "1FGD_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 18
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "BLOOD COAGULATION INHIBITOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "20-JUN-96",
+    "Sequence_length": 18,
+    "Title": "EPIDERMAL GROWTH FACTOR (EGF) SUBDOMAIN OF HUMAN THROMBOMODULIN (NMR, 11 STRUCTURES)"
   },
   {
     "Sequence": "CEAPEGYILDDGFICTDIDE",
     "PDB": "1FGE_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 20
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "BLOOD COAGULATION INHIBITOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "20-JUN-96",
+    "Sequence_length": 20,
+    "Title": "EPIDERMAL GROWTH FACTOR (EGF) SUBDOMAIN OF HUMAN THROMBOMODULIN (NMR, 14 STRUCTURES)"
   },
   {
     "Sequence": "GVQGFGDDIPGMEGLGTDITVICPWEAFNHLELHELAQYGII",
     "PDB": "1FQJ_C.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 42
+    "Organism_Scientific_Name": "Bos taurus",
+    "Keywords": "SIGNALING PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "28-FEB-01",
+    "Sequence_length": 42,
+    "Title": "CRYSTAL STRUCTURE OF THE HETEROTRIMERIC COMPLEX OF THE RGS DOMAIN OF RGS9, THE GAMMA SUBUNIT OF PHOSPHODIESTERASE AND THE GT/I1 CHIMERA ALPHA SUBUNIT [(RGS9)-(PDEGAMMA)-(GT/I1ALPHA)-(GDP)-(ALF4-)-(MG2+)]"
   },
   {
     "Sequence": "FLPLLILGSLLMTPPVIQAIHDAQR",
     "PDB": "1G92_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 25
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "18-NOV-03",
+    "Sequence_length": 25,
+    "Title": "SOLUTION STRUCTURE OF PONERATOXIN"
   },
   {
     "Sequence": "DQHFRGDNEEQEKLLKKSCTLYVGNLSFYTTEEQIYELFSKSGDIKKIIMGLDKMKTACGFCFVEYYSRADAENAMRYINGTRLDDRIIRTDWDAGFK",
     "PDB": "1H6K_X.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 98
+    "Organism_Scientific_Name": "HOMO SAPIENS",
+    "Keywords": "NUCLEAR PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "13-SEP-01",
+    "Sequence_length": 98,
+    "Title": "nuclear Cap Binding Complex"
   },
   {
     "Sequence": "LCTASIPPQCY",
     "PDB": "1HD9_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 11
+    "Organism_Scientific_Name": "synthetic construct",
+    "Keywords": "HYDROLASE INHIBITOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "29-MAR-01",
+    "Sequence_length": 11,
+    "Title": "The Bowman-Birk Inhibitor Reactive Site Loop Sequence Represents an Independent Structural Beta-Hairpin Motif"
   },
   {
     "Sequence": "HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
     "PDB": "1JRJ_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 39
+    "Keywords": "HORMONE/GROWTH FACTOR",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "21-NOV-01",
+    "Sequence_length": 39,
+    "Title": "Solution structure of exendin-4 in 30-vol% trifluoroethanol"
   },
   {
     "Sequence": "IWGIGCNP",
     "PDB": "1K83_M.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "SACCHAROMYCES CEREVISIAE",
+    "Keywords": "TRANSCRIPTION/TOXIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "13-FEB-02",
+    "Sequence_length": 8,
+    "Title": "Crystal Structure of Yeast RNA Polymerase II Complexed with the Inhibitor Alpha Amanitin"
   },
   {
     "Sequence": "CHWDLLVRHWVC",
     "PDB": "1MPV_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 12
+    "Keywords": "PROTEIN BINDING",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "30-OCT-02",
+    "Sequence_length": 12,
+    "Title": "Structure of bhpBR3, the BAFF-binding loop of BR3 embedded in a beta-hairpin peptide"
   },
   {
     "Sequence": "CAFXLPGGGGVCXLSECI",
     "PDB": "1MQX_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 18
+    "Organism_Scientific_Name": "BACILLUS SP. HIL-Y85/54728",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "11-MAR-03",
+    "Sequence_length": 18,
+    "Title": "NMR Solution Structure of Type-B Lantibiotics Mersacidin in MeOH/H2O Mixture"
   },
   {
     "Sequence": "CAFXLPGGGGVCXLASECI",
     "PDB": "1MQY_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Organism_Scientific_Name": "BACILLUS SP. HIL-Y85/54728",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "11-MAR-03",
+    "Sequence_length": 19,
+    "Title": "NMR solution structure of type-B lantibiotics mersacidin in DPC micelles"
   },
   {
     "Sequence": "CKFXLPGGGGVCXLKSECI",
     "PDB": "1MQZ_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Organism_Scientific_Name": "BACILLUS SP. HIL-Y85/54728",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "11-MAR-03",
+    "Sequence_length": 19,
+    "Title": "NMR solution structure of type-B lantibiotics mersacidin bound to lipid II in DPC micelles"
   },
   {
     "Sequence": "GDCPWKPWC",
     "PDB": "1NXN_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 9
+    "Organism_Scientific_Name": "synthetic construct",
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "04-MAR-03",
+    "Sequence_length": 9,
+    "Title": "SOLUTION STRUCTURE OF CONTRYPHAN-VN"
   },
   {
     "Sequence": "GEEEYQKMLENLREAEVKKNA",
     "PDB": "1ONT_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 21
+    "Organism_Scientific_Name": "Conus tulipa",
+    "Keywords": "ANTAGONIST",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "04-SEP-97",
+    "Sequence_length": 21,
+    "Title": "NMDA RECEPTOR ANTAGONIST, CONANTOKIN-T, NMR, 17 STRUCTURES"
   },
   {
     "Sequence": "GEEELQENQELIREKSN",
     "PDB": "1ONU_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 17
+    "Organism_Scientific_Name": "Conus geographus",
+    "Keywords": "ANTAGONIST",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "04-SEP-97",
+    "Sequence_length": 17,
+    "Title": "NMDA RECEPTOR ANTAGONIST, CONANTOKIN-G, NMR, 17 STRUCTURES"
   },
   {
     "Sequence": "AKKVFKRLEKLFAKIQNWK",
     "PDB": "1OT0_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Organism_Scientific_Name": "Helicobacter pylori",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "07-SEP-04",
+    "Sequence_length": 19,
+    "Title": "Structure of Antimicrobial Peptide, HP (2-20) and its Analogues Derived from Helicobacter pylori, as Determined by 1H NMR Spectroscopy"
   },
   {
     "Sequence": "AKKVFKRLEKLFSKIQNDK",
     "PDB": "1P0G_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Keywords": "RIBOSOME",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "20-MAY-03",
+    "Sequence_length": 19,
+    "Title": "Structure of Antimicrobial Peptide, HP (2-20) and its Analogues Derived from Helicobacter pylori, as Determined by 1H NMR Spectroscopy"
   },
   {
     "Sequence": "AKKVFKRLAKLFSKIQNWK",
     "PDB": "1P0J_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Keywords": "RIBOSOME",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "20-MAY-03",
+    "Sequence_length": 19,
+    "Title": "HP (2-20) Substitution ASP To TRP Modification In SDS-D25 Micelles"
   },
   {
     "Sequence": "AKKVFKALEKLFSKIWNDK",
     "PDB": "1P0L_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Keywords": "RIBOSOME",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "20-MAY-03",
+    "Sequence_length": 19,
+    "Title": "HP (2-20) Substitution GLN To TRP Modification In SDS-D25 MICELLES"
   },
   {
     "Sequence": "AKKVFKRLEKLFSKIWNWK",
     "PDB": "1P0O_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Keywords": "RIBOSOME",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "20-MAY-03",
+    "Sequence_length": 19,
+    "Title": "HP (2-20) substitution of Trp for Gln and Asp at position 17 and 19 MODIFICATION IN SDS-D25 MICELLES"
   },
   {
     "Sequence": "AKKVFKRLEKSFSKIQNAK",
     "PDB": "1P5K_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Keywords": "RIBOSOME",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "03-JUN-03",
+    "Sequence_length": 19,
+    "Title": "HP (2-20) Substitution SER to LEU11 modification in sds-d25 micelles"
   },
   {
     "Sequence": "AKKVSKRLEKLFSKIQNDK",
     "PDB": "1P5L_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 19
+    "Keywords": "RIBOSOME",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "03-JUN-03",
+    "Sequence_length": 19,
+    "Title": "HP (2-20) Substitution PHE5 to SER modification in sds-d25 micelles"
   },
   {
     "Sequence": "TYNNSNPFMT",
     "PDB": "1PD0_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 10
+    "Organism_Scientific_Name": "Saccharomyces cerevisiae",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "19-AUG-03",
+    "Sequence_length": 10,
+    "Title": "Crystal structure of the COPII coat subunit, Sec24, complexed with a peptide from the SNARE protein Sed5 (yeast syntaxin-5)"
   },
   {
     "Sequence": "QLKDLESQI",
     "PDB": "1PD1_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 9
+    "Organism_Scientific_Name": "Saccharomyces cerevisiae",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "19-AUG-03",
+    "Sequence_length": 9,
+    "Title": "Crystal structure of the COPII coat subunit, Sec24, complexed with a peptide containing the DxE cargo sorting signal of yeast Sys1 protein"
   },
   {
     "Sequence": "CANPACGRHYS",
     "PDB": "1QS3_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 11
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "06-OCT-99",
+    "Sequence_length": 11,
+    "Title": "NMR SOLUTION CONFORMATION OF AN ANTITOXIC ANALOG OF ALPHA-CONOTOXIN GI"
   },
   {
     "Sequence": "YPSKPDNPGEDAPAEDMARYYSALRHYINLITRQRY",
     "PDB": "1RON_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 36
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "NEUROPEPTIDE",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "17-AUG-96",
+    "Sequence_length": 36,
+    "Title": "NMR SOLUTION STRUCTURE OF HUMAN NEUROPEPTIDE Y"
   },
   {
     "Sequence": "GFASLPILKNG",
     "PDB": "1SBU_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 11
+    "Organism_Scientific_Name": "Conus ermineus",
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "24-FEB-04",
+    "Sequence_length": 11,
+    "Title": "NMR structure of a peptide containing a dimetylthiazolidine : an analog of delta conotoxin EVIA loop 2"
   },
   {
     "Sequence": "DLPKVAENLKSQLEGFNQDKLKNAS",
     "PDB": "1SQK_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 25
+    "Organism_Scientific_Name": "Oryctolagus cuniculus",
+    "Keywords": "STRUCTURAL PROTEIN/PROTEIN BINDING",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "15-JUN-04",
+    "Sequence_length": 25,
+    "Title": "CRYSTAL STRUCTURE OF CIBOULOT IN COMPLEX WITH SKELETAL ACTIN"
   },
   {
     "Sequence": "ILGKIWEGIKSLF",
     "PDB": "1T51_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "Opisthacanthus madagascariensis",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "19-OCT-04",
+    "Sequence_length": 13,
+    "Title": "Antibiotic Activity and Structural Analysis of a Scorpion-derived Antimicrobial peptide IsCT and Its Analogs"
   },
   {
     "Sequence": "ILGKIWKGIKSLF",
     "PDB": "1T52_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "Opisthacanthus madagascariensis",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "19-OCT-04",
+    "Sequence_length": 13,
+    "Title": "Antibiotic Activity and Structural Analysis of a Scorpion-derived Antimicrobial peptide IsCT and Its Analogs"
   },
   {
     "Sequence": "ILGKIAEGIKSLF",
     "PDB": "1T54_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "Opisthacanthus madagascariensis",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "19-OCT-04",
+    "Sequence_length": 13,
+    "Title": "Antibiotic Activity and Structural Analysis of a Scorpion-derived Antimicrobial peptide IsCT and Its Analogs"
   },
   {
     "Sequence": "ILGKIWKPIKKLF",
     "PDB": "1T55_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "Opisthacanthus madagascariensis",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "19-OCT-04",
+    "Sequence_length": 13,
+    "Title": "Antibiotic Activity and Structural Analysis of a Scorpion-derived Antimicrobial peptide IsCT and Its Analogs"
   },
   {
     "Sequence": "GLFDKLKSLVSDF",
     "PDB": "1VM2_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "07-DEC-04",
+    "Sequence_length": 13,
+    "Title": "Solution structure of an anticancer peptide designed based on the N-terminal sequence of E. coli enzyme IIA (Glucose)"
   },
   {
     "Sequence": "GLFDIVKSLVSDF",
     "PDB": "1VM3_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "synthetic construct",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "07-DEC-04",
+    "Sequence_length": 13,
+    "Title": "Solution structure of a membrane-targeting peptide designed based on the N-terminal sequence of E. coli enzyme IIA (Glucose)"
   },
   {
     "Sequence": "GLFDIVKKLVSDF",
     "PDB": "1VM4_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "synthetic construct",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "07-DEC-04",
+    "Sequence_length": 13,
+    "Title": "Solution structure of an antibacterial and antitumor peptide designed based on the N-terminal membrane anchor of E. coli enzyme IIA (Glucose)"
   },
   {
     "Sequence": "GLFDIIKKIAESF",
     "PDB": "1VM5_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 13
+    "Organism_Scientific_Name": "synthetic construct",
+    "Keywords": "ANTIBIOTIC",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "07-DEC-04",
+    "Sequence_length": 13,
+    "Title": "Solution structure of micelle-bound aurein 1.2, an antimicrobial and anticancer peptide from an Australian frog"
   },
   {
     "Sequence": "GSSGSSGMAVFHDEVEIEDFQYDEDSETYFYPCPCGDNFAITKEDLENGEDVATCPSCSLIIKVIYDKDQFMCGETVSGPSSG",
     "PDB": "1WGE_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 83
+    "Organism_Scientific_Name": "Mus musculus",
+    "Keywords": "METAL BINDING PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "23-AUG-05",
+    "Sequence_length": 83,
+    "Title": "Solution structure of the mouse DESR1"
   },
   {
     "Sequence": "ALETQKPNHLLEEALVAFAKKGNLGGLP",
     "PDB": "1WN4_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 28
+    "Keywords": "PLANT PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "14-SEP-04",
+    "Sequence_length": 28,
+    "Title": "NMR Structure of VoNTR"
   },
   {
     "Sequence": "GVKSSETTLTMFLKEMQLKGLP",
     "PDB": "1WN8_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 22
+    "Keywords": "PLANT PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "14-SEP-04",
+    "Sequence_length": 22,
+    "Title": "NMR Structure of OaNTR"
   },
   {
     "Sequence": "GFFALIPKIISSPLFKTLLSAVGSALSSSGGQE",
     "PDB": "1XC0_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 33
+    "Keywords": "SIGNALING PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "28-SEP-04",
+    "Sequence_length": 33,
+    "Title": "Twenty Lowest Energy Structures of Pa4 by Solution NMR"
   },
   {
     "Sequence": "YIQNCPLG",
     "PDB": "1XY2_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Keywords": "HORMONE",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "16-APR-88",
+    "Sequence_length": 8,
+    "Title": "CRYSTAL STRUCTURE ANALYSIS OF DEAMINO-OXYTOCIN. CONFORMATIONAL FLEXIBILITY AND RECEPTOR BINDING"
   },
   {
     "Sequence": "MAQDIISTIGDLVKWIIDTVNKFTKK",
     "PDB": "2DTB_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 26
+    "Organism_Scientific_Name": "Staphylococcus aureus",
+    "Keywords": "TOXIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "31-OCT-93",
+    "Sequence_length": 26,
+    "Title": "DELTA-TOXIN AND ANALOGUES AS PEPTIDE MODELS FOR PROTEIN ION CHANNELS"
   },
   {
     "Sequence": "CGETCVGGTCNTPGCTCSWPVCTRNGLPV",
     "PDB": "2JUE_A.pdb",
-    "Cyclization": "e2e with s2s",
+    "Cyclization": "e2e+s2s",
     "Organism_Scientific_Name": "Oldenlandia affinis",
     "Keywords": "CYCLOTIDE, CYCLIC BACKBONE, CYSTINE KNOT, CCK, INSECTICIDAL, ANTIBIOTIC; CYCLOTIDE, CYCLIC PEPTIDE, KNOTTIN, CYSTINE KNOT, ANTIMICROBIAL PEPTIDE, PLANT PROTEIN, ANTIBIOTIC",
     "Method": "SOLUTION NMR",
     "Release_Date": "01-DEC-02; 12-MAY-05",
-    "Sequence_length": 29
+    "Sequence_length": 29,
+    "Title": "Solution structure of the all-D kalata B1"
   },
   {
     "Sequence": "CYIQNCPLG",
     "PDB": "2MGO_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 9
+    "Keywords": "HORMONE",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "22-OCT-14",
+    "Sequence_length": 9,
+    "Title": "NMR solution structure of oxytocin"
   },
   {
     "Sequence": "GIGAVLKVLTTGLPALISWIKRKRQQ",
     "PDB": "2MLT_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 26
+    "Organism_Scientific_Name": "Apis mellifera",
+    "Keywords": "TOXIN (HEMOLYTIC POLYPEPTIDE)",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "15-OCT-90",
+    "Sequence_length": 26,
+    "Title": "MELITTIN"
   },
   {
     "Sequence": "PSQPPINAVSGQTPHLNRKANDGWNDLPLKVKEKPSRAKAVSVAPPNIL",
     "PDB": "2QTV_D.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 49
+    "Organism_Scientific_Name": "Saccharomyces cerevisiae",
+    "Keywords": "PROTEIN TRANSPORT",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "15-JAN-08",
+    "Sequence_length": 49,
+    "Title": "Structure of Sec23-Sar1 complexed with the active fragment of Sec31"
   },
   {
     "Sequence": "NPIWGIGC",
     "PDB": "2VUM_M.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "SACCHAROMYCES CEREVISIAE",
+    "Keywords": "TRANSFERASE",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "17-JUN-08",
+    "Sequence_length": 8,
+    "Title": "Alpha-amanitin inhibited complete RNA polymerase II elongation complex"
   },
   {
     "Sequence": "SDKPASTSGTGFGDKFKPAIGTWDCDTCLVQNKPEAVKCVACETPKPGTGVK",
     "PDB": "3CH5_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 52
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "01-JUL-08",
+    "Sequence_length": 52,
+    "Title": "The crystal structure of the RanGDP-Nup153ZnF2 complex"
   },
   {
     "Sequence": "LDKEAVYFCHLDIIW",
     "PDB": "3CMH_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 15
+    "Keywords": "CONTRACTILE PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "29-SEP-99",
+    "Sequence_length": 15,
+    "Title": "SYNTHETIC LINEAR TRUNCATED ENDOTHELIN-1 AGONIST"
   },
   {
     "Sequence": "IWGIGCNP",
     "PDB": "3CQZ_M.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "SACCHAROMYCES CEREVISIAE",
+    "Keywords": "TRANSCRIPTION/TOXIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "22-JUL-08",
+    "Sequence_length": 8,
+    "Title": "Crystal structure of 10 subunit RNA polymerase II in complex with the inhibitor alpha-amanitin"
   },
   {
     "Sequence": "MSISASEARQRLFPLIEQVNTDHQPVRITSRAGDAVLMSADDYDAWQETVYLLRSPENARRLMEAVARDKAGHSAFTKSVDELREMAGGEE",
     "PDB": "3CTO_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 91
+    "Organism_Scientific_Name": "Mycobacterium tuberculosis",
+    "Keywords": "TOXIN INHIBITOR",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "02-DEC-08",
+    "Sequence_length": 91,
+    "Title": "Crystal Structure of M. tuberculosis YefM antitoxin"
   },
   {
     "Sequence": "GPLGSGTWDCDTCLVQNKPEAVKCVACETPKPG",
     "PDB": "3GJ3_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 33
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "04-AUG-09",
+    "Sequence_length": 33,
+    "Title": "Crystal structure of human RanGDP-Nup153ZnF2 complex"
   },
   {
     "Sequence": "GPLGSGSWDCEVCLVQNKADSTKCIACESAKPGT",
     "PDB": "3GJ5_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 34
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "04-AUG-09",
+    "Sequence_length": 34,
+    "Title": "Crystal structure of human RanGDP-Nup153ZnF4 complex"
   },
   {
     "Sequence": "GPLGSAGSSWQCDTCLLQNKVTDNKCIACQAAKLPLKETAKQTGIGTPSKSDKPASTSGTGFGDKFKPAIGTWDCDTCLVQNKPEAVKCVACETPKPG",
     "PDB": "3GJ7_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 98
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "04-AUG-09",
+    "Sequence_length": 98,
+    "Title": "Crystal structure of human RanGDP-Nup153ZnF12 complex"
   },
   {
     "Sequence": "GPLGSVGSWECPVCCVSNKAEDSRCVSCTSEKPGLVSASSSNSVPVSLPSGGCLGLDKFKKPEGSWDCEVCLVQNKADSTKCIACESAKPGT",
     "PDB": "3GJ8_B.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 92
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "TRANSPORT PROTEIN",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "04-AUG-09",
+    "Sequence_length": 92,
+    "Title": "Crystal structure of human RanGDP-Nup153ZnF34 complex"
   },
   {
     "Sequence": "GUAUGUAU",
     "PDB": "3JB9_O.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 8
+    "Organism_Scientific_Name": "Schizosaccharomyces pombe 972h-",
+    "Keywords": "RNA BINDING PROTEIN/RNA",
+    "Method": "ELECTRON MICROSCOPY",
+    "Release_Date": "23-SEP-15",
+    "Sequence_length": 8,
+    "Title": "Cryo-EM structure of the yeast spliceosome at 3.6 angstrom resolution"
   },
   {
     "Sequence": "GAMSCVYAFGSNGQRQLGLGHDEDMDTPQRSVPGDDGAIVRKIACGGNHSVMLTNDGNLVGCGDNRRGELDSAQALRQVHDWRPVEVPAPVVDVACGWDTTVIVDADGRVWQRGGGCYEFTQQHVPLNSNDERIAVYGCFQNFVVVQGTRVYGWGSNTKCQLQEPKSRSLKEPVLVYDTGSVAVDYVAMGKDFMVIVDEGGRIVHASGRLPTGFELKQQQKRHNLVVLCMWTSIHLWNARLNTVESFGRGTHSQLFPQERLDFPIVGVATGSEHGILTTANQEGKSHCYNVYCWGWGEHGNCGPQKGSQPGLQLVGQYSGKPRVFGGCATTWIVLGSGSGSGSGSMSTYDEIEIEDMTFEPENQMFTYPCPCGDRFQIYLDDMFEGEKVAVCPSCSLMIDVVFDKEDLAEYYEEAGIHPPEPIAAAA",
     "PDB": "4D4O_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 427
+    "Organism_Scientific_Name": "Saccharomyces cerevisiae",
+    "Keywords": "TRANSLATION",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "14-JAN-15",
+    "Sequence_length": 427,
+    "Title": "Crystal Structure of the Kti11 Kti13 heterodimer Spacegroup P64"
   },
   {
     "Sequence": "GAMSCVYAFGSNGQRQLGLGHDEDMDTPQRSVPGDDGAIVRKIACGGNHSVMLTNDGNLVGCGDNRRGELDSAQALRQVHDWRPVEVPAPVVDVACGWDTTVIVDADGRVWQRGGGCYEFTQQHVPLNSNDERIAVYGCFQNFVVVQGTRVYGWGSNTKCQLQEPKSRSLKEPVLVYDTGSVAVDYVAMGKDFMVIVDEGGRIVHASGRLPTGFELKQQQKRHNLVVLCMWTSIHLWNARLNTVESFGRGTHSQLFPQERLDFPIVGVATGSEHGILTTANQEGKSHCYNVYCWGWGEHGNCGPQKGSQPGLQLVGQYSGKPRVFGGCATTWIVLGSGSGSGSGSMSTYDEIEIEDMTFEPENQMFTYPCPCGDRFQIYLDDMFEGEKVAVCPSCSLMIDVVFDKEDLAEYYEEAGIHPPEPIAAAA",
     "PDB": "4D4P_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 427
+    "Organism_Scientific_Name": "SACCHAROMYCES CEREVISIAE",
+    "Keywords": "TRANSLATION",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "14-JAN-15",
+    "Sequence_length": 427,
+    "Title": "Crystal Structure of the Kti11 Kti13 heterodimer Spacegroup P65"
   },
   {
     "Sequence": "CSASSLLDKEAVYFCHLDIIW",
     "PDB": "6CMH_A.pdb",
     "Cyclization": "Unknown",
     "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 21
+    "Keywords": "CONTRACTILE PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "29-SEP-99",
+    "Sequence_length": 21,
+    "Title": "SYNTHETIC LINEAR MODIFIED ENDOTHELIN-1 AGONIST"
   },
   {
     "Sequence": "CYWAVCT",
     "PDB": "7Q5G_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 7
+    "Organism_Scientific_Name": "Homo sapiens",
+    "Keywords": "HORMONE",
+    "Method": "X-RAY DIFFRACTION",
+    "Release_Date": "02-FEB-22",
+    "Sequence_length": 7,
+    "Title": "LAN-DAP5 DERIVATIVE OF LANREOTIDE: L-DIAMINO PROPIONIC ACID IN POSITION 5 IN PLACE OF L-LYSINE"
   },
   {
     "Sequence": "LKCNKLIPLAYKTCPAGKNLCYKMFMVSNKTVPVKRGCIDVCPKNSLLVKYVCCNTDRCN",
@@ -9987,16 +10055,18 @@
     "Keywords": "S-TYPE CYTOTOXIN, COBRA VENOM, THREE-FINGER PROTEIN, MEMBRANE-ACTIVE POLYPEPTIDE, TOXIN",
     "Method": "SOLUTION NMR",
     "Release_Date": "30-MAR-21",
-    "Sequence_length": 60
+    "Sequence_length": 60,
+    "Title": "Crystal structure of cytotoxin 13 from Naja naja, orthorhombic form"
   },
   {
     "Sequence": "LETVLSLSI",
     "PDB": "8S2C_A.pdb",
     "Cyclization": "Unknown",
-    "Organism_Scientific_Name": "Unknown",
-    "Keywords": "Unknown",
-    "Method": "Unknown",
-    "Release_Date": "",
-    "Sequence_length": 9
+    "Organism_Scientific_Name": "Pseudomonas fluorescens SBW25",
+    "Keywords": "SURFACTANT PROTEIN",
+    "Method": "SOLUTION NMR",
+    "Release_Date": "26-FEB-25",
+    "Sequence_length": 9,
+    "Title": "NMR structure of viscosin in micellar DPC solution"
   }
 ]
