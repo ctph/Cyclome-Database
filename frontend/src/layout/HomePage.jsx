@@ -16,7 +16,7 @@ const HomePage = ({ allOptions }) => {
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>
         <Header />
         <div style={{ marginLeft: "20px", width: "calc(100% - 40px)" }}>
-          <h2 style={{ fontFamily: "Arial, sans-serif" }}>PDB_ID Search Bar</h2>
+          <h2 style={{ fontFamily: "Arial, sans-serif" }}>PDB Search</h2>
           <SearchBar allOptions={allOptions} />
         </div>
 
@@ -28,7 +28,7 @@ const HomePage = ({ allOptions }) => {
           }}
         >
           <h2 style={{ fontFamily: "Arial, sans-serif" }}>
-            PDB Sequence Search Bar
+            Sequence Search
           </h2>
           <SequenceSearchBar allOptions={allOptions} />
         </div>
