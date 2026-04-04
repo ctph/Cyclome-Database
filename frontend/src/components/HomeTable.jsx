@@ -6,23 +6,16 @@ const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
 
 const HomeTable = () => {
   const [rawMap, setRawMap] = useState({});
-  const [metadataRows, setMetadataRows] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Promise.all([
-      fetch("/home_page_table_with_filenames.json").then((res) => {
+    fetch("/home_page_table_with_filenames.json")
+      .then((res) => {
         if (!res.ok) throw new Error("Failed to load homepage JSON");
         return res.json();
-      }),
-      fetch("/static/cyclome_for_website_with_metadata.json").then((res) => {
-        if (!res.ok) throw new Error("Failed to load metadata JSON");
-        return res.json();
-      }),
-    ])
-      .then(([homeData, metadataData]) => {
-        setRawMap(homeData || {});
-        setMetadataRows(Array.isArray(metadataData) ? metadataData : []);
+      })
+      .then((data) => {
+        setRawMap(data || {});
         setLoading(false);
       })
       .catch((err) => {
@@ -47,58 +40,22 @@ const HomeTable = () => {
         });
       }
 
-      const chainId = String(info.filename || "")
-        .toLowerCase()
-        .replace(/\.pdb$/i, "")
-        .trim();
-
-      if (chainId) {
-        seqMap.get(sequence).pdbs.set(chainId, {
-          baseId,
-          chainId,
-          downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
-        });
-      }
-    });
-
-    metadataRows.forEach((row) => {
-      const sequence = String(row.Sequence || "").trim();
-      if (!sequence) return;
-
-      if (!seqMap.has(sequence)) {
-        seqMap.set(sequence, {
-          key: sequence,
-          sequence,
-          melting_point:
-            row.STop2Melt_K ??
-            row.Melting_point_K ??
-            row.CyMelt_K ??
-            row["CyMelt (K)"] ??
-            "-",
-          pdbs: new Map(),
-        });
-      }
-
       const entry = seqMap.get(sequence);
-      if (entry.melting_point === "-") {
-        entry.melting_point =
-          row.STop2Melt_K ??
-          row.Melting_point_K ??
-          row.CyMelt_K ??
-          row["CyMelt (K)"] ??
-          "-";
-      }
+      const filenames = Array.isArray(info.filenames)
+        ? info.filenames
+        : info.filename
+          ? [info.filename]
+          : [];
 
-      String(row.PDB || "")
-        .split(";")
-        .map((pdb) => pdb.trim())
+      filenames
+        .map((pdb) => String(pdb || "").trim())
         .filter(Boolean)
         .forEach((pdb) => {
           const chainId = pdb.toLowerCase().replace(/\.pdb$/i, "").trim();
           if (!chainId) return;
 
           entry.pdbs.set(chainId, {
-            baseId: chainId.split("_")[0].toUpperCase(),
+            baseId,
             chainId,
             downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
           });
@@ -111,7 +68,7 @@ const HomeTable = () => {
         a.chainId.localeCompare(b.chainId, undefined, { numeric: true }),
       ),
     }));
-  }, [rawMap, metadataRows]);
+  }, [rawMap]);
 
   const columns = [
     {
