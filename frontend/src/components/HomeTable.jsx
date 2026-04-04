@@ -70,7 +70,11 @@ const HomeTable = () => {
           key: sequence,
           sequence,
           melting_point:
-            row.Melting_point_K ?? row.CyMelt_K ?? row["CyMelt (K)"] ?? "-",
+            row.STop2Melt_K ??
+            row.Melting_point_K ??
+            row.CyMelt_K ??
+            row["CyMelt (K)"] ??
+            "-",
           pdbs: new Map(),
         });
       }
@@ -78,7 +82,11 @@ const HomeTable = () => {
       const entry = seqMap.get(sequence);
       if (entry.melting_point === "-") {
         entry.melting_point =
-          row.Melting_point_K ?? row.CyMelt_K ?? row["CyMelt (K)"] ?? "-";
+          row.STop2Melt_K ??
+          row.Melting_point_K ??
+          row.CyMelt_K ??
+          row["CyMelt (K)"] ??
+          "-";
       }
 
       String(row.PDB || "")
