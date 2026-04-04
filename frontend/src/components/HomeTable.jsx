@@ -6,16 +6,23 @@ const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
 
 const HomeTable = () => {
   const [rawMap, setRawMap] = useState({});
+  const [metadataRows, setMetadataRows] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/home_page_table_with_filenames.json")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to load JSON");
+    Promise.all([
+      fetch("/home_page_table_with_filenames.json").then((res) => {
+        if (!res.ok) throw new Error("Failed to load homepage JSON");
         return res.json();
-      })
-      .then((data) => {
-        setRawMap(data || {});
+      }),
+      fetch("/static/cyclome_for_website_with_metadata.json").then((res) => {
+        if (!res.ok) throw new Error("Failed to load metadata JSON");
+        return res.json();
+      }),
+    ])
+      .then(([homeData, metadataData]) => {
+        setRawMap(homeData || {});
+        setMetadataRows(Array.isArray(metadataData) ? metadataData : []);
         setLoading(false);
       })
       .catch((err) => {
@@ -24,14 +31,11 @@ const HomeTable = () => {
       });
   }, []);
 
-  /**
-   * Group entries by sequences
-   */
   const groupedRows = useMemo(() => {
     const seqMap = new Map();
 
     Object.entries(rawMap).forEach(([baseId, info]) => {
-      const sequence = info.sequence;
+      const sequence = String(info.sequence || "").trim();
       if (!sequence) return;
 
       if (!seqMap.has(sequence)) {
@@ -39,23 +43,67 @@ const HomeTable = () => {
           key: sequence,
           sequence,
           melting_point: info.melting_point_K ?? "-",
-          pdbs: [],
+          pdbs: new Map(),
         });
       }
 
       const chainId = String(info.filename || "")
         .toLowerCase()
-        .replace(/\.pdb$/i, "");
+        .replace(/\.pdb$/i, "")
+        .trim();
 
-      seqMap.get(sequence).pdbs.push({
-        baseId,
-        chainId,
-        downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
-      });
+      if (chainId) {
+        seqMap.get(sequence).pdbs.set(chainId, {
+          baseId,
+          chainId,
+          downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
+        });
+      }
     });
 
-    return Array.from(seqMap.values());
-  }, [rawMap]);
+    metadataRows.forEach((row) => {
+      const sequence = String(row.Sequence || "").trim();
+      if (!sequence) return;
+
+      if (!seqMap.has(sequence)) {
+        seqMap.set(sequence, {
+          key: sequence,
+          sequence,
+          melting_point:
+            row.Melting_point_K ?? row.CyMelt_K ?? row["CyMelt (K)"] ?? "-",
+          pdbs: new Map(),
+        });
+      }
+
+      const entry = seqMap.get(sequence);
+      if (entry.melting_point === "-") {
+        entry.melting_point =
+          row.Melting_point_K ?? row.CyMelt_K ?? row["CyMelt (K)"] ?? "-";
+      }
+
+      String(row.PDB || "")
+        .split(";")
+        .map((pdb) => pdb.trim())
+        .filter(Boolean)
+        .forEach((pdb) => {
+          const chainId = pdb.toLowerCase().replace(/\.pdb$/i, "").trim();
+          if (!chainId) return;
+
+          entry.pdbs.set(chainId, {
+            baseId: chainId.split("_")[0].toUpperCase(),
+            chainId,
+            downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
+          });
+        });
+    });
+
+    return Array.from(seqMap.values()).map((entry) => ({
+      ...entry,
+      pdbs: Array.from(entry.pdbs.values()).sort((a, b) =>
+        a.chainId.localeCompare(b.chainId, undefined, { numeric: true }),
+      ),
+    }));
+  }, [rawMap, metadataRows]);
 
   const columns = [
     {
