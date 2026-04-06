@@ -3,10 +3,12 @@ from __future__ import annotations
 from typing import Any, Dict
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 from flask_similarity_service import cyclicity_aware_similarity
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
 
 
 def json_error(message: str, status: int = 400):
