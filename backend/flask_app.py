@@ -6,6 +6,11 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from flask_similarity_service import cyclicity_aware_similarity
+from flask_stop2melt_service import (
+    predict_stop2melt,
+    predict_stop2melt_batch,
+    stop2melt_healthcheck,
+)
 
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
@@ -120,6 +125,81 @@ def cyclic_sequence_similarity_batch():
         ),
         status,
     )
+
+
+def parse_stop2melt_request(payload: Dict[str, Any]):
+    sequence = require_string(payload, "sequence")
+    cyclization_pattern = payload.get("cyclization_pattern", "")
+    if cyclization_pattern is None:
+        cyclization_pattern = ""
+    if not isinstance(cyclization_pattern, str):
+        raise ValueError("cyclization_pattern must be a string")
+
+    return {
+        "sequence": sequence,
+        "cyclization_pattern": cyclization_pattern,
+    }
+
+
+@app.get("/api/predict/stop2melt/health")
+def stop2melt_health():
+    try:
+        return jsonify(stop2melt_healthcheck())
+    except FileNotFoundError as exc:
+        return json_error(str(exc), 503)
+    except Exception as exc:
+        return json_error(f"Stop2Melt model unavailable: {exc}", 503)
+
+
+@app.post("/api/predict/stop2melt")
+def stop2melt_predict():
+    if not request.is_json:
+        return json_error("Request body must be JSON", 400)
+
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return json_error("Request body must be a JSON object", 400)
+
+    try:
+        result = predict_stop2melt(**parse_stop2melt_request(payload))
+        return jsonify(result)
+    except ValueError as exc:
+        return json_error(str(exc), 400)
+    except FileNotFoundError as exc:
+        return json_error(str(exc), 503)
+    except Exception as exc:
+        return json_error(f"Stop2Melt inference failed: {exc}", 500)
+
+
+@app.post("/api/predict/stop2melt/batch")
+def stop2melt_predict_batch_route():
+    if not request.is_json:
+        return json_error("Request body must be JSON", 400)
+
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return json_error("Request body must be a JSON object", 400)
+
+    items = payload.get("items")
+    if not isinstance(items, list) or len(items) == 0:
+        return json_error("items must be a non-empty array", 400)
+
+    normalized_items = []
+    for index, item in enumerate(items):
+        if not isinstance(item, dict):
+            return json_error(f"items[{index}] must be a JSON object", 400)
+        try:
+            normalized_items.append(parse_stop2melt_request(item))
+        except ValueError as exc:
+            return json_error(f"items[{index}]: {exc}", 400)
+
+    try:
+        result = predict_stop2melt_batch(normalized_items)
+        return jsonify(result)
+    except FileNotFoundError as exc:
+        return json_error(str(exc), 503)
+    except Exception as exc:
+        return json_error(f"Stop2Melt batch inference failed: {exc}", 500)
 
 
 if __name__ == "__main__":
