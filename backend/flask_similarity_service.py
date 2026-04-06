@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from typing import Any, Dict, List, Tuple
 
 
@@ -231,7 +231,7 @@ def cyclicity_aware_similarity(
     if best_result is None:
         raise ValueError("No candidate templates could be generated.")
 
-    response = {
+    return {
         "query_sequence": query_seq,
         "template_sequence": template_seq,
         "template_cyclization": [list(pair) for pair in bridges],
@@ -241,6 +241,7 @@ def cyclicity_aware_similarity(
         "best_alignment_score": best_result.score,
         "best_similarity_percent": round(best_result.similarity_percent, 2),
         "best_identity_percent": round(best_result.identity_percent, 2),
+        "aligned_query": best_result.aligned_query,
+        "aligned_template": best_result.aligned_template,
+        "match_line": best_result.match_line,
     }
-    response.update(asdict(best_result))
-    return response
