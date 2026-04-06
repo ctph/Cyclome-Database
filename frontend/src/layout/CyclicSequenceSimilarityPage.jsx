@@ -20,9 +20,8 @@ const { Title, Text, Paragraph } = Typography;
 const { TextArea } = Input;
 
 const FLASK_API_BASE = process.env.REACT_APP_FLASK_API_BASE || "http://localhost:5002";
-const COLAB_URL = process.env.REACT_APP_CYCLIC_COLAB_URL || "#";
 const GITHUB_URL =
-  process.env.REACT_APP_CYCLIC_GITHUB_URL || "https://github.com/cyclome930";
+  process.env.REACT_APP_CYCLIC_GITHUB_URL || "https://github.com/ctph/Cyclome-Database";
 
 function normalizeBatchRows(rawText) {
   return String(rawText || "")
@@ -182,9 +181,6 @@ export default function CyclicSequenceSimilarityPage() {
               <Button type="primary" htmlType="submit" form="cyclic-seq-form" loading={loading}>
                 Run
               </Button>
-              <Button href={COLAB_URL} target="_blank" rel="noopener noreferrer">
-                Colab
-              </Button>
               <Button href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                 GitHub
               </Button>
@@ -195,8 +191,13 @@ export default function CyclicSequenceSimilarityPage() {
               showIcon
               message={
                 batchMode
-                  ? "Batch mode expects one item per line in this format: query_sequence[TAB]template_sequence[TAB]template_cyclization"
+                  ? "Batch mode: one row per line. Separate values with real tab characters in this order: query sequence, template sequence, cyclization. The third value is optional."
                   : "Single mode sends one cyclic similarity request to the Flask backend."
+              }
+              description={
+                batchMode
+                  ? "Example: ACDEFG[TAB]ACDFGG[TAB]1-6, 2-4 — when pasting from a spreadsheet, tabs usually come through automatically."
+                  : null
               }
             />
 
@@ -249,8 +250,8 @@ export default function CyclicSequenceSimilarityPage() {
                   <TextArea
                     rows={10}
                     placeholder={[
-                      "ACDEFG\tACDFGG\t1-6, 2-4",
-                      "AAAA\tAAAB\t",
+                      "ACDEFG    ACDFGG    1-6, 2-4",
+                      "AAAA    AAAB",
                     ].join("\n")}
                   />
                 </Form.Item>
