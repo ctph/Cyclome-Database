@@ -196,7 +196,7 @@ export default function CyclicSequenceSimilarityPage() {
               }
               description={
                 batchMode
-                  ? "Example: ACDEFG[TAB]ACDFGG[TAB]1-6, 2-4 — when pasting from a spreadsheet, tabs usually come through automatically."
+                  ? "Example row: ACDEFG, then ACDFGG, then 1-6, 2-4 in three tab-separated columns. If you paste from a spreadsheet, the tabs usually come through automatically."
                   : null
               }
             />
