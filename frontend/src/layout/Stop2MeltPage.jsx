@@ -177,7 +177,7 @@ export default function Stop2MeltPage() {
               description={
                 batchMode
                   ? "Example row: AKLAFKKLFQLICCCFK, then a tab, then 1-8. The second field is optional."
-                  : "If the model is cold, the first prediction can take noticeably longer while assets load."
+                  : "The first prediction may take a little longer while the model and its files load."
               }
             />
 
