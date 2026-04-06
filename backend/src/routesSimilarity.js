@@ -4,6 +4,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 import express from "express";
 
+const FLASK_BASE_URL = process.env.FLASK_BACKEND_URL || "http://127.0.0.1:5002";
+
 const router = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -166,6 +168,66 @@ router.get("/batch/:threshold", (req, res) => {
     });
   }
 });
+async function proxyJson(req, res, flaskPath, { method = "GET", body } = {}) {
+  try {
+    const response = await fetch(`${FLASK_BASE_URL}${flaskPath}`, {
+      method,
+      headers: { "Content-Type": "application/json" },
+      body: body ? JSON.stringify(body) : undefined,
+    });
+
+    const text = await response.text();
+    const contentType = response.headers.get("content-type") || "application/json";
+
+    res.status(response.status);
+    res.setHeader("Content-Type", contentType);
+    return res.send(text);
+  } catch (error) {
+    console.error(`[similarity] Flask proxy error for ${flaskPath}:`, error);
+    return res.status(502).json({
+      error: "Flask backend unavailable",
+      detail: String(error.message || error),
+      flaskBaseUrl: FLASK_BASE_URL,
+    });
+  }
+}
+
+router.get("/cyclic-sequence/health", async (req, res) => {
+  await proxyJson(req, res, "/api/health");
+});
+
+router.post("/cyclic-sequence", async (req, res) => {
+  await proxyJson(req, res, "/api/similarity/cyclic-sequence", {
+    method: "POST",
+    body: req.body,
+  });
+});
+
+router.post("/cyclic-sequence/batch", async (req, res) => {
+  await proxyJson(req, res, "/api/similarity/cyclic-sequence/batch", {
+    method: "POST",
+    body: req.body,
+  });
+});
+
+router.get("/stop2melt/health", async (req, res) => {
+  await proxyJson(req, res, "/api/predict/stop2melt/health");
+});
+
+router.post("/stop2melt", async (req, res) => {
+  await proxyJson(req, res, "/api/predict/stop2melt", {
+    method: "POST",
+    body: req.body,
+  });
+});
+
+router.post("/stop2melt/batch", async (req, res) => {
+  await proxyJson(req, res, "/api/predict/stop2melt/batch", {
+    method: "POST",
+    body: req.body,
+  });
+});
+
 // Single lookup
 // Full URL becomes: /api/similarity/:pdbId/:threshold
 router.get("/:pdbId/:threshold", (req, res) => {
