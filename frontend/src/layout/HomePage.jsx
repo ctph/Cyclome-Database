@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import "./HomePage.css";
 import SearchBar from "../components/SearchBar";
 import HomeTable from "../components/HomeTable";
 import Header from "../components/Header";
-import { Space } from "antd";
+import { Button, Space } from "antd";
 import SequenceSearchBar from "../components/SequenceSearchBar";
 
 const HomePage = ({ allOptions }) => {
@@ -32,6 +33,23 @@ const HomePage = ({ allOptions }) => {
           </h2>
           <SequenceSearchBar allOptions={allOptions} />
         </div>
+        <div
+          style={{
+            marginLeft: "20px",
+            width: "calc(100% - 40px)",
+            marginTop: "8px",
+          }}
+        >
+          <h2 style={{ fontFamily: "Arial, sans-serif" }}>
+            Tools
+          </h2>
+          <Space wrap>
+            <Link to="/cyclic-sequence-similarity">
+              <Button type="primary">Cyclic Sequence Similarity</Button>
+            </Link>
+          </Space>
+        </div>
+
         <div style={{ marginTop: 32 }}>
           <HomeTable />
         </div>

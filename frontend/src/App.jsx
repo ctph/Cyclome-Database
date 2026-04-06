@@ -3,6 +3,7 @@ import HomePage from "./layout/HomePage";
 import SimilarityPage from "./layout/SimilarityPage";
 import CyclizationPage from "./layout/CyclizationPage";
 import PdbPage from "./layout/PdbPage";
+import CyclicSequenceSimilarityPage from "./layout/CyclicSequenceSimilarityPage";
 // import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -20,6 +21,11 @@ export default function App() {
         <Route
           path="/cyclization/:pdbId/:cyclization"
           element={<CyclizationPage />}
+        />
+
+        <Route
+          path="/cyclic-sequence-similarity"
+          element={<CyclicSequenceSimilarityPage />}
         />
 
         {/* <Route path="*" element={<NotFound />} /> */}
