@@ -47,6 +47,9 @@ const HomePage = ({ allOptions }) => {
             <Link to="/cyclic-sequence-similarity">
               <Button type="primary">Cyclic Sequence Similarity</Button>
             </Link>
+            <Link to="/stop2melt">
+              <Button>STop2Melt</Button>
+            </Link>
           </Space>
         </div>
 
