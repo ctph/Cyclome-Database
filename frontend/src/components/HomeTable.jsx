@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Table, Tag } from "antd";
+import { Button, Space, Table, Tag } from "antd";
 import { Link } from "react-router-dom";
+import { ORIGINAL_PDB_CHAIN_IDS } from "../generated/originalPdbs";
 
 const API_BASE = process.env.REACT_APP_API_BASE || "";
 
@@ -57,6 +58,7 @@ const HomeTable = () => {
           entry.pdbs.set(chainId, {
             baseId,
             chainId,
+            isOriginal: ORIGINAL_PDB_CHAIN_IDS.has(chainId),
             downloadUrl: `${API_BASE}/api/pdb/file/${chainId}`,
           });
         });
@@ -110,16 +112,24 @@ const HomeTable = () => {
       {
         title: "Actions",
         key: "actions",
-        render: (_, row) => (
-          <>
-            <Link to={`/pdb/${row.chainId}`} style={{ marginRight: 8 }}>
-              View 3D
-            </Link>
-            <a href={row.downloadUrl} download>
-              Download
-            </a>
-          </>
-        ),
+        render: (_, row) =>
+          row.isOriginal ? (
+            <Space>
+              <Link to={`/pdb/${row.chainId}`}>View 3D</Link>
+              <a href={row.downloadUrl} download>
+                Download
+              </a>
+            </Space>
+          ) : (
+            <Button
+              type="link"
+              href={`https://www.rcsb.org/structure/${String(row.baseId || "").toUpperCase()}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on RCSB
+            </Button>
+          ),
       },
     ];
 
