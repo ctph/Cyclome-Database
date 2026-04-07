@@ -13,6 +13,7 @@ const META_PATH = path.resolve(
 const metaData = JSON.parse(fs.readFileSync(META_PATH, "utf-8"));
 
 const PDB_DIR = getPdbDirAbs();
+const ORIGINAL_PDB_DIR = path.resolve("metadata", "cyclic_pdbs_orig");
 if (!fs.existsSync(PDB_DIR)) {
   console.error(`PDB folder not found: ${PDB_DIR}`);
   console.error(
@@ -23,6 +24,10 @@ if (!fs.existsSync(PDB_DIR)) {
 // Build indexes once at startup
 const { chainIndex, pdbIndex } = fs.existsSync(PDB_DIR)
   ? buildPdbIndex(PDB_DIR)
+  : { chainIndex: {}, pdbIndex: {} };
+
+const { chainIndex: originalChainIndex, pdbIndex: originalPdbIndex } = fs.existsSync(ORIGINAL_PDB_DIR)
+  ? buildPdbIndex(ORIGINAL_PDB_DIR)
   : { chainIndex: {}, pdbIndex: {} };
 
 const sequenceMap = new Map();
@@ -45,6 +50,12 @@ for (const row of metaData) {
 for (const key of Object.keys(chainIndex)) {
   if (sequenceMap.has(key)) {
     chainIndex[key].sequence = sequenceMap.get(key);
+  }
+}
+
+for (const key of Object.keys(originalChainIndex)) {
+  if (sequenceMap.has(key)) {
+    originalChainIndex[key].sequence = sequenceMap.get(key);
   }
 }
 
@@ -72,21 +83,21 @@ router.get("/search", (req, res) => {
   const results = [];
 
   // 1) Prefer base-PDB prefix matches (fast + what users type)
-  const pdbKeys = Object.keys(pdbIndex).sort(); // lower keys
+  const pdbKeys = Object.keys(originalPdbIndex).sort(); // lower keys
   for (const pdbKey of pdbKeys) {
     if (!pdbKey.startsWith(q)) continue;
 
     // add all chains for this pdb
-    results.push(...pdbIndex[pdbKey].chainIds);
+    results.push(...originalPdbIndex[pdbKey].chainIds);
     if (results.length >= limit) break;
   }
 
   // 2) If no base-PDB matches, fallback to chain-id prefix matches
   if (results.length === 0) {
-    const chainKeys = Object.keys(chainIndex).sort();
+    const chainKeys = Object.keys(originalChainIndex).sort();
     for (const chainKey of chainKeys) {
       if (!chainKey.startsWith(q)) continue;
-      results.push(chainIndex[chainKey].id);
+      results.push(originalChainIndex[chainKey].id);
       if (results.length >= limit) break;
     }
   }
@@ -114,7 +125,7 @@ router.get("/sequence-search", (req, res) => {
 
   const results = [];
 
-  for (const entry of Object.values(chainIndex)) {
+  for (const entry of Object.values(originalChainIndex)) {
     const seq = entry.sequence;
     if (!seq) continue;
 
@@ -136,7 +147,7 @@ router.get("/sequence-search", (req, res) => {
  */
 router.get("/all", (req, res) => {
   res.json({
-    results: Object.values(chainIndex).map((e) => e.id),
+    results: Object.values(originalChainIndex).map((e) => e.id),
   });
 });
 
@@ -171,7 +182,7 @@ router.get("/file/:id", (req, res) => {
 router.get("/seq-index", (req, res) => {
   const results = [];
 
-  for (const entry of Object.values(chainIndex)) {
+  for (const entry of Object.values(originalChainIndex)) {
     const id = String(entry?.id || "")
       .trim()
       .toLowerCase(); // expect chain id
