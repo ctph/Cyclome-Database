@@ -3,7 +3,7 @@ import { Select, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import levenshtein from "fast-levenshtein";
 
-const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
+const API_BASE = process.env.REACT_APP_API_BASE || "";
 
 const SearchBar = () => {
   const [value, setValue] = useState(null);
