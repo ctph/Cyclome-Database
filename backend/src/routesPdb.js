@@ -13,7 +13,7 @@ const META_PATH = path.resolve(
 const metaData = JSON.parse(fs.readFileSync(META_PATH, "utf-8"));
 
 const PDB_DIR = getPdbDirAbs();
-const ORIGINAL_PDB_DIR = path.resolve("metadata", "cyclic_pdbs_orig");
+const ORIGINAL_MANIFEST_PATH = path.resolve("metadata", "cyclic_pdbs_orig_manifest.json");
 if (!fs.existsSync(PDB_DIR)) {
   console.error(`PDB folder not found: ${PDB_DIR}`);
   console.error(
@@ -26,9 +26,46 @@ const { chainIndex, pdbIndex } = fs.existsSync(PDB_DIR)
   ? buildPdbIndex(PDB_DIR)
   : { chainIndex: {}, pdbIndex: {} };
 
-const { chainIndex: originalChainIndex, pdbIndex: originalPdbIndex } = fs.existsSync(ORIGINAL_PDB_DIR)
-  ? buildPdbIndex(ORIGINAL_PDB_DIR)
-  : { chainIndex: {}, pdbIndex: {} };
+const originalManifest = fs.existsSync(ORIGINAL_MANIFEST_PATH)
+  ? JSON.parse(fs.readFileSync(ORIGINAL_MANIFEST_PATH, "utf-8"))
+  : { chainIds: [] };
+
+const originalChainIdSet = new Set(
+  Array.isArray(originalManifest?.chainIds)
+    ? originalManifest.chainIds.map((id) => String(id || "").trim().toLowerCase()).filter(Boolean)
+    : []
+);
+
+const originalChainIndex = Object.fromEntries(
+  Object.entries(chainIndex).filter(([key]) => originalChainIdSet.has(key))
+);
+
+const originalPdbIndex = {};
+for (const entry of Object.values(originalChainIndex)) {
+  const pdbKey = String(entry?.pdb || "").trim().toLowerCase();
+  if (!pdbKey) continue;
+
+  if (!originalPdbIndex[pdbKey]) {
+    originalPdbIndex[pdbKey] = {
+      pdb: entry.pdb,
+      chains: [],
+      chainIds: [],
+      files: [],
+    };
+  }
+
+  if (entry.chain && !originalPdbIndex[pdbKey].chains.includes(entry.chain)) {
+    originalPdbIndex[pdbKey].chains.push(entry.chain);
+  }
+  originalPdbIndex[pdbKey].chainIds.push(entry.id);
+  originalPdbIndex[pdbKey].files.push(entry.file);
+}
+
+for (const key of Object.keys(originalPdbIndex)) {
+  originalPdbIndex[key].chains.sort();
+  originalPdbIndex[key].chainIds.sort();
+  originalPdbIndex[key].files.sort();
+}
 
 const sequenceMap = new Map();
 
