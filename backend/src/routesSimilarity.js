@@ -192,6 +192,23 @@ async function proxyJson(req, res, flaskPath, { method = "GET", body } = {}) {
   }
 }
 
+async function enqueueJob(req, res, flaskPath) {
+  await proxyJson(req, res, flaskPath, {
+    method: "POST",
+    body: req.body,
+  });
+}
+
+async function getJob(req, res) {
+  await proxyJson(req, res, `/jobs/${encodeURIComponent(req.params.jobId)}`);
+}
+
+async function cancelJob(req, res) {
+  await proxyJson(req, res, `/jobs/${encodeURIComponent(req.params.jobId)}/cancel`, {
+    method: "POST",
+  });
+}
+
 router.get("/cyclic-sequence/health", async (req, res) => {
   await proxyJson(req, res, "/api/health");
 });
@@ -215,17 +232,19 @@ router.get("/stop2melt/health", async (req, res) => {
 });
 
 router.post("/stop2melt", async (req, res) => {
-  await proxyJson(req, res, "/api/predict/stop2melt", {
-    method: "POST",
-    body: req.body,
-  });
+  await enqueueJob(req, res, "/jobs/stop2melt");
 });
 
 router.post("/stop2melt/batch", async (req, res) => {
-  await proxyJson(req, res, "/api/predict/stop2melt/batch", {
-    method: "POST",
-    body: req.body,
-  });
+  await enqueueJob(req, res, "/jobs/stop2melt/batch");
+});
+
+router.get("/stop2melt/jobs/:jobId", async (req, res) => {
+  await getJob(req, res);
+});
+
+router.post("/stop2melt/jobs/:jobId/cancel", async (req, res) => {
+  await cancelJob(req, res);
 });
 
 // Single lookup
