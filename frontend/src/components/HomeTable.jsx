@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Table, Tag } from "antd";
 import { Link } from "react-router-dom";
 
-const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:5001";
+const API_BASE = process.env.REACT_APP_API_BASE || "";
 
 const HomeTable = () => {
   const [rawMap, setRawMap] = useState({});

@@ -19,7 +19,7 @@ import Header from "../components/Header";
 const { Title, Text, Paragraph } = Typography;
 const { TextArea } = Input;
 
-const FLASK_API_BASE = process.env.REACT_APP_FLASK_API_BASE || "http://localhost:5002";
+const FLASK_API_BASE = process.env.REACT_APP_FLASK_API_BASE || "";
 const GITHUB_URL =
   process.env.REACT_APP_CYCLIC_GITHUB_URL || "https://github.com/ctph/Cyclome-Database";
 
