@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
   Button,
@@ -6,6 +6,8 @@ import {
   Col,
   Form,
   Input,
+  Progress,
+  Result,
   Row,
   Space,
   Table,
@@ -17,6 +19,9 @@ import Header from "../components/Header";
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
+
+const POLL_INTERVAL_MS = 2000;
+const TERMINAL_JOB_STATUSES = new Set(["finished", "failed", "stopped", "canceled"]);
 
 function normalizeBatchRows(rawText) {
   return String(rawText || "")
@@ -36,13 +41,43 @@ function normalizeBatchRows(rawText) {
     });
 }
 
+async function readJson(response) {
+  return response.json().catch(() => null);
+}
+
 export default function Stop2MeltPage() {
   const [form] = Form.useForm();
+  const pollingTimeoutRef = useRef(null);
+  const lastJobIdRef = useRef(null);
+
   const [loading, setLoading] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
   const [singleResult, setSingleResult] = useState(null);
   const [batchResult, setBatchResult] = useState(null);
   const [error, setError] = useState("");
+  const [jobState, setJobState] = useState(null);
+
+  useEffect(() => {
+    return () => {
+      if (pollingTimeoutRef.current) {
+        clearTimeout(pollingTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const stopPolling = () => {
+    if (pollingTimeoutRef.current) {
+      clearTimeout(pollingTimeoutRef.current);
+      pollingTimeoutRef.current = null;
+    }
+  };
+
+  const resetResults = () => {
+    setSingleResult(null);
+    setBatchResult(null);
+    setError("");
+    setJobState(null);
+  };
 
   const batchColumns = useMemo(
     () => [
@@ -81,11 +116,72 @@ export default function Stop2MeltPage() {
     []
   );
 
+  const handleJobFinished = (jobData) => {
+    const result = jobData?.result;
+    if (!result) {
+      throw new Error("Job finished without a result payload.");
+    }
+
+    if (batchMode) {
+      const results = (result?.results || []).map((item, index) => ({
+        ...item,
+        _rowIndex: index,
+      }));
+      setBatchResult({ ...result, results });
+
+      const errorCount = results.filter((item) => item.error).length;
+      if (errorCount > 0) {
+        message.warning(`Batch finished with ${errorCount} error(s).`);
+      } else {
+        message.success("Stop2Melt batch run completed.");
+      }
+    } else {
+      setSingleResult(result);
+      message.success("Stop2Melt prediction completed.");
+    }
+  };
+
+  const pollJob = async (jobId) => {
+    try {
+      const response = await fetch(`/api/similarity/stop2melt/jobs/${jobId}`);
+      const data = await readJson(response);
+      if (!response.ok) {
+        throw new Error(data?.error || `Job polling failed (${response.status})`);
+      }
+
+      setJobState(data);
+
+      if (!TERMINAL_JOB_STATUSES.has(data?.status)) {
+        pollingTimeoutRef.current = setTimeout(() => {
+          pollJob(jobId);
+        }, POLL_INTERVAL_MS);
+        return;
+      }
+
+      stopPolling();
+      setLoading(false);
+
+      if (data.status === "finished") {
+        handleJobFinished(data);
+        return;
+      }
+
+      const failureMessage = data?.error || data?.message || `Job ended with status: ${data?.status || "unknown"}`;
+      setError(failureMessage);
+      message.error(failureMessage);
+    } catch (err) {
+      stopPolling();
+      setLoading(false);
+      const msg = err?.message || "Failed while polling Stop2Melt job.";
+      setError(msg);
+      message.error(msg);
+    }
+  };
+
   const handleSubmit = async (values) => {
+    stopPolling();
     setLoading(true);
-    setError("");
-    setSingleResult(null);
-    setBatchResult(null);
+    resetResults();
 
     try {
       const payload = batchMode
@@ -105,36 +201,58 @@ export default function Stop2MeltPage() {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json().catch(() => null);
+      const data = await readJson(response);
       if (!response.ok) {
         throw new Error(data?.error || `Request failed (${response.status})`);
       }
 
-      if (batchMode) {
-        const results = (data?.results || []).map((item, index) => ({
-          ...item,
-          _rowIndex: index,
-        }));
-        setBatchResult({ ...data, results });
-
-        const errorCount = results.filter((item) => item.error).length;
-        if (errorCount > 0) {
-          message.warning(`Batch finished with ${errorCount} error(s).`);
-        } else {
-          message.success("Stop2Melt batch run completed.");
-        }
-      } else {
-        setSingleResult(data);
-        message.success("Stop2Melt prediction completed.");
+      if (!data?.task_id) {
+        throw new Error("Backend accepted the request but did not return a task id.");
       }
+
+      lastJobIdRef.current = data.task_id;
+      setJobState({
+        id: data.task_id,
+        status: data.status || "queued",
+        progress: 0,
+        message: "queued",
+      });
+      message.success("Stop2Melt job submitted. Polling for results...");
+      await pollJob(data.task_id);
     } catch (err) {
+      stopPolling();
+      setLoading(false);
       const msg = err?.message || "Failed to run Stop2Melt.";
       setError(msg);
       message.error(msg);
-    } finally {
-      setLoading(false);
     }
   };
+
+  const handleCancelJob = async () => {
+    const jobId = lastJobIdRef.current;
+    if (!jobId) return;
+
+    try {
+      const response = await fetch(`/api/similarity/stop2melt/jobs/${jobId}/cancel`, {
+        method: "POST",
+      });
+      const data = await readJson(response);
+      if (!response.ok) {
+        throw new Error(data?.error || `Cancel failed (${response.status})`);
+      }
+
+      stopPolling();
+      setLoading(false);
+      setJobState((prev) => ({ ...prev, status: data?.status || "canceled" }));
+      message.info("Stop2Melt job canceled.");
+    } catch (err) {
+      message.error(err?.message || "Failed to cancel job.");
+    }
+  };
+
+  const currentProgress = Number(jobState?.progress ?? (loading ? 5 : 0));
+  const currentStatus = String(jobState?.status || "idle");
+  const canCancel = loading && jobState?.id && ["queued", "started", "deferred"].includes(currentStatus);
 
   return (
     <div style={{ padding: 16 }}>
@@ -149,8 +267,7 @@ export default function Stop2MeltPage() {
               </Title>
               <Paragraph style={{ maxWidth: 920, marginBottom: 0 }}>
                 Predict Stop2Melt directly from peptide sequence and optional cyclization pattern.
-                This runs the new model-backed backend route and is heavier than the cyclic sequence
-                similarity tool, so the first request may take longer.
+                Requests now run as background jobs, so the page can stay responsive while the model works.
               </Paragraph>
             </div>
 
@@ -164,6 +281,7 @@ export default function Stop2MeltPage() {
               <Button type="primary" htmlType="submit" form="stop2melt-form" loading={loading}>
                 Run
               </Button>
+              {canCancel ? <Button danger onClick={handleCancelJob}>Cancel Job</Button> : null}
             </Space>
 
             <Alert
@@ -172,12 +290,12 @@ export default function Stop2MeltPage() {
               message={
                 batchMode
                   ? "Batch mode: one row per line, tab-separated as sequence and optional cyclization pattern."
-                  : "Single mode sends one Stop2Melt request through the backend similarity API."
+                  : "Single mode submits one Stop2Melt job through the backend similarity API."
               }
               description={
                 batchMode
                   ? "Example row: AKLAFKKLFQLICCCFK, then a tab, then 1-8. The second field is optional."
-                  : "The first prediction may take a little longer while the model and its files load."
+                  : "You can leave the page open while the backend worker processes the prediction."
               }
             />
 
@@ -225,6 +343,21 @@ export default function Stop2MeltPage() {
           </Space>
         </Card>
 
+        {jobState ? (
+          <Card title="Job Status" style={{ borderRadius: 16 }}>
+            <Space direction="vertical" size="middle" style={{ width: "100%" }}>
+              <Space wrap>
+                <Tag color="blue">Job ID: {jobState.id}</Tag>
+                <Tag color={currentStatus === "finished" ? "green" : currentStatus === "failed" ? "red" : "gold"}>
+                  Status: {currentStatus}
+                </Tag>
+              </Space>
+              <Progress percent={Math.max(0, Math.min(100, currentProgress))} status={currentStatus === "failed" ? "exception" : undefined} />
+              {jobState.message ? <Text>{jobState.message}</Text> : null}
+            </Space>
+          </Card>
+        ) : null}
+
         {error ? <Alert type="error" showIcon message={error} /> : null}
 
         {singleResult ? (
@@ -268,6 +401,10 @@ export default function Stop2MeltPage() {
               />
             </Space>
           </Card>
+        ) : null}
+
+        {!loading && !singleResult && !batchResult && !error && jobState?.status === "canceled" ? (
+          <Result status="warning" title="Job canceled" subTitle="You can adjust the input and run it again." />
         ) : null}
       </Space>
     </div>
