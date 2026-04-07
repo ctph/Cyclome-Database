@@ -230,7 +230,7 @@ router.post("/stop2melt/batch", async (req, res) => {
 
 // Single lookup
 // Full URL becomes: /api/similarity/:pdbId/:threshold
-router.get("/:pdbId/:threshold", (req, res) => {
+router.get("/:pdbId/:threshold(\\d+(?:\\.\\d+)?)", (req, res) => {
   loadOnce();
   if (loadError) {
     return res.status(500).json({
