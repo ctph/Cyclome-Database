@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Button, Space, Table, Tag } from "antd";
+import { Space, Table, Tag } from "antd";
 import { Link } from "react-router-dom";
 import { ORIGINAL_PDB_CHAIN_IDS } from "../generated/originalPdbs";
 
@@ -121,14 +121,13 @@ const HomeTable = () => {
               </a>
             </Space>
           ) : (
-            <Button
-              type="link"
+            <a
               href={`https://www.rcsb.org/structure/${String(row.baseId || "").toUpperCase()}`}
               target="_blank"
               rel="noreferrer"
             >
               View on RCSB
-            </Button>
+            </a>
           ),
       },
     ];
