@@ -362,7 +362,7 @@ def get_predictor() -> Stop2MeltPredictor:
 
 
 def stop2melt_healthcheck() -> Dict[str, Any]:
-    checkpoint_path = resolve_checkpoint_path()
+    checkpoint_path = Path(resolve_checkpoint_path())
     configured_device = os.getenv(
         "STOP2MELT_DEVICE",
         "cuda" if torch.cuda.is_available() else "cpu",
@@ -373,7 +373,7 @@ def stop2melt_healthcheck() -> Dict[str, Any]:
         "predictor_loaded": False,
         "device": configured_device,
         "model_name": os.getenv("STOP2MELT_ESMC_MODEL", _DEFAULT_MODEL_NAME),
-        "checkpoint_path": checkpoint_path,
+        "checkpoint_path": str(checkpoint_path),
         "checkpoint_exists": checkpoint_path.exists(),
         "dmax": int(os.getenv("STOP2MELT_DMAX", str(_DEFAULT_DMAX))),
         "n_layers": int(os.getenv("STOP2MELT_N_LAYERS", str(_DEFAULT_N_LAYERS))),
