@@ -4,6 +4,7 @@ from typing import Any, Dict
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from werkzeug.exceptions import BadRequest, NotFound
 
 from flask_similarity_service import cyclicity_aware_similarity
 from flask_stop2melt_service import (
@@ -11,9 +12,11 @@ from flask_stop2melt_service import (
     predict_stop2melt_batch,
     stop2melt_healthcheck,
 )
+from jobs_routes import jobs_bp
 
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
+app.register_blueprint(jobs_bp)
 
 
 def json_error(message: str, status: int = 400):
@@ -200,6 +203,16 @@ def stop2melt_predict_batch_route():
         return json_error(str(exc), 503)
     except Exception as exc:
         return json_error(f"Stop2Melt batch inference failed: {exc}", 500)
+
+
+@app.errorhandler(BadRequest)
+def handle_bad_request(exc: BadRequest):
+    return json_error(str(exc.description or exc), 400)
+
+
+@app.errorhandler(NotFound)
+def handle_not_found(exc: NotFound):
+    return json_error(str(exc.description or exc), 404)
 
 
 if __name__ == "__main__":
