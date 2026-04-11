@@ -1,6 +1,7 @@
 // frontend/src/PdbPage.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../components/Header";
+import MeltingTempHistogram from "../components/MeltingTempHistogram";
 
 import { useParams, useNavigate } from "react-router-dom";
 import {
@@ -34,6 +35,36 @@ const CYC_BUTTONS = [
   { key: "s2e+s2s", label: "s2e + s2s" },
 ];
 
+async function loadAllMeltTemps() {
+  const res = await fetch("/home_page_table_with_filenames.json");
+  if (!res.ok) throw new Error(`home_page_table fetch failed: ${res.status}`);
+  const data = await res.json();
+
+  const allTemps = [];
+  const tempMap = {};
+
+  for (const [key, entry] of Object.entries(data || {})) {
+    const raw = entry?.melting_point_K;
+    if (raw == null || raw === "") continue;
+    const val = parseFloat(raw);
+    if (isNaN(val)) continue;
+
+    // index by base id lowercase e.g. "2kcg"
+    tempMap[key.trim().toLowerCase()] = val;
+    // also index every chain filename e.g. "2kcg_a"
+    for (const filename of entry?.filenames || []) {
+      const chainKey = String(filename)
+        .replace(/\.pdb$/i, "")
+        .toLowerCase();
+      if (chainKey) tempMap[chainKey] = val;
+    }
+
+    allTemps.push(val);
+  }
+
+  return { allTemps, tempMap };
+}
+
 const PdbPage = () => {
   const { pdbId } = useParams();
   const pdbIdUpper = useMemo(() => String(pdbId || "").toUpperCase(), [pdbId]);
@@ -41,12 +72,37 @@ const PdbPage = () => {
   const containerRef = useRef(null);
   const appletRef = useRef(null);
 
-  const [viewMode, setViewMode] = useState("cartoon"); // "cartoon" | "stick"
+  const [viewMode, setViewMode] = useState("cartoon");
 
   const [metaLoading, setMetaLoading] = useState(true);
   const [metaError, setMetaError] = useState(null);
   const [metaRecord, setMetaRecord] = useState(null);
   const navigate = useNavigate();
+
+  // melting temp state
+  const [allTemps, setAllTemps] = useState([]);
+  const [tempMap, setTempMap] = useState({});
+  const [tempsLoaded, setTempsLoaded] = useState(false);
+
+  useEffect(() => {
+    loadAllMeltTemps()
+      .then(({ allTemps, tempMap }) => {
+        setAllTemps(allTemps);
+        setTempMap(tempMap);
+      })
+      .catch((e) => console.warn("Failed to load melt temps:", e))
+      .finally(() => setTempsLoaded(true));
+  }, []);
+
+  // resolve protein's temp:
+  const thisTemp = useMemo(() => {
+    if (metaRecord?.STop2Melt_K != null && metaRecord.STop2Melt_K !== "") {
+      const v = parseFloat(metaRecord.STop2Melt_K);
+      if (!isNaN(v)) return v;
+    }
+    const key = String(pdbId || "").toLowerCase();
+    return tempMap[key] ?? null;
+  }, [metaRecord, pdbId, tempMap]);
 
   const runJsmol = (cmd) => {
     try {
@@ -58,7 +114,7 @@ const PdbPage = () => {
   useEffect(() => {
     if (!window.Jmol) {
       message.error(
-        "JSmol not loaded. Check /public/jsmol and index.html script tag."
+        "JSmol not loaded. Check /public/jsmol and index.html script tag.",
       );
       return;
     }
@@ -92,7 +148,9 @@ const PdbPage = () => {
     if (!appletRef.current) return;
 
     if (viewMode === "stick") {
-      runJsmol("select all; cartoons off; spacefill off; wireframe 0.2; color cpk;");
+      runJsmol(
+        "select all; cartoons off; spacefill off; wireframe 0.2; color cpk;",
+      );
     } else {
       runJsmol("select all; cartoons only; color structure;");
     }
@@ -134,7 +192,13 @@ const PdbPage = () => {
     navigate(`/similarity/${baseId}/${threshold}`);
   };
 
-  const baseId = useMemo(() => String(pdbId || "").split("_")[0].toLowerCase(), [pdbId]);
+  const baseId = useMemo(
+    () =>
+      String(pdbId || "")
+        .split("_")[0]
+        .toLowerCase(),
+    [pdbId],
+  );
 
   const activeCycl = useMemo(() => {
     return normalizeCyclization(metaRecord?.Cyclization);
@@ -195,7 +259,9 @@ const PdbPage = () => {
                 <Button.Group>
                   <Button
                     type={viewMode === "cartoon" ? "primary" : "default"}
-                    onClick={() => viewMode !== "cartoon" && setViewMode("cartoon")}
+                    onClick={() =>
+                      viewMode !== "cartoon" && setViewMode("cartoon")
+                    }
                   >
                     Cartoon
                   </Button>
@@ -215,13 +281,16 @@ const PdbPage = () => {
 
                 <Button.Group>
                   {CYC_BUTTONS.map((b) => {
-                    const isActive = Boolean(activeCycl) && activeCycl === b.key;
+                    const isActive =
+                      Boolean(activeCycl) && activeCycl === b.key;
                     return (
                       <Button
                         key={b.key}
                         type={isActive ? "primary" : "default"}
                         disabled={!isActive}
-                        onClick={() => isActive && handleCyclizationClick(b.key)}
+                        onClick={() =>
+                          isActive && handleCyclizationClick(b.key)
+                        }
                       >
                         {b.label}
                       </Button>
@@ -339,6 +408,25 @@ const PdbPage = () => {
                   >
                     {metaRecord.Sequence || "N/A"}
                   </div>
+                  {/* ── Melting Temperature Histogram ── */}
+                  <Divider style={{ margin: "12px 0" }} />
+
+                  {tempsLoaded ? (
+                    <MeltingTempHistogram
+                      allTemps={allTemps}
+                      thisTemp={thisTemp}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        padding: "12px 0",
+                      }}
+                    >
+                      <Spin size="small" />
+                    </div>
+                  )}
                 </>
               )}
             </Card>
