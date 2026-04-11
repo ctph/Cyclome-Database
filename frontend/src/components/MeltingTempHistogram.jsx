@@ -1,5 +1,10 @@
 import React, { useMemo, useState } from "react";
 
+const FONT =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
+const FONT_MONO =
+  "'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace";
+
 export default function MeltingTempHistogram({
   allTemps = [],
   thisTemp = null,
@@ -71,18 +76,16 @@ export default function MeltingTempHistogram({
   return (
     <div
       style={{
-        background: "linear-gradient(160deg, #ffffff 0%, #ffffff 100%)",
-        border: "1px solid #e2e8f0",
-        borderRadius: 10,
+        background: "#ffffff",
+        border: "1px solid #f0f0f0",
+        borderRadius: 8,
         padding: "14px 16px 12px",
         width: "100%",
         boxSizing: "border-box",
-        boxShadow:
-          "inset 0 1px 0 rgba(255,255,255,0.04), 0 4px 16px rgba(0,0,0,0.4)",
-        fontFamily: "'DM Mono', 'Fira Mono', 'Courier New', monospace",
+        fontFamily: FONT,
       }}
     >
-      {/* header */}
+      {/* header row */}
       <div
         style={{
           display: "flex",
@@ -93,25 +96,33 @@ export default function MeltingTempHistogram({
       >
         <span
           style={{
-            fontSize: 9.5,
-            letterSpacing: "0.14em",
+            fontSize: 12,
+            fontWeight: 600,
+            letterSpacing: "0.04em",
             textTransform: "uppercase",
             color: "#000000",
-            opacity: 0.75,
+            fontFamily: FONT,
           }}
         >
           CyMelt Distribution
         </span>
-        <span style={{ fontSize: 9.5, color: "#000000" }}>
+        <span
+          style={{
+            fontSize: 12,
+            color: "#595959",
+            fontFamily: FONT,
+          }}
+        >
           Cyclome {allTemps.length.toLocaleString()}
         </span>
       </div>
 
+      {/* temperature value */}
       <div
         style={{
           display: "flex",
           alignItems: "baseline",
-          gap: 6,
+          gap: 5,
           marginBottom: 10,
         }}
       >
@@ -119,45 +130,38 @@ export default function MeltingTempHistogram({
           <>
             <span
               style={{
-                fontSize: 36,
+                fontSize: 34,
                 fontWeight: 700,
                 lineHeight: 1,
-                letterSpacing: "-0.04em",
-                color: "#1677ff",
-                textShadow: "0 0 20px rgba(255,107,107,0.35)",
+                letterSpacing: "-0.02em",
+                color: "#1d4ed8",
+                fontFamily: FONT,
               }}
             >
               {tempK}
             </span>
-            <span style={{ fontSize: 14, color: "#1565c0", opacity: 0.65 }}>
-              K
-            </span>
-            {/* <span style={{ fontSize: 12, color: "#3a4550", margin: "0 2px" }}>
-              /
-            </span> */}
-            {/* <span
+            <span
               style={{
-                fontSize: 20,
-                fontWeight: 600,
-                color: "#1677ff",
-                opacity: 0.8,
+                fontSize: 14,
+                fontWeight: 500,
+                color: "#1d4ed8",
+                fontFamily: FONT,
               }}
             >
-              {tempC}
+              K
             </span>
-            <span style={{ fontSize: 12, color: "#1677ff", opacity: 0.55 }}>
-              °C
-            </span> */}
+
             {percentile != null && (
               <span
                 style={{
-                  fontSize: 10,
-                  color: "#8b949e",
-                  marginLeft: 6,
-                  background: "rgba(255,107,107,0.07)",
-                  border: "1px solid rgba(255,107,107,0.18)",
+                  fontSize: 11,
+                  color: "#595959",
+                  marginLeft: 8,
+                  background: "#fafafa",
+                  border: "1px solid #d9d9d9",
                   borderRadius: 4,
-                  padding: "2px 6px",
+                  padding: "1px 7px",
+                  fontFamily: FONT,
                 }}
               >
                 {percentile}th pct
@@ -165,11 +169,13 @@ export default function MeltingTempHistogram({
             )}
           </>
         ) : (
-          <span style={{ fontSize: 16, color: "#3a4550" }}>No Tm data</span>
+          <span style={{ fontSize: 14, color: "#8c8c8c", fontFamily: FONT }}>
+            No Tm data
+          </span>
         )}
       </div>
 
-      {/* SVG */}
+      {/* SVG: Y = temperature (K), X = count */}
       <svg
         width="100%"
         viewBox={`0 0 ${W_SVG} ${H_SVG}`}
@@ -178,15 +184,15 @@ export default function MeltingTempHistogram({
       >
         <defs>
           <linearGradient id="cymBarGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#1a3d6e" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="#2f6eb5" stopOpacity="0.9" />
+            <stop offset="0%" stopColor="#bfdbfe" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.85" />
           </linearGradient>
           <linearGradient id="cymBarHov" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#2f6eb5" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#58a0ef" stopOpacity="1" />
+            <stop offset="0%" stopColor="#93c5fd" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#1d4ed8" stopOpacity="1" />
           </linearGradient>
-          <filter id="cymGlow" x="-60%" y="-60%" width="220%" height="220%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
+          <filter id="cymRedGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="2" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -203,11 +209,12 @@ export default function MeltingTempHistogram({
               y1={0}
               x2={f * W}
               y2={H}
-              stroke="#1677ff"
+              stroke="#f0f0f0"
               strokeWidth={1}
             />
           ))}
 
+          {/* horizontal bars */}
           {bins.map((bin, i) => {
             const by = toY(bin.y1);
             const bh = Math.max(toY(bin.y0) - by - 0.8, 1);
@@ -222,7 +229,7 @@ export default function MeltingTempHistogram({
                 height={bh}
                 fill={hovered === i ? "url(#cymBarHov)" : "url(#cymBarGrad)"}
                 rx={1.5}
-                style={{ cursor: "crosshair", transition: "fill 0.1s" }}
+                style={{ cursor: "crosshair", transition: "fill 0.12s" }}
                 onMouseEnter={() => setHovered(i)}
               />
             );
@@ -236,7 +243,7 @@ export default function MeltingTempHistogram({
               const cy = toY((bin.y0 + bin.y1) / 2);
               const bw = toBarW(bin.count);
               const label = `${bin.y0}–${bin.y1} K: ${bin.count}`;
-              const tw = label.length * 5.2 + 8;
+              const tw = label.length * 5.4 + 10;
               const tx = Math.min(bw + 4, W - tw);
               return (
                 <g pointerEvents="none">
@@ -247,16 +254,16 @@ export default function MeltingTempHistogram({
                     height={14}
                     rx={3}
                     fill="#ffffff"
-                    stroke="#2a3545"
+                    stroke="#d9d9d9"
                     strokeWidth={0.8}
                   />
                   <text
                     x={tx + tw / 2}
                     y={cy + 2.5}
                     textAnchor="middle"
-                    fill="#c9d1d9"
+                    fill="#000000"
                     fontSize={8.5}
-                    fontFamily="'DM Mono', monospace"
+                    fontFamily={FONT}
                   >
                     {label}
                   </text>
@@ -264,36 +271,38 @@ export default function MeltingTempHistogram({
               );
             })()}
 
-          {/* horizontal marker line for this protein */}
+          {/* ── red marker line for this protein ── */}
           {markerY !== null && (
-            <g filter="url(#cymGlow)">
+            <g filter="url(#cymRedGlow)">
+              {/* dashed red line */}
               <line
                 x1={0}
                 y1={markerY}
                 x2={W}
                 y2={markerY}
-                stroke="#ff1616"
+                stroke="#ef4444"
                 strokeWidth={1.5}
                 strokeDasharray="4 3"
               />
+              {/* label box — right end */}
               <rect
-                x={W - 52}
+                x={W - 54}
                 y={markerY - 10}
-                width={52}
+                width={54}
                 height={18}
                 rx={3}
-                fill="#1a0a0a"
-                stroke="#ff1616"
+                fill="#fff1f0"
+                stroke="#ef4444"
                 strokeWidth={1}
               />
               <text
-                x={W - 26}
+                x={W - 27}
                 y={markerY + 3.5}
                 textAnchor="middle"
-                fill="#1677ff"
+                fill="#dc2626"
                 fontSize={8.5}
                 fontWeight="700"
-                fontFamily="'DM Mono', monospace"
+                fontFamily={FONT}
               >
                 {tempK} K
               </text>
@@ -303,16 +312,15 @@ export default function MeltingTempHistogram({
                 y1={markerY}
                 x2={0}
                 y2={markerY}
-                stroke="#ff1616"
+                stroke="#ef4444"
                 strokeWidth={1.5}
               />
             </g>
           )}
 
-          {/* left axis */}
-          <line x1={0} y1={0} x2={0} y2={H} stroke="#1e2937" strokeWidth={1} />
-          {/* bottom axis */}
-          <line x1={0} y1={H} x2={W} y2={H} stroke="#1e2937" strokeWidth={1} />
+          {/* axes */}
+          <line x1={0} y1={0} x2={0} y2={H} stroke="#d9d9d9" strokeWidth={1} />
+          <line x1={0} y1={H} x2={W} y2={H} stroke="#d9d9d9" strokeWidth={1} />
 
           {/* y-axis ticks + labels */}
           {yTicks.map((t) => (
@@ -322,16 +330,16 @@ export default function MeltingTempHistogram({
                 y1={0}
                 x2={0}
                 y2={0}
-                stroke="#2a3545"
+                stroke="#d9d9d9"
                 strokeWidth={0.8}
               />
               <text
                 x={-6}
                 y={3.5}
                 textAnchor="end"
-                fill="#3a4a5a"
+                fill="#595959"
                 fontSize={8}
-                fontFamily="'DM Mono', monospace"
+                fontFamily={FONT}
               >
                 {t}
               </text>
@@ -342,10 +350,10 @@ export default function MeltingTempHistogram({
           <text
             transform={`translate(${-PAD_LEFT + 8}, ${H / 2}) rotate(-90)`}
             textAnchor="middle"
-            fill="#2a3a4a"
-            fontSize={7.5}
-            fontFamily="'DM Mono', monospace"
-            letterSpacing="0.1em"
+            fill="#595959"
+            fontSize={8}
+            fontFamily={FONT}
+            letterSpacing="0.05em"
           >
             CyMelt (K)
           </text>
@@ -355,10 +363,10 @@ export default function MeltingTempHistogram({
             x={W / 2}
             y={H + 22}
             textAnchor="middle"
-            fill="#2a3a4a"
-            fontSize={7.5}
-            fontFamily="'DM Mono', monospace"
-            letterSpacing="0.1em"
+            fill="#595959"
+            fontSize={8}
+            fontFamily={FONT}
+            letterSpacing="0.05em"
           >
             Cyclome {allTemps.length.toLocaleString()}
           </text>
