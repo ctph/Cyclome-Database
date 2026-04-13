@@ -34,21 +34,64 @@ const Header = () => (
       minHeight: 96,
     }}
   >
-    <div style={{ textAlign: "center" }}>
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <Title
-          level={2}
+    {/* Agrivax link */}
+    {/* Title row */}
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr auto 1fr",
+        alignItems: "center",
+        marginBottom: 18,
+        paddingTop: 8,
+        width: "100%",
+      }}
+    >
+      {/* Left Agrivax link */}
+      <div
+        style={{
+          fontSize: 13,
+          fontWeight: 500,
+          color: "rgba(0, 0, 0, 0.75)",
+          whiteSpace: "nowrap",
+          paddingLeft: 10,
+        }}
+      >
+        An{" "}
+        <a
+          href="https://agrivax.studio"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             color: "#1677ff",
-            marginBottom: 0,
-            letterSpacing: "-0.02em",
+            textDecoration: "none",
+            fontWeight: 600,
           }}
         >
-          Cyclome Database
-        </Title>
-      </Link>
-    </div>
+          AgriVax.studio
+        </a>{" "}
+        collection
+      </div>
 
+      {/* Center title */}
+      <div style={{ justifySelf: "center" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Title
+            level={2}
+            style={{
+              color: "#1677ff",
+              margin: 0,
+              letterSpacing: "-0.02em",
+              textAlign: "center",
+            }}
+          >
+            Cyclome Database
+          </Title>
+        </Link>
+      </div>
+
+      {/* Spacer to balance layout */}
+      <div style={{ width: 180 }} />
+    </div>
     <div
       style={{
         position: "absolute",
@@ -81,7 +124,14 @@ const Header = () => (
         Chowdhury Lab
       </a>
 
-      <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 6 }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          gap: 10,
+          marginBottom: 6,
+        }}
+      >
         <span style={labelStyle}>Science</span>
         <a
           href="https://chowdhurylab.github.io/author.html?author=karuna-anna-sajeevan"
@@ -93,14 +143,23 @@ const Header = () => (
         </a>
       </div>
 
-      <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 6 }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          gap: 10,
+          marginBottom: 6,
+        }}
+      >
         <span style={labelStyle}>Software</span>
         <span style={valueStyle}>Curwen, Riza</span>
       </div>
 
       <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
         <span style={labelStyle}>Paper</span>
-        <span style={{ ...valueStyle, color: "rgba(0, 0, 0, 0.42)" }}>Coming soon</span>
+        <span style={{ ...valueStyle, color: "rgba(0, 0, 0, 0.42)" }}>
+          Coming soon
+        </span>
       </div>
     </div>
   </header>
