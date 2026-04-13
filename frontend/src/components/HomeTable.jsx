@@ -52,7 +52,10 @@ const HomeTable = () => {
         .map((pdb) => String(pdb || "").trim())
         .filter(Boolean)
         .forEach((pdb) => {
-          const chainId = pdb.toLowerCase().replace(/\.pdb$/i, "").trim();
+          const chainId = pdb
+            .toLowerCase()
+            .replace(/\.pdb$/i, "")
+            .trim();
           if (!chainId) return;
 
           entry.pdbs.set(chainId, {
@@ -98,17 +101,32 @@ const HomeTable = () => {
   ];
 
   const expandedRowRender = (record) => {
+    // const innerColumns = [
+    //   {
+    //     title: "PDB ID",
+    //     dataIndex: "chainId",
+    //     key: "chainId",
+    //     render: (id) => (
+    //       <Link to={`/pdb/${id}`}>
+    //         <Tag color="blue">{id}</Tag>
+    //       </Link>
+    //     ),
+    //   },
     const innerColumns = [
       {
         title: "PDB ID",
         dataIndex: "chainId",
         key: "chainId",
-        render: (id) => (
-          <Link to={`/pdb/${id}`}>
-            <Tag color="blue">{id}</Tag>
-          </Link>
-        ),
+        render: (id) => {
+          const displayId = String(id || "").split("_")[0];
+          return (
+            <Link to={`/pdb/${id}`}>
+              <Tag color="blue">{displayId}</Tag>
+            </Link>
+          );
+        },
       },
+
       {
         title: "Actions",
         key: "actions",

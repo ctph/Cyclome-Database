@@ -224,7 +224,7 @@ const PdbPage = () => {
           <Flex align="center" gap={16} wrap="wrap">
             <div style={{ flex: 1, minWidth: 260 }}>
               <Title level={2} style={{ margin: 0 }}>
-                {pdbIdUpper} Structure Viewer
+                {pdbIdUpper.split("_")[0]} Structure Viewer
               </Title>
             </div>
 
