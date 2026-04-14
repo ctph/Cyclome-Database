@@ -23,7 +23,10 @@ const SequenceSearchBar = () => {
         // Build sequenceMap: { "1a1p_a": "SEQUENCE", ... }
         const seqMap = {};
         data.results.forEach((item) => {
-          seqMap[item.id] = item.sequence;
+          const normalizedId = String(item?.id || "").trim().toLowerCase();
+          const normalizedSequence = String(item?.sequence || "").trim();
+          if (!normalizedId || !normalizedSequence) return;
+          seqMap[normalizedId] = normalizedSequence;
         });
 
         setSequenceMap(seqMap);
@@ -86,7 +89,8 @@ const SequenceSearchBar = () => {
       .slice(0, 5);
 
     if (sequenceMatches.length === 1) {
-      const chainId = sequenceMatches[0][0];
+      const chainId = String(sequenceMatches[0][0] || "").trim().toLowerCase();
+      if (!chainId) return;
       navigate(`/pdb/${chainId}`);
       lastSearchedTerm.current = null; // Reset so it can trigger again
       return;
@@ -112,13 +116,22 @@ const SequenceSearchBar = () => {
 
               return (
                 <li key={chainId}>
-                  <a
+                  <button
+                    type="button"
                     onClick={() => {
+                      const normalized = String(chainId || "").trim().toLowerCase();
+                      if (!normalized) return;
                       message.destroy(key);
-                      navigate(`/pdb/${chainId}`);
+                      navigate(`/pdb/${normalized}`);
                       lastSearchedTerm.current = null; // Reset after navigation
                     }}
-                    style={{ cursor: "pointer" }}
+                    style={{
+                      cursor: "pointer",
+                      padding: 0,
+                      border: 0,
+                      background: "none",
+                      textAlign: "left",
+                    }}
                   >
                     <strong>{chainId.toUpperCase()}</strong>
                     <span
@@ -132,7 +145,7 @@ const SequenceSearchBar = () => {
                     >
                       {preview}
                     </span>
-                  </a>
+                  </button>
                 </li>
               );
             })}
@@ -148,8 +161,11 @@ const SequenceSearchBar = () => {
   };
 
   const handleChange = (selectedChainId) => {
-    setValue(selectedChainId);
-    navigate(`/pdb/${selectedChainId}`);
+    const normalized = String(selectedChainId || "").trim().toLowerCase();
+    if (!normalized) return;
+
+    setValue(normalized);
+    navigate(`/pdb/${normalized}`);
     lastSearchedTerm.current = null;
   };
 
