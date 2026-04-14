@@ -107,14 +107,25 @@ const SearchBar = () => {
               <ul style={{ marginTop: 8, marginBottom: 0 }}>
                 {nearest.map((match) => (
                   <li key={match}>
-                    <a
+                    <button
+                      type="button"
                       onClick={() => {
+                        const normalized = String(match || "").trim().toLowerCase();
+                        if (!normalized) return;
                         message.destroy(key);
-                        navigate(`/pdb/${String(match).toLowerCase()}`);
+                        navigate(`/pdb/${normalized}`);
+                      }}
+                      style={{
+                        padding: 0,
+                        border: 0,
+                        background: "none",
+                        color: "#1677ff",
+                        cursor: "pointer",
+                        textDecoration: "underline",
                       }}
                     >
                       {String(match).toUpperCase()}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -128,8 +139,11 @@ const SearchBar = () => {
   };
 
   const handleChange = (selectedIdLower) => {
-    setValue(selectedIdLower);
-    navigate(`/pdb/${selectedIdLower}`);
+    const normalized = String(selectedIdLower || "").trim().toLowerCase();
+    if (!normalized) return;
+
+    setValue(normalized);
+    navigate(`/pdb/${normalized}`);
     lastSearchTerm.current = "";
   };
 
