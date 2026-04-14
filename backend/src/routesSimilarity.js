@@ -269,7 +269,7 @@ router.post("/stop2melt/jobs/:jobId/cancel", async (req, res) => {
 
 // Single lookup
 // Full URL becomes: /api/similarity/:pdbId/:threshold
-router.get("/:pdbId/:threshold(\\d+(?:\\.\\d+)?)", (req, res) => {
+router.get("/:pdbId/:threshold", (req, res) => {
   loadOnce();
   if (loadError) {
     return res.status(500).json({

@@ -187,18 +187,23 @@ const PdbPage = () => {
     };
   }, [pdbId]);
 
-  const handleSimilarityClick = (threshold) => {
-    const baseId = pdbId.split("_")[0].toLowerCase();
-    navigate(`/similarity/${baseId}/${threshold}`);
-  };
-
-  const baseId = useMemo(
+  const normalizedBaseId = useMemo(
     () =>
       String(pdbId || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\.pdb$/i, "")
         .split("_")[0]
-        .toLowerCase(),
+        .trim(),
     [pdbId],
   );
+
+  const handleSimilarityClick = (threshold) => {
+    if (!normalizedBaseId) return;
+    navigate(`/similarity/${normalizedBaseId}/${threshold}`);
+  };
+
+  const baseId = normalizedBaseId;
 
   const activeCycl = useMemo(() => {
     return normalizeCyclization(metaRecord?.Cyclization);
