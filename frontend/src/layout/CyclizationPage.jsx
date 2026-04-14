@@ -10,7 +10,8 @@ function normalizeBaseId(x) {
     .trim()
     .toLowerCase()
     .replace(/\.pdb$/i, "")
-    .split("_")[0];
+    .split("_")[0]
+    .trim();
 }
 
 function normalizeChainId(x) {
