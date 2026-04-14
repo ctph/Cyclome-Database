@@ -4,6 +4,7 @@ import SimilarityPage from "./layout/SimilarityPage";
 import CyclizationPage from "./layout/CyclizationPage";
 import PdbPage from "./layout/PdbPage";
 import CyclicSequenceSimilarityPage from "./layout/CyclicSequenceSimilarityPage";
+import CritiCLPage from "./layout/CritiCLPage";
 import Stop2MeltPage from "./layout/Stop2MeltPage";
 // import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,11 @@ export default function App() {
         <Route
           path="/cyclic-sequence-similarity"
           element={<CyclicSequenceSimilarityPage />}
+        />
+
+        <Route
+          path="/criticl"
+          element={<CritiCLPage />}
         />
 
         <Route

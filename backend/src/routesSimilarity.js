@@ -227,6 +227,26 @@ router.post("/cyclic-sequence/batch", async (req, res) => {
   });
 });
 
+router.get("/criticl/health", async (req, res) => {
+  await proxyJson(req, res, "/api/predict/criticl/health");
+});
+
+router.post("/criticl", async (req, res) => {
+  await enqueueJob(req, res, "/jobs/criticl");
+});
+
+router.post("/criticl/batch", async (req, res) => {
+  await enqueueJob(req, res, "/jobs/criticl/batch");
+});
+
+router.get("/criticl/jobs/:jobId", async (req, res) => {
+  await getJob(req, res);
+});
+
+router.post("/criticl/jobs/:jobId/cancel", async (req, res) => {
+  await cancelJob(req, res);
+});
+
 router.get("/stop2melt/health", async (req, res) => {
   await proxyJson(req, res, "/api/predict/stop2melt/health");
 });
