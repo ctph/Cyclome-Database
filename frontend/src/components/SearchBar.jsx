@@ -165,6 +165,26 @@ const SearchBar = () => {
       onChange={handleChange}
       onSearch={handleSearch}
       onClear={handleClear}
+      onSelect={handleChange}
+      onInputKeyDown={(event) => {
+        if (event.key !== "Enter") return;
+
+        const term = String(lastSearchTerm.current || value || "").trim().toLowerCase();
+        if (!term) return;
+
+        const exactMatch = allPdbIds.find((id) => String(id || "").trim().toLowerCase() === term);
+        if (exactMatch) {
+          event.preventDefault();
+          handleChange(exactMatch);
+          return;
+        }
+
+        const prefixMatch = allPdbIds.find((id) => String(id || "").trim().toLowerCase().startsWith(term));
+        if (prefixMatch) {
+          event.preventDefault();
+          handleChange(prefixMatch);
+        }
+      }}
       filterOption={false}
     />
   );

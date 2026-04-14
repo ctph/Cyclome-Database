@@ -75,9 +75,10 @@ const SequenceSearchBar = () => {
   }, []);
 
   const handleSearch = (input) => {
-    if (!input || input.length < 3) return;
+    const rawInput = String(input || "").trim();
+    if (rawInput.length < 3) return;
 
-    const inputLower = input.toLowerCase();
+    const inputLower = rawInput.toLowerCase();
 
     // Only skip if it's exactly the same term AND we haven't cleared it
     if (inputLower === lastSearchedTerm.current) return;
@@ -185,8 +186,31 @@ const SequenceSearchBar = () => {
       onChange={handleChange}
       onSearch={handleSearch}
       onClear={handleClear}
+      onSelect={handleChange}
+      onInputKeyDown={(event) => {
+        if (event.key !== "Enter") return;
+
+        const term = String(event.currentTarget?.value || "").trim().toLowerCase();
+        if (term.length < 3) return;
+
+        const exactChain = Object.keys(sequenceMap).find((chainId) => chainId === term);
+        if (exactChain) {
+          event.preventDefault();
+          handleChange(exactChain);
+          return;
+        }
+
+        const firstSequenceMatch = Object.entries(sequenceMap).find(([_, seq]) =>
+          String(seq || "").toLowerCase().includes(term)
+        );
+
+        if (firstSequenceMatch) {
+          event.preventDefault();
+          handleChange(firstSequenceMatch[0]);
+        }
+      }}
       filterOption={(input, option) =>
-        option?.sequence?.includes(input.toLowerCase())
+        option?.sequence?.includes(String(input || "").toLowerCase())
       }
     />
   );
