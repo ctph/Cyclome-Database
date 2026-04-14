@@ -48,6 +48,59 @@ def _require_json_object() -> Dict[str, Any]:
     return payload
 
 
+@jobs_bp.route("/jobs/criticl", methods=["POST"])
+def enqueue_criticl_single():
+    payload = _require_json_object()
+    sequence = payload.get("sequence", "")
+    cyclization_pattern = payload.get("cyclization_pattern", "")
+
+    if not isinstance(sequence, str) or not sequence.strip():
+        raise BadRequest("sequence is required")
+    if cyclization_pattern is not None and not isinstance(cyclization_pattern, str):
+        raise BadRequest("cyclization_pattern must be a string")
+
+    job = _queue("criticl").enqueue(
+        "tasks_criticl.task_criticl_predict",
+        sequence.strip(),
+        (cyclization_pattern or "").strip(),
+    )
+    return jsonify({"task_id": job.get_id(), "status": "accepted"}), 202
+
+
+@jobs_bp.route("/jobs/criticl/batch", methods=["POST"])
+def enqueue_criticl_batch():
+    payload = _require_json_object()
+    items = payload.get("items")
+    if not isinstance(items, list) or len(items) == 0:
+        raise BadRequest("items must be a non-empty array")
+
+    normalized_items: List[Dict[str, Any]] = []
+    for index, item in enumerate(items):
+        if not isinstance(item, dict):
+            raise BadRequest(f"items[{index}] must be a JSON object")
+
+        sequence = item.get("sequence", "")
+        cyclization_pattern = item.get("cyclization_pattern", "")
+
+        if not isinstance(sequence, str) or not sequence.strip():
+            raise BadRequest(f"items[{index}].sequence is required")
+        if cyclization_pattern is not None and not isinstance(cyclization_pattern, str):
+            raise BadRequest(f"items[{index}].cyclization_pattern must be a string")
+
+        normalized_items.append(
+            {
+                "sequence": sequence.strip(),
+                "cyclization_pattern": (cyclization_pattern or "").strip(),
+            }
+        )
+
+    job = _queue("criticl").enqueue(
+        "tasks_criticl.task_criticl_batch",
+        normalized_items,
+    )
+    return jsonify({"task_id": job.get_id(), "status": "accepted"}), 202
+
+
 @jobs_bp.route("/jobs/stop2melt", methods=["POST"])
 def enqueue_stop2melt_single():
     payload = _require_json_object()
