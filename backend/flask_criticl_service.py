@@ -36,7 +36,10 @@ def clean_sequence(seq: Any) -> str:
 
 @lru_cache(maxsize=2)
 def load_esmc(model_name: str, device: str):
-    from esm.models.esmc import ESMC
+    try:
+        from esm.models.esmc import ESMC
+    except ModuleNotFoundError:
+        from esm.pretrained import ESMC
 
     model = ESMC.from_pretrained(model_name).to(device)
     model.eval()
