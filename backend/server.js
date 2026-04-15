@@ -3,6 +3,7 @@ import cors from "cors";
 import pdbRoutes from "./src/routesPdb.js";
 import metaRoutes from "./src/routesMeta.js";
 import similarityRoutes from "./src/routesSimilarity.js";
+import flaskProxyRoutes from "./src/routesFlaskProxy.js";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get("/api/health", (req, res) => {
 app.use("/api/pdb", pdbRoutes);
 app.use("/api/meta", metaRoutes);
 app.use("/api/similarity", similarityRoutes);
+app.use(flaskProxyRoutes);
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
