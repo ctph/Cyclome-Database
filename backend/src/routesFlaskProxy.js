@@ -24,7 +24,8 @@ function buildTargetUrl(prefix, path, queryString) {
 }
 
 async function proxyRequest(req, res, prefix) {
-  const targetUrl = buildTargetUrl(prefix, req.params[0] || "", req.originalUrl.split("?")[1] || "");
+  const remainder = req.path.startsWith(prefix) ? req.path.slice(prefix.length) : "";
+  const targetUrl = buildTargetUrl(prefix, remainder, req.originalUrl.split("?")[1] || "");
 
   const headers = {};
   for (const [key, value] of Object.entries(req.headers)) {
@@ -64,8 +65,12 @@ async function proxyRequest(req, res, prefix) {
   }
 }
 
-router.use("/api/predict/criticl", (req, res) => proxyRequest(req, res, "/api/predict/criticl"));
-router.use("/api/predict/stop2melt", (req, res) => proxyRequest(req, res, "/api/predict/stop2melt"));
-router.use("/jobs", (req, res) => proxyRequest(req, res, "/jobs"));
+router.all(/^\/api\/predict\/criticl(?:\/.*)?$/, (req, res) =>
+  proxyRequest(req, res, "/api/predict/criticl")
+);
+router.all(/^\/api\/predict\/stop2melt(?:\/.*)?$/, (req, res) =>
+  proxyRequest(req, res, "/api/predict/stop2melt")
+);
+router.all(/^\/jobs(?:\/.*)?$/, (req, res) => proxyRequest(req, res, "/jobs"));
 
 export default router;
