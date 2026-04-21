@@ -157,9 +157,14 @@ const Header = () => (
 
       <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
         <span style={labelStyle}>Paper</span>
-        <span style={{ ...valueStyle, color: "rgba(0, 0, 0, 0.42)" }}>
-          Coming soon
-        </span>
+        <a
+          href="https://www.biorxiv.org/content/10.1101/2026.04.08.717280v1"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={linkStyle}
+        >
+          Cyclome bioRxiv preprint
+        </a>
       </div>
     </div>
   </header>
