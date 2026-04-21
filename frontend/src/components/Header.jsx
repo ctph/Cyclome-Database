@@ -152,18 +152,36 @@ const Header = () => (
         }}
       >
         <span style={labelStyle}>Software</span>
-        <span style={valueStyle}>Curwen, Riza</span>
+        <span style={valueStyle}>
+          <a
+            href="https://chowdhurylab.github.io/author.html?author=curwen-pei-hong-tan"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={linkStyle}
+          >
+            Curwen
+          </a>
+          {", "}
+          <a
+            href="https://chowdhurylab.github.io/author.html?author=riza-danurdoro"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={linkStyle}
+          >
+            Riza
+          </a>
+        </span>
       </div>
 
       <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
         <span style={labelStyle}>Paper</span>
         <a
-          href="https://www.biorxiv.org/content/10.1101/2026.04.08.717280v1"
+          href="https://www.biorxiv.org/content/biorxiv/early/2026/04/12/2026.04.08.717280.full.pdf"
           target="_blank"
           rel="noopener noreferrer"
           style={linkStyle}
         >
-          Cyclome bioRxiv preprint
+          bioRxiv PDF
         </a>
       </div>
     </div>
