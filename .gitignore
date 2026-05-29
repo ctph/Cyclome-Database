@@ -199,3 +199,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 >>>>>>> 833011a (Initialize project using Create React App)
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc

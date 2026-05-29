@@ -21,7 +21,12 @@ const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
 
 const POLL_INTERVAL_MS = 2000;
-const TERMINAL_JOB_STATUSES = new Set(["finished", "failed", "stopped", "canceled"]);
+const TERMINAL_JOB_STATUSES = new Set([
+  "finished",
+  "failed",
+  "stopped",
+  "canceled",
+]);
 
 function normalizeBatchRows(rawText) {
   return String(rawText || "")
@@ -31,7 +36,9 @@ function normalizeBatchRows(rawText) {
     .map((line, index) => {
       const parts = line.split("\t").map((part) => part.trim());
       if (parts.length < 1 || !parts[0]) {
-        throw new Error(`Line ${index + 1} must include a sequence in the first tab-separated column.`);
+        throw new Error(
+          `Line ${index + 1} must include a sequence in the first tab-separated column.`,
+        );
       }
 
       return {
@@ -79,10 +86,7 @@ export default function CritiCLPage() {
     setJobState(null);
   };
 
-  const probabilityColumns = useMemo(
-    () => ["Co", "Ln", "Mn", "Ni", "Zn"],
-    []
-  );
+  const probabilityColumns = useMemo(() => ["Co", "Ln", "Mn", "Ni", "Zn"], []);
 
   const batchColumns = useMemo(
     () => [
@@ -132,7 +136,7 @@ export default function CritiCLPage() {
         render: (value) => (value ? <Tag color="red">{value}</Tag> : null),
       },
     ],
-    [probabilityColumns]
+    [probabilityColumns],
   );
 
   const handleJobFinished = (jobData) => {
@@ -165,7 +169,9 @@ export default function CritiCLPage() {
       const response = await fetch(`/api/similarity/criticl/jobs/${jobId}`);
       const data = await readJson(response);
       if (!response.ok) {
-        throw new Error(data?.error || `Job polling failed (${response.status})`);
+        throw new Error(
+          data?.error || `Job polling failed (${response.status})`,
+        );
       }
 
       setJobState(data);
@@ -185,7 +191,10 @@ export default function CritiCLPage() {
         return;
       }
 
-      const failureMessage = data?.error || data?.message || `Job ended with status: ${data?.status || "unknown"}`;
+      const failureMessage =
+        data?.error ||
+        data?.message ||
+        `Job ended with status: ${data?.status || "unknown"}`;
       setError(failureMessage);
       message.error(failureMessage);
     } catch (err) {
@@ -226,7 +235,9 @@ export default function CritiCLPage() {
       }
 
       if (!data?.task_id) {
-        throw new Error("Backend accepted the request but did not return a task id.");
+        throw new Error(
+          "Backend accepted the request but did not return a task id.",
+        );
       }
 
       lastJobIdRef.current = data.task_id;
@@ -252,9 +263,12 @@ export default function CritiCLPage() {
     if (!jobId) return;
 
     try {
-      const response = await fetch(`/api/similarity/criticl/jobs/${jobId}/cancel`, {
-        method: "POST",
-      });
+      const response = await fetch(
+        `/api/similarity/criticl/jobs/${jobId}/cancel`,
+        {
+          method: "POST",
+        },
+      );
       const data = await readJson(response);
       if (!response.ok) {
         throw new Error(data?.error || `Cancel failed (${response.status})`);
@@ -271,7 +285,10 @@ export default function CritiCLPage() {
 
   const currentProgress = Number(jobState?.progress ?? (loading ? 5 : 0));
   const currentStatus = String(jobState?.status || "idle");
-  const canCancel = loading && jobState?.id && ["queued", "started", "deferred"].includes(currentStatus);
+  const canCancel =
+    loading &&
+    jobState?.id &&
+    ["queued", "started", "deferred"].includes(currentStatus);
 
   return (
     <div style={{ padding: 16 }}>
@@ -285,38 +302,39 @@ export default function CritiCLPage() {
                 CritiCL
               </Title>
               <Paragraph style={{ maxWidth: 920, marginBottom: 0 }}>
-                Predict likely metal class directly from peptide sequence using the CritiCL backend.
-                Requests run as background jobs so the page stays responsive while embeddings and inference complete.
+                Predict likely metal class directly from peptide sequence using
+                the CritiCL backend. Requests run as background jobs so the page
+                stays responsive while embeddings and inference complete.
               </Paragraph>
             </div>
 
             <Space wrap>
-              <Button type={!batchMode ? "primary" : "default"} onClick={() => setBatchMode(false)}>
+              <Button
+                type={!batchMode ? "primary" : "default"}
+                onClick={() => setBatchMode(false)}
+              >
                 Single Run
               </Button>
-              <Button type={batchMode ? "primary" : "default"} onClick={() => setBatchMode(true)}>
+              <Button
+                type={batchMode ? "primary" : "default"}
+                onClick={() => setBatchMode(true)}
+              >
                 Batch Run
               </Button>
-              <Button type="primary" htmlType="submit" form="criticl-form" loading={loading}>
+              <Button
+                type="primary"
+                htmlType="submit"
+                form="criticl-form"
+                loading={loading}
+              >
                 Run
               </Button>
-              {canCancel ? <Button danger onClick={handleCancelJob}>Cancel Job</Button> : null}
+              {canCancel ? (
+                <Button danger onClick={handleCancelJob}>
+                  Cancel Job
+                </Button>
+              ) : null}
             </Space>
-
-            <Alert
-              type="info"
-              showIcon
-              message={
-                batchMode
-                  ? "Batch mode: one row per line, tab-separated as sequence and optional cyclization pattern."
-                  : "Single mode submits one CritiCL job through the backend similarity API."
-              }
-              description={
-                batchMode
-                  ? "Example row: AKWYFGLICCKLQLK, then a tab, then 1-9. The second field is optional metadata."
-                  : "Cyclization is currently treated as metadata for CritiCL and does not alter the embedding step."
-              }
-            />
 
             <Form
               id="criticl-form"
@@ -331,14 +349,19 @@ export default function CritiCLPage() {
                     <Form.Item
                       label="Sequence"
                       name="sequence"
-                      rules={[{ required: true, message: "Please enter a sequence" }]}
+                      rules={[
+                        { required: true, message: "Please enter a sequence" },
+                      ]}
                     >
                       <TextArea rows={5} placeholder="e.g. AKWYFGLICCKLQLK" />
                     </Form.Item>
                   </Col>
 
                   <Col xs={24} md={12}>
-                    <Form.Item label="Cyclization Pattern" name="cyclization_pattern">
+                    <Form.Item
+                      label="Cyclization Pattern"
+                      name="cyclization_pattern"
+                    >
                       <TextArea rows={5} placeholder="e.g. 1-9" />
                     </Form.Item>
                   </Col>
@@ -347,14 +370,18 @@ export default function CritiCLPage() {
                 <Form.Item
                   label="Batch Input"
                   name="batch_rows"
-                  rules={[{ required: true, message: "Please paste at least one batch row" }]}
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please paste at least one batch row",
+                    },
+                  ]}
                 >
                   <TextArea
                     rows={10}
-                    placeholder={[
-                      "AKWYFGLICCKLQLK\t",
-                      "ACDEFGHIK\t1-9",
-                    ].join("\n")}
+                    placeholder={["AKWYFGLICCKLQLK\t", "ACDEFGHIK\t1-9"].join(
+                      "\n",
+                    )}
                   />
                 </Form.Item>
               )}
@@ -367,11 +394,22 @@ export default function CritiCLPage() {
             <Space direction="vertical" size="middle" style={{ width: "100%" }}>
               <Space wrap>
                 <Tag color="blue">Job ID: {jobState.id}</Tag>
-                <Tag color={currentStatus === "finished" ? "green" : currentStatus === "failed" ? "red" : "gold"}>
+                <Tag
+                  color={
+                    currentStatus === "finished"
+                      ? "green"
+                      : currentStatus === "failed"
+                        ? "red"
+                        : "gold"
+                  }
+                >
                   Status: {currentStatus}
                 </Tag>
               </Space>
-              <Progress percent={Math.max(0, Math.min(100, currentProgress))} status={currentStatus === "failed" ? "exception" : undefined} />
+              <Progress
+                percent={Math.max(0, Math.min(100, currentProgress))}
+                status={currentStatus === "failed" ? "exception" : undefined}
+              />
               {jobState.message ? <Text>{jobState.message}</Text> : null}
             </Space>
           </Card>
@@ -383,9 +421,18 @@ export default function CritiCLPage() {
           <Card title="Prediction Result" style={{ borderRadius: 16 }}>
             <Space direction="vertical" size="middle" style={{ width: "100%" }}>
               <Space wrap>
-                <Tag color="blue">Sequence length: {singleResult.sequence?.length || 0}</Tag>
-                <Tag color="green">Prediction: {singleResult.prediction || "-"}</Tag>
-                <Tag>Confidence: {singleResult.confidence_max == null ? "-" : Number(singleResult.confidence_max).toFixed(6)}</Tag>
+                <Tag color="blue">
+                  Sequence length: {singleResult.sequence?.length || 0}
+                </Tag>
+                <Tag color="green">
+                  Prediction: {singleResult.prediction || "-"}
+                </Tag>
+                <Tag>
+                  Confidence:{" "}
+                  {singleResult.confidence_max == null
+                    ? "-"
+                    : Number(singleResult.confidence_max).toFixed(6)}
+                </Tag>
               </Space>
 
               <Row gutter={16}>
@@ -393,11 +440,14 @@ export default function CritiCLPage() {
                   <Card size="small" title="Inputs">
                     <Space direction="vertical" size={6}>
                       <Text>
-                        <strong>Sequence:</strong> <Text code>{singleResult.sequence}</Text>
+                        <strong>Sequence:</strong>{" "}
+                        <Text code>{singleResult.sequence}</Text>
                       </Text>
                       <Text>
                         <strong>Cyclization:</strong>{" "}
-                        <Text code>{singleResult.cyclization_pattern || ""}</Text>
+                        <Text code>
+                          {singleResult.cyclization_pattern || ""}
+                        </Text>
                       </Text>
                     </Space>
                   </Card>
@@ -406,10 +456,12 @@ export default function CritiCLPage() {
                   <Card size="small" title="Prediction Details">
                     <Space direction="vertical" size={6}>
                       <Text>
-                        <strong>Predicted class:</strong> <Tag color="blue">{singleResult.prediction || "-"}</Tag>
+                        <strong>Predicted class:</strong>{" "}
+                        <Tag color="blue">{singleResult.prediction || "-"}</Tag>
                       </Text>
                       <Text>
-                        <strong>Raw class index:</strong> <Text code>{singleResult.prediction_raw}</Text>
+                        <strong>Raw class index:</strong>{" "}
+                        <Text code>{singleResult.prediction_raw}</Text>
                       </Text>
                     </Space>
                   </Card>
@@ -420,7 +472,10 @@ export default function CritiCLPage() {
                 <Space wrap>
                   {probabilityColumns.map((metal) => (
                     <Tag key={metal} color="geekblue">
-                      {metal}: {singleResult?.probabilities?.[metal] == null ? "-" : Number(singleResult.probabilities[metal]).toFixed(6)}
+                      {metal}:{" "}
+                      {singleResult?.probabilities?.[metal] == null
+                        ? "-"
+                        : Number(singleResult.probabilities[metal]).toFixed(6)}
                     </Tag>
                   ))}
                 </Space>
@@ -444,8 +499,16 @@ export default function CritiCLPage() {
           </Card>
         ) : null}
 
-        {!loading && !singleResult && !batchResult && !error && jobState?.status === "canceled" ? (
-          <Result status="warning" title="Job canceled" subTitle="You can adjust the input and run it again." />
+        {!loading &&
+        !singleResult &&
+        !batchResult &&
+        !error &&
+        jobState?.status === "canceled" ? (
+          <Result
+            status="warning"
+            title="Job canceled"
+            subTitle="You can adjust the input and run it again."
+          />
         ) : null}
       </Space>
     </div>
