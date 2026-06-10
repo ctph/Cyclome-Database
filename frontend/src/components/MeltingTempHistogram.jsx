@@ -2,8 +2,6 @@ import React, { useMemo, useState } from "react";
 
 const FONT =
   "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
-const FONT_MONO =
-  "'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace";
 
 export default function MeltingTempHistogram({
   allTemps = [],
