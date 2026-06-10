@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Card,
@@ -92,7 +92,7 @@ const SimilarityPage = () => {
 
       try {
         const url = `/api/similarity/${encodeURIComponent(
-          baseId
+          baseId,
         )}/${encodeURIComponent(t)}`;
         const res = await fetch(url);
         const data = await res.json().catch(() => null);
@@ -159,32 +159,36 @@ const SimilarityPage = () => {
   }, [baseId, t]);
 
   // View -> resolve base -> preferred chain -> /pdb/<chain>
-  async function goToPdbChain(base) {
-    const baseKey = normalizeBaseId(base);
-    if (!baseKey) return;
+  const goToPdbChain = useCallback(
+    async (base) => {
+      const baseKey = normalizeBaseId(base);
+      if (!baseKey) return;
 
-    try {
-      const res = await fetch(`/api/pdb/${encodeURIComponent(baseKey)}`);
-      const data = await res.json().catch(() => null);
+      try {
+        const res = await fetch(`/api/pdb/${encodeURIComponent(baseKey)}`);
+        const data = await res.json().catch(() => null);
 
-      if (!res.ok) {
-        const msg = data?.error || `Failed to fetch chains (${res.status})`;
-        throw new Error(msg);
+        if (!res.ok) {
+          const msg = data?.error || `Failed to fetch chains (${res.status})`;
+          throw new Error(msg);
+        }
+
+        const chainIds = Array.isArray(data?.chainIds) ? data.chainIds : [];
+        if (chainIds.length === 0) {
+          throw new Error("No chains found for this PDB");
+        }
+
+        const lower = chainIds.map((x) => String(x).toLowerCase());
+        const preferred = lower.find((x) => x.endsWith("_a")) || lower[0];
+
+        navigate(`/pdb/${preferred}`);
+      } catch (e) {
+        const msg = e?.message || "Failed to open PDB viewer";
+        message.error(msg);
       }
-
-      const chainIds = Array.isArray(data?.chainIds) ? data.chainIds : [];
-      if (chainIds.length === 0)
-        throw new Error("No chains found for this PDB");
-
-      const lower = chainIds.map((x) => String(x).toLowerCase());
-      const preferred = lower.find((x) => x.endsWith("_a")) || lower[0];
-
-      navigate(`/pdb/${preferred}`);
-    } catch (e) {
-      const msg = e?.message || "Failed to open PDB viewer";
-      message.error(msg);
-    }
-  }
+    },
+    [navigate],
+  );
 
   const rows = useMemo(() => {
     return results.map((id, idx) => {
@@ -237,7 +241,7 @@ const SimilarityPage = () => {
         ),
       },
     ],
-    [goToPdbChain]
+    [goToPdbChain],
   );
 
   return (
