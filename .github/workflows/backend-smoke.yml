@@ -1,0 +1,83 @@
+name: Backend Smoke
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-smoke.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-smoke.yml"
+
+concurrency:
+  group: cyclome-backend-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    name: Backend smoke checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Node dependencies
+        working-directory: backend
+        run: npm ci
+
+      - name: Check Express entrypoint
+        working-directory: backend
+        run: node --check server.js
+
+      - name: Compile backend Python
+        run: |
+          python - <<'PY'
+          import py_compile
+          from pathlib import Path
+
+          excluded_dirs = {
+              "__pycache__",
+              ".ipynb_checkpoints",
+              ".pytest_cache",
+              ".mypy_cache",
+              ".ruff_cache",
+              ".venv",
+              "venv",
+              "env",
+          }
+
+          failures = []
+          for path in Path("backend").rglob("*.py"):
+              if any(part in excluded_dirs for part in path.parts):
+                  continue
+              try:
+                  py_compile.compile(str(path), doraise=True)
+              except py_compile.PyCompileError as exc:
+                  failures.append((path, exc))
+
+          if failures:
+              for path, exc in failures:
+                  print(f"FAILED: {path}")
+                  print(exc)
+              raise SystemExit(1)
+
+          print("Python syntax smoke check passed")
+          PY

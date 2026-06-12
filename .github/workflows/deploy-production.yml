@@ -1,0 +1,27 @@
+name: Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: cyclome-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to Chowdhury Lab workstation
+    runs-on:
+      - self-hosted
+      - cyclome-workstation
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy production
+        shell: bash
+        run: ./scripts/deploy-production.sh
