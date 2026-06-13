@@ -18,9 +18,26 @@ from flask_stop2melt_service import (
     stop2melt_healthcheck,
 )
 from jobs_routes import jobs_bp
+from security_config import (
+    CYCLIC_BATCH_MAX_ITEMS,
+    CYCLIC_SEQUENCE_MAX_LENGTH,
+    MODEL_BATCH_MAX_ITEMS,
+    MODEL_SEQUENCE_MAX_LENGTH,
+    validate_cyclization_pattern,
+    validate_items,
+    validate_sequence,
+)
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000", "https://cyclome930.structf.studio/"])
+app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024
+CORS(
+    app,
+    origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://cyclome930.structf.studio",
+    ],
+)
 app.register_blueprint(jobs_bp)
 
 
@@ -52,13 +69,20 @@ def health():
 
 
 def parse_similarity_request(payload: Dict[str, Any]):
-    query_sequence = require_string(payload, "query_sequence")
-    template_sequence = require_string(payload, "template_sequence")
-    template_cyclization = payload.get("template_cyclization", "")
-    if template_cyclization is None:
-        template_cyclization = ""
-    if not isinstance(template_cyclization, str):
-        raise ValueError("template_cyclization must be a string")
+    query_sequence = validate_sequence(
+        require_string(payload, "query_sequence"),
+        "query_sequence",
+        max_length=CYCLIC_SEQUENCE_MAX_LENGTH,
+    )
+    template_sequence = validate_sequence(
+        require_string(payload, "template_sequence"),
+        "template_sequence",
+        max_length=CYCLIC_SEQUENCE_MAX_LENGTH,
+    )
+    template_cyclization = validate_cyclization_pattern(
+        payload.get("template_cyclization", ""),
+        "template_cyclization",
+    )
 
     match_score = optional_int(payload, "match_score", 2)
     mismatch_score = optional_int(payload, "mismatch_score", -1)
@@ -101,9 +125,10 @@ def cyclic_sequence_similarity_batch():
     if not isinstance(payload, dict):
         return json_error("Request body must be a JSON object", 400)
 
-    items = payload.get("items")
-    if not isinstance(items, list) or len(items) == 0:
-        return json_error("items must be a non-empty array", 400)
+    try:
+        items = validate_items(payload.get("items"), max_items=CYCLIC_BATCH_MAX_ITEMS)
+    except ValueError as exc:
+        return json_error(str(exc), 400)
 
     results = []
     errors = []
@@ -136,12 +161,15 @@ def cyclic_sequence_similarity_batch():
 
 
 def parse_stop2melt_request(payload: Dict[str, Any]):
-    sequence = require_string(payload, "sequence")
-    cyclization_pattern = payload.get("cyclization_pattern", "")
-    if cyclization_pattern is None:
-        cyclization_pattern = ""
-    if not isinstance(cyclization_pattern, str):
-        raise ValueError("cyclization_pattern must be a string")
+    sequence = validate_sequence(
+        require_string(payload, "sequence"),
+        "sequence",
+        max_length=MODEL_SEQUENCE_MAX_LENGTH,
+    )
+    cyclization_pattern = validate_cyclization_pattern(
+        payload.get("cyclization_pattern", ""),
+        "cyclization_pattern",
+    )
 
     return {
         "sequence": sequence,
@@ -188,9 +216,10 @@ def criticl_predict_batch_route():
     if not isinstance(payload, dict):
         return json_error("Request body must be a JSON object", 400)
 
-    items = payload.get("items")
-    if not isinstance(items, list) or len(items) == 0:
-        return json_error("items must be a non-empty array", 400)
+    try:
+        items = validate_items(payload.get("items"), max_items=MODEL_BATCH_MAX_ITEMS)
+    except ValueError as exc:
+        return json_error(str(exc), 400)
 
     normalized_items = []
     for index, item in enumerate(items):
@@ -249,9 +278,10 @@ def stop2melt_predict_batch_route():
     if not isinstance(payload, dict):
         return json_error("Request body must be a JSON object", 400)
 
-    items = payload.get("items")
-    if not isinstance(items, list) or len(items) == 0:
-        return json_error("items must be a non-empty array", 400)
+    try:
+        items = validate_items(payload.get("items"), max_items=MODEL_BATCH_MAX_ITEMS)
+    except ValueError as exc:
+        return json_error(str(exc), 400)
 
     normalized_items = []
     for index, item in enumerate(items):

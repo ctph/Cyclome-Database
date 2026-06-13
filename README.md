@@ -1,32 +1,132 @@
-# Cyclome-Database
+# Cyclome Database
 
-Cyclome Database for Agrivax.
+[website](https://cyclome930.structf.studio/)
 
-## Repository Structure
+## Installation
 
-- `backend/` — data processing and metadata assets
-- `frontend/` — web application
+### Local Server
 
-## Metadata Curation Template
+1. Clone the GitHub repo:
 
-The metadata curation template lives at:
+```bash
+git clone https://github.com/ctph/Cyclome-Database
+cd ./Cyclome-Database
+```
 
-- `backend/metadata/missing_metadata_curation_template.csv`
+2. Open a terminal, install backend requirements, and start the Flask model API:
 
-Current CSV schema:
+```bash
+cd ./backend
+python -m venv venv
 
-1. `PDB_ID`
-2. `PDB_File`
-3. `Sequence`
-4. `Cyclization`
-5. `Organism_Scientific_Name`
-6. `Method`
-7. `Release_Date`
-8. `Keywords`
-9. `Title`
-10. `Missing_Fields`
+# if you're on Windows
+.\venv\Scripts\activate
 
-### Notes
+# if you're on Mac or Linux
+source ./venv/bin/activate
 
-- `Researcher_Notes` is no longer part of the template.
-- `Release_Date` values in this template are normalized to title-cased month format (e.g., `31-Jan-94`).
+pip install -r requirements.txt
+flask --app flask_app run --host 127.0.0.1 --port 5002
+```
+
+3. Open another terminal, install Express packages, and start the API gateway:
+
+```bash
+cd ./backend
+npm install
+npm run dev
+```
+
+4. Open another terminal, install frontend packages, and start the web UI:
+
+```bash
+cd ./frontend
+npm install
+npm start
+```
+
+Open a browser with url [localhost](http://localhost:3000/).
+
+## Production Deployment
+
+The production site is served through Cloudflare Tunnel at:
+
+```text
+https://cyclome930.structf.studio
+```
+
+Production runs on the Chowdhury Lab workstation:
+
+```text
+/home/chowdhurylab01/work/Cyclome-Database
+/var/www/cyclome930.structf.studio
+```
+
+Production services:
+
+```text
+cyclome-flask.service
+cyclome-express.service
+cyclome-worker.service
+nginx.service
+cloudflared.service
+redis-server.service
+```
+
+Deployment is handled by GitHub Actions on the self-hosted runner labeled:
+
+```text
+cyclome-workstation
+```
+
+The deploy script is:
+
+```text
+scripts/deploy-production.sh
+```
+
+## Production Security Notes
+
+Production clients should call the API through same-origin routes:
+
+```text
+https://cyclome930.structf.studio/api/*
+```
+
+Direct public non-health `/api/predict/*` routes are intentionally blocked. The frontend uses `/api/similarity/*`, which proxies to the Flask model backend.
+
+Expensive model enqueue routes require Cloudflare Turnstile:
+
+```text
+POST /api/similarity/criticl
+POST /api/similarity/criticl/batch
+POST /api/similarity/stop2melt
+POST /api/similarity/stop2melt/batch
+```
+
+The frontend obtains a Turnstile token and sends it as:
+
+```text
+X-Cyclome-Turnstile-Token
+```
+
+Polling and canceling queued jobs requires the returned job token:
+
+```text
+X-Cyclome-Job-Token
+```
+
+Cloudflare WAF blocks obvious bad paths and disallowed HTTP methods. The active rate-limit rule protects model enqueue routes.
+
+If protected POST routes return `400 Verification token is required`, the frontend is missing the Turnstile token. If disallowed methods or bad paths return `403`, that is expected.
+
+After deployment, verify:
+
+```bash
+curl -i https://cyclome930.structf.studio/api/health
+curl -i https://cyclome930.structf.studio/api/similarity/criticl/health
+curl -i https://cyclome930.structf.studio/api/similarity/stop2melt/health
+curl -i -X DELETE https://cyclome930.structf.studio/api/health
+```
+
+Expected result: health endpoints return JSON, while disallowed methods are blocked.

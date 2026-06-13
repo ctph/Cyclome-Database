@@ -16,6 +16,7 @@ import {
   message,
 } from "antd";
 import Header from "../components/Header";
+import TurnstileBox from "../components/TurnstileBox";
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
@@ -56,6 +57,8 @@ export default function CritiCLPage() {
   const [form] = Form.useForm();
   const pollingTimeoutRef = useRef(null);
   const lastJobIdRef = useRef(null);
+  const lastJobTokenRef = useRef("");
+  const turnstileWidgetRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
@@ -63,6 +66,7 @@ export default function CritiCLPage() {
   const [batchResult, setBatchResult] = useState(null);
   const [error, setError] = useState("");
   const [jobState, setJobState] = useState(null);
+  const [turnstileToken, setTurnstileToken] = useState("");
 
   useEffect(() => {
     return () => {
@@ -84,6 +88,7 @@ export default function CritiCLPage() {
     setBatchResult(null);
     setError("");
     setJobState(null);
+    lastJobTokenRef.current = "";
   };
 
   const probabilityColumns = useMemo(() => ["Co", "Ln", "Mn", "Ni", "Zn"], []);
@@ -166,7 +171,12 @@ export default function CritiCLPage() {
 
   const pollJob = async (jobId) => {
     try {
-      const response = await fetch(`/api/similarity/criticl/jobs/${jobId}`);
+      const headers = lastJobTokenRef.current
+        ? { "X-Cyclome-Job-Token": lastJobTokenRef.current }
+        : {};
+      const response = await fetch(`/api/similarity/criticl/jobs/${jobId}`, {
+        headers,
+      });
       const data = await readJson(response);
       if (!response.ok) {
         throw new Error(
@@ -212,6 +222,10 @@ export default function CritiCLPage() {
     resetResults();
 
     try {
+      if (!turnstileToken) {
+        throw new Error("Verification is required before submitting.");
+      }
+
       const payload = batchMode
         ? { items: normalizeBatchRows(values.batch_rows) }
         : {
@@ -225,9 +239,13 @@ export default function CritiCLPage() {
 
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "X-Cyclome-Turnstile-Token": turnstileToken,
+        },
         body: JSON.stringify(payload),
       });
+      turnstileWidgetRef.current?.reset();
 
       const data = await readJson(response);
       if (!response.ok) {
@@ -241,6 +259,7 @@ export default function CritiCLPage() {
       }
 
       lastJobIdRef.current = data.task_id;
+      lastJobTokenRef.current = data.job_token || "";
       setJobState({
         id: data.task_id,
         status: data.status || "queued",
@@ -255,6 +274,7 @@ export default function CritiCLPage() {
       const msg = err?.message || "Failed to run CritiCL.";
       setError(msg);
       message.error(msg);
+      turnstileWidgetRef.current?.reset();
     }
   };
 
@@ -267,6 +287,9 @@ export default function CritiCLPage() {
         `/api/similarity/criticl/jobs/${jobId}/cancel`,
         {
           method: "POST",
+          headers: lastJobTokenRef.current
+            ? { "X-Cyclome-Job-Token": lastJobTokenRef.current }
+            : {},
         },
       );
       const data = await readJson(response);
@@ -326,6 +349,7 @@ export default function CritiCLPage() {
                 htmlType="submit"
                 form="criticl-form"
                 loading={loading}
+                disabled={!turnstileToken}
               >
                 Run
               </Button>
@@ -385,6 +409,13 @@ export default function CritiCLPage() {
                   />
                 </Form.Item>
               )}
+              <Form.Item>
+                <TurnstileBox
+                  ref={turnstileWidgetRef}
+                  disabled={loading}
+                  onToken={setTurnstileToken}
+                />
+              </Form.Item>
             </Form>
           </Space>
         </Card>

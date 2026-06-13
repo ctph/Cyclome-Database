@@ -2,6 +2,8 @@ import express from "express";
 
 const router = express.Router();
 const FLASK_BASE_URL = process.env.FLASK_BASE_URL || "http://127.0.0.1:5002";
+const ALLOW_DIRECT_PREDICT =
+  String(process.env.CYCLOME_ALLOW_DIRECT_PREDICT || "").toLowerCase() === "true";
 
 const HOP_BY_HOP_HEADERS = new Set([
   "connection",
@@ -24,6 +26,14 @@ function buildTargetUrl(prefix, path, queryString) {
 }
 
 async function proxyRequest(req, res, prefix) {
+  if (
+    !ALLOW_DIRECT_PREDICT &&
+    req.path.startsWith("/api/predict/") &&
+    !(req.method === "GET" && req.path.endsWith("/health"))
+  ) {
+    return res.status(404).json({ error: "not_found" });
+  }
+
   const remainder = req.path.startsWith(prefix) ? req.path.slice(prefix.length) : "";
   const targetUrl = buildTargetUrl(prefix, remainder, req.originalUrl.split("?")[1] || "");
 
