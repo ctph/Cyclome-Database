@@ -170,9 +170,23 @@ router.get("/batch/:threshold", (req, res) => {
 });
 async function proxyJson(req, res, flaskPath, { method = "GET", body } = {}) {
   try {
+    const headers = { "Content-Type": "application/json" };
+    const jobToken = req.get("X-Cyclome-Job-Token");
+    if (jobToken) {
+      headers["X-Cyclome-Job-Token"] = jobToken;
+    }
+    const turnstileToken = req.get("X-Cyclome-Turnstile-Token");
+    if (turnstileToken) {
+      headers["X-Cyclome-Turnstile-Token"] = turnstileToken;
+    }
+    const cfConnectingIp = req.get("CF-Connecting-IP");
+    if (cfConnectingIp) {
+      headers["CF-Connecting-IP"] = cfConnectingIp;
+    }
+
     const response = await fetch(`${FLASK_BASE_URL}${flaskPath}`, {
       method,
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: body ? JSON.stringify(body) : undefined,
     });
 
@@ -186,8 +200,6 @@ async function proxyJson(req, res, flaskPath, { method = "GET", body } = {}) {
     console.error(`[similarity] Flask proxy error for ${flaskPath}:`, error);
     return res.status(502).json({
       error: "Flask backend unavailable",
-      detail: String(error.message || error),
-      flaskBaseUrl: FLASK_BASE_URL,
     });
   }
 }
