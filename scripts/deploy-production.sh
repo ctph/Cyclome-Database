@@ -15,6 +15,40 @@ NGINX="${NGINX:-/usr/sbin/nginx}"
 
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+wait_for_url() {
+  local url="$1"
+  local output="$2"
+  local attempts="${3:-30}"
+  local delay="${4:-2}"
+
+  for attempt in $(seq 1 "$attempts"); do
+    if curl -fsS "$url" >"$output"; then
+      return 0
+    fi
+    if [ "$attempt" -lt "$attempts" ]; then
+      sleep "$delay"
+    fi
+  done
+
+  echo "Timed out waiting for $url" >&2
+  return 1
+}
+
+expect_http_code_in() {
+  local actual="$1"
+  shift
+
+  local expected
+  for expected in "$@"; do
+    if [ "$actual" = "$expected" ]; then
+      return 0
+    fi
+  done
+
+  echo "Unexpected HTTP status $actual; expected one of: $*" >&2
+  return 1
+}
+
 exec 9>"$LOCK_FILE"
 flock -n 9 || {
   echo "Another Cyclome production deploy is already running."
@@ -76,11 +110,16 @@ echo ">>> Verifying local services"
 sudo -n "$SYSTEMCTL" is-active cyclome-flask.service
 sudo -n "$SYSTEMCTL" is-active cyclome-express.service
 sudo -n "$SYSTEMCTL" is-active cyclome-worker.service
-curl -fsS http://127.0.0.1:5001/api/health >/tmp/cyclome-express-health.json
-curl -fsS http://127.0.0.1:5002/api/health >/tmp/cyclome-flask-health.json
+wait_for_url http://127.0.0.1:5001/api/health /tmp/cyclome-express-health.json
+wait_for_url http://127.0.0.1:5002/api/health /tmp/cyclome-flask-health.json
 
 echo ">>> Verifying public Cloudflare route"
-curl -fsS "$PUBLIC_URL/api/health" >/tmp/cyclome-public-health.json
-curl -fsS "$PUBLIC_URL/api/similarity/cyclic-sequence/health" >/tmp/cyclome-cyclic-health.json
+wait_for_url "$PUBLIC_URL/api/health" /tmp/cyclome-public-health.json
+wait_for_url "$PUBLIC_URL/api/similarity/cyclic-sequence/health" /tmp/cyclome-cyclic-health.json
+wait_for_url "$PUBLIC_URL/api/similarity/criticl/health" /tmp/cyclome-criticl-health.json
+wait_for_url "$PUBLIC_URL/api/similarity/stop2melt/health" /tmp/cyclome-stop2melt-health.json
+expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X DELETE "$PUBLIC_URL/api/health")" 403 405
+expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$PUBLIC_URL/api/predict/criticl" -H 'Content-Type: application/json' --data '{"sequence":"ACDEFGHIK"}')" 404
+expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$PUBLIC_URL/api/similarity/criticl" -H 'Content-Type: application/json' --data '{"sequence":"ACDEFGHIK"}')" 400 403
 
 echo ">>> Cyclome production deploy complete"
