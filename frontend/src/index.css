@@ -490,12 +490,15 @@ code,
 .cyclome-app .ant-btn-primary {
   background: var(--blue);
   border-color: var(--blue);
+  color: #fff !important;
   box-shadow: none;
+  transition: none;
 }
 
 .cyclome-app .ant-btn-primary:not(:disabled):hover {
   background: #1728d4;
   border-color: #1728d4;
+  color: #fff !important;
 }
 
 .cyclome-app .ant-btn-default:not(:disabled):hover {

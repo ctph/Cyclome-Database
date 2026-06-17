@@ -22,7 +22,7 @@ const Header = () => {
           <Link className="brand-home" to="/">
             <h1>Cyclome</h1>
           </Link>
-          <span>Cyclic peptide structure and stability workbench within StructF.studio</span>
+          <span>Cyclic peptide workbench within StructF.studio</span>
         </div>
       </div>
 

@@ -102,7 +102,7 @@ export default function MeltingTempHistogram({
             fontFamily: FONT,
           }}
         >
-          CyMelt Distribution
+          Predicted melt temperature
         </span>
         <span
           style={{
@@ -111,7 +111,7 @@ export default function MeltingTempHistogram({
             fontFamily: FONT,
           }}
         >
-          Cyclome {allTemps.length.toLocaleString()}
+          Cyclome930
         </span>
       </div>
 
@@ -162,7 +162,7 @@ export default function MeltingTempHistogram({
                   fontFamily: FONT,
                 }}
               >
-                {percentile}th pct
+                {percentile}th percentile
               </span>
             )}
           </>
@@ -295,10 +295,10 @@ export default function MeltingTempHistogram({
               />
               <text
                 x={W - 27}
-                y={markerY + 3.5}
+                y={markerY + 4.4}
                 textAnchor="middle"
                 fill="#dc2626"
-                fontSize={8.5}
+                fontSize={12}
                 fontWeight="700"
                 fontFamily={FONT}
               >
@@ -366,7 +366,7 @@ export default function MeltingTempHistogram({
             fontFamily={FONT}
             letterSpacing="0.05em"
           >
-            Cyclome {allTemps.length.toLocaleString()}
+            Cyclome930
           </text>
         </g>
       </svg>
