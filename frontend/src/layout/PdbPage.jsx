@@ -198,9 +198,19 @@ const PdbPage = () => {
     [pdbId],
   );
 
+  const normalizedPdbId = useMemo(
+    () =>
+      String(pdbId || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\.pdb$/i, "")
+        .trim(),
+    [pdbId],
+  );
+
   const handleSimilarityClick = (threshold) => {
-    if (!normalizedBaseId) return;
-    navigate(`/similarity/${normalizedBaseId}/${threshold}`);
+    if (!normalizedPdbId) return;
+    navigate(`/similarity/${normalizedPdbId}/${threshold}`);
   };
 
   const baseId = normalizedBaseId;

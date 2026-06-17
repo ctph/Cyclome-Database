@@ -28,6 +28,13 @@ function baseId(x) {
     .split("_")[0];
 }
 
+function pdbId(x) {
+  return String(x || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\.pdb$/i, "");
+}
+
 function splitIds(str) {
   return String(str || "")
     .split(/[;,]/)
@@ -38,6 +45,7 @@ function splitIds(str) {
 let loaded = false;
 let loadError = null;
 let index = new Map();
+let exactIndex = new Map();
 
 function loadOnce() {
   if (loaded) return;
@@ -56,6 +64,7 @@ function loadOnce() {
     }
 
     const m = new Map();
+    const exact = new Map();
 
     for (const row of data) {
       const pdbField = row?.PDB;
@@ -68,24 +77,33 @@ function loadOnce() {
         .filter(Boolean);
 
       for (const pdb of pdbs) {
+        const exactKey = pdbId(pdb);
         const key = baseId(pdb);
+        if (exactKey) exact.set(exactKey, row);
         if (key) m.set(key, row);
       }
     }
 
     index = m;
+    exactIndex = exact;
     loaded = true;
     loadError = null;
 
     console.log(
-      `[similarity] loaded ${data.length} rows, indexed ${index.size} PDB ids from ${SIM_PATH}`
+      `[similarity] loaded ${data.length} rows, indexed ${exactIndex.size} exact PDB ids and ${index.size} base PDB ids from ${SIM_PATH}`
     );
   } catch (e) {
     loadError = e;
     loaded = false;
     index = new Map();
+    exactIndex = new Map();
     console.error("[similarity] load error:", e);
   }
+}
+
+function getSimilarityRow(id) {
+  const exactKey = pdbId(id);
+  return exactIndex.get(exactKey) || index.get(baseId(id));
 }
 
 // routes
@@ -101,7 +119,12 @@ router.get("/health", (req, res) => {
       simPath: SIM_PATH,
     });
   }
-  res.json({ ok: true, indexed: index.size, simPath: SIM_PATH });
+  res.json({
+    ok: true,
+    indexed: index.size,
+    exactIndexed: exactIndex.size,
+    simPath: SIM_PATH,
+  });
 });
 
 // Batch lookup
@@ -131,7 +154,7 @@ router.get("/batch/:threshold", (req, res) => {
 
     const ids = idsParam
       .split(/[;,]/)
-      .map((s) => baseId(s))
+      .map((s) => pdbId(s))
       .filter(Boolean);
 
     if (ids.length === 0) {
@@ -141,14 +164,15 @@ router.get("/batch/:threshold", (req, res) => {
     const key = `similarity_${threshold}`;
 
     const items = ids.map((id) => {
-      const row = index.get(id);
+      const row = getSimilarityRow(id);
       if (!row) return { pdbId: id, error: `No similarity record for ${id}` };
       if (!(key in row))
         return { pdbId: id, error: `No field ${key} for ${id}` };
 
       const rawList = row[key];
       const results = splitIds(rawList);
-      const unique = [...new Set(results)].filter((x) => x !== id);
+      const requestedBaseId = baseId(id);
+      const unique = [...new Set(results)].filter((x) => x !== requestedBaseId);
 
       return {
         pdbId: id,
@@ -291,7 +315,7 @@ router.get("/:pdbId/:threshold", (req, res) => {
   }
 
   try {
-    const id = baseId(req.params.pdbId);
+    const id = pdbId(req.params.pdbId);
     const threshold = String(req.params.threshold || "").trim();
 
     // Validate
@@ -302,7 +326,7 @@ router.get("/:pdbId/:threshold", (req, res) => {
 
     const key = `similarity_${threshold}`;
 
-    const row = index.get(id);
+    const row = getSimilarityRow(id);
     if (!row) {
       return res.status(404).json({ error: `No similarity record for ${id}` });
     }
@@ -314,7 +338,8 @@ router.get("/:pdbId/:threshold", (req, res) => {
     const rawList = row[key];
     const results = splitIds(rawList);
 
-    const unique = [...new Set(results)].filter((x) => x !== id);
+    const requestedBaseId = baseId(id);
+    const unique = [...new Set(results)].filter((x) => x !== requestedBaseId);
 
     res.json({
       pdbId: id,

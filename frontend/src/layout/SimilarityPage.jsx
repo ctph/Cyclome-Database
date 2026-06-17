@@ -23,11 +23,20 @@ function normalizeBaseId(x) {
     .trim();
 }
 
+function normalizePdbId(x) {
+  return String(x || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\.pdb$/i, "")
+    .trim();
+}
+
 const SimilarityPage = () => {
   const { pdbId, threshold } = useParams();
   const navigate = useNavigate();
 
-  const baseId = useMemo(() => normalizeBaseId(pdbId), [pdbId]);
+  const queryId = useMemo(() => normalizePdbId(pdbId), [pdbId]);
+  const baseId = useMemo(() => normalizeBaseId(queryId), [queryId]);
 
   const t = useMemo(() => {
     const raw = String(threshold || "50").trim();
@@ -80,7 +89,7 @@ const SimilarityPage = () => {
 
   // Load similarity list (keep your current routing + action behavior)
   useEffect(() => {
-    if (!baseId) return;
+    if (!queryId) return;
 
     let cancelled = false;
 
@@ -92,7 +101,7 @@ const SimilarityPage = () => {
 
       try {
         const url = `/api/similarity/${encodeURIComponent(
-          baseId,
+          queryId,
         )}/${encodeURIComponent(t)}`;
         const res = await fetch(url);
         const data = await res.json().catch(() => null);
@@ -156,7 +165,7 @@ const SimilarityPage = () => {
     return () => {
       cancelled = true;
     };
-  }, [baseId, t]);
+  }, [baseId, queryId, t]);
 
   // View -> resolve base -> preferred chain -> /pdb/<chain>
   const goToPdbChain = useCallback(
@@ -251,7 +260,7 @@ const SimilarityPage = () => {
       <Space direction="vertical" size="middle" style={{ width: "100%" }}>
         <Space align="center" wrap>
           <Title level={2} style={{ margin: 0 }}>
-            Similarity: {baseId ? baseId.toUpperCase() : "—"}
+            Similarity: {queryId ? queryId.toUpperCase() : "—"}
           </Title>
           <Tag color="blue">{t}%</Tag>
           {!loading && !error && <Tag>{count} results</Tag>}
