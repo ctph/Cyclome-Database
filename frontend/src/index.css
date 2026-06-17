@@ -81,8 +81,16 @@ code,
 
 .brand {
   display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.brand-copy {
+  display: flex;
   align-items: flex-end;
   gap: 18px;
+  min-width: 0;
   white-space: nowrap;
 }
 
@@ -106,6 +114,10 @@ code,
   font-size: 15px;
   margin-bottom: 6px;
   letter-spacing: 0;
+}
+
+.nav-panel a:hover {
+  text-decoration: underline;
 }
 
 .cyclome-header nav {
@@ -202,6 +214,11 @@ code,
 .nav-panel p {
   margin: 0;
   color: #666;
+}
+
+.nav-panel a {
+  color: var(--blue);
+  text-decoration: none;
 }
 
 .nav-panel code {
@@ -321,6 +338,43 @@ code,
 
 .query-field {
   margin-top: 14px;
+}
+
+.credit-bubble {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  display: grid;
+  gap: 6px;
+  margin: 0 0 14px;
+  padding: 13px 16px;
+}
+
+.credit-line {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 10px;
+  color: rgba(0, 0, 0, 0.68);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.credit-line > span:first-child {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.credit-line a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.credit-line a:hover {
+  text-decoration: underline;
 }
 
 .filter-title {
@@ -501,6 +555,11 @@ code,
   letter-spacing: 0;
 }
 
+.cyclome-app .external-pdb-id {
+  color: #555;
+  font-weight: 500;
+}
+
 .cyclome-app .ant-progress-bg {
   background: var(--blue) !important;
 }
@@ -526,6 +585,12 @@ code,
 
 @media (max-width: 1200px) {
   .brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .brand-copy {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
@@ -557,6 +622,11 @@ code,
   .brand {
     width: 100%;
     min-width: 0;
+    white-space: normal;
+  }
+
+  .brand-copy {
+    width: 100%;
     white-space: normal;
   }
 
@@ -644,6 +714,14 @@ code,
 
   .brand h1 {
     font-size: 40px;
+  }
+
+  .credit-bubble {
+    border-radius: 18px;
+  }
+
+  .credit-line {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .card,

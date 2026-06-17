@@ -6,6 +6,12 @@ import HomeTable from "../components/HomeTable";
 import Header from "../components/Header";
 import SequenceSearchBar from "../components/SequenceSearchBar";
 
+const authorLinks = {
+  karuna: "https://chowdhurylab.github.io/author.html?author=karuna-anna-sajeevan",
+  curwen: "https://chowdhurylab.github.io/author.html?author=curwen-pei-hong-tan",
+  riza: "https://chowdhurylab.github.io/author.html?author=riza-danurdoro",
+};
+
 const HomePage = ({ allOptions }) => {
   return (
     <div className="home-container">
@@ -22,6 +28,27 @@ const HomePage = ({ allOptions }) => {
                 open a structure page for visualization, metadata, and stability
                 context.
               </p>
+            </div>
+          </div>
+
+          <div className="credit-bubble" aria-label="Cyclome contributor credits">
+            <div className="credit-line">
+              <span>Science</span>
+              <a href={authorLinks.karuna} target="_blank" rel="noopener noreferrer">
+                Karuna Anna Sajeevan
+              </a>
+            </div>
+            <div className="credit-line">
+              <span>Software</span>
+              <span>
+                <a href={authorLinks.curwen} target="_blank" rel="noopener noreferrer">
+                  Curwen Pei Hong Tan
+                </a>
+                {", "}
+                <a href={authorLinks.riza} target="_blank" rel="noopener noreferrer">
+                  Riza Danurdoro
+                </a>
+              </span>
             </div>
           </div>
 

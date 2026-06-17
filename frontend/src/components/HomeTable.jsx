@@ -117,12 +117,14 @@ const HomeTable = () => {
         title: "PDB ID",
         dataIndex: "chainId",
         key: "chainId",
-        render: (id) => {
+        render: (id, row) => {
           const displayId = String(id || "").split("_")[0];
-          return (
+          return row.isOriginal ? (
             <Link to={`/pdb/${id}`}>
               <Tag color="blue">{displayId}</Tag>
             </Link>
+          ) : (
+            <span className="external-pdb-id">{displayId}</span>
           );
         },
       },

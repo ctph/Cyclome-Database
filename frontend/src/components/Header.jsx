@@ -9,16 +9,21 @@ const navItems = [
   { to: "/stop2melt", label: "STop2Melt" },
 ];
 
+const paperUrl =
+  "https://www.biorxiv.org/content/biorxiv/early/2026/04/12/2026.04.08.717280.full.pdf";
+
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
     <header className="cyclome-header">
       <div className="brand">
-        <Link className="brand-home" to="/">
-          <h1>Cyclome</h1>
-        </Link>
-        <span>Cyclic peptide structure and stability workbench within StructF.studio</span>
+        <div className="brand-copy">
+          <Link className="brand-home" to="/">
+            <h1>Cyclome</h1>
+          </Link>
+          <span>Cyclic peptide structure and stability workbench within StructF.studio</span>
+        </div>
       </div>
 
       <nav aria-label="Cyclome navigation">
@@ -54,26 +59,6 @@ const Header = () => {
           </div>
         </details>
 
-        <details
-          className="nav-dropdown"
-          open={openDropdown === "cite"}
-          onToggle={(event) => {
-            if (event.currentTarget.open) {
-              setOpenDropdown("cite");
-            }
-          }}
-        >
-          <summary>Cite Cyclome</summary>
-          <div className="nav-panel">
-            <strong>Cyclome Database</strong>
-            <p>
-              Use the Cyclome publication and database record associated with the
-              current deployment.
-            </p>
-            <code>cyclome930.structf.studio</code>
-          </div>
-        </details>
-
         <a
           className="link"
           href="https://chowdhurylab.github.io/"
@@ -85,7 +70,7 @@ const Header = () => {
 
         <a
           className="link"
-          href="https://www.biorxiv.org/content/biorxiv/early/2026/04/12/2026.04.08.717280.full.pdf"
+          href={paperUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
