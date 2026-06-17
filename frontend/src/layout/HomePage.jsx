@@ -4,81 +4,92 @@ import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import HomeTable from "../components/HomeTable";
 import Header from "../components/Header";
-import { Button, Space } from "antd";
 import SequenceSearchBar from "../components/SequenceSearchBar";
 
 const HomePage = ({ allOptions }) => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  if (isMobile) {
-    return (
-      <div
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          padding: "20px",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "36px",
-            marginBottom: "16px",
-          }}
-        >
-          Please open this website in desktop view
-        </h2>
-      </div>
-    );
-  }
-
   return (
     <div className="home-container">
-      <Space direction="vertical" size="middle" style={{ width: "100%" }}>
-        <Header />
-        <div style={{ marginLeft: "20px", width: "calc(100% - 40px)" }}>
-          <h2 style={{ fontFamily: "Arial, sans-serif" }}>PDB Search</h2>
-          <SearchBar allOptions={allOptions} />
-        </div>
+      <Header />
 
-        <div
-          style={{
-            marginLeft: "20px",
-            width: "calc(100% - 40px)",
-            marginTop: "24px",
-          }}
-        >
-          <h2 style={{ fontFamily: "Arial, sans-serif" }}>Sequence Search</h2>
-          <SequenceSearchBar allOptions={allOptions} />
-        </div>
-        <div
-          style={{
-            marginLeft: "20px",
-            width: "calc(100% - 40px)",
-            marginTop: "8px",
-          }}
-        >
-          <h2 style={{ fontFamily: "Arial, sans-serif" }}>Tools</h2>
-          <Space wrap>
-            <Link to="/cyclic-sequence-similarity">
-              <Button type="primary">Cyclic Sequence Similarity</Button>
-            </Link>
-            <Link to="/criticl">
-              <Button type="primary">CritiCL</Button>
-            </Link>
-            <Link to="/stop2melt">
-              <Button type="primary">STop2Melt</Button>
-            </Link>
-          </Space>
-        </div>
+      <main className="cyclome-home-main">
+        <section className="cyclome-search-column">
+          <div className="section-head">
+            <span className="badge">SEARCH</span>
+            <div>
+              <h2>Find cyclic peptide records</h2>
+              <p className="sub">
+                Search curated structures by PDB chain or peptide sequence, then
+                open a structure page for visualization, metadata, and stability
+                context.
+              </p>
+            </div>
+          </div>
 
-        <div style={{ marginTop: 32 }}>
-          <HomeTable />
-        </div>
-      </Space>
+          <div className="card search-card">
+            <div className="search-top">
+              <div>
+                <h3>PDB Search</h3>
+                <p>Prefix search across Cyclome structure IDs.</p>
+              </div>
+              <span className="dot" aria-hidden="true" />
+            </div>
+            <div className="query-field">
+              <SearchBar allOptions={allOptions} />
+            </div>
+          </div>
+
+          <div className="card search-card">
+            <div className="search-top">
+              <div>
+                <h3>Sequence Search</h3>
+                <p>Search peptide chains by sequence fragment.</p>
+              </div>
+              <span className="dot" aria-hidden="true" />
+            </div>
+            <div className="query-field">
+              <SequenceSearchBar allOptions={allOptions} />
+            </div>
+          </div>
+
+          <div className="download">
+            <div className="filter-title">
+              <span className="dot" aria-hidden="true" />
+              Tools
+            </div>
+            <div className="tool-grid">
+              <Link className="mini phosfate-action" to="/cyclic-sequence-similarity">
+                <b>Cyclic Sequence Similarity</b>
+                <span>Compare peptide sequences against Cyclome similarity routes.</span>
+              </Link>
+              <Link className="mini" to="/criticl">
+                <b>CritiCL</b>
+                <span>Predict likely metal class from sequence and cyclization inputs.</span>
+              </Link>
+              <Link className="mini" to="/stop2melt">
+                <b>STop2Melt</b>
+                <span>Run sequence-level stability inference with queued backend jobs.</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="cyclome-results-column">
+          <div className="section-head">
+            <span className="badge">DATA</span>
+            <div>
+              <h2>Cyclome records</h2>
+              <p className="sub">
+                Expand a sequence group to view available structures, open 3D
+                records, or download curated PDB files.
+              </p>
+            </div>
+          </div>
+
+          <div className="result-card">
+            <HomeTable />
+          </div>
+        </section>
+      </main>
     </div>
   );
 };

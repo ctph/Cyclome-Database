@@ -1,191 +1,99 @@
 // components/Header.jsx
-import React from "react";
-import { Link } from "react-router-dom";
-import { Typography } from "antd";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
-const { Title } = Typography;
+const navItems = [
+  { to: "/", label: "Cyclome search", end: true },
+  { to: "/cyclic-sequence-similarity", label: "Sequence similarity" },
+  { to: "/criticl", label: "CritiCL" },
+  { to: "/stop2melt", label: "STop2Melt" },
+];
 
-const labelStyle = {
-  fontSize: 12,
-  fontWeight: 600,
-  letterSpacing: "0.06em",
-  textTransform: "uppercase",
-  color: "rgba(0, 0, 0, 0.42)",
-  minWidth: 70,
-};
+const Header = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
 
-const valueStyle = {
-  fontSize: 14,
-  color: "rgba(0, 0, 0, 0.72)",
-};
+  return (
+    <header className="cyclome-header">
+      <div className="brand">
+        <Link className="brand-home" to="/">
+          <h1>Cyclome</h1>
+        </Link>
+        <span>Cyclic peptide structure and stability workbench within StructF.studio</span>
+      </div>
 
-const linkStyle = {
-  color: "#1677ff",
-  textDecoration: "none",
-  fontWeight: 500,
-};
+      <nav aria-label="Cyclome navigation">
+        {navItems.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            end={item.end}
+            className={({ isActive }) => (isActive ? "pill active" : "pill")}
+          >
+            {item.label}
+          </NavLink>
+        ))}
 
-const Header = () => (
-  <header
-    style={{
-      position: "relative",
-      marginBottom: 18,
-      paddingTop: 8,
-      minHeight: 96,
-    }}
-  >
-    {/* Agrivax link */}
-    {/* Title row */}
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr auto 1fr",
-        alignItems: "center",
-        marginBottom: 18,
-        paddingTop: 8,
-        width: "100%",
-      }}
-    >
-      {/* Left Agrivax link */}
-      <div
-        style={{
-          fontSize: 13,
-          fontWeight: 500,
-          color: "rgba(0, 0, 0, 0.75)",
-          whiteSpace: "nowrap",
-          paddingLeft: 10,
-        }}
-      >
-        An{" "}
-        <a
-          href="https://agrivax.studio"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: "#1677ff",
-            textDecoration: "none",
-            fontWeight: 600,
+        <details
+          className="nav-dropdown"
+          open={openDropdown === "guide"}
+          onToggle={(event) => {
+            if (event.currentTarget.open) {
+              setOpenDropdown("guide");
+            }
           }}
         >
-          AgriVax.studio
-        </a>{" "}
-        collection
-      </div>
+          <summary>Guide</summary>
+          <div className="nav-panel">
+            <strong>Use Cyclome</strong>
+            <ol>
+              <li>Search by PDB ID or peptide sequence to open a structure record.</li>
+              <li>Inspect the 3D structure, metadata, melting profile, and cyclization state.</li>
+              <li>Run sequence similarity, CritiCL, or STop2Melt jobs from the tool pages.</li>
+            </ol>
+            <p>Expensive model jobs use Turnstile verification before submission.</p>
+          </div>
+        </details>
 
-      {/* Center title */}
-      <div style={{ justifySelf: "center" }}>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <Title
-            level={2}
-            style={{
-              color: "#1677ff",
-              margin: 0,
-              letterSpacing: "-0.02em",
-              textAlign: "center",
-            }}
-          >
-            Cyclome Database
-          </Title>
-        </Link>
-      </div>
+        <details
+          className="nav-dropdown"
+          open={openDropdown === "cite"}
+          onToggle={(event) => {
+            if (event.currentTarget.open) {
+              setOpenDropdown("cite");
+            }
+          }}
+        >
+          <summary>Cite Cyclome</summary>
+          <div className="nav-panel">
+            <strong>Cyclome Database</strong>
+            <p>
+              Use the Cyclome publication and database record associated with the
+              current deployment.
+            </p>
+            <code>cyclome930.structf.studio</code>
+          </div>
+        </details>
 
-      {/* Spacer to balance layout */}
-      <div style={{ width: 180 }} />
-    </div>
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        right: 0,
-        width: 300,
-        padding: "12px 14px",
-        border: "1px solid rgba(22, 119, 255, 0.10)",
-        borderRadius: 14,
-        background: "rgba(250, 252, 255, 0.92)",
-        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.05)",
-        backdropFilter: "blur(8px)",
-      }}
-    >
-      <a
-        href="https://chowdhurylab.github.io/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-block",
-          marginBottom: 10,
-          fontSize: 13,
-          fontWeight: 700,
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          color: "rgba(0, 0, 0, 0.58)",
-          textDecoration: "none",
-        }}
-      >
-        Chowdhury Lab
-      </a>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "baseline",
-          gap: 10,
-          marginBottom: 6,
-        }}
-      >
-        <span style={labelStyle}>Science</span>
         <a
-          href="https://chowdhurylab.github.io/author.html?author=karuna-anna-sajeevan"
+          className="link"
+          href="https://chowdhurylab.github.io/"
           target="_blank"
           rel="noopener noreferrer"
-          style={linkStyle}
         >
-          Karuna
+          ChowdhuryLab
         </a>
-      </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "baseline",
-          gap: 10,
-          marginBottom: 6,
-        }}
-      >
-        <span style={labelStyle}>Software</span>
-        <span style={valueStyle}>
-          <a
-            href="https://chowdhurylab.github.io/author.html?author=curwen-pei-hong-tan"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={linkStyle}
-          >
-            Curwen
-          </a>
-          {", "}
-          <a
-            href="https://chowdhurylab.github.io/author.html?author=riza-danurdoro"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={linkStyle}
-          >
-            Riza
-          </a>
-        </span>
-      </div>
-
-      <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-        <span style={labelStyle}>Paper</span>
         <a
+          className="link"
           href="https://www.biorxiv.org/content/biorxiv/early/2026/04/12/2026.04.08.717280.full.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          style={linkStyle}
         >
-          bioRxiv PDF
+          Paper
         </a>
-      </div>
-    </div>
-  </header>
-);
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

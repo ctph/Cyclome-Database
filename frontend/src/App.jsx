@@ -10,38 +10,40 @@ import Stop2MeltPage from "./layout/Stop2MeltPage";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    <div className="cyclome-app">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
 
-        <Route path="/pdb/:pdbId" element={<PdbPage />} />
-        <Route
-          path="/similarity/:pdbId/:threshold"
-          element={<SimilarityPage />}
-        />
+          <Route path="/pdb/:pdbId" element={<PdbPage />} />
+          <Route
+            path="/similarity/:pdbId/:threshold"
+            element={<SimilarityPage />}
+          />
 
-        <Route
-          path="/cyclization/:pdbId/:cyclization"
-          element={<CyclizationPage />}
-        />
+          <Route
+            path="/cyclization/:pdbId/:cyclization"
+            element={<CyclizationPage />}
+          />
 
-        <Route
-          path="/cyclic-sequence-similarity"
-          element={<CyclicSequenceSimilarityPage />}
-        />
+          <Route
+            path="/cyclic-sequence-similarity"
+            element={<CyclicSequenceSimilarityPage />}
+          />
 
-        <Route
-          path="/criticl"
-          element={<CritiCLPage />}
-        />
+          <Route
+            path="/criticl"
+            element={<CritiCLPage />}
+          />
 
-        <Route
-          path="/stop2melt"
-          element={<Stop2MeltPage />}
-        />
+          <Route
+            path="/stop2melt"
+            element={<Stop2MeltPage />}
+          />
 
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-    </BrowserRouter>
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }

@@ -1,13 +1,659 @@
+:root {
+  --blue: #273cf5;
+  --ink: #111;
+  --muted: #8f8f8f;
+  --line: #ededed;
+  --soft: #f8f9ff;
+  --shadow: 0 20px 55px rgba(0, 0, 0, 0.1);
+  --radius: 24px;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
+  width: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background: #fff;
+  color: var(--ink);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial,
     sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+code,
+.ant-typography code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+#root,
+.cyclome-app {
+  width: 100%;
+  min-height: 100svh;
+}
+
+.cyclome-app main,
+.cyclome-app section,
+.cyclome-app .card,
+.cyclome-app .result-card,
+.cyclome-app .download,
+.cyclome-app .mini,
+.cyclome-app .search-top,
+.cyclome-app .query-field,
+.cyclome-app textarea,
+.cyclome-app .ant-card,
+.cyclome-app .ant-table-wrapper {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cyclome-header {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  white-space: nowrap;
+}
+
+.brand-home {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand h1 {
+  font-size: 52px;
+  line-height: 0.9;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.brand span {
+  color: #aaa;
+  font-size: 15px;
+  margin-bottom: 6px;
+  letter-spacing: 0;
+}
+
+.cyclome-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 1120px;
+}
+
+.pill,
+.link,
+.nav-dropdown summary {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 800;
+  background: #fff;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.pill:hover,
+.nav-dropdown summary:hover {
+  border-color: rgba(39, 60, 245, 0.32);
+  color: var(--blue);
+}
+
+.pill.active {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--soft);
+  box-shadow: 0 0 0 1px rgba(39, 60, 245, 0.15) inset;
+}
+
+.link {
+  border: 0;
+  color: var(--blue);
+  padding: 8px;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 20;
+  width: min(520px, calc(100vw - 44px));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.nav-panel strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 15px;
+}
+
+.nav-panel ol {
+  margin: 0 0 10px 18px;
+  padding: 0;
+}
+
+.nav-panel li {
+  margin: 0 0 7px;
+  padding-left: 2px;
+}
+
+.nav-panel p {
+  margin: 0;
+  color: #666;
+}
+
+.nav-panel code {
+  display: block;
+  margin-top: 8px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #f7f7f7;
+  padding: 8px;
+  color: #333;
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.cyclome-home-main {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.42fr);
+  gap: 26px;
+  padding: 28px 22px 40px;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  height: 28px;
+  min-width: 66px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.cyclome-app h2,
+.cyclome-app .ant-typography h2,
+.cyclome-app h2.ant-typography {
+  font-size: 29px;
+  line-height: 1;
+  margin: 0 0 8px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.sub {
+  font-size: 15px;
+  line-height: 1.28;
+  color: #9f9f9f;
+  max-width: 780px;
+  letter-spacing: 0;
+}
+
+.card,
+.download,
+.result-card,
+.cyclome-app .ant-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card {
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.download {
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.result-card {
+  padding: 18px 0 22px;
+  border: 2px solid var(--blue);
+  min-height: 315px;
+}
+
+.search-top {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.search-top h3 {
+  font-size: 17px;
+  margin: 0 0 5px;
+  color: #696969;
+  letter-spacing: 0;
+}
+
+.search-top p {
+  margin: 0;
+  color: #9c9c9c;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.query-field {
+  margin-top: 14px;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: #737373;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: inline-block;
+  flex: none;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.mini {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 15px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mini:hover {
+  border-color: var(--blue);
+  background: var(--soft);
+}
+
+.mini b {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.mini span {
+  display: block;
+  color: #9b9b9b;
+  font-size: 13px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.phosfate-action {
+  padding: 22px;
+  border-color: rgba(39, 60, 245, 0.28);
+  box-shadow: var(--shadow);
+}
+
+.phosfate-action:hover {
+  box-shadow: 0 18px 46px rgba(39, 60, 245, 0.14);
+  transform: translateY(-1px);
+}
+
+.phosfate-action b {
+  font-size: 22px;
+}
+
+.phosfate-action span {
+  max-width: 720px;
+  font-size: 15px;
+}
+
+.cyclome-app .ant-select-selector,
+.cyclome-app .ant-input,
+.cyclome-app textarea.ant-input {
+  border-color: var(--line) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  color: #333 !important;
+  box-shadow: none !important;
+}
+
+.cyclome-app .ant-select-selector {
+  min-height: 50px;
+  padding: 8px 14px !important;
+}
+
+.cyclome-app .ant-select-selection-placeholder,
+.cyclome-app .ant-input::placeholder {
+  color: #888 !important;
+}
+
+.cyclome-app .ant-select-focused .ant-select-selector,
+.cyclome-app .ant-input:focus,
+.cyclome-app textarea.ant-input:focus {
+  border-color: var(--blue) !important;
+  box-shadow: 0 0 0 3px rgba(39, 60, 245, 0.12) !important;
+}
+
+.cyclome-app .ant-btn {
+  min-height: 40px;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cyclome-app .ant-btn-primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: none;
+}
+
+.cyclome-app .ant-btn-primary:not(:disabled):hover {
+  background: #1728d4;
+  border-color: #1728d4;
+}
+
+.cyclome-app .ant-btn-default:not(:disabled):hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.cyclome-app .ant-card {
+  overflow: hidden;
+}
+
+.cyclome-app .ant-card-head {
+  border-bottom: 1px solid var(--line);
+  color: #222;
+  font-weight: 900;
+}
+
+.cyclome-app .ant-card-body {
+  color: #555;
+}
+
+.cyclome-app .ant-table-wrapper {
+  color: #555;
+}
+
+.cyclome-app .ant-table {
+  background: transparent;
+}
+
+.cyclome-app .ant-table-container {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.cyclome-app .ant-table-thead > tr > th {
+  background: #fafafa !important;
+  color: #777 !important;
+  font-size: 12px;
+  font-weight: 900 !important;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.cyclome-app .ant-table-tbody > tr > td {
+  color: #555;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.cyclome-app .ant-table-tbody > tr:hover > td {
+  background: var(--soft) !important;
+}
+
+.cyclome-app .ant-tag {
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.cyclome-app .ant-progress-bg {
+  background: var(--blue) !important;
+}
+
+.cyclome-app .ant-alert {
+  border-radius: 16px;
+}
+
+.cyclome-app .ant-typography,
+.cyclome-app p,
+.cyclome-app span,
+.cyclome-app div {
+  letter-spacing: 0;
+}
+
+.cyclome-app a {
+  color: var(--blue);
+}
+
+.home-container {
+  min-height: 100svh;
+}
+
+@media (max-width: 1200px) {
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .brand span {
+    margin-bottom: 0;
+  }
+
+  .cyclome-home-main {
+    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cyclome-header,
+  .cyclome-home-main {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .cyclome-header {
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .brand {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .brand h1 {
+    font-size: 42px;
+  }
+
+  .brand span {
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .cyclome-header nav {
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .pill,
+  .link,
+  .nav-dropdown summary {
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  .nav-panel {
+    left: 0;
+    right: auto;
+    width: calc(100vw - 36px);
+  }
+
+  .cyclome-home-main {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 28px 14px 36px;
+  }
+
+  .section-head {
+    grid-template-columns: 1fr;
+  }
+
+  .cyclome-app h2,
+  .cyclome-app .ant-typography h2,
+  .cyclome-app h2.ant-typography,
+  .sub,
+  .search-top h3,
+  .search-top p,
+  .mini span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .search-top {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .cyclome-header nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .pill,
+  .link,
+  .nav-dropdown summary {
+    width: 100%;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .nav-dropdown {
+    min-width: 0;
+  }
+
+  .brand h1 {
+    font-size: 40px;
+  }
+
+  .card,
+  .download,
+  .result-card,
+  .cyclome-app .ant-card {
+    border-radius: 18px;
+  }
+
+  .cyclome-app .ant-table {
+    font-size: 13px;
+  }
 }
