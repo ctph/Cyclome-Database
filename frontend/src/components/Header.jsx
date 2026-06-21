@@ -1,12 +1,14 @@
 // components/Header.jsx
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useAccount } from "../account/AccountProvider";
 
 const navItems = [
   { to: "/", label: "Cyclome search", end: true },
   { to: "/cyclic-sequence-similarity", label: "Sequence similarity" },
   { to: "/criticl", label: "CritiCL" },
   { to: "/stop2melt", label: "STop2Melt" },
+  { to: "/history", label: "History" },
 ];
 
 const paperUrl =
@@ -14,6 +16,16 @@ const paperUrl =
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const { session, loading, loginHref, logout } = useAccount();
+
+  const accountLabel =
+    session.mode === "user"
+      ? session.user?.email || session.user?.displayName || "Signed in"
+      : session.mode === "offline"
+        ? "Account offline"
+        : loading
+          ? "Checking account"
+          : "Guest";
 
   return (
     <header className="cyclome-header">
@@ -76,6 +88,17 @@ const Header = () => {
         >
           Paper
         </a>
+
+        <div className="account-chip" aria-label="StructF account state">
+          <span>{accountLabel}</span>
+          {session.mode === "user" ? (
+            <button type="button" onClick={logout} disabled={loading}>
+              Sign out
+            </button>
+          ) : (
+            <a href={loginHref}>Sign in</a>
+          )}
+        </div>
       </nav>
     </header>
   );
