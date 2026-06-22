@@ -17,6 +17,13 @@ import {
 } from "antd";
 import Header from "../components/Header";
 import TurnstileBox from "../components/TurnstileBox";
+import {
+  cancelJob as cancelStructfJob,
+  createJob as createStructfJob,
+  downloadJobArtifact,
+  getJob as getStructfJob,
+  uploadJobArtifact,
+} from "../account/accountApi";
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
@@ -28,6 +35,8 @@ const TERMINAL_JOB_STATUSES = new Set([
   "stopped",
   "canceled",
 ]);
+const STRUCTF_TERMINAL_JOB_STATUSES = new Set(["succeeded", "failed", "canceled", "expired"]);
+const STRUCTF_CRITICL_JOB_TYPE = "criticl.single";
 
 function normalizeBatchRows(rawText) {
   return String(rawText || "")
@@ -58,6 +67,7 @@ export default function CritiCLPage() {
   const pollingTimeoutRef = useRef(null);
   const lastJobIdRef = useRef(null);
   const lastJobTokenRef = useRef("");
+  const lastStructfJobIdRef = useRef(null);
   const turnstileWidgetRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
@@ -89,6 +99,7 @@ export default function CritiCLPage() {
     setError("");
     setJobState(null);
     lastJobTokenRef.current = "";
+    lastStructfJobIdRef.current = null;
   };
 
   const probabilityColumns = useMemo(() => ["Co", "Ln", "Mn", "Ni", "Zn"], []);
@@ -216,6 +227,145 @@ export default function CritiCLPage() {
     }
   };
 
+  const normalizeSinglePayload = (values) => ({
+    sequence: String(values.sequence || "")
+      .trim()
+      .replace(/\s+/g, "")
+      .toUpperCase(),
+    cyclization_pattern: String(values.cyclization_pattern || "").trim(),
+  });
+
+  const structfProgress = (status) => {
+    if (status === "queued") return 5;
+    if (status === "claimed") return 20;
+    if (status === "running" || status === "cancel_requested") return 65;
+    if (status === "succeeded") return 100;
+    return 0;
+  };
+
+  const setStructfJobState = (job) => {
+    const status = job?.status || "queued";
+    setJobState({
+      id: job?.id,
+      status,
+      progress: structfProgress(status),
+      message:
+        status === "cancel_requested"
+          ? "cancel requested"
+          : status === "succeeded"
+            ? "completed"
+            : status,
+      source: "structf",
+    });
+  };
+
+  const pollStructfJob = async (jobId) => {
+    try {
+      const body = await getStructfJob(jobId);
+      const job = body?.job;
+      if (!job) {
+        throw new Error("Account API did not return job state.");
+      }
+
+      setStructfJobState(job);
+
+      if (!STRUCTF_TERMINAL_JOB_STATUSES.has(job.status)) {
+        pollingTimeoutRef.current = setTimeout(() => {
+          pollStructfJob(jobId);
+        }, POLL_INTERVAL_MS);
+        return;
+      }
+
+      stopPolling();
+      setLoading(false);
+
+      if (job.status === "succeeded") {
+        const artifact = await downloadJobArtifact(job.id, "result.json");
+        const result = artifact?.result || artifact;
+        setSingleResult(result);
+        message.success("CritiCL prediction completed.");
+        return;
+      }
+
+      if (job.status === "canceled") {
+        message.info("CritiCL job canceled.");
+        return;
+      }
+
+      const failureMessage =
+        job?.errorMessage ||
+        job?.errorCode ||
+        `Job ended with status: ${job?.status || "unknown"}`;
+      setError(failureMessage);
+      message.error(failureMessage);
+    } catch (err) {
+      stopPolling();
+      setLoading(false);
+      const msg = err?.message || "Failed while polling StructF job.";
+      setError(msg);
+      message.error(msg);
+    }
+  };
+
+  const submitStructfCriticlJob = async (payload) => {
+    const createBody = await createStructfJob({
+      appSlug: "cyclome",
+      jobType: STRUCTF_CRITICL_JOB_TYPE,
+      inputSummary: payload,
+      publicLabel: `CritiCL ${payload.sequence.slice(0, 24)}`,
+      turnstileToken,
+    });
+    const job = createBody?.job;
+    if (!job?.id) {
+      throw new Error("Account API accepted the request but did not return a job id.");
+    }
+
+    lastJobIdRef.current = job.id;
+    lastStructfJobIdRef.current = job.id;
+    setStructfJobState(job);
+
+    try {
+      await uploadJobArtifact(job.id, "input.json", payload, { kind: "input" });
+    } catch (err) {
+      await cancelStructfJob(job.id).catch(() => null);
+      throw err;
+    }
+
+    message.success("CritiCL job submitted through StructF history.");
+    await pollStructfJob(job.id);
+  };
+
+  const submitLegacyCriticlJob = async (payload) => {
+    const response = await fetch("/api/similarity/criticl", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Cyclome-Turnstile-Token": turnstileToken,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await readJson(response);
+    if (!response.ok) {
+      throw new Error(data?.error || `Request failed (${response.status})`);
+    }
+
+    if (!data?.task_id) {
+      throw new Error("Backend accepted the request but did not return a task id.");
+    }
+
+    lastJobIdRef.current = data.task_id;
+    lastJobTokenRef.current = data.job_token || "";
+    setJobState({
+      id: data.task_id,
+      status: data.status || "queued",
+      progress: 0,
+      message: "queued",
+    });
+    message.success("CritiCL job submitted. Polling for results...");
+    await pollJob(data.task_id);
+  };
+
   const handleSubmit = async (values) => {
     stopPolling();
     setLoading(true);
@@ -226,48 +376,56 @@ export default function CritiCLPage() {
         throw new Error("Verification is required before submitting.");
       }
 
-      const payload = batchMode
-        ? { items: normalizeBatchRows(values.batch_rows) }
-        : {
-            sequence: values.sequence,
-            cyclization_pattern: values.cyclization_pattern || "",
-          };
+      if (batchMode) {
+        const payload = { items: normalizeBatchRows(values.batch_rows) };
+        const response = await fetch("/api/similarity/criticl/batch", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Cyclome-Turnstile-Token": turnstileToken,
+          },
+          body: JSON.stringify(payload),
+        });
+        turnstileWidgetRef.current?.reset();
+        setTurnstileToken("");
 
-      const endpoint = batchMode
-        ? "/api/similarity/criticl/batch"
-        : "/api/similarity/criticl";
+        const data = await readJson(response);
+        if (!response.ok) {
+          throw new Error(data?.error || `Request failed (${response.status})`);
+        }
 
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Cyclome-Turnstile-Token": turnstileToken,
-        },
-        body: JSON.stringify(payload),
-      });
-      turnstileWidgetRef.current?.reset();
+        if (!data?.task_id) {
+          throw new Error(
+            "Backend accepted the request but did not return a task id.",
+          );
+        }
 
-      const data = await readJson(response);
-      if (!response.ok) {
-        throw new Error(data?.error || `Request failed (${response.status})`);
+        lastJobIdRef.current = data.task_id;
+        lastJobTokenRef.current = data.job_token || "";
+        setJobState({
+          id: data.task_id,
+          status: data.status || "queued",
+          progress: 0,
+          message: "queued",
+        });
+        message.success("CritiCL job submitted. Polling for results...");
+        await pollJob(data.task_id);
+        return;
       }
 
-      if (!data?.task_id) {
-        throw new Error(
-          "Backend accepted the request but did not return a task id.",
-        );
+      const payload = normalizeSinglePayload(values);
+      try {
+        await submitStructfCriticlJob(payload);
+      } catch (err) {
+        if (err?.status) {
+          throw err;
+        }
+        message.warning("StructF history unavailable. Falling back to current CritiCL job path.");
+        await submitLegacyCriticlJob(payload);
+      } finally {
+        turnstileWidgetRef.current?.reset();
+        setTurnstileToken("");
       }
-
-      lastJobIdRef.current = data.task_id;
-      lastJobTokenRef.current = data.job_token || "";
-      setJobState({
-        id: data.task_id,
-        status: data.status || "queued",
-        progress: 0,
-        message: "queued",
-      });
-      message.success("CritiCL job submitted. Polling for results...");
-      await pollJob(data.task_id);
     } catch (err) {
       stopPolling();
       setLoading(false);
@@ -275,10 +433,32 @@ export default function CritiCLPage() {
       setError(msg);
       message.error(msg);
       turnstileWidgetRef.current?.reset();
+      setTurnstileToken("");
     }
   };
 
   const handleCancelJob = async () => {
+    const structfJobId = lastStructfJobIdRef.current;
+    if (structfJobId) {
+      try {
+        const body = await cancelStructfJob(structfJobId);
+        const job = body?.job;
+        if (job) {
+          setStructfJobState(job);
+        }
+        if (job?.status === "canceled") {
+          stopPolling();
+          setLoading(false);
+          message.info("CritiCL job canceled.");
+        } else {
+          message.info("CritiCL job cancellation requested.");
+        }
+      } catch (err) {
+        message.error(err?.message || "Failed to cancel job.");
+      }
+      return;
+    }
+
     const jobId = lastJobIdRef.current;
     if (!jobId) return;
 
@@ -311,7 +491,7 @@ export default function CritiCLPage() {
   const canCancel =
     loading &&
     jobState?.id &&
-    ["queued", "started", "deferred"].includes(currentStatus);
+    ["queued", "claimed", "running", "started", "deferred"].includes(currentStatus);
 
   return (
     <div style={{ padding: 16 }}>
@@ -427,11 +607,13 @@ export default function CritiCLPage() {
                 <Tag color="blue">Job ID: {jobState.id}</Tag>
                 <Tag
                   color={
-                    currentStatus === "finished"
+                    currentStatus === "finished" || currentStatus === "succeeded"
                       ? "green"
                       : currentStatus === "failed"
                         ? "red"
-                        : "gold"
+                        : currentStatus === "canceled"
+                          ? "orange"
+                          : "gold"
                   }
                 >
                   Status: {currentStatus}

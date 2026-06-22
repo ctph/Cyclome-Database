@@ -64,6 +64,64 @@ export async function listJobs({ limit = 20 } = {}) {
   return accountRequest(`/api/jobs?limit=${encodeURIComponent(String(limit))}`);
 }
 
+export async function createJob({ appSlug, jobType, inputSummary, publicLabel, idempotencyKey, turnstileToken }) {
+  const csrfToken = await getCsrfToken();
+  return accountRequest("/api/jobs", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-Token": csrfToken,
+      ...(turnstileToken ? { "X-Turnstile-Token": turnstileToken } : {}),
+    },
+    body: JSON.stringify({
+      appSlug,
+      jobType,
+      inputSummary,
+      publicLabel,
+      idempotencyKey,
+    }),
+  });
+}
+
+export async function getJob(jobId) {
+  return accountRequest(`/api/jobs/${encodeURIComponent(jobId)}`);
+}
+
+export async function cancelJob(jobId) {
+  const csrfToken = await getCsrfToken();
+  return accountRequest(`/api/jobs/${encodeURIComponent(jobId)}/cancel`, {
+    method: "POST",
+    headers: {
+      "X-CSRF-Token": csrfToken,
+    },
+  });
+}
+
+export async function uploadJobArtifact(jobId, artifactName, payload, { kind = "input" } = {}) {
+  const csrfToken = await getCsrfToken();
+  return accountRequest(
+    `/api/jobs/${encodeURIComponent(jobId)}/artifacts/${encodeURIComponent(artifactName)}?kind=${encodeURIComponent(kind)}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Token": csrfToken,
+      },
+      body: JSON.stringify(payload),
+    },
+  );
+}
+
+export async function downloadJobArtifact(jobId, artifactName) {
+  return accountRequest(
+    `/api/jobs/${encodeURIComponent(jobId)}/download/${encodeURIComponent(artifactName)}`,
+  );
+}
+
+export function jobArtifactDownloadUrl(jobId, artifactName) {
+  return `${ACCOUNT_API_BASE}/api/jobs/${encodeURIComponent(jobId)}/download/${encodeURIComponent(artifactName)}`;
+}
+
 export function loginUrl() {
   return `${ACCOUNT_API_BASE}/login`;
 }

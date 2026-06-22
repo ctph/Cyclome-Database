@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Alert, Button, Empty, Space, Table, Tag, Typography } from "antd";
 import Header from "../components/Header";
 import { useAccount } from "../account/AccountProvider";
-import { listJobs } from "../account/accountApi";
+import { jobArtifactDownloadUrl, listJobs } from "../account/accountApi";
 
 const { Text } = Typography;
 
@@ -89,6 +89,19 @@ export default function HistoryPage() {
         key: "createdAt",
         width: 210,
         render: (value) => (value ? new Date(value).toLocaleString() : "-"),
+      },
+      {
+        title: "Result",
+        key: "result",
+        width: 120,
+        render: (_, record) =>
+          record.status === "succeeded" ? (
+            <Button size="small" href={jobArtifactDownloadUrl(record.id, "result.json")}>
+              Download
+            </Button>
+          ) : (
+            "-"
+          ),
       },
     ],
     [],
