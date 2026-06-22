@@ -67,6 +67,9 @@ export default function CritiCLPage() {
   const [error, setError] = useState("");
   const [jobState, setJobState] = useState(null);
   const [turnstileToken, setTurnstileToken] = useState("");
+  // geomscan
+  const [geomscanResult, setGeomscanResult] = useState(null);
+  const [geomscanLoading, setGeomscanLoading] = useState(false);
 
   useEffect(() => {
     return () => {
@@ -88,7 +91,31 @@ export default function CritiCLPage() {
     setBatchResult(null);
     setError("");
     setJobState(null);
+    setGeomscanResult(null);
     lastJobTokenRef.current = "";
+  };
+
+  const runGeomscan = async (pdbFile) => {
+    setGeomscanLoading(true);
+
+    try {
+      const response = await fetch("/api/geomscan/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pdb_file: `cyclic_pdbs/${pdbFile}` }),
+      });
+
+      const data = await readJson(response);
+      if (!response.ok) {
+        throw new Error(data?.error || `Geomscan failed (${response.status})`);
+      }
+
+      setGeomscanResult(data);
+    } catch (err) {
+      message.warning(err?.message || "Geomscan failed.");
+    } finally {
+      setGeomscanLoading(false);
+    }
   };
 
   const probabilityColumns = useMemo(() => ["Co", "Ln", "Mn", "Ni", "Zn"], []);
@@ -540,6 +567,24 @@ export default function CritiCLPage() {
             title="Job canceled"
             subTitle="You can adjust the input and run it again."
           />
+        ) : null}
+
+        {geomscanResult ? (
+          <Card size="small" title="Geomscan Metal-Binding Hits">
+            <Table
+              rowKey={(_, index) => `geomscan-${index}`}
+              dataSource={geomscanResult.hits || []}
+              pagination={false}
+              columns={[
+                { title: "Geometry", dataIndex: "geometry" },
+                { title: "Metal", dataIndex: "metal" },
+                { title: "Score", dataIndex: "best_score" },
+                { title: "Residues", dataIndex: "ligand_atoms" },
+              ]}
+            />
+          </Card>
+        ) : geomscanLoading ? (
+          <Card size="small">Running geomscan...</Card>
         ) : null}
       </Space>
     </div>
