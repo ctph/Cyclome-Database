@@ -77,9 +77,7 @@ export default function CritiCLPage() {
   const [error, setError] = useState("");
   const [jobState, setJobState] = useState(null);
   const [turnstileToken, setTurnstileToken] = useState("");
-  // geomscan
   const [geomscanResult, setGeomscanResult] = useState(null);
-  const [geomscanLoading, setGeomscanLoading] = useState(false);
 
   useEffect(() => {
     return () => {
@@ -104,29 +102,6 @@ export default function CritiCLPage() {
     setGeomscanResult(null);
     lastJobTokenRef.current = "";
     lastStructfJobIdRef.current = null;
-  };
-
-  const runGeomscan = async (pdbFile) => {
-    setGeomscanLoading(true);
-
-    try {
-      const response = await fetch("/api/geomscan/run", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pdb_file: `cyclic_pdbs/${pdbFile}` }),
-      });
-
-      const data = await readJson(response);
-      if (!response.ok) {
-        throw new Error(data?.error || `Geomscan failed (${response.status})`);
-      }
-
-      setGeomscanResult(data);
-    } catch (err) {
-      message.warning(err?.message || "Geomscan failed.");
-    } finally {
-      setGeomscanLoading(false);
-    }
   };
 
   const probabilityColumns = useMemo(() => ["Co", "Ln", "Mn", "Ni", "Zn"], []);
@@ -765,8 +740,6 @@ export default function CritiCLPage() {
               ]}
             />
           </Card>
-        ) : geomscanLoading ? (
-          <Card size="small">Running geomscan...</Card>
         ) : null}
       </Space>
     </div>
