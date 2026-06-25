@@ -17,6 +17,10 @@ const paperUrl =
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const { session, loading, loginHref, logout } = useAccount();
+  const visibleNavItems =
+    session.mode === "user"
+      ? navItems
+      : navItems.filter((item) => item.to !== "/history");
 
   const accountLabel =
     session.mode === "user"
@@ -39,7 +43,7 @@ const Header = () => {
       </div>
 
       <nav aria-label="Cyclome navigation">
-        {navItems.map((item) => (
+        {visibleNavItems.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}

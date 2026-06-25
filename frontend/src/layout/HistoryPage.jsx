@@ -20,7 +20,7 @@ export default function HistoryPage() {
   const [jobsLoading, setJobsLoading] = useState(false);
   const [jobsError, setJobsError] = useState("");
 
-  const canLoadJobs = session.mode === "guest" || session.mode === "user";
+  const canLoadJobs = session.mode === "user";
 
   useEffect(() => {
     let cancelled = false;
@@ -117,9 +117,7 @@ export default function HistoryPage() {
           <div>
             <h2>Job history</h2>
             <p className="sub">
-              {session.mode === "user"
-                ? "Signed-in StructF jobs for this account."
-                : "Current browser session jobs for this guest session."}
+              Signed-in StructF jobs for this account.
             </p>
           </div>
         </section>
