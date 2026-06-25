@@ -122,6 +122,12 @@ export function jobArtifactDownloadUrl(jobId, artifactName) {
   return `${ACCOUNT_API_BASE}/api/jobs/${encodeURIComponent(jobId)}/download/${encodeURIComponent(artifactName)}`;
 }
 
-export function loginUrl() {
-  return `${ACCOUNT_API_BASE}/login`;
+export function loginUrl(returnTo = "") {
+  const url = new URL(`${ACCOUNT_API_BASE}/login`);
+  const destination =
+    returnTo || (typeof window !== "undefined" ? window.location.href : "");
+  if (destination) {
+    url.searchParams.set("return_to", destination);
+  }
+  return url.toString();
 }
