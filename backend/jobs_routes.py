@@ -38,7 +38,8 @@ def _queue(name: str) -> Queue:
 
 def _job_json(job: Job) -> Dict[str, Any]:
     data: Dict[str, Any] = {
-        "id": job.get_id(),
+        # "id": job.get_id(),
+        "id": job.id,
         "status": job.get_status(refresh=True),
         "enqueued_at": job.enqueued_at.isoformat() if job.enqueued_at else None,
         "started_at": job.started_at.isoformat() if job.started_at else None,
@@ -112,7 +113,9 @@ def _require_job_access(job: Job) -> None:
         return
     token = _request_job_token()
     if not token or not secrets.compare_digest(_hash_token(token), str(token_hash)):
-        raise NotFound(f"Job {job.get_id()} not found")
+        # raise NotFound(f"Job {job.get_id()} not found")
+        raise NotFound(f"Job {job.id} not found")
+
 
 
 def _enqueue_with_token(queue_name: str, func_name: str, *args: Any):
@@ -123,7 +126,9 @@ def _enqueue_with_token(queue_name: str, func_name: str, *args: Any):
         failure_ttl=JOB_FAILURE_TTL,
     )
     token = _issue_job_token(job)
-    return jsonify({"task_id": job.get_id(), "status": "accepted", "job_token": token}), 202
+    # return jsonify({"task_id": job.get_id(), "status": "accepted", "job_token": token}), 202
+    return jsonify({"task_id": job.id, "status": "accepted", "job_token": token}), 202
+
 
 
 def _parse_model_payload(payload: Dict[str, Any], *, index_label: str | None = None) -> Dict[str, str]:

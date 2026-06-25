@@ -6,6 +6,12 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from werkzeug.exceptions import BadRequest, NotFound
 
+# geomscan
+from pathlib import Path
+import subprocess
+import sys
+import pandas as pd
+
 from flask_criticl_service import (
     criticl_healthcheck,
     predict_criticl,
@@ -238,6 +244,67 @@ def criticl_predict_batch_route():
     except Exception as exc:
         return json_error(f"CritiCL batch inference failed: {exc}", 500)
 
+@app.post("/api/geomscan/run")
+def run_geomscan():
+    if not request.is_json:
+        return json_error("Request body must be JSON", 400)
+
+    payload = request.get_json(silent=True)
+    pdb_file = payload.get("pdb_file")
+
+    if not pdb_file:
+        return json_error("pdb_file is required", 400)
+
+    base_dir = Path(__file__).resolve().parent
+    pdb_path = base_dir / pdb_file
+    templates_dir = base_dir / "geomscan_data"
+
+    if not pdb_path.exists():
+        return json_error(f"PDB file not found: {pdb_file}", 404)
+
+    out_hits = base_dir / "geomscan_hits.tsv"
+    out_all = base_dir / "geomscan_all.tsv"
+    out_pml = base_dir / "geomscan_hits.pml"
+
+    cmd = [
+        sys.executable,
+        str(base_dir / "geomscan.py"),
+        "--pdb-file", str(pdb_path),
+        "--templates-dir", str(templates_dir),
+        "--out-hits", str(out_hits),
+        "--out-all", str(out_all),
+        "--out-pml", str(out_pml),
+        "--workers", "1",
+    ]
+
+    try:
+        completed = subprocess.run(
+            cmd,
+            cwd=base_dir,
+            capture_output=True,
+            text=True,
+            timeout=60,
+            check=False,
+        )
+
+        if completed.returncode != 0:
+            return json_error(completed.stderr or "geomscan failed", 500)
+
+        if out_hits.exists() and out_hits.stat().st_size > 0:
+            hits = pd.read_csv(out_hits, sep="\t").to_dict(orient="records")
+        else:
+            hits = []
+
+        return jsonify({
+            "ok": True,
+            "pdb_file": pdb_file,
+            "hits_count": len(hits),
+            "hits": hits,
+            "stdout": completed.stdout,
+        })
+
+    except subprocess.TimeoutExpired:
+        return json_error("geomscan timed out", 504)
 
 @app.get("/api/predict/stop2melt/health")
 def stop2melt_health():
