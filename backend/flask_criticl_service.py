@@ -13,6 +13,7 @@ import torch
 from huggingface_hub import hf_hub_download
 
 _DEFAULT_REPO_ID = "KarunaAnna/CritiCL"
+_DEFAULT_HF_REVISION = "1a389c328df8c66fb5c7c0eb8df668bff37cb76c"
 _DEFAULT_MODEL_FILENAME = "model_XGB.joblib"
 _DEFAULT_LABEL_ENCODER_FILENAME = "label_encoder.joblib"
 _DEFAULT_MODEL_NAME = "esmc_300m"
@@ -220,8 +221,9 @@ def resolve_model_path() -> str:
         return explicit_path
 
     repo_id = os.getenv("CRITICL_HF_REPO_ID", _DEFAULT_REPO_ID)
+    revision = os.getenv("CRITICL_HF_REVISION", _DEFAULT_HF_REVISION).strip() or None
     filename = os.getenv("CRITICL_HF_MODEL_FILENAME", _DEFAULT_MODEL_FILENAME)
-    return hf_hub_download(repo_id=repo_id, filename=filename, repo_type="model")
+    return hf_hub_download(repo_id=repo_id, filename=filename, repo_type="model", revision=revision)
 
 
 def resolve_label_encoder_path() -> Optional[str]:
@@ -236,8 +238,9 @@ def resolve_label_encoder_path() -> Optional[str]:
         return None
 
     repo_id = os.getenv("CRITICL_HF_REPO_ID", _DEFAULT_REPO_ID)
+    revision = os.getenv("CRITICL_HF_REVISION", _DEFAULT_HF_REVISION).strip() or None
     try:
-        return hf_hub_download(repo_id=repo_id, filename=filename, repo_type="model")
+        return hf_hub_download(repo_id=repo_id, filename=filename, repo_type="model", revision=revision)
     except Exception:
         return None
 
@@ -263,6 +266,7 @@ def criticl_healthcheck() -> Dict[str, Any]:
         "predictor_loaded": False,
         "device": configured_device,
         "model_name": os.getenv("CRITICL_ESMC_MODEL", _DEFAULT_MODEL_NAME),
+        "hf_revision": os.getenv("CRITICL_HF_REVISION", _DEFAULT_HF_REVISION),
         "model_path": str(model_path),
         "model_exists": model_path.exists(),
         "label_encoder_path": label_encoder_path,
