@@ -2,7 +2,11 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Alert, Button, Empty, Space, Table, Tag, Typography } from "antd";
 import Header from "../components/Header";
 import { useAccount } from "../account/AccountProvider";
-import { jobArtifactDownloadUrl, listJobs } from "../account/accountApi";
+import {
+  jobArtifactDownloadUrl,
+  listJobs,
+  onlyAppJobs,
+} from "../account/accountApi";
 
 const { Text } = Typography;
 
@@ -33,9 +37,9 @@ export default function HistoryPage() {
 
       setJobsLoading(true);
       try {
-        const body = await listJobs({ limit: 20 });
+        const body = await listJobs({ limit: 20, appSlug: "cyclome" });
         if (!cancelled) {
-          setJobs(body.jobs || []);
+          setJobs(onlyAppJobs(body.jobs, "cyclome"));
           setJobsError("");
         }
       } catch (err) {
@@ -117,7 +121,7 @@ export default function HistoryPage() {
           <div>
             <h2>Job history</h2>
             <p className="sub">
-              Signed-in StructF jobs for this account.
+              Signed-in Cyclome jobs for this StructF account.
             </p>
           </div>
         </section>

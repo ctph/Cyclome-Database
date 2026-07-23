@@ -60,8 +60,17 @@ export async function logoutSession() {
   });
 }
 
-export async function listJobs({ limit = 20 } = {}) {
-  return accountRequest(`/api/jobs?limit=${encodeURIComponent(String(limit))}`);
+export function onlyAppJobs(jobs, appSlug) {
+  if (!Array.isArray(jobs)) return [];
+  return jobs.filter((job) => job?.appSlug === appSlug);
+}
+
+export async function listJobs({ limit = 20, appSlug } = {}) {
+  const params = new URLSearchParams({ limit: String(limit) });
+  if (appSlug) {
+    params.set("app", appSlug);
+  }
+  return accountRequest(`/api/jobs?${params.toString()}`);
 }
 
 export async function createJob({ appSlug, jobType, inputSummary, publicLabel, idempotencyKey, turnstileToken }) {
