@@ -120,6 +120,6 @@ wait_for_url "$PUBLIC_URL/api/similarity/criticl/health" /tmp/cyclome-criticl-he
 wait_for_url "$PUBLIC_URL/api/similarity/stop2melt/health" /tmp/cyclome-stop2melt-health.json
 expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X DELETE "$PUBLIC_URL/api/health")" 403 405
 expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$PUBLIC_URL/api/predict/criticl" -H 'Content-Type: application/json' --data '{"sequence":"ACDEFGHIK"}')" 404
-expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$PUBLIC_URL/api/similarity/criticl" -H 'Content-Type: application/json' --data '{"sequence":"ACDEFGHIK"}')" 400 403
+expect_http_code_in "$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$PUBLIC_URL/api/similarity/criticl" -H 'Content-Type: application/json' --data '{"sequence":"INVALID123"}')" 400
 
 echo ">>> Cyclome production deploy complete"

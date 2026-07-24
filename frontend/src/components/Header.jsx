@@ -71,7 +71,7 @@ const Header = () => {
               <li>Inspect the 3D structure, metadata, melting profile, and cyclization state.</li>
               <li>Run sequence similarity, CritiCL, or STop2Melt jobs from the tool pages.</li>
             </ol>
-            <p>Expensive model jobs use Turnstile verification before submission.</p>
+            <p>Expensive model jobs are rate-limited before submission.</p>
           </div>
         </details>
 

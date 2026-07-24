@@ -16,7 +16,6 @@ import {
   message,
 } from "antd";
 import Header from "../components/Header";
-import TurnstileBox from "../components/TurnstileBox";
 import {
   cancelJob as cancelStructfJob,
   createJob as createStructfJob,
@@ -68,7 +67,6 @@ export default function CritiCLPage() {
   const lastJobIdRef = useRef(null);
   const lastJobTokenRef = useRef("");
   const lastStructfJobIdRef = useRef(null);
-  const turnstileWidgetRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
@@ -76,7 +74,6 @@ export default function CritiCLPage() {
   const [batchResult, setBatchResult] = useState(null);
   const [error, setError] = useState("");
   const [jobState, setJobState] = useState(null);
-  const [turnstileToken, setTurnstileToken] = useState("");
   const [geomscanResult, setGeomscanResult] = useState(null);
 
   useEffect(() => {
@@ -315,7 +312,6 @@ export default function CritiCLPage() {
       jobType: STRUCTF_CRITICL_JOB_TYPE,
       inputSummary: payload,
       publicLabel: `CritiCL ${payload.sequence.slice(0, 24)}`,
-      turnstileToken,
     });
     const job = createBody?.job;
     if (!job?.id) {
@@ -342,7 +338,6 @@ export default function CritiCLPage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Cyclome-Turnstile-Token": turnstileToken,
       },
       body: JSON.stringify(payload),
     });
@@ -374,22 +369,15 @@ export default function CritiCLPage() {
     resetResults();
 
     try {
-      if (!turnstileToken) {
-        throw new Error("Verification is required before submitting.");
-      }
-
       if (batchMode) {
         const payload = { items: normalizeBatchRows(values.batch_rows) };
         const response = await fetch("/api/similarity/criticl/batch", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "X-Cyclome-Turnstile-Token": turnstileToken,
           },
           body: JSON.stringify(payload),
         });
-        turnstileWidgetRef.current?.reset();
-        setTurnstileToken("");
 
         const data = await readJson(response);
         if (!response.ok) {
@@ -424,9 +412,6 @@ export default function CritiCLPage() {
         }
         message.warning("StructF history unavailable. Falling back to current CritiCL job path.");
         await submitLegacyCriticlJob(payload);
-      } finally {
-        turnstileWidgetRef.current?.reset();
-        setTurnstileToken("");
       }
     } catch (err) {
       stopPolling();
@@ -434,8 +419,6 @@ export default function CritiCLPage() {
       const msg = err?.message || "Failed to run CritiCL.";
       setError(msg);
       message.error(msg);
-      turnstileWidgetRef.current?.reset();
-      setTurnstileToken("");
     }
   };
 
@@ -531,7 +514,6 @@ export default function CritiCLPage() {
                 htmlType="submit"
                 form="criticl-form"
                 loading={loading}
-                disabled={!turnstileToken}
               >
                 Run
               </Button>
@@ -591,13 +573,6 @@ export default function CritiCLPage() {
                   />
                 </Form.Item>
               )}
-              <Form.Item>
-                <TurnstileBox
-                  ref={turnstileWidgetRef}
-                  disabled={loading}
-                  onToken={setTurnstileToken}
-                />
-              </Form.Item>
             </Form>
           </Space>
         </Card>

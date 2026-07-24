@@ -73,14 +73,13 @@ export async function listJobs({ limit = 20, appSlug } = {}) {
   return accountRequest(`/api/jobs?${params.toString()}`);
 }
 
-export async function createJob({ appSlug, jobType, inputSummary, publicLabel, idempotencyKey, turnstileToken }) {
+export async function createJob({ appSlug, jobType, inputSummary, publicLabel, idempotencyKey }) {
   const csrfToken = await getCsrfToken();
   return accountRequest("/api/jobs", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "X-CSRF-Token": csrfToken,
-      ...(turnstileToken ? { "X-Turnstile-Token": turnstileToken } : {}),
     },
     body: JSON.stringify({
       appSlug,

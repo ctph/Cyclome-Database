@@ -17,7 +17,6 @@ from security_config import (
     validate_cyclization_pattern,
     validate_items,
     validate_sequence,
-    verify_turnstile_token,
 )
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
@@ -80,33 +79,6 @@ def _request_job_token() -> str:
     ).strip()
 
 
-def _request_turnstile_token() -> str:
-    return (
-        request.headers.get("X-Cyclome-Turnstile-Token")
-        or request.form.get("cf-turnstile-response")
-        or ""
-    ).strip()
-
-
-def _request_remote_ip() -> str:
-    return (
-        request.headers.get("CF-Connecting-IP")
-        or request.headers.get("X-Forwarded-For", "").split(",", 1)[0]
-        or request.remote_addr
-        or ""
-    ).strip()
-
-
-def _require_turnstile() -> None:
-    try:
-        verify_turnstile_token(
-            _request_turnstile_token(),
-            remote_ip=_request_remote_ip(),
-        )
-    except ValueError as exc:
-        raise BadRequest(str(exc)) from exc
-
-
 def _require_job_access(job: Job) -> None:
     token_hash = job.meta.get("client_token_hash")
     if not token_hash:
@@ -156,7 +128,6 @@ def enqueue_criticl_single():
     except ValueError as exc:
         raise BadRequest(str(exc)) from exc
 
-    _require_turnstile()
     return _enqueue_with_token(
         "criticl",
         "tasks_criticl.task_criticl_predict",
@@ -183,7 +154,6 @@ def enqueue_criticl_batch():
         except ValueError as exc:
             raise BadRequest(str(exc)) from exc
 
-    _require_turnstile()
     return _enqueue_with_token(
         "criticl",
         "tasks_criticl.task_criticl_batch",
@@ -199,7 +169,6 @@ def enqueue_stop2melt_single():
     except ValueError as exc:
         raise BadRequest(str(exc)) from exc
 
-    _require_turnstile()
     return _enqueue_with_token(
         "stop2melt",
         "tasks_stop2melt.task_stop2melt_predict",
@@ -226,7 +195,6 @@ def enqueue_stop2melt_batch():
         except ValueError as exc:
             raise BadRequest(str(exc)) from exc
 
-    _require_turnstile()
     return _enqueue_with_token(
         "stop2melt",
         "tasks_stop2melt.task_stop2melt_batch",

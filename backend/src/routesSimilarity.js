@@ -199,10 +199,6 @@ async function proxyJson(req, res, flaskPath, { method = "GET", body } = {}) {
     if (jobToken) {
       headers["X-Cyclome-Job-Token"] = jobToken;
     }
-    const turnstileToken = req.get("X-Cyclome-Turnstile-Token");
-    if (turnstileToken) {
-      headers["X-Cyclome-Turnstile-Token"] = turnstileToken;
-    }
     const cfConnectingIp = req.get("CF-Connecting-IP");
     if (cfConnectingIp) {
       headers["CF-Connecting-IP"] = cfConnectingIp;

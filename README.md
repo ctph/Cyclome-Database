@@ -95,7 +95,7 @@ https://cyclome930.structf.studio/api/*
 
 Direct public non-health `/api/predict/*` routes are intentionally blocked. The frontend uses `/api/similarity/*`, which proxies to the Flask model backend.
 
-Expensive model enqueue routes require Cloudflare Turnstile:
+The active Cloudflare rate-limit rule protects expensive model enqueue routes:
 
 ```text
 POST /api/similarity/criticl
@@ -104,21 +104,15 @@ POST /api/similarity/stop2melt
 POST /api/similarity/stop2melt/batch
 ```
 
-The frontend obtains a Turnstile token and sends it as:
-
-```text
-X-Cyclome-Turnstile-Token
-```
-
 Polling and canceling queued jobs requires the returned job token:
 
 ```text
 X-Cyclome-Job-Token
 ```
 
-Cloudflare WAF blocks obvious bad paths and disallowed HTTP methods. The active rate-limit rule protects model enqueue routes.
+Cloudflare WAF also blocks obvious bad paths and disallowed HTTP methods.
 
-If protected POST routes return `400 Verification token is required`, the frontend is missing the Turnstile token. If disallowed methods or bad paths return `403`, that is expected.
+Rate-limited requests return `429`. If disallowed methods or bad paths return `403`, that is expected.
 
 After deployment, verify:
 

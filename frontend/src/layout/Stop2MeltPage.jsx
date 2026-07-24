@@ -16,7 +16,6 @@ import {
   message,
 } from "antd";
 import Header from "../components/Header";
-import TurnstileBox from "../components/TurnstileBox";
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
@@ -51,7 +50,6 @@ export default function Stop2MeltPage() {
   const pollingTimeoutRef = useRef(null);
   const lastJobIdRef = useRef(null);
   const lastJobTokenRef = useRef("");
-  const turnstileWidgetRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
@@ -59,7 +57,6 @@ export default function Stop2MeltPage() {
   const [batchResult, setBatchResult] = useState(null);
   const [error, setError] = useState("");
   const [jobState, setJobState] = useState(null);
-  const [turnstileToken, setTurnstileToken] = useState("");
 
   useEffect(() => {
     return () => {
@@ -194,10 +191,6 @@ export default function Stop2MeltPage() {
     resetResults();
 
     try {
-      if (!turnstileToken) {
-        throw new Error("Verification is required before submitting.");
-      }
-
       const payload = batchMode
         ? { items: normalizeBatchRows(values.batch_rows) }
         : {
@@ -213,11 +206,9 @@ export default function Stop2MeltPage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Cyclome-Turnstile-Token": turnstileToken,
         },
         body: JSON.stringify(payload),
       });
-      turnstileWidgetRef.current?.reset();
 
       const data = await readJson(response);
       if (!response.ok) {
@@ -244,7 +235,6 @@ export default function Stop2MeltPage() {
       const msg = err?.message || "Failed to run Stop2Melt.";
       setError(msg);
       message.error(msg);
-      turnstileWidgetRef.current?.reset();
     }
   };
 
@@ -301,7 +291,7 @@ export default function Stop2MeltPage() {
               <Button type={batchMode ? "primary" : "default"} onClick={() => setBatchMode(true)}>
                 Batch Run
               </Button>
-              <Button type="primary" htmlType="submit" form="stop2melt-form" loading={loading} disabled={!turnstileToken}>
+              <Button type="primary" htmlType="submit" form="stop2melt-form" loading={loading}>
                 Run
               </Button>
               {canCancel ? <Button danger onClick={handleCancelJob}>Cancel Job</Button> : null}
@@ -362,13 +352,6 @@ export default function Stop2MeltPage() {
                   />
                 </Form.Item>
               )}
-              <Form.Item>
-                <TurnstileBox
-                  ref={turnstileWidgetRef}
-                  disabled={loading}
-                  onToken={setTurnstileToken}
-                />
-              </Form.Item>
             </Form>
           </Space>
         </Card>
