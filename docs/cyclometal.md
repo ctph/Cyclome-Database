@@ -114,3 +114,7 @@ Tabbed frontend components are `CycloMetalPage.jsx` (shared header/tab routing),
 `CycloMetalMLPanel.jsx`, and `CycloMetalGeomPanel.jsx`. Tabs have independent filters
 and pagination; their state is retained when switching tabs. Tab selection is
 shareable in the `tab` query parameter and works with browser Back/Forward.
+
+The Geom tab also links to the curated 1BQF_A coordination-site viewer. See
+[temperature-and-coordination.md](temperature-and-coordination.md) for the proposed
+center/donor contract, source files, JSmol controls, and validation details.
