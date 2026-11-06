@@ -1,3 +1,4 @@
 # Keep the supplied scientific source files byte-identical to their recorded hashes.
 frontend/public/data/cyclometal/cyclome-metal-hits.html -text
 frontend/public/data/cyclometal/shape_names.csv -text whitespace=cr-at-eol
+frontend/public/data/cyclometal/CycloMetal-ML-predictions.html -text
