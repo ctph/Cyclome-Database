@@ -1,0 +1,80 @@
+# 1BQF_A: three distinct CycloMetal-Geo coordination sites (CN >= 4, RMSD < 0.5 A)
+# Jmol script (.spt). Run with:  jmol -s 1BQF_A_three_sites.spt
+# or inside Jmol:  script "1BQF_A_three_sites.spt"
+#
+#   Site 1 (red):    pyv  RMSD 0.254 A  donors Gly10 O, Met12 SD, Pro21 O, Thr22 OG1   (divalent TM)
+#   Site 2 (blue):   tet  RMSD 0.360 A  donors Met12 SD, Pro21 O, Thr22 OG1, Gln25 O   (TM + Sm)
+#   Site 3 (green):  spy  RMSD 0.393 A  donors Ser4 O+OG, Gly5 O, Gly6 O, Cys7 O       (TM + lanthanides)
+
+load "1BQF_A.pdb"
+
+background white
+select all
+spacefill off
+wireframe off
+cartoon only
+color cartoon translucent [x999999]
+
+# ---------------- Site 1: pyv (square pyramid, equatorial vacancy) ----------------
+select (resno=10 or resno=12 or resno=21 or resno=22) and chain='A'
+wireframe 0.18
+color wireframe cpk
+select (resno=10 or resno=12 or resno=21 or resno=22) and chain='A' and carbon
+color wireframe red
+
+draw site1_center sphere diameter 1.4 {1.152 -5.702 3.350} color red
+draw site1_b1 width 0.06 line {1.152 -5.702 3.350} (chain='A' and resno=10 and atomname='O') color red
+draw site1_b2 width 0.06 line {1.152 -5.702 3.350} (chain='A' and resno=12 and atomname='SD') color red
+draw site1_b3 width 0.06 line {1.152 -5.702 3.350} (chain='A' and resno=21 and atomname='O') color red
+draw site1_b4 width 0.06 line {1.152 -5.702 3.350} (chain='A' and resno=22 and atomname='OG1') color red
+
+set echo site1_label {1.152 -5.702 3.350}
+echo pyv 0.254
+color echo black
+font echo 18
+
+# ---------------- Site 2: tet (tetrahedron) ----------------
+select (resno=25) and chain='A'
+wireframe 0.18
+color wireframe cpk
+select (resno=25) and chain='A' and carbon
+color wireframe blue
+
+draw site2_center sphere diameter 1.4 {4.036 -5.272 4.539} color blue
+draw site2_b1 width 0.06 line {4.036 -5.272 4.539} (chain='A' and resno=12 and atomname='SD') color blue
+draw site2_b2 width 0.06 line {4.036 -5.272 4.539} (chain='A' and resno=21 and atomname='O') color blue
+draw site2_b3 width 0.06 line {4.036 -5.272 4.539} (chain='A' and resno=22 and atomname='OG1') color blue
+draw site2_b4 width 0.06 line {4.036 -5.272 4.539} (chain='A' and resno=25 and atomname='O') color blue
+
+set echo site2_label {4.036 -5.272 4.539}
+echo tet 0.360
+color echo black
+font echo 18
+
+# ---------------- Site 3: spy (square pyramid, CN 5) ----------------
+select (resno=4 or resno=5 or resno=6 or resno=7) and chain='A'
+wireframe 0.18
+color wireframe cpk
+select (resno=4 or resno=5 or resno=6 or resno=7) and chain='A' and carbon
+color wireframe green
+
+draw site3_center sphere diameter 1.4 {-9.713 -1.702 -0.830} color green
+draw site3_b1 width 0.06 line {-9.713 -1.702 -0.830} (chain='A' and resno=4 and atomname='O') color green
+draw site3_b2 width 0.06 line {-9.713 -1.702 -0.830} (chain='A' and resno=4 and atomname='OG') color green
+draw site3_b3 width 0.06 line {-9.713 -1.702 -0.830} (chain='A' and resno=5 and atomname='O') color green
+draw site3_b4 width 0.06 line {-9.713 -1.702 -0.830} (chain='A' and resno=6 and atomname='O') color green
+draw site3_b5 width 0.06 line {-9.713 -1.702 -0.830} (chain='A' and resno=7 and atomname='O') color green
+
+set echo site3_label {-9.713 -1.702 -0.830}
+echo spy 0.393
+color echo black
+font echo 18
+
+# ---------------- Final view ----------------
+select all
+center all
+zoom 110
+set antialiasDisplay true
+
+# Export a figure (uncomment):
+# write IMAGE 1600 1200 PNG 300 "1BQF_A_three_sites_jmol.png"
