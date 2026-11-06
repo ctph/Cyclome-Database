@@ -92,9 +92,9 @@ const HomePage = ({ allOptions }) => {
                 <b>CycloMetal</b>
                 <span>Explore CycloMetal-ML predictions and CycloMetal-Geom coordination-site hits.</span>
               </Link>
-              <Link className="mini" to="/stop2melt">
-                <b>STop2Melt</b>
-                <span>Run sequence-level stability inference with queued backend jobs.</span>
+              <Link className="mini" to="/distortion-temperature">
+                <b>Distortion Temperature Predictor</b>
+                <span>Predict distortion temperature with queued sequence-level inference.</span>
               </Link>
             </div>
           </div>

@@ -7,7 +7,7 @@ const navItems = [
   { to: "/", label: "Cyclome search", end: true },
   { to: "/cyclic-sequence-similarity", label: "Sequence similarity" },
   { to: "/cyclometal", label: "CycloMetal" },
-  { to: "/stop2melt", label: "STop2Melt" },
+  { to: "/distortion-temperature", label: "Distortion Temperature Predictor" },
   { to: "/history", label: "History" },
 ];
 
@@ -68,8 +68,8 @@ const Header = () => {
             <strong>Use Cyclome</strong>
             <ol>
               <li>Search by PDB ID or peptide sequence to open a structure record.</li>
-              <li>Inspect the 3D structure, metadata, melting profile, and cyclization state.</li>
-              <li>Run sequence similarity or STop2Melt jobs, or browse CycloMetal ML predictions and geometry hits.</li>
+              <li>Inspect the 3D structure, metadata, distortion temperature profile, and cyclization state.</li>
+              <li>Run sequence similarity or Distortion Temperature Predictor jobs, or browse CycloMetal ML predictions and geometry hits.</li>
             </ol>
             <p>Expensive model jobs are rate-limited before submission.</p>
           </div>

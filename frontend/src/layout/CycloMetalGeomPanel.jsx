@@ -71,6 +71,7 @@ export default function CycloMetalGeomPanel() {
           <Paragraph type="secondary">Source screening: CN &gt;=4, RMSD ≤ 0.5 Å.</Paragraph>
           {catalog && <Paragraph type="secondary">{catalog.statistics.structures.toLocaleString()} structures · {catalog.statistics.metals} metals · {catalog.statistics.geometries} legend entries</Paragraph>}
           <Space wrap>
+            <Button href="/pdb/1BQF_A?view=coordination">View 1BQF_A annotated metal sites</Button>
             <Button href={`${dataRoot}/cyclome-metal-hits.html`} download>Download supplied HTML</Button>
             <Button href={`${dataRoot}/shape_names.csv`} download>Download geometry legend CSV</Button>
             <a href="#metalpdb-legend">Jump to geometry legend</a>

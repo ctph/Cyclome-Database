@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 const FONT =
   "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
 
-export default function MeltingTempHistogram({
+export default function DistortionTempHistogram({
   allTemps = [],
   thisTemp = null,
 }) {
@@ -102,7 +102,7 @@ export default function MeltingTempHistogram({
             fontFamily: FONT,
           }}
         >
-          Predicted melt temperature
+          Predicted Distortion Temperature
         </span>
         <span
           style={{
@@ -168,7 +168,7 @@ export default function MeltingTempHistogram({
           </>
         ) : (
           <span style={{ fontSize: 14, color: "#8c8c8c", fontFamily: FONT }}>
-            No Tm data
+            No distortion temperature data
           </span>
         )}
       </div>
@@ -353,7 +353,7 @@ export default function MeltingTempHistogram({
             fontFamily={FONT}
             letterSpacing="0.05em"
           >
-            CyMelt (K)
+            Distortion Temperature (K)
           </text>
 
           {/* x-axis label */}

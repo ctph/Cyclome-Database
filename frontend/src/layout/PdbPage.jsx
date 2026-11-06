@@ -1,9 +1,11 @@
 // frontend/src/PdbPage.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../components/Header";
-import MeltingTempHistogram from "../components/MeltingTempHistogram";
+import DistortionTempHistogram from "../components/DistortionTempHistogram";
+import CoordinationSitePanel from "../components/CoordinationSitePanel";
+import { clearCoordinationScript, coordinationScript } from "../lib/coordinationView";
 
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import {
   Card,
   Spin,
@@ -15,6 +17,7 @@ import {
   Descriptions,
   Flex,
   message,
+  Alert,
 } from "antd";
 
 const { Title, Text } = Typography;
@@ -35,7 +38,7 @@ const CYC_BUTTONS = [
   { key: "s2e+s2s", label: "s2e + s2s" },
 ];
 
-async function loadAllMeltTemps() {
+async function loadAllDistortionTemps() {
   const res = await fetch("/home_page_table_with_filenames.json");
   if (!res.ok) throw new Error(`home_page_table fetch failed: ${res.status}`);
   const data = await res.json();
@@ -71,26 +74,40 @@ const PdbPage = () => {
 
   const containerRef = useRef(null);
   const appletRef = useRef(null);
-
-  const [viewMode, setViewMode] = useState("cartoon");
+  const loadedSourceRef = useRef("");
+  const previousSiteRef = useRef("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const requestedView = searchParams.get("view");
+  const viewMode = ["stick", "coordination"].includes(requestedView) ? requestedView : "cartoon";
+  const setViewMode = (mode) => setSearchParams((previous) => {
+    const next = new URLSearchParams(previous);
+    next.set("view", mode);
+    return next;
+  });
+  const [coordinationData, setCoordinationData] = useState(null);
+  const [coordinationError, setCoordinationError] = useState("");
+  const [coordinationLoading, setCoordinationLoading] = useState(false);
+  const [selectedSite, setSelectedSite] = useState("all");
+  const [showDistances, setShowDistances] = useState(true);
+  const [showResidueLabels, setShowResidueLabels] = useState(true);
 
   const [metaLoading, setMetaLoading] = useState(true);
   const [metaError, setMetaError] = useState(null);
   const [metaRecord, setMetaRecord] = useState(null);
   const navigate = useNavigate();
 
-  // melting temp state
+  // Predicted distortion temperature, using the existing Kelvin data fields.
   const [allTemps, setAllTemps] = useState([]);
   const [tempMap, setTempMap] = useState({});
   const [tempsLoaded, setTempsLoaded] = useState(false);
 
   useEffect(() => {
-    loadAllMeltTemps()
+    loadAllDistortionTemps()
       .then(({ allTemps, tempMap }) => {
         setAllTemps(allTemps);
         setTempMap(tempMap);
       })
-      .catch((e) => console.warn("Failed to load melt temps:", e))
+      .catch((e) => console.warn("Failed to load distortion temperatures:", e))
       .finally(() => setTempsLoaded(true));
   }, []);
 
@@ -103,6 +120,36 @@ const PdbPage = () => {
     const key = String(pdbId || "").toLowerCase();
     return tempMap[key] ?? null;
   }, [metaRecord, pdbId, tempMap]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const root = `${process.env.PUBLIC_URL || ""}/data/cyclometal/sites`;
+    setCoordinationData(null);
+    setCoordinationError("");
+    setCoordinationLoading(true);
+    setSelectedSite("all");
+    fetch(`${root}/index.json`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error("Coordination annotation index is unavailable.");
+        return response.json();
+      })
+      .then(async (index) => {
+        const filename = index[pdbIdUpper.replace(/\.PDB$/, "")];
+        if (!filename) return null;
+        const response = await fetch(`${root}/${filename}`, { signal: controller.signal });
+        if (!response.ok) throw new Error("The supplied coordination annotation could not be loaded.");
+        return response.json();
+      })
+      .then((data) => {
+        if (!controller.signal.aborted) {
+          setCoordinationData(data);
+          setSelectedSite(data?.sites?.[0]?.id || "all");
+        }
+      })
+      .catch((error) => { if (error.name !== "AbortError") setCoordinationError(error.message); })
+      .finally(() => { if (!controller.signal.aborted) setCoordinationLoading(false); });
+    return () => controller.abort();
+  }, [pdbIdUpper]);
 
   const runJsmol = (cmd) => {
     try {
@@ -129,7 +176,7 @@ const PdbPage = () => {
       j2sPath: "/jsmol/j2s",
       serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
       script: `
-        load "/api/pdb/file/${pdbId}";
+        load ${JSON.stringify(`/api/pdb/file/${encodeURIComponent(pdbId)}`)};
         set antialiasDisplay true;
         set cartoonFancy true;
         cartoon only;
@@ -137,25 +184,47 @@ const PdbPage = () => {
       `,
     };
 
+    // React owns the document; JSmol must return markup instead of document.write().
+    window.Jmol.setDocument(0);
     const applet = window.Jmol.getApplet("jsmolApplet", Info);
     appletRef.current = applet;
     containerRef.current.innerHTML = window.Jmol.getAppletHtml(applet);
-
-    setViewMode("cartoon");
+    loadedSourceRef.current = `/api/pdb/file/${encodeURIComponent(pdbId)}`;
+    previousSiteRef.current = "";
+    return () => {
+      if (typeof window.Jmol._destroy === "function") window.Jmol._destroy(applet);
+      if (appletRef.current === applet) appletRef.current = null;
+    };
   }, [pdbId]);
 
   useEffect(() => {
     if (!appletRef.current) return;
 
-    if (viewMode === "stick") {
-      runJsmol(
-        "select all; cartoons off; spacefill off; wireframe 0.2; color cpk;",
-      );
-    } else {
-      runJsmol("select all; cartoons only; color structure;");
+    if (viewMode === "coordination") {
+      if (!coordinationData || coordinationData.structure !== pdbIdUpper.replace(/\.PDB$/, "")) return;
+      const source = `${process.env.PUBLIC_URL || ""}${coordinationData.pdbUrl}`;
+      const loadModel = loadedSourceRef.current !== source;
+      try {
+        runJsmol(coordinationScript(coordinationData, {
+          siteId: selectedSite, showDistances, showLabels: showResidueLabels,
+          loadModel, focus: loadModel || previousSiteRef.current !== selectedSite,
+        }));
+        loadedSourceRef.current = source;
+        previousSiteRef.current = selectedSite;
+      } catch (error) {
+        setCoordinationError(error.message);
+      }
+      return;
     }
+    const source = `/api/pdb/file/${encodeURIComponent(pdbId)}`;
+    const load = loadedSourceRef.current === source ? "" : `load ${JSON.stringify(source)};`;
+    runJsmol(`${load}${clearCoordinationScript}${viewMode === "stick"
+      ? "select all; cartoons OFF; spacefill OFF; wireframe 0.2; color cpk;"
+      : "select all; cartoons ONLY; color structure;"}`);
+    loadedSourceRef.current = source;
+    previousSiteRef.current = "";
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [viewMode]);
+  }, [pdbId, pdbIdUpper, viewMode, coordinationData, selectedSite, showDistances, showResidueLabels]);
 
   // Metadata from backend
   useEffect(() => {
@@ -286,6 +355,7 @@ const PdbPage = () => {
                   >
                     Stick
                   </Button>
+                  {coordinationData && <Button type={viewMode === "coordination" ? "primary" : "default"} onClick={() => setViewMode("coordination")}>Metal sites</Button>}
                 </Button.Group>
               </Flex>
             </div>
@@ -423,11 +493,11 @@ const PdbPage = () => {
                   >
                     {metaRecord.Sequence || "N/A"}
                   </div>
-                  {/* ── Melting Temperature Histogram ── */}
+                  {/* Predicted Distortion Temperature histogram */}
                   <Divider style={{ margin: "12px 0" }} />
 
                   {tempsLoaded ? (
-                    <MeltingTempHistogram
+                    <DistortionTempHistogram
                       allTemps={allTemps}
                       thisTemp={thisTemp}
                     />
@@ -447,6 +517,14 @@ const PdbPage = () => {
             </Card>
           </Col>
         </Row>
+        {coordinationLoading && viewMode === "coordination" ? <Spin style={{ marginTop: 18 }} /> : null}
+        {coordinationError ? <Alert style={{ marginTop: 18 }} type="warning" showIcon message={coordinationError} /> : null}
+        {!coordinationLoading && !coordinationData && viewMode === "coordination" && !coordinationError
+          ? <Alert style={{ marginTop: 18 }} type="info" message="No curated coordination annotations have been supplied for this structure." /> : null}
+        {coordinationData && <CoordinationSitePanel annotation={coordinationData} active={viewMode === "coordination"}
+          siteId={selectedSite} showDistances={showDistances} showLabels={showResidueLabels}
+          onOpen={() => setViewMode("coordination")} onSiteChange={setSelectedSite}
+          onDistancesChange={setShowDistances} onLabelsChange={setShowResidueLabels} />}
       </div>
     </div>
   );

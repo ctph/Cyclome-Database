@@ -45,7 +45,7 @@ async function readJson(response) {
   return response.json().catch(() => null);
 }
 
-export default function Stop2MeltPage() {
+export default function DistortionTemperaturePage() {
   const [form] = Form.useForm();
   const pollingTimeoutRef = useRef(null);
   const lastJobIdRef = useRef(null);
@@ -57,6 +57,12 @@ export default function Stop2MeltPage() {
   const [batchResult, setBatchResult] = useState(null);
   const [error, setError] = useState("");
   const [jobState, setJobState] = useState(null);
+
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = "Distortion Temperature Predictor | Cyclome";
+    return () => { document.title = previousTitle; };
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -103,7 +109,7 @@ export default function Stop2MeltPage() {
         render: (value) => <Text code>{value || ""}</Text>,
       },
       {
-        title: "Predicted Stop2Melt",
+        title: "Predicted Distortion Temperature",
         dataIndex: "pred_stop2melt",
         key: "pred_stop2melt",
         render: (value) => (value == null ? "-" : Number(value).toFixed(6)),
@@ -135,11 +141,11 @@ export default function Stop2MeltPage() {
       if (errorCount > 0) {
         message.warning(`Batch finished with ${errorCount} error(s).`);
       } else {
-        message.success("Stop2Melt batch run completed.");
+        message.success("Distortion temperature batch run completed.");
       }
     } else {
       setSingleResult(result);
-      message.success("Stop2Melt prediction completed.");
+      message.success("Distortion temperature prediction completed.");
     }
   };
 
@@ -179,7 +185,7 @@ export default function Stop2MeltPage() {
     } catch (err) {
       stopPolling();
       setLoading(false);
-      const msg = err?.message || "Failed while polling Stop2Melt job.";
+      const msg = err?.message || "Failed while polling the distortion temperature job.";
       setError(msg);
       message.error(msg);
     }
@@ -227,12 +233,12 @@ export default function Stop2MeltPage() {
         progress: 0,
         message: "queued",
       });
-      message.success("Stop2Melt job submitted. Polling for results...");
+      message.success("Distortion temperature job submitted. Polling for results...");
       await pollJob(data.task_id);
     } catch (err) {
       stopPolling();
       setLoading(false);
-      const msg = err?.message || "Failed to run Stop2Melt.";
+      const msg = err?.message || "Failed to predict distortion temperature.";
       setError(msg);
       message.error(msg);
     }
@@ -257,7 +263,7 @@ export default function Stop2MeltPage() {
       stopPolling();
       setLoading(false);
       setJobState((prev) => ({ ...prev, status: data?.status || "canceled" }));
-      message.info("Stop2Melt job canceled.");
+      message.info("Distortion temperature job canceled.");
     } catch (err) {
       message.error(err?.message || "Failed to cancel job.");
     }
@@ -276,10 +282,10 @@ export default function Stop2MeltPage() {
           <Space direction="vertical" size="middle" style={{ width: "100%" }}>
             <div>
               <Title level={2} style={{ marginBottom: 8 }}>
-                Stop2Melt
+                Distortion Temperature Predictor
               </Title>
               <Paragraph style={{ maxWidth: 920, marginBottom: 0 }}>
-                Predict Stop2Melt directly from peptide sequence and optional cyclization pattern.
+                Predict distortion temperature directly from peptide sequence and optional cyclization pattern.
                 Requests now run as background jobs, so the page can stay responsive while the model works.
               </Paragraph>
             </div>
@@ -303,7 +309,7 @@ export default function Stop2MeltPage() {
               message={
                 batchMode
                   ? "Batch mode: one row per line, tab-separated as sequence and optional cyclization pattern."
-                  : "Single mode submits one Stop2Melt job through the backend similarity API."
+                  : "Single mode submits one distortion temperature prediction job through the backend similarity API."
               }
               description={
                 batchMode
@@ -379,7 +385,7 @@ export default function Stop2MeltPage() {
               <Space wrap>
                 <Tag color="blue">Sequence length: {singleResult.sequence?.length || 0}</Tag>
                 <Tag color="green">
-                  Predicted Stop2Melt: {Number(singleResult.pred_stop2melt).toFixed(6)}
+                  Predicted Distortion Temperature: {Number(singleResult.pred_stop2melt).toFixed(6)}
                 </Tag>
               </Space>
 

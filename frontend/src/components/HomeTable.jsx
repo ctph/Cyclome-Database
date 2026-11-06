@@ -93,7 +93,7 @@ const HomeTable = () => {
       render: (_, record) => record.pdbs.length,
     },
     {
-      title: "CyMelt (K)",
+      title: "Predicted Distortion Temperature (K)",
       dataIndex: "melting_point",
       key: "melting_point",
       render: (temp) => (temp !== "-" ? `${temp} K` : "-"),

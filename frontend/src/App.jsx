@@ -6,7 +6,7 @@ import CyclizationPage from "./layout/CyclizationPage";
 import PdbPage from "./layout/PdbPage";
 import CyclicSequenceSimilarityPage from "./layout/CyclicSequenceSimilarityPage";
 import CycloMetalPage from "./layout/CycloMetalPage";
-import Stop2MeltPage from "./layout/Stop2MeltPage";
+import DistortionTemperaturePage from "./layout/DistortionTemperaturePage";
 import HistoryPage from "./layout/HistoryPage";
 // import NotFound from "./pages/NotFound";
 
@@ -45,9 +45,11 @@ export default function App() {
             />
 
             <Route
-              path="/stop2melt"
-              element={<Stop2MeltPage />}
+              path="/distortion-temperature"
+              element={<DistortionTemperaturePage />}
             />
+
+            <Route path="/stop2melt" element={<Navigate to="/distortion-temperature" replace />} />
 
             <Route path="/history" element={<HistoryPage />} />
 
