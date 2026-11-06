@@ -90,7 +90,7 @@ const HomePage = ({ allOptions }) => {
               </Link>
               <Link className="mini" to="/cyclometal">
                 <b>CycloMetal</b>
-                <span>Explore cyclic-peptide metal-coordination geometry hits and the MetalPDB legend.</span>
+                <span>Explore CycloMetal-ML predictions and CycloMetal-Geom coordination-site hits.</span>
               </Link>
               <Link className="mini" to="/stop2melt">
                 <b>STop2Melt</b>

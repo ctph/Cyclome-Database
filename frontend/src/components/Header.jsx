@@ -69,7 +69,7 @@ const Header = () => {
             <ol>
               <li>Search by PDB ID or peptide sequence to open a structure record.</li>
               <li>Inspect the 3D structure, metadata, melting profile, and cyclization state.</li>
-              <li>Run sequence similarity or STop2Melt jobs, or browse CycloMetal geometry hits.</li>
+              <li>Run sequence similarity or STop2Melt jobs, or browse CycloMetal ML predictions and geometry hits.</li>
             </ol>
             <p>Expensive model jobs are rate-limited before submission.</p>
           </div>
