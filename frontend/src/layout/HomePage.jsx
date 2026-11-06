@@ -88,9 +88,9 @@ const HomePage = ({ allOptions }) => {
                 <b>Cyclic Sequence Similarity</b>
                 <span>Compare peptide sequences against Cyclome similarity routes.</span>
               </Link>
-              <Link className="mini" to="/criticl">
-                <b>CritiCL</b>
-                <span>Predict likely metal class from sequence and cyclization inputs.</span>
+              <Link className="mini" to="/cyclometal">
+                <b>CycloMetal</b>
+                <span>Explore cyclic-peptide metal-coordination geometry hits and the MetalPDB legend.</span>
               </Link>
               <Link className="mini" to="/stop2melt">
                 <b>STop2Melt</b>

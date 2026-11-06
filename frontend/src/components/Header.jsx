@@ -6,7 +6,7 @@ import { useAccount } from "../account/AccountProvider";
 const navItems = [
   { to: "/", label: "Cyclome search", end: true },
   { to: "/cyclic-sequence-similarity", label: "Sequence similarity" },
-  { to: "/criticl", label: "CritiCL" },
+  { to: "/cyclometal", label: "CycloMetal" },
   { to: "/stop2melt", label: "STop2Melt" },
   { to: "/history", label: "History" },
 ];
@@ -69,7 +69,7 @@ const Header = () => {
             <ol>
               <li>Search by PDB ID or peptide sequence to open a structure record.</li>
               <li>Inspect the 3D structure, metadata, melting profile, and cyclization state.</li>
-              <li>Run sequence similarity, CritiCL, or STop2Melt jobs from the tool pages.</li>
+              <li>Run sequence similarity or STop2Melt jobs, or browse CycloMetal geometry hits.</li>
             </ol>
             <p>Expensive model jobs are rate-limited before submission.</p>
           </div>

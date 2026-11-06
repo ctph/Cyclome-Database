@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AccountProvider } from "./account/AccountProvider";
 import HomePage from "./layout/HomePage";
 import SimilarityPage from "./layout/SimilarityPage";
 import CyclizationPage from "./layout/CyclizationPage";
 import PdbPage from "./layout/PdbPage";
 import CyclicSequenceSimilarityPage from "./layout/CyclicSequenceSimilarityPage";
-import CritiCLPage from "./layout/CritiCLPage";
+import CycloMetalPage from "./layout/CycloMetalPage";
 import Stop2MeltPage from "./layout/Stop2MeltPage";
 import HistoryPage from "./layout/HistoryPage";
 // import NotFound from "./pages/NotFound";
@@ -35,8 +35,13 @@ export default function App() {
             />
 
             <Route
+              path="/cyclometal"
+              element={<CycloMetalPage />}
+            />
+
+            <Route
               path="/criticl"
-              element={<CritiCLPage />}
+              element={<Navigate to="/cyclometal" replace />}
             />
 
             <Route
