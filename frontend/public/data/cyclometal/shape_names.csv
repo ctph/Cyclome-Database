@@ -1,0 +1,38 @@
+shape_name,description,coord_number
+spy,Square pyramid,5
+bvp,Trigonal bipyramid with a vacancy (equatorial),4
+bts,Trigonal prism ( square-face bicapped),8
+pvp,Pentagonal bipyramid with a vacancy (equatorial),6
+hva,Hexagonal bipyramid with a vacancy (axial),7
+tbp,Trigonal bipyramid,5
+ttp,Trigonal prism ( square-face tricapped),9
+spv,Square plane with a vacancy,3
+pva,Pentagonal bipyramid with a vacancy (axial),6
+bva,Trigonal bipyramid with a vacancy (axial),4
+spl,Square plane,4
+pyv,Square pyramid with a vacancy (equatorial),4
+cub,Cube,8
+hvp,Hexagonal bipyramid with a vacancy (equatorial),7
+sqa,Square antiprism,8
+tet,Tetrahedron,4
+sav,Square antiprism with a vacancy,7
+tev,Tetrahedron with a vacancy,3
+tri,Trigonal plane,3
+cuv,Cube with a vacancy,7
+boc,Octahedron ( trans-bicapped) ,8
+ctp,Trigonal prism ( square-face monocapped ),7
+pbp,Pentagonal bipyramid,7
+lin,Linear,2
+csa,Square antiprism ( square-face monocapped ),9
+coc,Octahedron ( face monocapped ),7
+oct,Octahedron,6
+tpv,Trigonal prism with a vacancy,5
+ctf,Trigonal prism ( square-face monocapped with a vacancy (capped face)),6
+hbp,Hexagonal bipyramid,8
+btt,Trigonal prism ( triangular-face bicapped),8
+tpr,Trigonal prism,6
+cof,Octahedron ( face monocapped with a vacancy (capped face) ),6
+ctn,Trigonal prism ( square-face monocapped with a vacancy (non-capped edge) ),6
+con,Octahedron ( face monocapped with a vacancy (non-capped face) ),6
+trv,Trigonal plane with a vacancy,2
+irr,Irregular,N/A
