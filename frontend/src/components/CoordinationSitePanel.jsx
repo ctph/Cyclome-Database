@@ -21,15 +21,16 @@ export default function CoordinationSitePanel({ annotation, active, siteId, show
   }
 
   return (
-    <Card title={`Metal-coordination annotations: ${annotation.structure}`} style={{ marginTop: 18, borderRadius: 14 }}>
-      <Paragraph>These are proposed geometry centers from the supplied Jmol example, not experimentally observed metal atoms. Distances are calculated from each supplied center to its donor atoms in Å. The coordination view uses the supplied example PDB coordinates.</Paragraph>
+    <Card title={<span style={{ whiteSpace: "normal" }}>Metal-coordination annotations: {annotation.structure}</span>} style={{ marginTop: 18, borderRadius: 14 }}>
+      <Paragraph>These are proposed geometry centers from the supplied Jmol annotations, not experimentally observed metal atoms. Distances are calculated from each supplied center to its donor atoms in Å. The coordination view uses the matching supplied PDB coordinates.</Paragraph>
       <Space wrap style={{ marginBottom: 14 }}>
         {!active && <Button type="primary" onClick={onOpen}>Show metal sites</Button>}
         {annotation.sites.map((site) => <Tag key={site.id} color={site.color}>{site.id.replace("site", "Site ")}: {site.geometry} · CN {site.coordinationNumber} · RMSD {site.rmsd} Å</Tag>)}
-        <Button href={`${prefix}${annotation.pdbUrl}`} download>Download example PDB</Button>
+        <Button href={`${prefix}${annotation.pdbUrl}`} download>Download supplied PDB</Button>
         <Button href={`${prefix}${annotation.scriptUrl}`} download>Download supplied Jmol script</Button>
         <Button onClick={downloadViewerScript}>Download viewer script</Button>
       </Space>
+      {sites.some((site) => site.metals?.length) && <Paragraph type="secondary">Associated metals in the supplied screening: {sites.map((site) => `${site.id.replace("site", "Site ")}: ${(site.metals || []).join(", ")}`).join("; ")}. These associations do not establish metal occupancy.</Paragraph>}
       {active && <>
         <Paragraph type="secondary">Select one site for a labeled close-up, or all sites for an overview. The viewer supports mouse rotation and zoom.</Paragraph>
         <Space wrap style={{ marginBottom: 14 }}>

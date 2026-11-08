@@ -6,23 +6,25 @@ const dataRoot = `${process.env.PUBLIC_URL || ""}/data/cyclometal`;
 
 export default function CycloMetalGeomPanel() {
   const [catalog, setCatalog] = useState(null);
+  const [collection, setCollection] = useState(null);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
   const [metal, setMetal] = useState("");
   const [shape, setShape] = useState("");
   const [onlyHits, setOnlyHits] = useState(false);
+  const [onlyAnnotated, setOnlyAnnotated] = useState(false);
   const [page, setPage] = useState(1);
   const [requestKey, setRequestKey] = useState(0);
 
   useEffect(() => {
     const controller = new AbortController();
     setError("");
-    fetch(`${dataRoot}/catalog.json`, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error("The CycloMetal catalog could not be loaded.");
-        return response.json();
-      })
-      .then(setCatalog)
+    Promise.all(["catalog.json", "sites/collection/summary.json"].map(async (file) => {
+      const response = await fetch(`${dataRoot}/${file}`, { signal: controller.signal });
+      if (!response.ok) throw new Error("The CycloMetal catalog or coordination collection could not be loaded.");
+      return response.json();
+    }))
+      .then(([data, summary]) => { setCatalog(data); setCollection(summary); })
       .catch((err) => { if (err.name !== "AbortError") setError(err.message); });
     return () => controller.abort();
   }, [requestKey]);
@@ -31,13 +33,16 @@ export default function CycloMetalGeomPanel() {
   const visibleMetals = useMemo(() => metal ? [metal] : catalog?.metals || [], [catalog, metal]);
   const filteredRows = useMemo(() => (catalog?.rows || []).filter((row) => {
     if (!row.structure.toLowerCase().includes(query.trim().toLowerCase())) return false;
+    if (onlyAnnotated && !collection?.structures[row.structure]) return false;
     if (!metal && !shape && !onlyHits) return true;
     return visibleMetals.some((name) => row.cells[name].some((hit) => !shape || hit.shape === shape));
-  }), [catalog, query, metal, shape, onlyHits, visibleMetals]);
+  }), [catalog, collection, query, metal, shape, onlyHits, onlyAnnotated, visibleMetals]);
 
   const columns = useMemo(() => [
-    { title: "Structure", dataIndex: "structure", key: "structure", fixed: "left", width: 135,
-      render: (value) => <Text code>{value}</Text> },
+    { title: "Structure / sites", dataIndex: "structure", key: "structure", fixed: "left", width: 190,
+      render: (value) => <div><Text code>{value}</Text><br />{collection?.structures[value]
+        ? <a href={`/pdb/${value}?view=coordination`}>View {collection.structures[value].siteCount} sites</a>
+        : collection?.pendingStructures[value] ? <a href={`/pdb/${value}?view=coordination`}>Awaiting curation</a> : <Text type="secondary">No supplied sites</Text>}</div> },
     ...visibleMetals.map((name) => ({
       title: name, key: name, width: 160,
       render: (_, row) => {
@@ -56,7 +61,7 @@ export default function CycloMetalGeomPanel() {
         ))}</div>;
       },
     })),
-  ], [visibleMetals, shape, geometries]);
+  ], [visibleMetals, shape, geometries, collection]);
 
   function changeFilter(setter, value) {
     setter(value);
@@ -70,10 +75,12 @@ export default function CycloMetalGeomPanel() {
           <Paragraph>Browse the supplied cyclic-peptide metal-coordination geometry hits. Expand a geometry code to inspect its residues and RMSD; the legend below explains each code.</Paragraph>
           <Paragraph type="secondary">Source screening: CN &gt;=4, RMSD ≤ 0.5 Å.</Paragraph>
           {catalog && <Paragraph type="secondary">{catalog.statistics.structures.toLocaleString()} structures · {catalog.statistics.metals} metals · {catalog.statistics.geometries} legend entries</Paragraph>}
+          {collection && <Paragraph>{collection.statistics.annotatedStructures} structures with interactive annotations · {collection.statistics.sites} proposed sites · {collection.statistics.pendingCuration} structures awaiting alternate-conformer curation. Use the structure-row links to open the matching sites.</Paragraph>}
           <Space wrap>
             <Button href="/pdb/1BQF_A?view=coordination">View 1BQF_A annotated metal sites</Button>
             <Button href={`${dataRoot}/cyclome-metal-hits.html`} download>Download supplied HTML</Button>
             <Button href={`${dataRoot}/shape_names.csv`} download>Download geometry legend CSV</Button>
+            <Button href={`${dataRoot}/sites/collection/manifest.json`} download>Download annotation provenance</Button>
             <a href="#metalpdb-legend">Jump to geometry legend</a>
           </Space>
         </Card>
@@ -88,7 +95,8 @@ export default function CycloMetalGeomPanel() {
           </div>
           <Space wrap className="cyclometal-filter-actions">
             <Checkbox checked={onlyHits} onChange={(event) => changeFilter(setOnlyHits, event.target.checked)}>Show structures with hits only</Checkbox>
-            <Button onClick={() => { setQuery(""); setMetal(""); setShape(""); setOnlyHits(false); setPage(1); }}>Reset filters</Button>
+            <Checkbox checked={onlyAnnotated} onChange={(event) => changeFilter(setOnlyAnnotated, event.target.checked)}>Interactive annotations only</Checkbox>
+            <Button onClick={() => { setQuery(""); setMetal(""); setShape(""); setOnlyHits(false); setOnlyAnnotated(false); setPage(1); }}>Reset filters</Button>
             <Text type="secondary">{filteredRows.length.toLocaleString()} structures shown</Text>
           </Space>
           <Table className="cyclometal-matrix" rowKey="structure" columns={columns} dataSource={filteredRows} pagination={{ current: page, defaultPageSize: 25, showSizeChanger: true, pageSizeOptions: [25, 50, 100], onChange: (value) => setPage(value), showTotal: (total) => `${total.toLocaleString()} structures` }} scroll={{ x: "max-content", y: 560 }} />

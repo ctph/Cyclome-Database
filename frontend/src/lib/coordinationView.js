@@ -1,4 +1,4 @@
-const COLORS = new Set(["red", "blue", "green"]);
+const COLORS = new Set(["red", "blue", "green", "orange", "magenta", "cyan"]);
 
 function point(coordinates) {
   if (!Array.isArray(coordinates) || coordinates.length !== 3 || !coordinates.every(Number.isFinite)) {

@@ -85,6 +85,7 @@ const PdbPage = () => {
     return next;
   });
   const [coordinationData, setCoordinationData] = useState(null);
+  const [coordinationPending, setCoordinationPending] = useState(null);
   const [coordinationError, setCoordinationError] = useState("");
   const [coordinationLoading, setCoordinationLoading] = useState(false);
   const [selectedSite, setSelectedSite] = useState("all");
@@ -123,20 +124,22 @@ const PdbPage = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    const root = `${process.env.PUBLIC_URL || ""}/data/cyclometal/sites`;
+    const root = `${process.env.PUBLIC_URL || ""}/data/cyclometal/sites/collection`;
     setCoordinationData(null);
+    setCoordinationPending(null);
     setCoordinationError("");
     setCoordinationLoading(true);
     setSelectedSite("all");
-    fetch(`${root}/index.json`, { signal: controller.signal })
+    fetch(`${root}/summary.json`, { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error("Coordination annotation index is unavailable.");
         return response.json();
       })
-      .then(async (index) => {
-        const filename = index[pdbIdUpper.replace(/\.PDB$/, "")];
-        if (!filename) return null;
-        const response = await fetch(`${root}/${filename}`, { signal: controller.signal });
+      .then(async (summary) => {
+        const structure = pdbIdUpper.replace(/\.PDB$/, "");
+        if (!controller.signal.aborted) setCoordinationPending(summary.pendingStructures[structure] || null);
+        if (!summary.structures[structure]) return null;
+        const response = await fetch(`${root}/${structure}.json`, { signal: controller.signal });
         if (!response.ok) throw new Error("The supplied coordination annotation could not be loaded.");
         return response.json();
       })
@@ -304,7 +307,7 @@ const PdbPage = () => {
 
         <Divider style={{ margin: "12px 0 20px" }} />
 
-        <Flex direction="column" gap={10} style={{ marginBottom: 18 }}>
+        <Flex vertical gap={10} style={{ marginBottom: 18 }}>
           <Flex align="center" gap={16} wrap="wrap">
             <div style={{ flex: 1, minWidth: 260 }}>
               <Title level={2} style={{ margin: 0 }}>
@@ -312,7 +315,7 @@ const PdbPage = () => {
               </Title>
             </div>
 
-            <div style={{ flex: "none" }}>
+            <div style={{ flex: "none", maxWidth: "100%" }}>
               <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
                 <Text strong>Similarity:</Text>
 
@@ -360,11 +363,11 @@ const PdbPage = () => {
               </Flex>
             </div>
 
-            <div style={{ flex: "none" }}>
+            <div style={{ flex: "none", maxWidth: "100%" }}>
               <Flex align="center" gap={8} wrap="wrap" justify="flex-end">
                 <Text strong>Cyclization:</Text>
 
-                <Button.Group>
+                <Button.Group style={{ flexWrap: "wrap", maxWidth: "100%" }}>
                   {CYC_BUTTONS.map((b) => {
                     const isActive =
                       Boolean(activeCycl) && activeCycl === b.key;
@@ -519,7 +522,9 @@ const PdbPage = () => {
         </Row>
         {coordinationLoading && viewMode === "coordination" ? <Spin style={{ marginTop: 18 }} /> : null}
         {coordinationError ? <Alert style={{ marginTop: 18 }} type="warning" showIcon message={coordinationError} /> : null}
-        {!coordinationLoading && !coordinationData && viewMode === "coordination" && !coordinationError
+        {coordinationPending && <Alert style={{ marginTop: 18 }} type="info" showIcon message="Coordination sites awaiting conformer curation"
+          description={<><p>The supplied donor selectors match multiple alternate conformers. No conformer has been chosen and interactive site annotations are held pending curation.</p><p>{coordinationPending.reason}</p><Button href={`${process.env.PUBLIC_URL || ""}${coordinationPending.pdbUrl}`} download>Download supplied PDB</Button>{" "}<Button href={`${process.env.PUBLIC_URL || ""}${coordinationPending.scriptUrl}`} download>Download supplied Jmol script</Button></>} />}
+        {!coordinationLoading && !coordinationData && !coordinationPending && viewMode === "coordination" && !coordinationError
           ? <Alert style={{ marginTop: 18 }} type="info" message="No curated coordination annotations have been supplied for this structure." /> : null}
         {coordinationData && <CoordinationSitePanel annotation={coordinationData} active={viewMode === "coordination"}
           siteId={selectedSite} showDistances={showDistances} showLabels={showResidueLabels}
