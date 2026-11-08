@@ -1,0 +1,327 @@
+{
+  "structure": "2QJB_D",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 695,
+  "pdbUrl": "/data/cyclometal/sites/collection/2QJB_D.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2QJB_D.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.186",
+      "center": [
+        23.134,
+        -50.647,
+        -12.744
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 316,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "D",
+          "resno": 72,
+          "icode": "",
+          "coordinates": [
+            19.781,
+            -49.244,
+            -13.043
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "THR72:O",
+          "distanceAngstrom": 3.646973951099734
+        },
+        {
+          "serial": 258,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "D",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            24.201,
+            -49.13,
+            -15.437
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLU64:OE2",
+          "distanceAngstrom": 3.2698665110368017
+        },
+        {
+          "serial": 240,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "D",
+          "resno": 62,
+          "icode": "",
+          "coordinates": [
+            26.398,
+            -51.933,
+            -12.611
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "MET62:SD",
+          "distanceAngstrom": 3.510723714563708
+        },
+        {
+          "serial": 245,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "D",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            23.478,
+            -49.082,
+            -9.69
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ILE63:O",
+          "distanceAngstrom": 3.4488370503692973
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.326",
+      "center": [
+        23.08,
+        -50.857,
+        -12.68
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 316,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "D",
+          "resno": 72,
+          "icode": "",
+          "coordinates": [
+            19.781,
+            -49.244,
+            -13.043
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "THR72:O",
+          "distanceAngstrom": 3.6901136838856328
+        },
+        {
+          "serial": 240,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "D",
+          "resno": 62,
+          "icode": "",
+          "coordinates": [
+            26.398,
+            -51.933,
+            -12.611
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "MET62:SD",
+          "distanceAngstrom": 3.4887907647206373
+        },
+        {
+          "serial": 333,
+          "name": "OG1",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "D",
+          "resno": 74,
+          "icode": "",
+          "coordinates": [
+            22.661,
+            -53.169,
+            -15.378
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "THR74:OG1",
+          "distanceAngstrom": 3.5777239971803287
+        },
+        {
+          "serial": 245,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "D",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            23.478,
+            -49.082,
+            -9.69
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ILE63:O",
+          "distanceAngstrom": 3.4998755692167114
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site3",
+      "geometry": "spy",
+      "description": "Square pyramid",
+      "coordinationNumber": 5,
+      "rmsd": "0.485",
+      "center": [
+        23.067,
+        -50.99,
+        -12.776
+      ],
+      "diameter": 1.4,
+      "color": "green",
+      "donors": [
+        {
+          "serial": 245,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "D",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            23.478,
+            -49.082,
+            -9.69
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ILE63:O",
+          "distanceAngstrom": 3.651408084561353
+        },
+        {
+          "serial": 258,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "D",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            24.201,
+            -49.13,
+            -15.437
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLU64:OE2",
+          "distanceAngstrom": 3.438964524388118
+        },
+        {
+          "serial": 240,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "D",
+          "resno": 62,
+          "icode": "",
+          "coordinates": [
+            26.398,
+            -51.933,
+            -12.611
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "MET62:SD",
+          "distanceAngstrom": 3.465838282436154
+        },
+        {
+          "serial": 316,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "D",
+          "resno": 72,
+          "icode": "",
+          "coordinates": [
+            19.781,
+            -49.244,
+            -13.043
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "THR72:O",
+          "distanceAngstrom": 3.7306301076359762
+        },
+        {
+          "serial": 333,
+          "name": "OG1",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "D",
+          "resno": 74,
+          "icode": "",
+          "coordinates": [
+            22.661,
+            -53.169,
+            -15.378
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "THR74:OG1",
+          "distanceAngstrom": 3.4180814794267236
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "gadolinium",
+        "holmium",
+        "manganese",
+        "nickel",
+        "praseodymium",
+        "samarium",
+        "terbium",
+        "ytterbium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "15c71c948a5c8ce141b394c42e707dc43473fd3cab74924d56b64d69ce5119e4",
+      "bytes": 56384
+    },
+    "script": {
+      "sha256": "ce59e2ca13fdcdaba001970bcba0dcc71f283f7c48217776c35131432d69f4e6",
+      "bytes": 3437
+    }
+  }
+}

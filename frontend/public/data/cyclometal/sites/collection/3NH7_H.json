@@ -1,0 +1,131 @@
+{
+  "structure": "3NH7_H",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1569,
+  "pdbUrl": "/data/cyclometal/sites/collection/3NH7_H.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/3NH7_H.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tbp",
+      "description": "Trigonal bipyramid",
+      "coordinationNumber": 5,
+      "rmsd": "0.445",
+      "center": [
+        17.281,
+        9.125,
+        8.153
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 392,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "H",
+          "resno": 53,
+          "icode": "",
+          "coordinates": [
+            17.449,
+            10.725,
+            5.9
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER53:O",
+          "distanceAngstrom": 2.768435117534814
+        },
+        {
+          "serial": 218,
+          "name": "O",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "H",
+          "resno": 32,
+          "icode": "",
+          "coordinates": [
+            18.395,
+            11.325,
+            10.326
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "TYR32:O",
+          "distanceAngstrom": 3.2867803394811768
+        },
+        {
+          "serial": 204,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "H",
+          "resno": 30,
+          "icode": "",
+          "coordinates": [
+            14.455,
+            9.221,
+            7.804
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER30:O",
+          "distanceAngstrom": 2.849086344777917
+        },
+        {
+          "serial": 549,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "H",
+          "resno": 74,
+          "icode": "",
+          "coordinates": [
+            18.947,
+            6.672,
+            6.175
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASN74:OD1",
+          "distanceAngstrom": 3.5644423126205877
+        },
+        {
+          "serial": 193,
+          "name": "O",
+          "altloc": "",
+          "resname": "PHE",
+          "chain": "H",
+          "resno": 29,
+          "icode": "",
+          "coordinates": [
+            17.157,
+            7.684,
+            10.562
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "PHE29:O",
+          "distanceAngstrom": 2.809828820408815
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "95c64d2c1274698adfc799d3492b6943eadde9928afa93894106cca482296943",
+      "bytes": 127178
+    },
+    "script": {
+      "sha256": "e5bd6ae2d4cc2a966c0b1f8671c1ff5f723e40badf9f5666475614e128cdd45a",
+      "bytes": 1377
+    }
+  }
+}

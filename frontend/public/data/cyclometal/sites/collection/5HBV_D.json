@@ -1,0 +1,113 @@
+{
+  "structure": "5HBV_D",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1646,
+  "pdbUrl": "/data/cyclometal/sites/collection/5HBV_D.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/5HBV_D.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.336",
+      "center": [
+        48.127,
+        -14.655,
+        52.122
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 530,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "D",
+          "resno": 70,
+          "icode": "",
+          "coordinates": [
+            50.232,
+            -16.315,
+            50.018
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER70:OG",
+          "distanceAngstrom": 3.407849908666752
+        },
+        {
+          "serial": 514,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "D",
+          "resno": 68,
+          "icode": "",
+          "coordinates": [
+            47.077,
+            -12.112,
+            49.77
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER68:O",
+          "distanceAngstrom": 3.619565305392346
+        },
+        {
+          "serial": 610,
+          "name": "O",
+          "altloc": "",
+          "resname": "LEU",
+          "chain": "D",
+          "resno": 80,
+          "icode": "",
+          "coordinates": [
+            46.157,
+            -13.373,
+            54.556
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "LEU80:O",
+          "distanceAngstrom": 3.3836045868274875
+        },
+        {
+          "serial": 599,
+          "name": "O",
+          "altloc": "",
+          "resname": "PHE",
+          "chain": "D",
+          "resno": 79,
+          "icode": "",
+          "coordinates": [
+            45.748,
+            -16.148,
+            50.764
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "PHE79:O",
+          "distanceAngstrom": 3.1197522337519072
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "d96dbfa7e66656cdbb7845dd488fe4f34e369505e85acac4b25510473f818730",
+      "bytes": 133415
+    },
+    "script": {
+      "sha256": "a543c0780ce42f317479bd5a220163ebbebe78f33f39035dac5f92af3aa185e4",
+      "bytes": 1256
+    }
+  }
+}

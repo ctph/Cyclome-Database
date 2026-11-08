@@ -1,0 +1,130 @@
+{
+  "structure": "1MYN_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 642,
+  "pdbUrl": "/data/cyclometal/sites/collection/1MYN_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1MYN_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tpv",
+      "description": "Trigonal prism with a vacancy",
+      "coordinationNumber": 5,
+      "rmsd": "0.481",
+      "center": [
+        4.758,
+        0.452,
+        -4.359
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 617,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 42,
+          "icode": "",
+          "coordinates": [
+            5.626,
+            0.211,
+            -0.947
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLU42:OE1",
+          "distanceAngstrom": 3.5289161225509456
+        },
+        {
+          "serial": 579,
+          "name": "O",
+          "altloc": "",
+          "resname": "TRP",
+          "chain": "A",
+          "resno": 40,
+          "icode": "",
+          "coordinates": [
+            5.855,
+            0.605,
+            -7.809
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "TRP40:O",
+          "distanceAngstrom": 3.6234400781577722
+        },
+        {
+          "serial": 8,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 1,
+          "icode": "",
+          "coordinates": [
+            2.294,
+            -0.911,
+            -2.391
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP1:OD2",
+          "distanceAngstrom": 3.435416859712952
+        },
+        {
+          "serial": 446,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "A",
+          "resno": 30,
+          "icode": "",
+          "coordinates": [
+            6.712,
+            3.784,
+            -4.912
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "SER30:O",
+          "distanceAngstrom": 3.9020698353566146
+        },
+        {
+          "serial": 603,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 41,
+          "icode": "",
+          "coordinates": [
+            2.206,
+            1.919,
+            -5.765
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "CYS41:O",
+          "distanceAngstrom": 3.2621509774993553
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "c4c40661113de5e2752d526dd574993e27c8c07dad936df38a94cc555bcdb371",
+      "bytes": 52091
+    },
+    "script": {
+      "sha256": "45be76805393931c54682dc8314bde9e9fe38ec25718ab0c7509ad032e200efb",
+      "bytes": 1370
+    }
+  }
+}

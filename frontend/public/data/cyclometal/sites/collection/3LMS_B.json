@@ -1,0 +1,114 @@
+{
+  "structure": "3LMS_B",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 534,
+  "pdbUrl": "/data/cyclometal/sites/collection/3LMS_B.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/3LMS_B.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.340",
+      "center": [
+        3.98,
+        67.546,
+        35.157
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 389,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "B",
+          "resno": 55,
+          "icode": "",
+          "coordinates": [
+            8.089,
+            68.142,
+            37.206
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "LYS55:O",
+          "distanceAngstrom": 4.630064578383331
+        },
+        {
+          "serial": 363,
+          "name": "O",
+          "altloc": "",
+          "resname": "ARG",
+          "chain": "B",
+          "resno": 52,
+          "icode": "",
+          "coordinates": [
+            3.729,
+            69.254,
+            30.815
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ARG52:O",
+          "distanceAngstrom": 4.67260409193845
+        },
+        {
+          "serial": 487,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "B",
+          "resno": 69,
+          "icode": "",
+          "coordinates": [
+            0.4,
+            69.445,
+            37.89
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "LYS69:O",
+          "distanceAngstrom": 4.88793310101519
+        },
+        {
+          "serial": 403,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "B",
+          "resno": 56,
+          "icode": "",
+          "coordinates": [
+            3.703,
+            63.342,
+            34.718
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLU56:OE2",
+          "distanceAngstrom": 4.235925636741048
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "9d492b7a4d7118aeeee12fe7d571ba4d418fe28dcf51da3c79207619896299e8",
+      "bytes": 43343
+    },
+    "script": {
+      "sha256": "0d7c9298125632352e8dda3b0046ceb4df359072a7ac99d2396ca455328b2a5d",
+      "bytes": 1255
+    }
+  }
+}

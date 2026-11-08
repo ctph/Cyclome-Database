@@ -1,0 +1,208 @@
+{
+  "structure": "1KTZ_B",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 840,
+  "pdbUrl": "/data/cyclometal/sites/collection/1KTZ_B.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1KTZ_B.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.213",
+      "center": [
+        15.852,
+        61.683,
+        60.482
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 515,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "B",
+          "resno": 89,
+          "icode": "",
+          "coordinates": [
+            14.285,
+            58.338,
+            59.075
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ILE89:O",
+          "distanceAngstrom": 3.9527412007365195
+        },
+        {
+          "serial": 704,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "B",
+          "resno": 113,
+          "icode": "",
+          "coordinates": [
+            17.341,
+            64.868,
+            62.207
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "CYS113:O",
+          "distanceAngstrom": 3.9162445020708265
+        },
+        {
+          "serial": 543,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 92,
+          "icode": "",
+          "coordinates": [
+            19.206,
+            60.075,
+            60.449
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP92:OD1",
+          "distanceAngstrom": 3.7196866803536
+        },
+        {
+          "serial": 699,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "B",
+          "resno": 112,
+          "icode": "",
+          "coordinates": [
+            12.578,
+            63.452,
+            60.198
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "MET112:SD",
+          "distanceAngstrom": 3.732170012204696
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.218",
+      "center": [
+        15.902,
+        61.821,
+        60.275
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 699,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "B",
+          "resno": 112,
+          "icode": "",
+          "coordinates": [
+            12.578,
+            63.452,
+            60.198
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "MET112:SD",
+          "distanceAngstrom": 3.7033857482039325
+        },
+        {
+          "serial": 515,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "B",
+          "resno": 89,
+          "icode": "",
+          "coordinates": [
+            14.285,
+            58.338,
+            59.075
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ILE89:O",
+          "distanceAngstrom": 4.023180085454785
+        },
+        {
+          "serial": 543,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 92,
+          "icode": "",
+          "coordinates": [
+            19.206,
+            60.075,
+            60.449
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP92:OD1",
+          "distanceAngstrom": 3.741016974032594
+        },
+        {
+          "serial": 696,
+          "name": "O",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "B",
+          "resno": 112,
+          "icode": "",
+          "coordinates": [
+            17.287,
+            64.664,
+            57.553
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "MET112:O",
+          "distanceAngstrom": 4.172548142322629
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "e1e761316722254041454c6d8bdc15fc7ac5216185e03e980c4016072e219d60",
+      "bytes": 68129
+    },
+    "script": {
+      "sha256": "ec93bc265950391052f56652456a046d6c41c8a354215e7c0c2639115c906568",
+      "bytes": 2211
+    }
+  }
+}

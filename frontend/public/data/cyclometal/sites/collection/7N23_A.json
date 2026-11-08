@@ -1,0 +1,130 @@
+{
+  "structure": "7N23_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 207,
+  "pdbUrl": "/data/cyclometal/sites/collection/7N23_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/7N23_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tpv",
+      "description": "Trigonal prism with a vacancy",
+      "coordinationNumber": 5,
+      "rmsd": "0.436",
+      "center": [
+        3.087,
+        -2.745,
+        2.034
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 136,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 13,
+          "icode": "",
+          "coordinates": [
+            2.806,
+            -2.16,
+            -0.534
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASN13:O",
+          "distanceAngstrom": 2.648737435081099
+        },
+        {
+          "serial": 200,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 17,
+          "icode": "",
+          "coordinates": [
+            3.487,
+            -1.209,
+            4.285
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "CYS17:O",
+          "distanceAngstrom": 2.754323328877712
+        },
+        {
+          "serial": 102,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "A",
+          "resno": 10,
+          "icode": "",
+          "coordinates": [
+            1.414,
+            -5.315,
+            1.208
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ALA10:O",
+          "distanceAngstrom": 3.1758628748735362
+        },
+        {
+          "serial": 150,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "A",
+          "resno": 14,
+          "icode": "",
+          "coordinates": [
+            5.865,
+            -0.984,
+            1.833
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLN14:O",
+          "distanceAngstrom": 3.295270246884161
+        },
+        {
+          "serial": 154,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "A",
+          "resno": 14,
+          "icode": "",
+          "coordinates": [
+            4.625,
+            -5.054,
+            3.12
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "GLN14:OE1",
+          "distanceAngstrom": 2.9793155254185484
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "353e839566d0ab9aacb31c03c0aacb7d8ba91dfbe3b67f294baf390dfe35ae48",
+      "bytes": 16856
+    },
+    "script": {
+      "sha256": "a7ae5a8802fcc3be390c4a5d37769d5fca3f07e46c5734a992abe13ab88d4b09",
+      "bytes": 1346
+    }
+  }
+}

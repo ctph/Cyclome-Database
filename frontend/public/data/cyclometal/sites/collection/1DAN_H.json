@@ -1,0 +1,209 @@
+{
+  "structure": "1DAN_H",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1974,
+  "pdbUrl": "/data/cyclometal/sites/collection/1DAN_H.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1DAN_H.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.071",
+      "center": [
+        7.537,
+        7.071,
+        4.873
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 436,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "H",
+          "resno": 70,
+          "icode": "",
+          "coordinates": [
+            9.087,
+            8.513,
+            5.739
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLU70:OE1",
+          "distanceAngstrom": 2.2873172058112097
+        },
+        {
+          "serial": 473,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "H",
+          "resno": 75,
+          "icode": "",
+          "coordinates": [
+            6.059,
+            5.549,
+            4.049
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLU75:O",
+          "distanceAngstrom": 2.275949032821253
+        },
+        {
+          "serial": 517,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "H",
+          "resno": 80,
+          "icode": "",
+          "coordinates": [
+            6.471,
+            8.891,
+            3.785
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLU80:OE2",
+          "distanceAngstrom": 2.373288857261164
+        },
+        {
+          "serial": 451,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "H",
+          "resno": 72,
+          "icode": "",
+          "coordinates": [
+            8.533,
+            5.33,
+            5.918
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASP72:O",
+          "distanceAngstrom": 2.2616635470378874
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.421",
+      "center": [
+        14.118,
+        25.302,
+        1.061
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 231,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "H",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            12.221,
+            25.527,
+            3.874
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "THR49:O",
+          "distanceAngstrom": 3.4003239551548616
+        },
+        {
+          "serial": 732,
+          "name": "O",
+          "altloc": "",
+          "resname": "LEU",
+          "chain": "H",
+          "resno": 108,
+          "icode": "",
+          "coordinates": [
+            15.768,
+            25.835,
+            -1.644
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "LEU108:O",
+          "distanceAngstrom": 3.2130381261354497
+        },
+        {
+          "serial": 238,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "H",
+          "resno": 50,
+          "icode": "",
+          "coordinates": [
+            16.728,
+            25.589,
+            2.615
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ILE50:O",
+          "distanceAngstrom": 3.0511284797595803
+        },
+        {
+          "serial": 750,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "H",
+          "resno": 110,
+          "icode": "",
+          "coordinates": [
+            11.756,
+            24.256,
+            -0.602
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLN110:O",
+          "distanceAngstrom": 3.0722514545525077
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "3f4db3fb7d69a816f1324353ec988fa4cf7980d79ceaa8fcd7ba35b636015fc2",
+      "bytes": 159983
+    },
+    "script": {
+      "sha256": "379d03ff7ec09aba9e7afb0b2e406d803faba64e0749f64a213511c67b43a22b",
+      "bytes": 2210
+    }
+  }
+}

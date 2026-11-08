@@ -1,0 +1,207 @@
+{
+  "structure": "1RGJ_B",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 223,
+  "pdbUrl": "/data/cyclometal/sites/collection/1RGJ_B.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1RGJ_B.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.129",
+      "center": [
+        -5.764,
+        -14.293,
+        4.993
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 214,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 13,
+          "icode": "",
+          "coordinates": [
+            -7.303,
+            -13.616,
+            4.14
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP13:O",
+          "distanceAngstrom": 1.8853272925410058
+        },
+        {
+          "serial": 201,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            -4.848,
+            -14.054,
+            3.668
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ASP12:O",
+          "distanceAngstrom": 1.6284354454506327
+        },
+        {
+          "serial": 205,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            -4.226,
+            -15.013,
+            5.768
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP12:OD2",
+          "distanceAngstrom": 1.8666732440360314
+        },
+        {
+          "serial": 177,
+          "name": "O",
+          "altloc": "",
+          "resname": "TRP",
+          "chain": "B",
+          "resno": 11,
+          "icode": "",
+          "coordinates": [
+            -5.822,
+            -12.965,
+            6.094
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "TRP11:O",
+          "distanceAngstrom": 1.7260211470315183
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.221",
+      "center": [
+        -5.861,
+        -14.469,
+        5.022
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 214,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 13,
+          "icode": "",
+          "coordinates": [
+            -7.303,
+            -13.616,
+            4.14
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP13:O",
+          "distanceAngstrom": 1.893382423072529
+        },
+        {
+          "serial": 201,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            -4.848,
+            -14.054,
+            3.668
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ASP12:O",
+          "distanceAngstrom": 1.7411806339377887
+        },
+        {
+          "serial": 205,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            -4.226,
+            -15.013,
+            5.768
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP12:OD2",
+          "distanceAngstrom": 1.8776786199986406
+        },
+        {
+          "serial": 177,
+          "name": "O",
+          "altloc": "",
+          "resname": "TRP",
+          "chain": "B",
+          "resno": 11,
+          "icode": "",
+          "coordinates": [
+            -5.822,
+            -12.965,
+            6.094
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "TRP11:O",
+          "distanceAngstrom": 1.8473551364044756
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "e9ebe1434c1042881fa91546d47580ff3b44e8b4561db0c0e92ae11d4f0a9376",
+      "bytes": 18152
+    },
+    "script": {
+      "sha256": "14956bb9b3db92a4aa297bd9aa9a5325141cd5428019e45c3cea65c66304568a",
+      "bytes": 2160
+    }
+  }
+}

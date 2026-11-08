@@ -1,0 +1,209 @@
+{
+  "structure": "4AEI_M",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1694,
+  "pdbUrl": "/data/cyclometal/sites/collection/4AEI_M.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/4AEI_M.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.321",
+      "center": [
+        57.864,
+        40.388,
+        54.721
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 228,
+          "name": "ND1",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "M",
+          "resno": 31,
+          "icode": "",
+          "coordinates": [
+            58.217,
+            39.868,
+            58.114
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "HIS31:ND1",
+          "distanceAngstrom": 3.450718475911937
+        },
+        {
+          "serial": 757,
+          "name": "ND1",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "M",
+          "resno": 98,
+          "icode": "",
+          "coordinates": [
+            57.174,
+            43.926,
+            53.925
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "HIS98:ND1",
+          "distanceAngstrom": 3.69149834078251
+        },
+        {
+          "serial": 750,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "M",
+          "resno": 97,
+          "icode": "",
+          "coordinates": [
+            55.437,
+            38.434,
+            54.169
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER97:OG",
+          "distanceAngstrom": 3.164356016632768
+        },
+        {
+          "serial": 218,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "M",
+          "resno": 30,
+          "icode": "",
+          "coordinates": [
+            60.629,
+            39.325,
+            52.675
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "VAL30:O",
+          "distanceAngstrom": 3.6001819398469284
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.475",
+      "center": [
+        28.029,
+        29.033,
+        45.681
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 675,
+          "name": "O",
+          "altloc": "",
+          "resname": "LEU",
+          "chain": "M",
+          "resno": 88,
+          "icode": "",
+          "coordinates": [
+            32.484,
+            28.57,
+            45.215
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "LEU88:O",
+          "distanceAngstrom": 4.5031711048993035
+        },
+        {
+          "serial": 1313,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "M",
+          "resno": 171,
+          "icode": "",
+          "coordinates": [
+            26.124,
+            30.176,
+            42.49
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN171:O",
+          "distanceAngstrom": 3.8881814515271746
+        },
+        {
+          "serial": 349,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "M",
+          "resno": 45,
+          "icode": "",
+          "coordinates": [
+            27.111,
+            31.825,
+            49.098
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "PRO45:O",
+          "distanceAngstrom": 4.50709185617511
+        },
+        {
+          "serial": 1332,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "M",
+          "resno": 173,
+          "icode": "",
+          "coordinates": [
+            26.397,
+            25.56,
+            45.921
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "SER173:OG",
+          "distanceAngstrom": 3.844834586819051
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "28fd69d0fe0065b219ebc129c852318f0863df1addd529b726c3b5de46dd7921",
+      "bytes": 137303
+    },
+    "script": {
+      "sha256": "e68c70a658849b821c9771c86f72c3f4d5ac6bf0c0d64483b871419bc5d5d962",
+      "bytes": 2238
+    }
+  }
+}

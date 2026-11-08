@@ -1,0 +1,118 @@
+{
+  "structure": "1ETL_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 138,
+  "pdbUrl": "/data/cyclometal/sites/collection/1ETL_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1ETL_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bva",
+      "description": "Trigonal bipyramid with a vacancy (axial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.361",
+      "center": [
+        17.252,
+        6.059,
+        -3.441
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 69,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 11,
+          "icode": "",
+          "coordinates": [
+            18.525,
+            4.009,
+            -1.881
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASN11:O",
+          "distanceAngstrom": 2.8734350523371845
+        },
+        {
+          "serial": 134,
+          "name": "OXT",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 17,
+          "icode": "",
+          "coordinates": [
+            18.08,
+            8.24,
+            -4.251
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "CYS17:OXT",
+          "distanceAngstrom": 2.469502986432695
+        },
+        {
+          "serial": 104,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 14,
+          "icode": "",
+          "coordinates": [
+            14.796,
+            5.812,
+            -4.235
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "CYS14:O",
+          "distanceAngstrom": 2.59294832189151
+        },
+        {
+          "serial": 83,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "A",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            18.699,
+            5.124,
+            -5.568
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "PRO12:O",
+          "distanceAngstrom": 2.737181579654519
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "gadolinium",
+        "manganese",
+        "nickel",
+        "praseodymium",
+        "samarium",
+        "ytterbium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "76f7464fc46d1c385a87c420c5f77a90ddb826a765ca205da18c2b2737db047c",
+      "bytes": 11267
+    },
+    "script": {
+      "sha256": "f287d05a87e25daba2c849c7d9add41ff724fbc1b8621ad280cce6f6640c48e5",
+      "bytes": 1298
+    }
+  }
+}

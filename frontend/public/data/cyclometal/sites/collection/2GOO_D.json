@@ -1,0 +1,131 @@
+{
+  "structure": "2GOO_D",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 814,
+  "pdbUrl": "/data/cyclometal/sites/collection/2GOO_D.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2GOO_D.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tbp",
+      "description": "Trigonal bipyramid",
+      "coordinationNumber": 5,
+      "rmsd": "0.499",
+      "center": [
+        -30.768,
+        25.997,
+        20.089
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 4,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "D",
+          "resno": 11,
+          "icode": "",
+          "coordinates": [
+            -28.887,
+            24.962,
+            17.42
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "LYS11:O",
+          "distanceAngstrom": 3.4253389613292264
+        },
+        {
+          "serial": 21,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "D",
+          "resno": 13,
+          "icode": "",
+          "coordinates": [
+            -31.955,
+            27.842,
+            18.751
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER13:OG",
+          "distanceAngstrom": 2.569676633352917
+        },
+        {
+          "serial": 13,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "D",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            -31.638,
+            23.232,
+            19.787
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER12:O",
+          "distanceAngstrom": 2.914331655800349
+        },
+        {
+          "serial": 295,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "D",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            -28.2,
+            27.331,
+            22.147
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLU46:OE1",
+          "distanceAngstrom": 3.550991974082736
+        },
+        {
+          "serial": 291,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "D",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            -33.161,
+            26.62,
+            22.339
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "GLU46:O",
+          "distanceAngstrom": 3.343213723350633
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "9daa213f0f4aac64e9002e926795cc9f41d03f42e7dc1b6191077a1244c45fb2",
+      "bytes": 66023
+    },
+    "script": {
+      "sha256": "a98d8a3e86c4d3405a43fec0ecf6cb13015b22afd059604f50296af17c4650d5",
+      "bytes": 1376
+    }
+  }
+}

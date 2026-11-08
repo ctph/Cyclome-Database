@@ -1,0 +1,114 @@
+{
+  "structure": "1GIB_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 312,
+  "pdbUrl": "/data/cyclometal/sites/collection/1GIB_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1GIB_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.320",
+      "center": [
+        -11.784,
+        -1.198,
+        -13.749
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 214,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 15,
+          "icode": "",
+          "coordinates": [
+            -9.23,
+            -1.428,
+            -13.944
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "CYS15:O",
+          "distanceAngstrom": 2.5717389058767224
+        },
+        {
+          "serial": 305,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "A",
+          "resno": 22,
+          "icode": "",
+          "coordinates": [
+            -14.059,
+            -1.158,
+            -13.697
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ALA22:O",
+          "distanceAngstrom": 2.27594573749024
+        },
+        {
+          "serial": 246,
+          "name": "O",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "A",
+          "resno": 18,
+          "icode": "",
+          "coordinates": [
+            -11.919,
+            -2.796,
+            -12.815
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "MET18:O",
+          "distanceAngstrom": 1.855851556563725
+        },
+        {
+          "serial": 224,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "A",
+          "resno": 16,
+          "icode": "",
+          "coordinates": [
+            -11.926,
+            0.592,
+            -14.539
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "LYS16:O",
+          "distanceAngstrom": 1.9617247513349059
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "70a2b1365cc74159d41c1d3b013673a218171b375b7bb510ba7ab5435af96f15",
+      "bytes": 25361
+    },
+    "script": {
+      "sha256": "6762cdb4da558d5fd56d0e8ca152103d7a9f052a972d5eb3818a8d06cbbf3e87",
+      "bytes": 1269
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "structure": "2KYQ_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 845,
+  "pdbUrl": "/data/cyclometal/sites/collection/2KYQ_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2KYQ_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.240",
+      "center": [
+        1.889,
+        7.994,
+        10.816
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 479,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "A",
+          "resno": 31,
+          "icode": "",
+          "coordinates": [
+            -0.63,
+            7.713,
+            12.448
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "HIS31:NE2",
+          "distanceAngstrom": 3.014588860856485
+        },
+        {
+          "serial": 420,
+          "name": "O",
+          "altloc": "",
+          "resname": "LEU",
+          "chain": "A",
+          "resno": 28,
+          "icode": "",
+          "coordinates": [
+            2.0,
+            5.335,
+            10.983
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "LEU28:O",
+          "distanceAngstrom": 2.6665503932984276
+        },
+        {
+          "serial": 442,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 29,
+          "icode": "",
+          "coordinates": [
+            4.576,
+            8.044,
+            9.043
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP29:OD1",
+          "distanceAngstrom": 3.2196269970293145
+        },
+        {
+          "serial": 439,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 29,
+          "icode": "",
+          "coordinates": [
+            0.209,
+            7.697,
+            8.52
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASP29:O",
+          "distanceAngstrom": 2.8604588792709476
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "9e2f5bdea3577591b503c8a07d7c6352fd206ea90c87b67250bc5c54954d508b",
+      "bytes": 68534
+    },
+    "script": {
+      "sha256": "f02602e5dc6cae2eaf2974880574585aa1a86fd12dc85fc43b95d64413375f77",
+      "bytes": 1220
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "structure": "1ES7_B",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 641,
+  "pdbUrl": "/data/cyclometal/sites/collection/1ES7_B.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1ES7_B.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.304",
+      "center": [
+        -10.244,
+        55.204,
+        50.287
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 265,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "B",
+          "resno": 266,
+          "icode": "",
+          "coordinates": [
+            -9.915,
+            53.262,
+            47.482
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP266:OD1",
+          "distanceAngstrom": 3.4274815827368057
+        },
+        {
+          "serial": 275,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "B",
+          "resno": 270,
+          "icode": "",
+          "coordinates": [
+            -6.645,
+            55.34,
+            50.578
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLU270:OE2",
+          "distanceAngstrom": 3.613305688701138
+        },
+        {
+          "serial": 257,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "B",
+          "resno": 265,
+          "icode": "",
+          "coordinates": [
+            -10.501,
+            56.774,
+            53.451
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLU265:OE1",
+          "distanceAngstrom": 3.5414467382695465
+        },
+        {
+          "serial": 253,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "B",
+          "resno": 265,
+          "icode": "",
+          "coordinates": [
+            -11.967,
+            58.157,
+            48.196
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLU265:O",
+          "distanceAngstrom": 4.007645069114776
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "d869d7c38405f07175ad6513afaaf235192a230b49f360c76d88ede094074031",
+      "bytes": 52010
+    },
+    "script": {
+      "sha256": "5c800c0e06a9a2fecce747b839a313a90ab415e26b94c8152fc2a768f068fefe",
+      "bytes": 1256
+    }
+  }
+}

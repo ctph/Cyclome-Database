@@ -1,0 +1,207 @@
+{
+  "structure": "3TH4_T",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1551,
+  "pdbUrl": "/data/cyclometal/sites/collection/3TH4_T.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/3TH4_T.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.153",
+      "center": [
+        32.78,
+        15.795,
+        76.755
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 1517,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "T",
+          "resno": 206,
+          "icode": "",
+          "coordinates": [
+            31.972,
+            17.719,
+            77.387
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "PRO206:O",
+          "distanceAngstrom": 2.1803816179742506
+        },
+        {
+          "serial": 1513,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            31.002,
+            15.811,
+            75.456
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER205:OG",
+          "distanceAngstrom": 2.2020311078638257
+        },
+        {
+          "serial": 1384,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            33.643,
+            13.83,
+            76.077
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER188:OG",
+          "distanceAngstrom": 2.2507061114237006
+        },
+        {
+          "serial": 1511,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            33.952,
+            16.614,
+            75.161
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "SER205:O",
+          "distanceAngstrom": 2.1413035749281266
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.261",
+      "center": [
+        32.981,
+        11.393,
+        74.788
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 1506,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "T",
+          "resno": 204,
+          "icode": "",
+          "coordinates": [
+            35.305,
+            11.434,
+            72.944
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP204:OD1",
+          "distanceAngstrom": 2.9669838219983555
+        },
+        {
+          "serial": 1384,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            33.643,
+            13.83,
+            76.077
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER188:OG",
+          "distanceAngstrom": 2.835266125075387
+        },
+        {
+          "serial": 1382,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            30.98,
+            11.142,
+            76.809
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER188:O",
+          "distanceAngstrom": 2.8550732039651816
+        },
+        {
+          "serial": 1388,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "T",
+          "resno": 189,
+          "icode": "",
+          "coordinates": [
+            31.197,
+            13.254,
+            72.826
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "VAL189:O",
+          "distanceAngstrom": 3.239663717116333
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "79e5408e5f7a2a6c19f4f8be3ef337c7ced8487663745b6f4040cfd118c7144e",
+      "bytes": 125720
+    },
+    "script": {
+      "sha256": "1beec71d86d74eb72b0765564466c20e1a3c7072abde41660f3d39610337bb0e",
+      "bytes": 2190
+    }
+  }
+}

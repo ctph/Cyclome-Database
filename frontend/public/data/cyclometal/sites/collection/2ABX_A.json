@@ -1,0 +1,113 @@
+{
+  "structure": "2ABX_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 551,
+  "pdbUrl": "/data/cyclometal/sites/collection/2ABX_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2ABX_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.268",
+      "center": [
+        37.06,
+        39.334,
+        18.165
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 307,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 41,
+          "icode": "",
+          "coordinates": [
+            35.103,
+            40.759,
+            21.21
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLU41:OE2",
+          "distanceAngstrom": 3.8900512850089783
+        },
+        {
+          "serial": 185,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "A",
+          "resno": 26,
+          "icode": "",
+          "coordinates": [
+            36.889,
+            42.787,
+            17.042
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "LYS26:O",
+          "distanceAngstrom": 3.635048692933833
+        },
+        {
+          "serial": 288,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "A",
+          "resno": 39,
+          "icode": "",
+          "coordinates": [
+            39.243,
+            38.247,
+            14.94
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "VAL39:O",
+          "distanceAngstrom": 4.043226805411737
+        },
+        {
+          "serial": 398,
+          "name": "OH",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 54,
+          "icode": "",
+          "coordinates": [
+            40.369,
+            39.776,
+            20.092
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "TYR54:OH",
+          "distanceAngstrom": 3.8546302027561583
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "7ac62e535346f7c00088fb2440e21ad0a52b257bcb811f266dbe66bbfedd8e2c",
+      "bytes": 44720
+    },
+    "script": {
+      "sha256": "c55f98ba3f4fd03daf7fd06e12cf83191350fd6ae30d6fa7739fcf20d08c40ed",
+      "bytes": 1254
+    }
+  }
+}

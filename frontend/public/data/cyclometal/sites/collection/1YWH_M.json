@@ -1,0 +1,213 @@
+{
+  "structure": "1YWH_M",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 2016,
+  "pdbUrl": "/data/cyclometal/sites/collection/1YWH_M.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1YWH_M.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.162",
+      "center": [
+        82.195,
+        -11.782,
+        -1.62
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 1753,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "M",
+          "resno": 241,
+          "icode": "",
+          "coordinates": [
+            83.292,
+            -10.884,
+            1.432
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "CYS241:O",
+          "distanceAngstrom": 3.365191970749963
+        },
+        {
+          "serial": 1132,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "M",
+          "resno": 160,
+          "icode": "",
+          "coordinates": [
+            82.817,
+            -14.944,
+            -2.447
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "HIS160:NE2",
+          "distanceAngstrom": 3.3270192364938325
+        },
+        {
+          "serial": 1584,
+          "name": "O",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "M",
+          "resno": 219,
+          "icode": "",
+          "coordinates": [
+            83.667,
+            -9.917,
+            -3.975
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "MET219:O",
+          "distanceAngstrom": 3.345300285475136
+        },
+        {
+          "serial": 1587,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "M",
+          "resno": 219,
+          "icode": "",
+          "coordinates": [
+            79.006,
+            -11.381,
+            -1.49
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "MET219:SD",
+          "distanceAngstrom": 3.2167408972436613
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "bva",
+      "description": "Trigonal bipyramid with a vacancy (axial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.182",
+      "center": [
+        74.019,
+        -1.237,
+        2.281
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 1778,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "M",
+          "resno": 245,
+          "icode": "",
+          "coordinates": [
+            77.809,
+            -2.746,
+            0.969
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER245:OG",
+          "distanceAngstrom": 4.2851516892637465
+        },
+        {
+          "serial": 1826,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "M",
+          "resno": 251,
+          "icode": "",
+          "coordinates": [
+            72.42,
+            -1.739,
+            6.24
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "HIS251:NE2",
+          "distanceAngstrom": 4.299126190285651
+        },
+        {
+          "serial": 1076,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "M",
+          "resno": 152,
+          "icode": "",
+          "coordinates": [
+            71.81,
+            0.825,
+            -0.32
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLY152:O",
+          "distanceAngstrom": 3.9870698514071727
+        },
+        {
+          "serial": 1811,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "M",
+          "resno": 249,
+          "icode": "",
+          "coordinates": [
+            75.911,
+            2.247,
+            3.424
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "HIS249:NE2",
+          "distanceAngstrom": 4.126059742660058
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "gadolinium",
+        "manganese",
+        "nickel",
+        "praseodymium",
+        "samarium",
+        "ytterbium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "40f797b1e89644900f2d7148ae8bb402ab57c52c5f71305272b92b207c096e9e",
+      "bytes": 163385
+    },
+    "script": {
+      "sha256": "65f15b02eb7127ae56496e65badc187c0a8026da4b21db10295a374a3fb0dfc0",
+      "bytes": 2283
+    }
+  }
+}

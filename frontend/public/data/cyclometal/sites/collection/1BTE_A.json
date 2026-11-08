@@ -1,0 +1,130 @@
+{
+  "structure": "1BTE_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 740,
+  "pdbUrl": "/data/cyclometal/sites/collection/1BTE_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1BTE_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tpv",
+      "description": "Trigonal prism with a vacancy",
+      "coordinationNumber": 5,
+      "rmsd": "0.372",
+      "center": [
+        12.814,
+        37.184,
+        9.759
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 472,
+          "name": "O",
+          "altloc": "",
+          "resname": "ARG",
+          "chain": "A",
+          "resno": 69,
+          "icode": "",
+          "coordinates": [
+            13.755,
+            39.624,
+            8.888
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ARG69:O",
+          "distanceAngstrom": 2.756396560729248
+        },
+        {
+          "serial": 597,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 85,
+          "icode": "",
+          "coordinates": [
+            14.341,
+            34.94,
+            11.647
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "CYS85:O",
+          "distanceAngstrom": 3.3063286285546383
+        },
+        {
+          "serial": 477,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "A",
+          "resno": 70,
+          "icode": "",
+          "coordinates": [
+            9.658,
+            38.558,
+            8.952
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "THR70:O",
+          "distanceAngstrom": 3.535457678999992
+        },
+        {
+          "serial": 464,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 68,
+          "icode": "",
+          "coordinates": [
+            14.954,
+            36.364,
+            8.159
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASP68:O",
+          "distanceAngstrom": 2.794995527724508
+        },
+        {
+          "serial": 482,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 71,
+          "icode": "",
+          "coordinates": [
+            11.72,
+            34.943,
+            8.536
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "ASP71:O",
+          "distanceAngstrom": 2.777525157401819
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "fd6cfb5ffde34f0a68aff4909dc464e1eefac1a0b1cef46cf76dbe2d45e69148",
+      "bytes": 60029
+    },
+    "script": {
+      "sha256": "d99598d48b1a38605e94792afd7231273d3869a4570ed173427305c5c8d16164",
+      "bytes": 1373
+    }
+  }
+}

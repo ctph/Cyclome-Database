@@ -1,0 +1,130 @@
+{
+  "structure": "5OLL_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 324,
+  "pdbUrl": "/data/cyclometal/sites/collection/5OLL_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/5OLL_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tpv",
+      "description": "Trigonal prism with a vacancy",
+      "coordinationNumber": 5,
+      "rmsd": "0.396",
+      "center": [
+        11.661,
+        15.391,
+        13.143
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 229,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 27,
+          "icode": "",
+          "coordinates": [
+            11.246,
+            17.929,
+            11.923
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASN27:O",
+          "distanceAngstrom": 2.8464133571918175
+        },
+        {
+          "serial": 290,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "A",
+          "resno": 31,
+          "icode": "",
+          "coordinates": [
+            10.376,
+            11.984,
+            13.034
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "HIS31:NE2",
+          "distanceAngstrom": 3.642904747588111
+        },
+        {
+          "serial": 238,
+          "name": "O",
+          "altloc": "",
+          "resname": "TRP",
+          "chain": "A",
+          "resno": 28,
+          "icode": "",
+          "coordinates": [
+            14.553,
+            16.773,
+            13.112
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "TRP28:O",
+          "distanceAngstrom": 3.205393735565103
+        },
+        {
+          "serial": 276,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 30,
+          "icode": "",
+          "coordinates": [
+            8.828,
+            16.255,
+            14.058
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASP30:O",
+          "distanceAngstrom": 3.0999370961359842
+        },
+        {
+          "serial": 262,
+          "name": "O",
+          "altloc": "",
+          "resname": "TRP",
+          "chain": "A",
+          "resno": 29,
+          "icode": "",
+          "coordinates": [
+            12.097,
+            15.049,
+            16.364
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "TRP29:O",
+          "distanceAngstrom": 3.2683177630089766
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "989fbcf95dcea35509990bdcbd26e1c07c96c2b7b6bbe1b065aefb2880786414",
+      "bytes": 26333
+    },
+    "script": {
+      "sha256": "0cb9b473cec14d5f181a230f686faaab7ff34423a2dc04507e34526c39993b47",
+      "bytes": 1384
+    }
+  }
+}

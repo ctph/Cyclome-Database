@@ -1,0 +1,302 @@
+{
+  "structure": "4XL1_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 860,
+  "pdbUrl": "/data/cyclometal/sites/collection/4XL1_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/4XL1_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.200",
+      "center": [
+        22.344,
+        8.898,
+        -6.218
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 424,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "A",
+          "resno": 470,
+          "icode": "",
+          "coordinates": [
+            22.344,
+            5.747,
+            -6.222
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLN470:OE1",
+          "distanceAngstrom": 3.1510025388755243
+        },
+        {
+          "serial": 446,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 473,
+          "icode": "",
+          "coordinates": [
+            21.058,
+            8.843,
+            -3.316
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLU473:OE2",
+          "distanceAngstrom": 3.1746535244023093
+        },
+        {
+          "serial": 429,
+          "name": "O",
+          "altloc": "",
+          "resname": "ILE",
+          "chain": "A",
+          "resno": 471,
+          "icode": "",
+          "coordinates": [
+            22.24,
+            12.349,
+            -6.153
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ILE471:O",
+          "distanceAngstrom": 3.4531785357840974
+        },
+        {
+          "serial": 441,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 473,
+          "icode": "",
+          "coordinates": [
+            25.64,
+            8.583,
+            -6.523
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLU473:O",
+          "distanceAngstrom": 3.325036240404004
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.203",
+      "center": [
+        31.203,
+        -14.527,
+        4.83
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 702,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 507,
+          "icode": "",
+          "coordinates": [
+            31.576,
+            -17.008,
+            4.867
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP507:OD2",
+          "distanceAngstrom": 2.5091550370592888
+        },
+        {
+          "serial": 579,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 490,
+          "icode": "",
+          "coordinates": [
+            31.322,
+            -14.263,
+            2.394
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ASN490:OD1",
+          "distanceAngstrom": 2.453151646352096
+        },
+        {
+          "serial": 576,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 490,
+          "icode": "",
+          "coordinates": [
+            31.017,
+            -12.158,
+            5.034
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASN490:O",
+          "distanceAngstrom": 2.3850310270518493
+        },
+        {
+          "serial": 584,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "A",
+          "resno": 491,
+          "icode": "",
+          "coordinates": [
+            28.844,
+            -14.762,
+            4.257
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "THR491:O",
+          "distanceAngstrom": 2.4389413687089716
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site3",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.329",
+      "center": [
+        24.217,
+        6.86,
+        -4.665
+      ],
+      "diameter": 1.4,
+      "color": "green",
+      "donors": [
+        {
+          "serial": 441,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 473,
+          "icode": "",
+          "coordinates": [
+            25.64,
+            8.583,
+            -6.523
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLU473:O",
+          "distanceAngstrom": 2.9061696440503955
+        },
+        {
+          "serial": 424,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "A",
+          "resno": 470,
+          "icode": "",
+          "coordinates": [
+            22.344,
+            5.747,
+            -6.222
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN470:OE1",
+          "distanceAngstrom": 2.677899736733994
+        },
+        {
+          "serial": 445,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 473,
+          "icode": "",
+          "coordinates": [
+            22.703,
+            7.875,
+            -2.233
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLU473:OE1",
+          "distanceAngstrom": 3.039250730031992
+        },
+        {
+          "serial": 450,
+          "name": "O",
+          "altloc": "",
+          "resname": "PHE",
+          "chain": "A",
+          "resno": 474,
+          "icode": "",
+          "coordinates": [
+            26.182,
+            5.236,
+            -3.682
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "PHE474:O",
+          "distanceAngstrom": 2.7321950882028907
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "308ce1d926a1493a4f8655d8cbb33075c0736d0afeaec6d02ea097257c4bed4f",
+      "bytes": 69749
+    },
+    "script": {
+      "sha256": "72934ce05bbdbb09618e1b496aecbb695f346392016080feed0e26414865986a",
+      "bytes": 3150
+    }
+  }
+}

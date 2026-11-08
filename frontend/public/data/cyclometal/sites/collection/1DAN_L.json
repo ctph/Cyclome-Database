@@ -1,0 +1,644 @@
+{
+  "structure": "1DAN_L",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1014,
+  "pdbUrl": "/data/cyclometal/sites/collection/1DAN_L.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1DAN_L.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.125",
+      "center": [
+        36.824,
+        25.99,
+        69.441
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 296,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            38.563,
+            24.721,
+            69.84
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP46:OD2",
+          "distanceAngstrom": 2.189448103975066
+        },
+        {
+          "serial": 406,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            34.959,
+            27.387,
+            68.932
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ASP63:OD1",
+          "distanceAngstrom": 2.385144649701562
+        },
+        {
+          "serial": 300,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "L",
+          "resno": 47,
+          "icode": "",
+          "coordinates": [
+            37.694,
+            27.52,
+            71.125
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLY47:O",
+          "distanceAngstrom": 2.4359096863389667
+        },
+        {
+          "serial": 411,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            36.081,
+            24.331,
+            67.869
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLN64:O",
+          "distanceAngstrom": 2.403229909933712
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.161",
+      "center": [
+        36.714,
+        25.987,
+        69.476
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 296,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            38.563,
+            24.721,
+            69.84
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP46:OD2",
+          "distanceAngstrom": 2.2702539505526715
+        },
+        {
+          "serial": 316,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            37.858,
+            27.219,
+            68.106
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN49:OE1",
+          "distanceAngstrom": 2.168746181552838
+        },
+        {
+          "serial": 406,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            34.959,
+            27.387,
+            68.932
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP63:OD1",
+          "distanceAngstrom": 2.3099699132239766
+        },
+        {
+          "serial": 411,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            36.081,
+            24.331,
+            67.869
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLN64:O",
+          "distanceAngstrom": 2.3927962721468763
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site3",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.166",
+      "center": [
+        36.791,
+        26.074,
+        69.487
+      ],
+      "diameter": 1.4,
+      "color": "green",
+      "donors": [
+        {
+          "serial": 406,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            34.959,
+            27.387,
+            68.932
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP63:OD1",
+          "distanceAngstrom": 2.321253540654266
+        },
+        {
+          "serial": 316,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            37.858,
+            27.219,
+            68.106
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN49:OE1",
+          "distanceAngstrom": 2.087264956827475
+        },
+        {
+          "serial": 296,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            38.563,
+            24.721,
+            69.84
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP46:OD2",
+          "distanceAngstrom": 2.2572554131068174
+        },
+        {
+          "serial": 300,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "L",
+          "resno": 47,
+          "icode": "",
+          "coordinates": [
+            37.694,
+            27.52,
+            71.125
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLY47:O",
+          "distanceAngstrom": 2.364184637459609
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site4",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.167",
+      "center": [
+        36.808,
+        25.965,
+        69.568
+      ],
+      "diameter": 1.4,
+      "color": "orange",
+      "donors": [
+        {
+          "serial": 300,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "L",
+          "resno": 47,
+          "icode": "",
+          "coordinates": [
+            37.694,
+            27.52,
+            71.125
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLY47:O",
+          "distanceAngstrom": 2.3721867548740785
+        },
+        {
+          "serial": 316,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            37.858,
+            27.219,
+            68.106
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN49:OE1",
+          "distanceAngstrom": 2.1937319799829713
+        },
+        {
+          "serial": 411,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            36.081,
+            24.331,
+            67.869
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLN64:O",
+          "distanceAngstrom": 2.4667967082838405
+        },
+        {
+          "serial": 296,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            38.563,
+            24.721,
+            69.84
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASP46:OD2",
+          "distanceAngstrom": 2.1683046372684838
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site5",
+      "geometry": "spy",
+      "description": "Square pyramid",
+      "coordinationNumber": 5,
+      "rmsd": "0.185",
+      "center": [
+        36.793,
+        26.006,
+        69.496
+      ],
+      "diameter": 1.4,
+      "color": "magenta",
+      "donors": [
+        {
+          "serial": 406,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            34.959,
+            27.387,
+            68.932
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP63:OD1",
+          "distanceAngstrom": 2.3640670464265554
+        },
+        {
+          "serial": 316,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            37.858,
+            27.219,
+            68.106
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN49:OE1",
+          "distanceAngstrom": 2.13018637682246
+        },
+        {
+          "serial": 300,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "L",
+          "resno": 47,
+          "icode": "",
+          "coordinates": [
+            37.694,
+            27.52,
+            71.125
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLY47:O",
+          "distanceAngstrom": 2.39950786620924
+        },
+        {
+          "serial": 411,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            36.081,
+            24.331,
+            67.869
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLN64:O",
+          "distanceAngstrom": 2.44124927035319
+        },
+        {
+          "serial": 296,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            38.563,
+            24.721,
+            69.84
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "ASP46:OD2",
+          "distanceAngstrom": 2.214150175575274
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "gadolinium",
+        "holmium",
+        "manganese",
+        "nickel",
+        "praseodymium",
+        "samarium",
+        "terbium",
+        "ytterbium"
+      ]
+    },
+    {
+      "id": "site6",
+      "geometry": "cof",
+      "description": "Octahedron ( face monocapped with a vacancy (capped face) )",
+      "coordinationNumber": 6,
+      "rmsd": "0.399",
+      "center": [
+        36.772,
+        26.094,
+        69.65
+      ],
+      "diameter": 1.4,
+      "color": "cyan",
+      "donors": [
+        {
+          "serial": 300,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "L",
+          "resno": 47,
+          "icode": "",
+          "coordinates": [
+            37.694,
+            27.52,
+            71.125
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLY47:O",
+          "distanceAngstrom": 2.249263212698769
+        },
+        {
+          "serial": 411,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 64,
+          "icode": "",
+          "coordinates": [
+            36.081,
+            24.331,
+            67.869
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN64:O",
+          "distanceAngstrom": 2.5995405363256063
+        },
+        {
+          "serial": 407,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            34.354,
+            25.737,
+            70.233
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP63:OD2",
+          "distanceAngstrom": 2.512779735671234
+        },
+        {
+          "serial": 406,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 63,
+          "icode": "",
+          "coordinates": [
+            34.959,
+            27.387,
+            68.932
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASP63:OD1",
+          "distanceAngstrom": 2.339731181140258
+        },
+        {
+          "serial": 296,
+          "name": "OD2",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "L",
+          "resno": 46,
+          "icode": "",
+          "coordinates": [
+            38.563,
+            24.721,
+            69.84
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "ASP46:OD2",
+          "distanceAngstrom": 2.264709694420019
+        },
+        {
+          "serial": 316,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "L",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            37.858,
+            27.219,
+            68.106
+          ],
+          "spoke": 6,
+          "width": 0.06,
+          "label": "GLN49:OE1",
+          "distanceAngstrom": 2.197488794055622
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "b97b32ec2fef380a7f593fdd43275e38f99e543d02655d9a5d3411ce2aaf1ecb",
+      "bytes": 82223
+    },
+    "script": {
+      "sha256": "01c5c15baba8fdbbef106125ff8003793fa2faab2c2745cbcaf70661667e862d",
+      "bytes": 6587
+    }
+  }
+}

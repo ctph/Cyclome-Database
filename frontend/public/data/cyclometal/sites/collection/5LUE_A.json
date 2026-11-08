@@ -1,0 +1,113 @@
+{
+  "structure": "5LUE_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 987,
+  "pdbUrl": "/data/cyclometal/sites/collection/5LUE_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/5LUE_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.383",
+      "center": [
+        0.963,
+        -2.764,
+        5.054
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 603,
+          "name": "O",
+          "altloc": "",
+          "resname": "ARG",
+          "chain": "A",
+          "resno": 36,
+          "icode": "",
+          "coordinates": [
+            -2.424,
+            -2.244,
+            3.575
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ARG36:O",
+          "distanceAngstrom": 3.73223927421595
+        },
+        {
+          "serial": 581,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "A",
+          "resno": 35,
+          "icode": "",
+          "coordinates": [
+            1.391,
+            -4.858,
+            2.329
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "LYS35:O",
+          "distanceAngstrom": 3.4631842284233163
+        },
+        {
+          "serial": 407,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "A",
+          "resno": 24,
+          "icode": "",
+          "coordinates": [
+            4.498,
+            -3.013,
+            5.941
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "MET24:SD",
+          "distanceAngstrom": 3.6530802071676445
+        },
+        {
+          "serial": 369,
+          "name": "OH",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 22,
+          "icode": "",
+          "coordinates": [
+            1.594,
+            0.678,
+            5.426
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "TYR22:OH",
+          "distanceAngstrom": 3.5190778621678716
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "2f08b0f112ef5f262c2be0648e570454fff1aaf623a6553780bebfb58803f113",
+      "bytes": 80036
+    },
+    "script": {
+      "sha256": "5481f5cca868ed1ff4cac302c69f4d6ab150d7187257f1e4d16b1187d405423f",
+      "bytes": 1240
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "structure": "3C5T_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 855,
+  "pdbUrl": "/data/cyclometal/sites/collection/3C5T_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/3C5T_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.331",
+      "center": [
+        -35.33,
+        15.011,
+        -0.594
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 361,
+          "name": "OH",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 69,
+          "icode": "",
+          "coordinates": [
+            -35.648,
+            17.065,
+            -2.804
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "TYR69:OH",
+          "distanceAngstrom": 3.0338325596512425
+        },
+        {
+          "serial": 792,
+          "name": "O",
+          "altloc": "",
+          "resname": "LEU",
+          "chain": "A",
+          "resno": 123,
+          "icode": "",
+          "coordinates": [
+            -33.791,
+            17.401,
+            1.591
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "LEU123:O",
+          "distanceAngstrom": 3.5853655322714317
+        },
+        {
+          "serial": 825,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 127,
+          "icode": "",
+          "coordinates": [
+            -34.93,
+            12.409,
+            1.509
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLU127:OE1",
+          "distanceAngstrom": 3.3694232444143895
+        },
+        {
+          "serial": 815,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 126,
+          "icode": "",
+          "coordinates": [
+            -38.33,
+            16.27,
+            0.65
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "CYS126:O",
+          "distanceAngstrom": 3.4831906350356423
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "066f77320fad728ae6cdcdb32616937f772a4db0163014be4051c067b745507a",
+      "bytes": 69344
+    },
+    "script": {
+      "sha256": "eaf41d9550635ad83505ba46539d1b4aff12e8371cb67709abbf68d99bf9aa4d",
+      "bytes": 1272
+    }
+  }
+}

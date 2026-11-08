@@ -1,0 +1,114 @@
+{
+  "structure": "1YZ2_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 357,
+  "pdbUrl": "/data/cyclometal/sites/collection/1YZ2_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1YZ2_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.445",
+      "center": [
+        1.99,
+        5.364,
+        -0.049
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 98,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 8,
+          "icode": "",
+          "coordinates": [
+            1.678,
+            4.528,
+            -3.141
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "CYS8:O",
+          "distanceAngstrom": 3.2181833384690814
+        },
+        {
+          "serial": 268,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "A",
+          "resno": 21,
+          "icode": "",
+          "coordinates": [
+            1.785,
+            6.878,
+            2.934
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ALA21:O",
+          "distanceAngstrom": 3.3514936968462288
+        },
+        {
+          "serial": 108,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 9,
+          "icode": "",
+          "coordinates": [
+            -0.792,
+            4.836,
+            0.04
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP9:O",
+          "distanceAngstrom": 2.833060006424149
+        },
+        {
+          "serial": 278,
+          "name": "O",
+          "altloc": "",
+          "resname": "PHE",
+          "chain": "A",
+          "resno": 22,
+          "icode": "",
+          "coordinates": [
+            5.289,
+            5.214,
+            -0.029
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "PHE22:O",
+          "distanceAngstrom": 3.302468924910573
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "f97e5ac07a9b96aac2fdd08c4ebca84612f21a67559b13e588cd97ad7069fdac",
+      "bytes": 29006
+    },
+    "script": {
+      "sha256": "891c44492cbca789ac2f514c99dbd5340dd6d66ff7d40fe11b7cc679c22a4010",
+      "bytes": 1237
+    }
+  }
+}

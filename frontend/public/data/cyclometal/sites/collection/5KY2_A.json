@@ -1,0 +1,114 @@
+{
+  "structure": "5KY2_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 5892,
+  "pdbUrl": "/data/cyclometal/sites/collection/5KY2_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/5KY2_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.167",
+      "center": [
+        22.82,
+        24.883,
+        19.85
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 5634,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 370,
+          "icode": "",
+          "coordinates": [
+            19.104,
+            22.926,
+            18.4
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "GLU370:OE1",
+          "distanceAngstrom": 4.4430850768356915
+        },
+        {
+          "serial": 3075,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "A",
+          "resno": 214,
+          "icode": "",
+          "coordinates": [
+            21.867,
+            28.428,
+            21.871
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN214:O",
+          "distanceAngstrom": 4.190426589262721
+        },
+        {
+          "serial": 5606,
+          "name": "O",
+          "altloc": "",
+          "resname": "ARG",
+          "chain": "A",
+          "resno": 369,
+          "icode": "",
+          "coordinates": [
+            25.382,
+            25.83,
+            16.757
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ARG369:O",
+          "distanceAngstrom": 4.126415151193588
+        },
+        {
+          "serial": 5706,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "A",
+          "resno": 374,
+          "icode": "",
+          "coordinates": [
+            24.926,
+            22.346,
+            22.373
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "HIS374:NE2",
+          "distanceAngstrom": 4.15176275815466
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "5c508366e8395a0ff60ef22d65272c2e1c795e0c6d556496d87c0bdcb53a93ff",
+      "bytes": 477341
+    },
+    "script": {
+      "sha256": "55983801f6b4ae3e9a79a5ca0b73076859be92351356ce3669664347f11945aa",
+      "bytes": 1281
+    }
+  }
+}

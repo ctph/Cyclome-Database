@@ -1,0 +1,207 @@
+{
+  "structure": "1DAN_U",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 940,
+  "pdbUrl": "/data/cyclometal/sites/collection/1DAN_U.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1DAN_U.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.161",
+      "center": [
+        33.009,
+        15.405,
+        77.009
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 773,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "U",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            33.938,
+            13.188,
+            76.362
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER188:OG",
+          "distanceAngstrom": 2.4893250089130596
+        },
+        {
+          "serial": 900,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "U",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            34.226,
+            16.324,
+            75.43
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER205:O",
+          "distanceAngstrom": 2.1951972576513437
+        },
+        {
+          "serial": 906,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "U",
+          "resno": 206,
+          "icode": "",
+          "coordinates": [
+            32.279,
+            17.529,
+            77.61
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "PRO206:O",
+          "distanceAngstrom": 2.3249681718251534
+        },
+        {
+          "serial": 902,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "U",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            31.163,
+            15.419,
+            75.442
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "SER205:OG",
+          "distanceAngstrom": 2.4214460555626722
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.238",
+      "center": [
+        33.175,
+        10.947,
+        74.911
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 895,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "U",
+          "resno": 204,
+          "icode": "",
+          "coordinates": [
+            35.371,
+            11.018,
+            72.97
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP204:OD1",
+          "distanceAngstrom": 2.931712468848204
+        },
+        {
+          "serial": 773,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "U",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            33.938,
+            13.188,
+            76.362
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER188:OG",
+          "distanceAngstrom": 2.7766258300318385
+        },
+        {
+          "serial": 771,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "U",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            31.262,
+            10.776,
+            76.941
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER188:O",
+          "distanceAngstrom": 2.794585836935411
+        },
+        {
+          "serial": 777,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "U",
+          "resno": 189,
+          "icode": "",
+          "coordinates": [
+            31.525,
+            12.845,
+            73.097
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "VAL189:O",
+          "distanceAngstrom": 3.1008869698845887
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "4c7bb9c6815259771c2632ef986daa9fa2c91aae17bd388a7d79bb4f83dd40fe",
+      "bytes": 76229
+    },
+    "script": {
+      "sha256": "a30f5e0e43a5cc6f66465831ab39bdd0ec01dae0a4fe38235c03b1d877837599",
+      "bytes": 2190
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "structure": "5KXH_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 5617,
+  "pdbUrl": "/data/cyclometal/sites/collection/5KXH_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/5KXH_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.179",
+      "center": [
+        22.815,
+        24.568,
+        20.041
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 5371,
+          "name": "O",
+          "altloc": "",
+          "resname": "ARG",
+          "chain": "A",
+          "resno": 369,
+          "icode": "",
+          "coordinates": [
+            25.383,
+            25.588,
+            16.972
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ARG369:O",
+          "distanceAngstrom": 4.129622864136625
+        },
+        {
+          "serial": 2946,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLN",
+          "chain": "A",
+          "resno": 214,
+          "icode": "",
+          "coordinates": [
+            21.837,
+            28.098,
+            22.13
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLN214:O",
+          "distanceAngstrom": 4.2167884699140386
+        },
+        {
+          "serial": 5471,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "A",
+          "resno": 374,
+          "icode": "",
+          "coordinates": [
+            24.939,
+            21.994,
+            22.494
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "HIS374:NE2",
+          "distanceAngstrom": 4.141746129351725
+        },
+        {
+          "serial": 5399,
+          "name": "OE1",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 370,
+          "icode": "",
+          "coordinates": [
+            19.1,
+            22.592,
+            18.57
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLU370:OE1",
+          "distanceAngstrom": 4.457537661085996
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "97f5a7b2b7664353b375c6d46b97df9afbca66c63746668877398d451567a261",
+      "bytes": 455066
+    },
+    "script": {
+      "sha256": "3997d7771187d026613e395eb61947e261419d6dab34d795be93875931730360",
+      "bytes": 1281
+    }
+  }
+}

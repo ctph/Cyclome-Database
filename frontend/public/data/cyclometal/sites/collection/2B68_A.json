@@ -1,0 +1,114 @@
+{
+  "structure": "2B68_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 610,
+  "pdbUrl": "/data/cyclometal/sites/collection/2B68_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2B68_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "spl",
+      "description": "Square plane",
+      "coordinationNumber": 4,
+      "rmsd": "0.385",
+      "center": [
+        10.405,
+        -2.165,
+        -12.993
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 195,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 15,
+          "icode": "",
+          "coordinates": [
+            10.857,
+            -4.229,
+            -10.848
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "CYS15:O",
+          "distanceAngstrom": 3.0108844215612125
+        },
+        {
+          "serial": 277,
+          "name": "O",
+          "altloc": "",
+          "resname": "ARG",
+          "chain": "A",
+          "resno": 21,
+          "icode": "",
+          "coordinates": [
+            9.363,
+            -0.508,
+            -15.386
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ARG21:O",
+          "distanceAngstrom": 3.091579208107079
+        },
+        {
+          "serial": 150,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 12,
+          "icode": "",
+          "coordinates": [
+            10.179,
+            0.388,
+            -10.822
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASN12:O",
+          "distanceAngstrom": 3.358887613481583
+        },
+        {
+          "serial": 267,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "A",
+          "resno": 20,
+          "icode": "",
+          "coordinates": [
+            11.219,
+            -4.309,
+            -14.916
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "CYS20:O",
+          "distanceAngstrom": 2.9928683566104275
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "ba311b18ca3c1a652bf6eb00807b8b588678840b1d8ba300576c624214a281b1",
+      "bytes": 49499
+    },
+    "script": {
+      "sha256": "f0a25280079ecd372906641318774e53b5ac915f4c37ed0c1d5e918f2c060db4",
+      "bytes": 1263
+    }
+  }
+}

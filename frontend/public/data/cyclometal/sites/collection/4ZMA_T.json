@@ -1,0 +1,113 @@
+{
+  "structure": "4ZMA_T",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 3043,
+  "pdbUrl": "/data/cyclometal/sites/collection/4ZMA_T.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/4ZMA_T.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.195",
+      "center": [
+        -0.469,
+        -14.156,
+        -14.005
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 2722,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            0.436,
+            -12.006,
+            -13.301
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER188:OG",
+          "distanceAngstrom": 2.4366249198430197
+        },
+        {
+          "serial": 2964,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            0.838,
+            -15.08,
+            -12.527
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER205:O",
+          "distanceAngstrom": 2.178648434236236
+        },
+        {
+          "serial": 2975,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "T",
+          "resno": 206,
+          "icode": "",
+          "coordinates": [
+            -1.082,
+            -16.302,
+            -14.785
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "PRO206:O",
+          "distanceAngstrom": 2.364209170103186
+        },
+        {
+          "serial": 2966,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            -2.312,
+            -14.292,
+            -12.211
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "SER205:OG",
+          "distanceAngstrom": 2.5755739166251863
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "2d7ca2c1ff0eee2ac997d00fd0c891cfb1279dee7a7c76306576684469f3b49b",
+      "bytes": 246572
+    },
+    "script": {
+      "sha256": "9c82c9fb200979cd4e26f786d304d784b17843c25714606d91393c857acaaa49",
+      "bytes": 1254
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "structure": "2LJM_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1259,
+  "pdbUrl": "/data/cyclometal/sites/collection/2LJM_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2LJM_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.202",
+      "center": [
+        -5.608,
+        7.736,
+        19.944
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 1004,
+          "name": "O",
+          "altloc": "",
+          "resname": "LEU",
+          "chain": "A",
+          "resno": 67,
+          "icode": "",
+          "coordinates": [
+            -3.59,
+            10.688,
+            20.242
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "LEU67:O",
+          "distanceAngstrom": 3.5882352208293153
+        },
+        {
+          "serial": 217,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "A",
+          "resno": 15,
+          "icode": "",
+          "coordinates": [
+            -7.668,
+            9.312,
+            18.092
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "GLY15:O",
+          "distanceAngstrom": 3.1870487915938788
+        },
+        {
+          "serial": 202,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 14,
+          "icode": "",
+          "coordinates": [
+            -7.793,
+            4.874,
+            19.601
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLU14:O",
+          "distanceAngstrom": 3.6170316559300395
+        },
+        {
+          "serial": 1049,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 69,
+          "icode": "",
+          "coordinates": [
+            -2.993,
+            6.175,
+            18.416
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLU69:OE2",
+          "distanceAngstrom": 3.4073053869590257
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "bva",
+      "description": "Trigonal bipyramid with a vacancy (axial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.244",
+      "center": [
+        2.031,
+        13.151,
+        27.316
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 292,
+          "name": "O",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 20,
+          "icode": "",
+          "coordinates": [
+            -0.548,
+            13.944,
+            28.359
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "TYR20:O",
+          "distanceAngstrom": 2.892739013461119
+        },
+        {
+          "serial": 332,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "A",
+          "resno": 22,
+          "icode": "",
+          "coordinates": [
+            4.372,
+            13.174,
+            28.804
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "VAL22:O",
+          "distanceAngstrom": 2.7739780100065676
+        },
+        {
+          "serial": 759,
+          "name": "OH",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 49,
+          "icode": "",
+          "coordinates": [
+            2.409,
+            12.06,
+            24.741
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "TYR49:OH",
+          "distanceAngstrom": 2.822018780943882
+        },
+        {
+          "serial": 1086,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "A",
+          "resno": 72,
+          "icode": "",
+          "coordinates": [
+            1.295,
+            10.931,
+            28.368
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "VAL72:O",
+          "distanceAngstrom": 2.5645272468819673
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "gadolinium",
+        "manganese",
+        "nickel",
+        "praseodymium",
+        "samarium",
+        "ytterbium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "16868f1da65bc1a455fce346342c5e8b5e7a6c9972fe4a95ea5f77ac4464addf",
+      "bytes": 102068
+    },
+    "script": {
+      "sha256": "b16fd7be926b887cd922ce74168013686100d8176c41716e2e0029a176b919a6",
+      "bytes": 2246
+    }
+  }
+}

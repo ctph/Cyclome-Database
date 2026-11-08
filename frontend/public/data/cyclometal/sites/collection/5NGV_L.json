@@ -1,0 +1,151 @@
+{
+  "structure": "5NGV_L",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 811,
+  "pdbUrl": "/data/cyclometal/sites/collection/5NGV_L.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/5NGV_L.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pvp",
+      "description": "Pentagonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 6,
+      "rmsd": "0.372",
+      "center": [
+        1.667,
+        14.758,
+        49.446
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 473,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "L",
+          "resno": 65,
+          "icode": "",
+          "coordinates": [
+            4.594,
+            14.768,
+            51.122
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER65:OG",
+          "distanceAngstrom": 3.372892675434546
+        },
+        {
+          "serial": 526,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "L",
+          "resno": 74,
+          "icode": "",
+          "coordinates": [
+            0.203,
+            16.625,
+            47.023
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER74:O",
+          "distanceAngstrom": 3.3911523115306954
+        },
+        {
+          "serial": 483,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "L",
+          "resno": 67,
+          "icode": "",
+          "coordinates": [
+            -1.371,
+            13.456,
+            48.903
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "SER67:OG",
+          "distanceAngstrom": 3.3495517610569925
+        },
+        {
+          "serial": 542,
+          "name": "OG1",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "L",
+          "resno": 76,
+          "icode": "",
+          "coordinates": [
+            0.784,
+            17.281,
+            51.903
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "THR76:OG1",
+          "distanceAngstrom": 3.630711638232924
+        },
+        {
+          "serial": 477,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "L",
+          "resno": 66,
+          "icode": "",
+          "coordinates": [
+            2.34,
+            12.35,
+            47.002
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "GLY66:O",
+          "distanceAngstrom": 3.4963593922822027
+        },
+        {
+          "serial": 471,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "L",
+          "resno": 65,
+          "icode": "",
+          "coordinates": [
+            3.952,
+            16.486,
+            48.443
+          ],
+          "spoke": 6,
+          "width": 0.06,
+          "label": "SER65:O",
+          "distanceAngstrom": 3.035328318320772
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "lanthanum",
+        "lutetium",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "a596805cd58fe2311c37c83da75fe560d1c352284687be2897c8a79f425e878d",
+      "bytes": 65780
+    },
+    "script": {
+      "sha256": "b3e9e78c0900ae8326ed236d8b1ee5ef5109fa0e8f372219137d16705e23df25",
+      "bytes": 1521
+    }
+  }
+}

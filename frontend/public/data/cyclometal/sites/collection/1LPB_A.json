@@ -1,0 +1,114 @@
+{
+  "structure": "1LPB_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 786,
+  "pdbUrl": "/data/cyclometal/sites/collection/1LPB_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1LPB_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.436",
+      "center": [
+        -6.991,
+        9.798,
+        15.409
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 474,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "A",
+          "resno": 57,
+          "icode": "",
+          "coordinates": [
+            -5.448,
+            7.309,
+            18.004
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "VAL57:O",
+          "distanceAngstrom": 3.9127988703739938
+        },
+        {
+          "serial": 419,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "A",
+          "resno": 51,
+          "icode": "",
+          "coordinates": [
+            -10.881,
+            8.999,
+            13.939
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ALA51:O",
+          "distanceAngstrom": 4.2345485001355225
+        },
+        {
+          "serial": 694,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "A",
+          "resno": 81,
+          "icode": "",
+          "coordinates": [
+            -3.97,
+            9.783,
+            12.297
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASN81:O",
+          "distanceAngstrom": 4.33718918194722
+        },
+        {
+          "serial": 510,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "A",
+          "resno": 60,
+          "icode": "",
+          "coordinates": [
+            -7.666,
+            13.102,
+            17.395
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "LYS60:O",
+          "distanceAngstrom": 3.9135964278397433
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "d4190e31e4a2239ad42460510b901120218099a3e0fe1c5cb28b091e7e17a134",
+      "bytes": 63755
+    },
+    "script": {
+      "sha256": "a55da03d2060670e4b03802ab9f7425b42ccf6c2b905122c6a1f298472806255",
+      "bytes": 1251
+    }
+  }
+}

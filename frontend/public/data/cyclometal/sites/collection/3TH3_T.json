@@ -1,0 +1,113 @@
+{
+  "structure": "3TH3_T",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 1242,
+  "pdbUrl": "/data/cyclometal/sites/collection/3TH3_T.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/3TH3_T.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.221",
+      "center": [
+        -17.592,
+        19.002,
+        35.556
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 1084,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 188,
+          "icode": "",
+          "coordinates": [
+            -16.842,
+            21.533,
+            34.237
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER188:OG",
+          "distanceAngstrom": 2.950969671142013
+        },
+        {
+          "serial": 1213,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "T",
+          "resno": 205,
+          "icode": "",
+          "coordinates": [
+            -14.549,
+            17.889,
+            35.687
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER205:OG",
+          "distanceAngstrom": 3.242804187736286
+        },
+        {
+          "serial": 1217,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "T",
+          "resno": 206,
+          "icode": "",
+          "coordinates": [
+            -18.38,
+            16.554,
+            36.728
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "PRO206:O",
+          "distanceAngstrom": 2.8261691386044134
+        },
+        {
+          "serial": 1071,
+          "name": "O",
+          "altloc": "",
+          "resname": "PHE",
+          "chain": "T",
+          "resno": 187,
+          "icode": "",
+          "coordinates": [
+            -17.408,
+            20.432,
+            38.491
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "PHE187:O",
+          "distanceAngstrom": 3.270012385297648
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "59d39087236a572eeb77e6723b0501e9816d938d12e8cf6af2d88c66f316bb40",
+      "bytes": 100691
+    },
+    "script": {
+      "sha256": "1cbccebe0c501a8d03974d0a01e4db1686e9d3db94e95106bd353d61f2be60dc",
+      "bytes": 1274
+    }
+  }
+}

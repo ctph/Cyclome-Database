@@ -1,0 +1,130 @@
+{
+  "structure": "3TH3_L",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 718,
+  "pdbUrl": "/data/cyclometal/sites/collection/3TH3_L.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/3TH3_L.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tpv",
+      "description": "Trigonal prism with a vacancy",
+      "coordinationNumber": 5,
+      "rmsd": "0.407",
+      "center": [
+        -9.454,
+        -11.062,
+        19.974
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 73,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "L",
+          "resno": 57,
+          "icode": "",
+          "coordinates": [
+            -10.707,
+            -12.026,
+            22.491
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASN57:OD1",
+          "distanceAngstrom": 2.972304493150054
+        },
+        {
+          "serial": 268,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "L",
+          "resno": 83,
+          "icode": "",
+          "coordinates": [
+            -6.798,
+            -9.674,
+            19.13
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "THR83:O",
+          "distanceAngstrom": 3.1133930044245948
+        },
+        {
+          "serial": 281,
+          "name": "NE2",
+          "altloc": "",
+          "resname": "HIS",
+          "chain": "L",
+          "resno": 84,
+          "icode": "",
+          "coordinates": [
+            -10.546,
+            -13.792,
+            19.273
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "HIS84:NE2",
+          "distanceAngstrom": 3.022708222769773
+        },
+        {
+          "serial": 253,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "L",
+          "resno": 81,
+          "icode": "",
+          "coordinates": [
+            -10.668,
+            -8.203,
+            21.252
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "CYS81:O",
+          "distanceAngstrom": 3.358714188495352
+        },
+        {
+          "serial": 259,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "L",
+          "resno": 82,
+          "icode": "",
+          "coordinates": [
+            -10.867,
+            -9.536,
+            16.898
+          ],
+          "spoke": 5,
+          "width": 0.06,
+          "label": "GLU82:O",
+          "distanceAngstrom": 3.7130877985848927
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "3909d311fae71f86f8a650f9f12d2eb6c901b5b46a3931e5f8ca8431758cdb8e",
+      "bytes": 58247
+    },
+    "script": {
+      "sha256": "395a99f8a870dc3f03ebeded661c60a83d4e1eef915ebb3b4136c8a828877d1d",
+      "bytes": 1395
+    }
+  }
+}

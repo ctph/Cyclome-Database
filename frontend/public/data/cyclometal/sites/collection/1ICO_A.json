@@ -1,0 +1,118 @@
+{
+  "structure": "1ICO_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 432,
+  "pdbUrl": "/data/cyclometal/sites/collection/1ICO_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1ICO_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bva",
+      "description": "Trigonal bipyramid with a vacancy (axial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.435",
+      "center": [
+        32.191,
+        20.778,
+        -19.828
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 161,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "A",
+          "resno": 11,
+          "icode": "",
+          "coordinates": [
+            35.587,
+            21.98,
+            -22.223
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "THR11:O",
+          "distanceAngstrom": 4.3259270682710325
+        },
+        {
+          "serial": 39,
+          "name": "O",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 3,
+          "icode": "",
+          "coordinates": [
+            31.686,
+            16.947,
+            -18.149
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "TYR3:O",
+          "distanceAngstrom": 4.213149297141035
+        },
+        {
+          "serial": 65,
+          "name": "OE2",
+          "altloc": "",
+          "resname": "GLU",
+          "chain": "A",
+          "resno": 4,
+          "icode": "",
+          "coordinates": [
+            29.305,
+            23.077,
+            -18.766
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "GLU4:OE2",
+          "distanceAngstrom": 3.839562605297644
+        },
+        {
+          "serial": 75,
+          "name": "O",
+          "altloc": "",
+          "resname": "TYR",
+          "chain": "A",
+          "resno": 5,
+          "icode": "",
+          "coordinates": [
+            34.251,
+            22.494,
+            -16.968
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "TYR5:O",
+          "distanceAngstrom": 3.9201857098867117
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "europium",
+        "gadolinium",
+        "manganese",
+        "nickel",
+        "praseodymium",
+        "samarium",
+        "ytterbium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "132c615f011d2ae2c98bd3c2ca8a23c6eb9c9865639fe7fd3d02174646852e9a",
+      "bytes": 35081
+    },
+    "script": {
+      "sha256": "81aa79e89e3df938a156c4a0ee75bebd98035f46f1e3f5487c934ea02339c772",
+      "bytes": 1298
+    }
+  }
+}

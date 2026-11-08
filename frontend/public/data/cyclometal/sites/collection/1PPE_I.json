@@ -1,0 +1,207 @@
+{
+  "structure": "1PPE_I",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 222,
+  "pdbUrl": "/data/cyclometal/sites/collection/1PPE_I.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1PPE_I.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.205",
+      "center": [
+        -3.551,
+        8.834,
+        5.536
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 139,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "I",
+          "resno": 18,
+          "icode": "",
+          "coordinates": [
+            -3.381,
+            9.851,
+            8.704
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ALA18:O",
+          "distanceAngstrom": 3.3315781545687937
+        },
+        {
+          "serial": 153,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "I",
+          "resno": 20,
+          "icode": "",
+          "coordinates": [
+            -1.72,
+            10.889,
+            4.774
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "CYS20:O",
+          "distanceAngstrom": 2.8559114131919427
+        },
+        {
+          "serial": 103,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "I",
+          "resno": 13,
+          "icode": "",
+          "coordinates": [
+            -3.672,
+            7.992,
+            2.5
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ASP13:O",
+          "distanceAngstrom": 3.152919440772313
+        },
+        {
+          "serial": 125,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "I",
+          "resno": 16,
+          "icode": "",
+          "coordinates": [
+            -2.383,
+            6.117,
+            6.126
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "CYS16:O",
+          "distanceAngstrom": 3.01569444738687
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.424",
+      "center": [
+        -3.894,
+        8.9,
+        5.543
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 103,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "I",
+          "resno": 13,
+          "icode": "",
+          "coordinates": [
+            -3.672,
+            7.992,
+            2.5
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ASP13:O",
+          "distanceAngstrom": 3.1833311169276755
+        },
+        {
+          "serial": 125,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "I",
+          "resno": 16,
+          "icode": "",
+          "coordinates": [
+            -2.383,
+            6.117,
+            6.126
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "CYS16:O",
+          "distanceAngstrom": 3.2199532605303456
+        },
+        {
+          "serial": 139,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "I",
+          "resno": 18,
+          "icode": "",
+          "coordinates": [
+            -3.381,
+            9.851,
+            8.704
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "ALA18:O",
+          "distanceAngstrom": 3.3405824342470587
+        },
+        {
+          "serial": 153,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "I",
+          "resno": 20,
+          "icode": "",
+          "coordinates": [
+            -1.72,
+            10.889,
+            4.774
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "CYS20:O",
+          "distanceAngstrom": 3.0452845515649267
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "7a7940fa5e4fb5367790ca77d29049a3c6f990a39500a167f2202569c06ef362",
+      "bytes": 18071
+    },
+    "script": {
+      "sha256": "6b7ddad63d7d2b149472734f6f774e020cb6614d9a42624761ad0368f5a419c3",
+      "bytes": 2176
+    }
+  }
+}

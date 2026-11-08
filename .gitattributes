@@ -4,3 +4,5 @@ frontend/public/data/cyclometal/shape_names.csv -text whitespace=cr-at-eol
 frontend/public/data/cyclometal/CycloMetal-ML-predictions.html -text
 frontend/public/data/cyclometal/sites/*.pdb -text whitespace=-blank-at-eol,cr-at-eol
 frontend/public/data/cyclometal/sites/*.spt -text whitespace=cr-at-eol
+frontend/public/data/cyclometal/sites/collection/*.pdb -text whitespace=-blank-at-eol,cr-at-eol
+frontend/public/data/cyclometal/sites/collection/*.spt -text whitespace=cr-at-eol

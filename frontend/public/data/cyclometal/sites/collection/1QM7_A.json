@@ -1,0 +1,114 @@
+{
+  "structure": "1QM7_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 458,
+  "pdbUrl": "/data/cyclometal/sites/collection/1QM7_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1QM7_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.332",
+      "center": [
+        -4.601,
+        37.558,
+        -0.232
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 412,
+          "name": "O",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "A",
+          "resno": 56,
+          "icode": "",
+          "coordinates": [
+            -2.821,
+            38.759,
+            1.89
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "THR56:O",
+          "distanceAngstrom": 3.0188880403221314
+        },
+        {
+          "serial": 422,
+          "name": "OD1",
+          "altloc": "",
+          "resname": "ASP",
+          "chain": "A",
+          "resno": 57,
+          "icode": "",
+          "coordinates": [
+            -6.4,
+            39.021,
+            -1.544
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "ASP57:OD1",
+          "distanceAngstrom": 2.664228593795961
+        },
+        {
+          "serial": 6,
+          "name": "OG1",
+          "altloc": "",
+          "resname": "THR",
+          "chain": "A",
+          "resno": 1,
+          "icode": "",
+          "coordinates": [
+            -6.106,
+            35.857,
+            0.687
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "THR1:OG1",
+          "distanceAngstrom": 2.4500993857392808
+        },
+        {
+          "serial": 11,
+          "name": "O",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "A",
+          "resno": 2,
+          "icode": "",
+          "coordinates": [
+            -3.075,
+            36.594,
+            -1.961
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "MET2:O",
+          "distanceAngstrom": 2.499482546448364
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "376b1f0359d5b2978929b633923ae26cccb66625b4d5a61343f8db44a10a3e2d",
+      "bytes": 37187
+    },
+    "script": {
+      "sha256": "a3d2578133570a81a0c569bf75d7ae0d86733b93d9dcac4241b43938138f6ece",
+      "bytes": 1257
+    }
+  }
+}

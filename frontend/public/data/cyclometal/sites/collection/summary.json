@@ -1,0 +1,2185 @@
+{
+  "statistics": {
+    "inputPdbs": 930,
+    "inputScripts": 334,
+    "annotatedStructures": 328,
+    "pendingCuration": 6,
+    "sites": 504,
+    "distances": 2071,
+    "geometryCounts": {
+      "bva": 77,
+      "bvp": 68,
+      "cof": 1,
+      "ctn": 1,
+      "pvp": 1,
+      "pyv": 170,
+      "spl": 42,
+      "spy": 14,
+      "tbp": 13,
+      "tet": 95,
+      "tpv": 22
+    },
+    "colors": {
+      "blue": 113,
+      "cyan": 2,
+      "green": 43,
+      "magenta": 4,
+      "orange": 14,
+      "red": 328
+    },
+    "minimumDistanceAngstrom": 1.6284354454506327,
+    "maximumDistanceAngstrom": 4.965992448645087
+  },
+  "pendingStructures": {
+    "1FAS_A": {
+      "status": "pending-curation",
+      "reason": "Donor requires alternate-conformer curation: A:1:OG1",
+      "pdbUrl": "/data/cyclometal/sites/collection/1FAS_A.pdb",
+      "scriptUrl": "/data/cyclometal/sites/collection/1FAS_A.spt"
+    },
+    "1H9H_I": {
+      "status": "pending-curation",
+      "reason": "Donor requires alternate-conformer curation: I:15:O",
+      "pdbUrl": "/data/cyclometal/sites/collection/1H9H_I.pdb",
+      "scriptUrl": "/data/cyclometal/sites/collection/1H9H_I.spt"
+    },
+    "1ONJ_A": {
+      "status": "pending-curation",
+      "reason": "Donor requires alternate-conformer curation: A:52:OD1",
+      "pdbUrl": "/data/cyclometal/sites/collection/1ONJ_A.pdb",
+      "scriptUrl": "/data/cyclometal/sites/collection/1ONJ_A.spt"
+    },
+    "2C4B_A": {
+      "status": "pending-curation",
+      "reason": "Donor requires alternate-conformer curation: A:22:OD1",
+      "pdbUrl": "/data/cyclometal/sites/collection/2C4B_A.pdb",
+      "scriptUrl": "/data/cyclometal/sites/collection/2C4B_A.spt"
+    },
+    "4ABJ_A": {
+      "status": "pending-curation",
+      "reason": "Donor requires alternate-conformer curation: A:115:O",
+      "pdbUrl": "/data/cyclometal/sites/collection/4ABJ_A.pdb",
+      "scriptUrl": "/data/cyclometal/sites/collection/4ABJ_A.spt"
+    },
+    "6ZOI_D": {
+      "status": "pending-curation",
+      "reason": "Donor requires alternate-conformer curation: D:19:OG",
+      "pdbUrl": "/data/cyclometal/sites/collection/6ZOI_D.pdb",
+      "scriptUrl": "/data/cyclometal/sites/collection/6ZOI_D.spt"
+    }
+  },
+  "structures": {
+    "1APF_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1AS5_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1ATX_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1AZ6_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1B41_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1BAH_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1BF0_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1BGK_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1BIG_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1BQF_A": {
+      "siteCount": 5,
+      "geometries": [
+        "pyv",
+        "spy",
+        "tet"
+      ]
+    },
+    "1BTE_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "1BUN_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1C01_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1C49_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1C4E_A": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "tpv"
+      ]
+    },
+    "1CHV_S": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1CIX_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1CLV_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "tet"
+      ]
+    },
+    "1CMR_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1COE_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1CRF_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "bvp"
+      ]
+    },
+    "1CW5_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1CW6_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "1D1H_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1DAN_H": {
+      "siteCount": 2,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1DAN_L": {
+      "siteCount": 6,
+      "geometries": [
+        "cof",
+        "pyv",
+        "spl",
+        "spy"
+      ]
+    },
+    "1DAN_T": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1DAN_U": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1DEM_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1DF6_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1DL0_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1DU9_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1EHS_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1EMX_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1ES7_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1ETL_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1F2S_I": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1F3K_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1F8U_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1FJN_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1FSS_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1G1Z_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1GIB_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1GNA_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1H9I_E": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "spl"
+      ]
+    },
+    "1H9I_I": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "spl"
+      ]
+    },
+    "1I6G_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1I8E_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1I93_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1ICO_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1IDG_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "pyv",
+        "tet"
+      ]
+    },
+    "1IGX_A": {
+      "siteCount": 3,
+      "geometries": [
+        "spl",
+        "tet",
+        "tpv"
+      ]
+    },
+    "1IJC_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1IMT_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1IVA_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1IXT_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1J35_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1J35_B": {
+      "siteCount": 1,
+      "geometries": [
+        "spy"
+      ]
+    },
+    "1JC6_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "1JJZ_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1JMN_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1JU8_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1JZA_B": {
+      "siteCount": 4,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "1KCP_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1KJ6_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1KTZ_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "1KTZ_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "spl"
+      ]
+    },
+    "1KU6_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1L3X_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1L4V_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1LIR_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1LPB_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1LQQ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1LSI_A": {
+      "siteCount": 4,
+      "geometries": [
+        "bvp",
+        "pyv",
+        "tet"
+      ]
+    },
+    "1LU0_B": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1LX5_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1M4E_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1MAH_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1MCT_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "spl",
+        "tbp"
+      ]
+    },
+    "1MCT_I": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1MCV_A": {
+      "siteCount": 6,
+      "geometries": [
+        "pyv",
+        "spl",
+        "spy"
+      ]
+    },
+    "1MCV_I": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "pyv",
+        "tet"
+      ]
+    },
+    "1MMC_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1MR0_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1MYN_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "1NB1_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "1NYS_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1NYU_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1NYU_C": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1NYU_D": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1OMY_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1ORL_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1OZZ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1P8B_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1PCN_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1PJV_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1PNH_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1PPE_I": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1PQR_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "1Q2J_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "1QK6_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1QM7_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1RC9_A": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "spy",
+        "tet"
+      ]
+    },
+    "1REW_C": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1REW_D": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "1RGJ_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1RMR_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1S4Y_D": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1S6W_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1SH1_A": {
+      "siteCount": 2,
+      "geometries": [
+        "tbp",
+        "tet"
+      ]
+    },
+    "1SN4_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1T0Z_B": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1TCJ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1TOC_T": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1TXB_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "spl"
+      ]
+    },
+    "1UOY_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1V7F_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1VB8_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1VNA_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1W7Z_H": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1WM7_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "1WM8_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "1WMT_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "pyv",
+        "tet"
+      ]
+    },
+    "1WQ9_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1WQB_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1WT7_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1XDT_T": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1XJ1_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "1Y29_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1YI5_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "pyv",
+        "tet"
+      ]
+    },
+    "1YI5_B": {
+      "siteCount": 4,
+      "geometries": [
+        "bvp",
+        "tet"
+      ]
+    },
+    "1YI5_C": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "1YI5_D": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "tet",
+        "tpv"
+      ]
+    },
+    "1YP8_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "pyv",
+        "tet"
+      ]
+    },
+    "1YWH_I": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "tbp",
+        "tet"
+      ]
+    },
+    "1YWH_M": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "1YZ2_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "1ZAD_A": {
+      "siteCount": 5,
+      "geometries": [
+        "bvp",
+        "ctn",
+        "pyv",
+        "spl",
+        "tpv"
+      ]
+    },
+    "1ZLC_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1ZLI_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1ZMM_B": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "1ZMM_C": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "1ZUF_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "2A7T_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2ABX_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2B38_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2B3C_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2B68_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "2BTC_I": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "bvp",
+        "pyv"
+      ]
+    },
+    "2CA7_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "spy"
+      ]
+    },
+    "2CBH_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2CRT_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "2EFZ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2F2I_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2FQA_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2FR9_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "2GOO_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2GOO_D": {
+      "siteCount": 1,
+      "geometries": [
+        "tbp"
+      ]
+    },
+    "2H5F_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "2H5F_B": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "2H64_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "2H7Z_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "2H8U_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2H9X_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "2IT8_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "pyv"
+      ]
+    },
+    "2JOT_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "2JQP_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2JRY_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2JUR_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2K3G_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "bvp",
+        "pyv"
+      ]
+    },
+    "2K4U_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "2KBH_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2KCR_A": {
+      "siteCount": 4,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "2KJF_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "2KRA_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2KY3_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2KYQ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2L37_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2LET_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "spl"
+      ]
+    },
+    "2LEW_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2LJ7_A": {
+      "siteCount": 4,
+      "geometries": [
+        "bva",
+        "pyv",
+        "spl",
+        "spy"
+      ]
+    },
+    "2LJM_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "bvp"
+      ]
+    },
+    "2LJS_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "pyv",
+        "tet"
+      ]
+    },
+    "2LKB_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2M4Z_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "2M75_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "pyv"
+      ]
+    },
+    "2M9O_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2MD6_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "2MH1_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "pyv",
+        "tet"
+      ]
+    },
+    "2MJ4_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "2MLD_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2MN1_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2MOP_1": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2N8E_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2NY8_X": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2ODY_D": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "2ODY_F": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2PJF_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2PJG_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2PJI_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2PJY_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2PO8_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2PTA_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2PUQ_L": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2PUQ_T": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "2QC1_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2QC1_B": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2QJ9_B": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2QJ9_C": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "bvp"
+      ]
+    },
+    "2QJA_D": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "2QJB_C": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "bvp",
+        "pyv"
+      ]
+    },
+    "2QJB_D": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "spl",
+        "spy"
+      ]
+    },
+    "2STB_E": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "tbp"
+      ]
+    },
+    "2UVS_A": {
+      "siteCount": 4,
+      "geometries": [
+        "pyv",
+        "spy"
+      ]
+    },
+    "2W9U_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2W9V_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "2X8B_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "2YBR_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "2YBR_G": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "2YC1_C": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "2Z3S_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "3BT1_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "3BT1_U": {
+      "siteCount": 4,
+      "geometries": [
+        "bvp",
+        "pyv",
+        "spl",
+        "spy"
+      ]
+    },
+    "3BT2_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "3BT2_U": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "3C05_C": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "pyv"
+      ]
+    },
+    "3C59_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3C5T_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3D4U_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3EVS_B": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "3EVS_C": {
+      "siteCount": 4,
+      "geometries": [
+        "pyv",
+        "spl",
+        "spy"
+      ]
+    },
+    "3KFD_E": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "3KFD_H": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "3KFD_L": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "spl"
+      ]
+    },
+    "3LMS_A": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "spy",
+        "tet"
+      ]
+    },
+    "3LMS_B": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "3NH7_H": {
+      "siteCount": 1,
+      "geometries": [
+        "tbp"
+      ]
+    },
+    "3NH7_O": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "3PLC_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3PLC_C": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3QB4_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tpv"
+      ]
+    },
+    "3QB4_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "pyv"
+      ]
+    },
+    "3QB4_C": {
+      "siteCount": 2,
+      "geometries": [
+        "spl",
+        "tpv"
+      ]
+    },
+    "3TH3_L": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "3TH3_T": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3TH4_T": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "3UIR_A": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "tbp"
+      ]
+    },
+    "3UIR_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "4AEI_M": {
+      "siteCount": 2,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "4AML_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "4BVV_A": {
+      "siteCount": 4,
+      "geometries": [
+        "pyv",
+        "spl",
+        "spy",
+        "tet"
+      ]
+    },
+    "4CQK_N": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "tbp"
+      ]
+    },
+    "4EC7_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "pyv"
+      ]
+    },
+    "4EY8_A": {
+      "siteCount": 3,
+      "geometries": [
+        "pyv",
+        "spl",
+        "tet"
+      ]
+    },
+    "4JTD_Y": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "4LFT_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "4NTY_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "4OM5_D": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "tet"
+      ]
+    },
+    "4R5R_B": {
+      "siteCount": 2,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "4R5U_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "4V1D_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "spl"
+      ]
+    },
+    "4V1D_B": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "4V1D_E": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "4X9Z_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "4X9Z_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "4XL1_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "pyv",
+        "tet"
+      ]
+    },
+    "4XL1_B": {
+      "siteCount": 2,
+      "geometries": [
+        "spl",
+        "tbp"
+      ]
+    },
+    "4XL1_D": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "4XL1_E": {
+      "siteCount": 4,
+      "geometries": [
+        "bva",
+        "bvp",
+        "pyv",
+        "tbp"
+      ]
+    },
+    "4Z6A_H": {
+      "siteCount": 2,
+      "geometries": [
+        "spl",
+        "tpv"
+      ]
+    },
+    "4Z6A_L": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "4Z6A_T": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "pyv"
+      ]
+    },
+    "4ZMA_H": {
+      "siteCount": 2,
+      "geometries": [
+        "spl",
+        "tpv"
+      ]
+    },
+    "4ZMA_L": {
+      "siteCount": 3,
+      "geometries": [
+        "spl",
+        "tbp",
+        "tet"
+      ]
+    },
+    "4ZMA_T": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "4ZQY_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "5E5Q_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "5HBT_B": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "5HBT_C": {
+      "siteCount": 2,
+      "geometries": [
+        "bvp",
+        "tet"
+      ]
+    },
+    "5HBV_D": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "5IMT_D": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "5IMY_B": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tpv"
+      ]
+    },
+    "5KXH_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "5KY0_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "5KY2_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "5KY4_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "5KY8_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "5KY9_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "5L34_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "5LUE_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "5NGV_L": {
+      "siteCount": 1,
+      "geometries": [
+        "pvp"
+      ]
+    },
+    "5OLL_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "5UG3_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "5VYP_H": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "5VYP_K": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "bvp"
+      ]
+    },
+    "5WOW_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "5WUZ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "6A5I_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "6ATL_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "6ATL_C": {
+      "siteCount": 3,
+      "geometries": [
+        "bva",
+        "bvp",
+        "pyv"
+      ]
+    },
+    "6ATM_C": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "6ATU_N": {
+      "siteCount": 2,
+      "geometries": [
+        "bva",
+        "tet"
+      ]
+    },
+    "6AVA_B": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "6AVD_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "6B55_T": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "6D8H_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "6IMF_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "6LCQ_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "spy"
+      ]
+    },
+    "6LSQ_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "6LSQ_B": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "6MAC_A": {
+      "siteCount": 2,
+      "geometries": [
+        "pyv",
+        "spl"
+      ]
+    },
+    "6OHX_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "6Q6C_B": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "6QEU_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "6SF1_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "6VPN_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tet"
+      ]
+    },
+    "6VXW_A": {
+      "siteCount": 1,
+      "geometries": [
+        "spl"
+      ]
+    },
+    "6YHT_A": {
+      "siteCount": 1,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "6ZOI_E": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "7C28_B": {
+      "siteCount": 1,
+      "geometries": [
+        "bvp"
+      ]
+    },
+    "7KPD_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "7N0T_A": {
+      "siteCount": 3,
+      "geometries": [
+        "bvp",
+        "pyv",
+        "tbp"
+      ]
+    },
+    "7N23_A": {
+      "siteCount": 1,
+      "geometries": [
+        "tpv"
+      ]
+    },
+    "7N25_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "7O2K_A": {
+      "siteCount": 2,
+      "geometries": [
+        "bva"
+      ]
+    },
+    "7RC8_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "7T10_A": {
+      "siteCount": 1,
+      "geometries": [
+        "pyv"
+      ]
+    },
+    "9FJY_E": {
+      "siteCount": 3,
+      "geometries": [
+        "tbp",
+        "tet",
+        "tpv"
+      ]
+    }
+  }
+}

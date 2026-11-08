@@ -1,0 +1,207 @@
+{
+  "structure": "2W9V_A",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 622,
+  "pdbUrl": "/data/cyclometal/sites/collection/2W9V_A.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/2W9V_A.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "bvp",
+      "description": "Trigonal bipyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.228",
+      "center": [
+        11.528,
+        -9.788,
+        2.814
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 380,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "A",
+          "resno": 27,
+          "icode": "",
+          "coordinates": [
+            13.363,
+            -10.285,
+            -0.08
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "VAL27:O",
+          "distanceAngstrom": 3.4625814069852563
+        },
+        {
+          "serial": 398,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "A",
+          "resno": 28,
+          "icode": "",
+          "coordinates": [
+            11.526,
+            -6.891,
+            2.075
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER28:OG",
+          "distanceAngstrom": 2.989771563180037
+        },
+        {
+          "serial": 604,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "A",
+          "resno": 43,
+          "icode": "",
+          "coordinates": [
+            9.714,
+            -9.081,
+            5.706
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "PRO43:O",
+          "distanceAngstrom": 3.486274372449765
+        },
+        {
+          "serial": 618,
+          "name": "O",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "A",
+          "resno": 44,
+          "icode": "",
+          "coordinates": [
+            9.09,
+            -11.594,
+            1.75
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLY44:O",
+          "distanceAngstrom": 3.2152101019995567
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.309",
+      "center": [
+        11.397,
+        -9.766,
+        2.778
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 380,
+          "name": "O",
+          "altloc": "",
+          "resname": "VAL",
+          "chain": "A",
+          "resno": 27,
+          "icode": "",
+          "coordinates": [
+            13.363,
+            -10.285,
+            -0.08
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "VAL27:O",
+          "distanceAngstrom": 3.5075177832763726
+        },
+        {
+          "serial": 398,
+          "name": "OG",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "A",
+          "resno": 28,
+          "icode": "",
+          "coordinates": [
+            11.526,
+            -6.891,
+            2.075
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER28:OG",
+          "distanceAngstrom": 2.962511603352804
+        },
+        {
+          "serial": 604,
+          "name": "O",
+          "altloc": "",
+          "resname": "PRO",
+          "chain": "A",
+          "resno": 43,
+          "icode": "",
+          "coordinates": [
+            9.714,
+            -9.081,
+            5.706
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "PRO43:O",
+          "distanceAngstrom": 3.445997388275273
+        },
+        {
+          "serial": 619,
+          "name": "OXT",
+          "altloc": "",
+          "resname": "GLY",
+          "chain": "A",
+          "resno": 44,
+          "icode": "",
+          "coordinates": [
+            8.4,
+            -9.598,
+            1.14
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "GLY44:OXT",
+          "distanceAngstrom": 3.41954339057132
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "3df5e94215da8cdb2791a2c4e321f902259a2a2dba6eac45b41d4135d27c26c6",
+      "bytes": 50471
+    },
+    "script": {
+      "sha256": "6745c8e1f2a5ecab633e9a6da8a244b038e699ef936d31e50f3f1f57db1d4c6c",
+      "bytes": 2196
+    }
+  }
+}

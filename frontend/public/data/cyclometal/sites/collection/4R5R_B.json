@@ -1,0 +1,209 @@
+{
+  "structure": "4R5R_B",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 510,
+  "pdbUrl": "/data/cyclometal/sites/collection/4R5R_B.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/4R5R_B.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.226",
+      "center": [
+        -1.588,
+        34.073,
+        -40.588
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 95,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "B",
+          "resno": 14,
+          "icode": "",
+          "coordinates": [
+            -1.882,
+            36.14,
+            -36.846
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "CYS14:O",
+          "distanceAngstrom": 4.285030805023464
+        },
+        {
+          "serial": 52,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "B",
+          "resno": 8,
+          "icode": "",
+          "coordinates": [
+            -5.19,
+            32.32,
+            -41.492
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "SER8:O",
+          "distanceAngstrom": 4.106656669360125
+        },
+        {
+          "serial": 126,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "B",
+          "resno": 19,
+          "icode": "",
+          "coordinates": [
+            1.659,
+            30.863,
+            -40.464
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "CYS19:O",
+          "distanceAngstrom": 4.567546934624756
+        },
+        {
+          "serial": 109,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "B",
+          "resno": 16,
+          "icode": "",
+          "coordinates": [
+            -0.937,
+            36.967,
+            -43.549
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ALA16:O",
+          "distanceAngstrom": 4.191247785564578
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    },
+    {
+      "id": "site2",
+      "geometry": "tet",
+      "description": "Tetrahedron",
+      "coordinationNumber": 4,
+      "rmsd": "0.319",
+      "center": [
+        -1.25,
+        33.615,
+        -39.992
+      ],
+      "diameter": 1.4,
+      "color": "blue",
+      "donors": [
+        {
+          "serial": 109,
+          "name": "O",
+          "altloc": "",
+          "resname": "ALA",
+          "chain": "B",
+          "resno": 16,
+          "icode": "",
+          "coordinates": [
+            -0.937,
+            36.967,
+            -43.549
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "ALA16:O",
+          "distanceAngstrom": 4.897562863302522
+        },
+        {
+          "serial": 132,
+          "name": "O",
+          "altloc": "",
+          "resname": "LYS",
+          "chain": "B",
+          "resno": 20,
+          "icode": "",
+          "coordinates": [
+            2.255,
+            33.664,
+            -37.132
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "LYS20:O",
+          "distanceAngstrom": 4.524049734474633
+        },
+        {
+          "serial": 40,
+          "name": "O",
+          "altloc": "",
+          "resname": "CYS",
+          "chain": "B",
+          "resno": 6,
+          "icode": "",
+          "coordinates": [
+            -1.649,
+            29.266,
+            -42.133
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "CYS6:O",
+          "distanceAngstrom": 4.863834187140846
+        },
+        {
+          "serial": 74,
+          "name": "O",
+          "altloc": "",
+          "resname": "ASN",
+          "chain": "B",
+          "resno": 11,
+          "icode": "",
+          "coordinates": [
+            -4.667,
+            34.562,
+            -37.153
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "ASN11:O",
+          "distanceAngstrom": 4.542314277986496
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel",
+        "samarium"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "9ded9cb3fd0502a5c11ff92b8c11a6d609b3eae20fa716902188d20a71bf0b3f",
+      "bytes": 41399
+    },
+    "script": {
+      "sha256": "8127ad7313e446d9ffe61048da6e34926d21483ae807a661b77df4808a01bf22",
+      "bytes": 2222
+    }
+  }
+}

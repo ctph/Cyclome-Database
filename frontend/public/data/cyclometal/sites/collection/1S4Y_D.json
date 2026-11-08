@@ -1,0 +1,113 @@
+{
+  "structure": "1S4Y_D",
+  "kind": "proposed-geometry-centers",
+  "atomCount": 741,
+  "pdbUrl": "/data/cyclometal/sites/collection/1S4Y_D.pdb",
+  "scriptUrl": "/data/cyclometal/sites/collection/1S4Y_D.spt",
+  "sites": [
+    {
+      "id": "site1",
+      "geometry": "pyv",
+      "description": "Square pyramid with a vacancy (equatorial)",
+      "coordinationNumber": 4,
+      "rmsd": "0.461",
+      "center": [
+        20.089,
+        52.228,
+        28.022
+      ],
+      "diameter": 1.4,
+      "color": "red",
+      "donors": [
+        {
+          "serial": 531,
+          "name": "O",
+          "altloc": "",
+          "resname": "SER",
+          "chain": "D",
+          "resno": 90,
+          "icode": "",
+          "coordinates": [
+            22.317,
+            55.237,
+            27.598
+          ],
+          "spoke": 1,
+          "width": 0.06,
+          "label": "SER90:O",
+          "distanceAngstrom": 3.768002255837967
+        },
+        {
+          "serial": 540,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "D",
+          "resno": 91,
+          "icode": "",
+          "coordinates": [
+            19.638,
+            53.28,
+            32.001
+          ],
+          "spoke": 2,
+          "width": 0.06,
+          "label": "MET91:SD",
+          "distanceAngstrom": 4.140355781813924
+        },
+        {
+          "serial": 684,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "D",
+          "resno": 108,
+          "icode": "",
+          "coordinates": [
+            17.244,
+            49.576,
+            28.452
+          ],
+          "spoke": 3,
+          "width": 0.06,
+          "label": "MET108:SD",
+          "distanceAngstrom": 3.9130587779894133
+        },
+        {
+          "serial": 526,
+          "name": "SD",
+          "altloc": "",
+          "resname": "MET",
+          "chain": "D",
+          "resno": 89,
+          "icode": "",
+          "coordinates": [
+            17.648,
+            54.4,
+            26.212
+          ],
+          "spoke": 4,
+          "width": 0.06,
+          "label": "MET89:SD",
+          "distanceAngstrom": 3.7352596964602043
+        }
+      ],
+      "metals": [
+        "cobalt",
+        "copper",
+        "manganese",
+        "nickel"
+      ]
+    }
+  ],
+  "sources": {
+    "pdb": {
+      "sha256": "616a4cb5dcf18c02e27e34413699cdfc3d3cbe2f12a9503bc1994faef5371c21",
+      "bytes": 60110
+    },
+    "script": {
+      "sha256": "26f8b42a4829c5d25f6effa08fdcdcb07e555598078934504a68b871dead7b96",
+      "bytes": 1258
+    }
+  }
+}
