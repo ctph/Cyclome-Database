@@ -1,5 +1,70 @@
 # Distortion temperature terminology and curated JSmol sites
 
+## Full coordination collection
+
+The current viewer uses `frontend/public/data/cyclometal/sites/collection/`:
+
+- **930** archived PDB identities and **334** supplied site scripts are recorded in provenance.
+- **328** structures have interactive annotations: **504** proposed sites and **2,071**
+  center–donor measurements, covering 11 geometries and all six supplied colors.
+- **Six** structures are held for alternate-conformer curation by explicit owner decision:
+  `1FAS_A`, `1H9H_I`, `1ONJ_A`, `2C4B_A`, `4ABJ_A`, `6ZOI_D`. Their donor selectors
+  match multiple PDB atoms. No alternate location is selected implicitly. All sites of
+  each held structure remain unpublished until its donor definitions are curated.
+- All **334** paired original PDB/SPT files, including held inputs, are downloadable
+  byte-for-byte. The other 596 PDBs have no supplied site scripts; their identities,
+  sizes, and checksums are recorded, without generating site annotations.
+
+CycloMetal-Geom has a **View N sites** link per annotated row, an **Interactive
+annotations only** filter, and **Awaiting curation** links for the six holds. The
+structure viewer explains held status and offers both originals. No-site structures
+are distinguished from pending-curation structures.
+
+`index.json` contains only validated structures. `summary.json` drives discovery and
+curation notices; `manifest.json` records archive/input hashes, complete coverage,
+the hold policy, and the first ambiguous donor's candidate atom records for each hold.
+The original legacy three-site 1BQF_A files remain at `sites/`; current 1BQF_A viewing
+uses the new **five-site** script. `1DAN_L` and `1MCV_A` each have six sites.
+
+| Supplied archive | SHA-256 |
+| --- | --- |
+| `cyclic_pdbs.zip` | `6b0ac8182d73fcfdb6c5b89a7e2309dab66cd6728022f021730cc0d4d6638e38` |
+| `cyclometal_geo_jmol_scripts.zip` | `a6dde5ba3ea4f97caa42979fdeb36efeaa305fd6a62cc55158f5324f015b5078` |
+
+Regenerate with:
+
+```bash
+python3 scripts/import-cyclometal-collection.py \
+  --pdb-zip /path/to/cyclic_pdbs.zip \
+  --scripts-zip /path/to/cyclometal_geo_jmol_scripts.zip
+python3 -m unittest discover -s scripts/tests -v
+```
+
+The bounded parser validates structure identities, geometry/CN, center/spoke commands,
+site IDs, donor serials/coordinates, exact RMSD text, and donor/metal provenance comments.
+Any unexpected error aborts publication. Only the six explicitly listed ambiguous inputs
+may be held. Associated metals are copied from the supplied comments; they do not imply
+experimentally observed occupancy. No geometry fitting or distance filtering is performed.
+
+Verification: all 930 PDB and 334 script manifest entries were compared directly with
+the ZIP members, and all 668 published originals matched byte-for-byte. Thirteen fidelity
+tests cover both catalogs, the legacy example, every published donor/center/distance,
+source hashes, coverage, and actual ambiguity of the six holds. Browser verification of
+all sites in `1BQF_A`, `1DAN_L`, `1MCV_A`, and `5NGV_L` checked 79 actual JSmol
+measurements against source coordinates (maximum difference 4.45e-16 Å), matching donor
+serials, center counts, and full model atom counts. JSmol's `atomInfo` defaults to the
+selected conformer set; use `modelInfo.models[0].atomCount` to verify full retained models.
+Distance/label toggles preserve the camera, generated viewer scripts download correctly,
+and returning to Cartoon clears overlays and restores database coordinates. All six
+held pages and a no-site page were checked. Mobile controls wrap within a 390px viewport.
+
+Pre-collection backups preserve `514b060` and its deployed frontend:
+
+```text
+/Users/rizapd/Documents/Work/_git-history-backups/Cyclome-before-coordination-collection-514b060.tar.gz
+/home/chowdhurylab01/work/Cyclome-backups/Before-coordination-collection-514b060/web-root/
+```
+
 ## Temperature interface
 
 - The public tool is **Distortion Temperature Predictor** at `/distortion-temperature`.
@@ -13,9 +78,9 @@ The renamed components are `DistortionTemperaturePage.jsx` and
 `DistortionTempHistogram.jsx`. A browser check of `/pdb/2KCG_A` retained the
 displayed 398.5 K value under the corrected label.
 
-## Supplied coordination example
+## Original three-site example (retained provenance)
 
-The initial curated annotation is **1BQF_A**, accessible at:
+The initial curated annotation was **1BQF_A**. The route now uses the full collection:
 
 ```text
 /pdb/1BQF_A?view=coordination
